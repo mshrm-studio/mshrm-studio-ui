@@ -1,5 +1,5 @@
 import { Locale } from '@/utils/enums/locale'
-import Link from 'next/link'
+import Link from '@/components/LocaleLink'
 import { getDictionary } from '@/app/[lang]/dictionaries'
 
 export default async function Page({

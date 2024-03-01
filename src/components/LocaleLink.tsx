@@ -7,9 +7,11 @@ import Link from 'next/link'
 export default function LocaleLink({
     children,
     href,
+    className,
 }: Readonly<{
     children: React.ReactNode
     href: string
+    className?: string | null
 }>) {
     const locale = useContext(LocaleContext)
 
@@ -19,5 +21,9 @@ export default function LocaleLink({
         return `/${locale}${normalizedHref}`
     }, [href, locale])
 
-    return <Link href={hrefWithLocale}>{children}</Link>
+    return (
+        <Link href={hrefWithLocale} className={className || undefined}>
+            {children}
+        </Link>
+    )
 }
