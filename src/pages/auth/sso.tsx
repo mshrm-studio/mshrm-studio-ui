@@ -111,7 +111,7 @@ export default function Page() {
             <p>
                 Authentication Result:{' '}
                 {authResult ? (
-                    <pre>{JSON.stringify(authResult, null, 2)}</pre>
+                    <pre>{JSON.stringify(authResult, null, 4)}</pre>
                 ) : (
                     'None'
                 )}
@@ -120,7 +120,7 @@ export default function Page() {
             <p>
                 Authentication Error:{' '}
                 {authError ? (
-                    <pre>{JSON.stringify(authError, null, 2)}</pre>
+                    <pre>{JSON.stringify(authError, null, 4)}</pre>
                 ) : (
                     'None'
                 )}
