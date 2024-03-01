@@ -22,6 +22,10 @@ export default function Page() {
                 },
             }
 
+            console.log('***********')
+            console.log('initMsal')
+            console.log('msalConfig:', msalConfig)
+
             const instance = new PublicClientApplication(msalConfig)
             await instance.initialize()
             setMsalInstance(instance)
@@ -29,6 +33,10 @@ export default function Page() {
             instance
                 .handleRedirectPromise()
                 .then((authenticationResult) => {
+                    console.log('***********')
+                    console.log('msalInstance.handleRedirectPromise')
+                    console.log('authenticationResult:', authenticationResult)
+
                     if (!authenticationResult) {
                         loginRedirect()
                     } else {
@@ -36,6 +44,10 @@ export default function Page() {
                     }
                 })
                 .catch((err) => {
+                    console.log('***********')
+                    console.log('msalInstance.handleRedirectPromise')
+                    console.log('err:', err)
+
                     if (err instanceof InteractionRequiredAuthError) {
                         loginRedirect()
                     } else {
@@ -59,18 +71,32 @@ export default function Page() {
             `api://${oauthClientId}/mshrm.studio`,
         ]
 
+        console.log('***********')
+        console.log('loginRedirect')
+        console.log('accounts:', accounts)
+        console.log('oauthClientId:', oauthClientId)
+        console.log('scopes:', scopes)
+
         if (accounts.length > 0) {
             const silentRequest: SilentRequest = {
                 scopes,
                 account: accounts[0],
             }
 
+            console.log('silentRequest:', silentRequest)
+
             msalInstance
                 .acquireTokenSilent(silentRequest)
                 .then((authenticationResult) => {
+                    console.log('***********')
+                    console.log('msalInstance.acquireTokenSilent')
+                    console.log('authenticationResult:', authenticationResult)
                     setAuthResult(authenticationResult)
                 })
-                .catch((_error) => {
+                .catch((error) => {
+                    console.log('***********')
+                    console.log('msalInstance.acquireTokenSilent')
+                    console.log('error:', error)
                     msalInstance.acquireTokenRedirect({ scopes })
                 })
         } else {
