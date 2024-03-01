@@ -15,6 +15,31 @@ export default function Msal() {
 
     useEffect(() => {
         const initMsal = async () => {
+            // Get the full URL
+            const fullUrl = window.location.href
+
+            // Get the protocol (e.g., "http:" or "https:")
+            const protocol = window.location.protocol
+
+            // Get the host (includes hostname and port if available)
+            const host = window.location.host
+
+            // Get the path of the URL
+            const pathname = window.location.pathname
+
+            // Get the query string (e.g., "?query=string")
+            const search = window.location.search
+
+            // Get the hash fragment (e.g., "#section")
+            const hash = window.location.hash
+
+            console.log('Full URL:', fullUrl)
+            console.log('Protocol:', protocol)
+            console.log('Host:', host)
+            console.log('Pathname:', pathname)
+            console.log('Search (Query Parameters):', search)
+            console.log('Hash Fragment:', hash)
+
             const msalConfig: Configuration = {
                 auth: {
                     clientId: process.env.NEXT_PUBLIC_OAUTH_CLIENT_ID as string,
@@ -46,6 +71,7 @@ export default function Msal() {
                     console.log('***********')
                     console.log('msalInstance.handleRedirectPromise')
                     console.log('err:', err)
+                    console.log('err.response:', err?.response || 'None')
 
                     if (err instanceof InteractionRequiredAuthError) {
                         loginRedirect(msalInstance)
