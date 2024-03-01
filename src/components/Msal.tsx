@@ -18,8 +18,7 @@ export default function Msal() {
             const msalConfig: Configuration = {
                 auth: {
                     clientId: process.env.NEXT_PUBLIC_OAUTH_CLIENT_ID as string,
-                    redirectUri: process.env
-                        .NEXT_PUBLIC_OAUTH_REDIRECT_URI as string,
+                    redirectUri: `${window.location.origin}${window.location.pathname}`,
                 },
             }
 
