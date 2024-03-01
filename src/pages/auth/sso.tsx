@@ -60,6 +60,10 @@ export default function Page() {
     }, [])
 
     const loginRedirect = () => {
+        console.log('***********')
+        console.log('loginRedirect')
+        console.log('msalInstance', msalInstance)
+
         if (!msalInstance) return
 
         const accounts = msalInstance.getAllAccounts()
@@ -71,8 +75,6 @@ export default function Page() {
             `api://${oauthClientId}/mshrm.studio`,
         ]
 
-        console.log('***********')
-        console.log('loginRedirect')
         console.log('accounts:', accounts)
         console.log('oauthClientId:', oauthClientId)
         console.log('scopes:', scopes)
