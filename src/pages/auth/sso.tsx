@@ -8,7 +8,6 @@ import {
 import { useEffect, useState } from 'react'
 
 export default function Page() {
-    const [msalInstance, setMsalInstance] = useState<PublicClientApplication>()
     const [authResult, setAuthResult] = useState<AuthenticationResult>()
     const [authError, setAuthError] = useState<any>()
 
@@ -26,11 +25,10 @@ export default function Page() {
             console.log('initMsal')
             console.log('msalConfig:', msalConfig)
 
-            const instance = new PublicClientApplication(msalConfig)
-            await instance.initialize()
-            setMsalInstance(instance)
+            const msalInstance = new PublicClientApplication(msalConfig)
+            await msalInstance.initialize()
 
-            instance
+            msalInstance
                 .handleRedirectPromise()
                 .then((authenticationResult) => {
                     console.log('***********')
@@ -38,7 +36,7 @@ export default function Page() {
                     console.log('authenticationResult:', authenticationResult)
 
                     if (!authenticationResult) {
-                        loginRedirect()
+                        loginRedirect(msalInstance)
                     } else {
                         setAuthResult(authenticationResult)
                     }
@@ -49,7 +47,7 @@ export default function Page() {
                     console.log('err:', err)
 
                     if (err instanceof InteractionRequiredAuthError) {
-                        loginRedirect()
+                        loginRedirect(msalInstance)
                     } else {
                         setAuthError(err)
                     }
@@ -59,12 +57,10 @@ export default function Page() {
         initMsal()
     }, [])
 
-    const loginRedirect = () => {
+    const loginRedirect = (msalInstance: PublicClientApplication) => {
         console.log('***********')
         console.log('loginRedirect')
         console.log('msalInstance', msalInstance)
-
-        if (!msalInstance) return
 
         const accounts = msalInstance.getAllAccounts()
         const oauthClientId = process.env.NEXT_PUBLIC_OAUTH_CLIENT_ID as string
