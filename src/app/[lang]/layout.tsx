@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@/app/globals.css'
 import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 import { Locale } from '@/utils/enums/locale'
 import LocaleContextProvider from '@/components/LocaleContextProvider'
 
@@ -32,7 +33,7 @@ export default function RootLayout({
         <html lang={params.lang}>
             <body className={inter.className}>
                 <LocaleContextProvider locale={params.lang}>
-                    <header></header>
+                    <Header />
 
                     <main>{children}</main>
 

@@ -56,7 +56,7 @@ export default function Msal() {
                 })
         }
 
-        // initMsal()
+        initMsal()
     }, [])
 
     const loginRedirect = (msalInstance: PublicClientApplication) => {
