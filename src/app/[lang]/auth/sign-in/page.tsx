@@ -1,9 +1,17 @@
+import { Locale } from '@/utils/enums/locale'
 import Link from 'next/link'
+import { getDictionary } from '@/app/[lang]/dictionaries'
 
-export default function Page() {
+export default async function Page({
+    params: { lang },
+}: Readonly<{
+    params: { lang: Locale }
+}>) {
+    const dict = await getDictionary(lang)
+
     return (
         <>
-            <h1>Hello, Sign-in Page!</h1>
+            <h1>{dict.signIn}</h1>
 
             <Link href="/auth/sso" className="flex items-center justify-center">
                 <button type="button">
@@ -14,7 +22,7 @@ export default function Page() {
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                     >
-                        <g clip-path="url(#clip0_3301_4796)">
+                        <g clipPath="url(#clip0_3301_4796)">
                             <path d="M0 0H20V20H0V0Z" fill="#F3F3F3" />
                             <path
                                 d="M0.869141 0.869568H9.56479V9.56522H0.869141V0.869568Z"

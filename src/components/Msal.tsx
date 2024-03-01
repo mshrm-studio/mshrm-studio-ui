@@ -1,3 +1,5 @@
+'use client'
+
 import {
     AuthenticationResult,
     Configuration,
@@ -7,7 +9,7 @@ import {
 } from '@azure/msal-browser'
 import { useEffect, useState } from 'react'
 
-export default function Page() {
+export default function Msal() {
     const [authResult, setAuthResult] = useState<AuthenticationResult>()
     const [authError, setAuthError] = useState<any>()
 
@@ -54,7 +56,7 @@ export default function Page() {
                 })
         }
 
-        initMsal()
+        // initMsal()
     }, [])
 
     const loginRedirect = (msalInstance: PublicClientApplication) => {
@@ -104,8 +106,6 @@ export default function Page() {
 
     return (
         <>
-            <h1>Hello, SSO Page!</h1>
-
             <p>Access Token: {authResult ? authResult.accessToken : 'None'}</p>
 
             <p>
