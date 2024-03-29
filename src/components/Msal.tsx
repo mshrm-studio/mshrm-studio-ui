@@ -43,7 +43,6 @@ export default function Msal() {
             const msalConfig: Configuration = {
                 auth: {
                     clientId: process.env.NEXT_PUBLIC_OAUTH_CLIENT_ID as string,
-                    redirectUri: `${window.location.origin}${window.location.pathname}`,
                 },
             }
 
@@ -81,7 +80,7 @@ export default function Msal() {
                 })
         }
 
-        initMsal()
+        if (authError === undefined) initMsal()
     }, [])
 
     const loginRedirect = (msalInstance: PublicClientApplication) => {
