@@ -16,11 +16,14 @@ export default function Msal() {
 
     useEffect(() => {
         async function initMsal(msalClientId: string) {
+            console.log('******************')
+            console.log('initMsal')
             const msalConfig = {
                 auth: {
                     clientId: msalClientId,
                 },
             }
+            console.log('msalConfig', msalConfig)
 
             const msalInstance = new PublicClientApplication(msalConfig)
 
@@ -29,11 +32,15 @@ export default function Msal() {
             msalInstance
                 .handleRedirectPromise()
                 .then((response: AuthenticationResult | null) => {
+                    console.log('response', response)
+
                     if (response !== null) {
                         setAuthResult(response)
                     } else {
                         const accounts: AccountInfo[] =
                             msalInstance.getAllAccounts()
+
+                        console.log('accounts', accounts)
 
                         if (accounts.length > 0) {
                             if (accounts.length === 1) {
@@ -55,6 +62,7 @@ export default function Msal() {
                     }
                 })
                 .catch((error) => {
+                    console.log('error', error)
                     setAuthError(error)
                 })
         }
@@ -69,6 +77,9 @@ export default function Msal() {
         msalClientId: string,
         homeAccountId: string
     ) {
+        console.log('******************')
+        console.log('acquireTokenSilent')
+
         // TODO
         // User interaction required?
         // No - tokens returned
@@ -88,13 +99,17 @@ export default function Msal() {
             ],
         }
 
+        console.log('request', request)
+
         msalInstance
             .acquireTokenSilent(request)
             .then((authenticationResult: AuthenticationResult) => {
+                console.log('authenticationResult', authenticationResult)
                 // Do something with the tokenResponse
                 setAuthResult(authenticationResult)
             })
             .catch((error) => {
+                console.log('error', error)
                 if (error instanceof InteractionRequiredAuthError) {
                     // fallback to interaction when silent call fails
                     msalInstance.acquireTokenRedirect(request)
@@ -109,6 +124,8 @@ export default function Msal() {
         msalInstance: PublicClientApplication,
         msalClientId: string
     ) {
+        console.log('******************')
+        console.log('ssoSilent')
         // TODO
         // User interaction required?
         // No - tokens returned
@@ -126,9 +143,11 @@ export default function Msal() {
         msalInstance
             .ssoSilent(request)
             .then((authenticationResult: AuthenticationResult) => {
+                console.log('authenticationResult', authenticationResult)
                 setAuthResult(authenticationResult)
             })
             .catch((error) => {
+                console.log('error', error)
                 if (error instanceof InteractionRequiredAuthError) {
                     // fallback to interaction when silent call fails
                     msalInstance.loginRedirect(request)
