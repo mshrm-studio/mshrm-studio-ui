@@ -1,3 +1,9 @@
+import MsalLogout from '@/components/MsalLogout'
+
 export default function Header() {
-    return <header></header>
+    return (
+        <header>
+            <MsalLogout />
+        </header>
+    )
 }
