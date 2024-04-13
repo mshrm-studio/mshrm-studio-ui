@@ -1,4 +1,15 @@
 {
+    "homepage": {
+        "aboutUsMessage": {
+            "what": "Maßgeschneiderte Apps, Websites und Software",
+            "who": "Unser Studio arbeitet mit globalen Marken zusammen"
+        },
+        "welcomeMessage": {
+            "afternoon": "Guten Tag, lassen Sie uns eine effektive digitale Lösung schaffen",
+            "evening": "Guten Abend, lassen Sie uns eine effektive digitale Lösung schaffen",
+            "morning": "Guten Morgen, lassen Sie uns eine effektive digitale Lösung schaffen"
+        }
+    },
     "signIn": "anmelden",
     "signInWithMicrosoft": "Melden Sie sich bei Microsoft an",
     "signOut": "Ausloggen",

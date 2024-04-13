@@ -10,11 +10,17 @@ export default async function Header({ locale }: { locale: Locale }) {
 
     return (
         <header className={styles.header}>
-            <Link href="/">M</Link>
+            <div className={styles.column}>
+                <Link href="/">M</Link>
+            </div>
 
-            <ThemeSwitcher />
+            <div className={`${styles.column} flex justify-center`}>
+                <ThemeSwitcher />
+            </div>
 
-            <LoginLogoutOption dictionary={dictionary} />
+            <div className={`${styles.column} text-right`}>
+                <LoginLogoutOption dictionary={dictionary} />
+            </div>
         </header>
     )
 }

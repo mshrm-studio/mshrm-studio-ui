@@ -1,4 +1,15 @@
 {
+    "homepage": {
+        "aboutUsMessage": {
+            "what": "Aplicaciones, sitios y software personalizados",
+            "who": "Nuestro estudio trabaja con marcas globales."
+        },
+        "welcomeMessage": {
+            "afternoon": "Buenas tardes, creemos una solución digital efectiva.",
+            "evening": "Buenas noches, creemos una solución digital eficaz.",
+            "morning": "Buenos días, creemos una solución digital efectiva."
+        }
+    },
     "signIn": "iniciar sesión",
     "signInWithMicrosoft": "Iniciar sesión con Microsoft",
     "signOut": "Cerrar sesión",

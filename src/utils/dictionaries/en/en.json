@@ -1,4 +1,15 @@
 {
+    "homepage": {
+        "aboutUsMessage": {
+            "what": "Bespoke apps, sites & software",
+            "who": "Our studio works with Global Brands"
+        },
+        "welcomeMessage": {
+            "afternoon": "Good afternoon, let's create an effective digital solution",
+            "evening": "Good evening, let's create an effective digital solution",
+            "morning": "Good morning, let's create an effective digital solution"
+        }
+    },
     "signIn": "Login",
     "signInWithMicrosoft": "Login with Microsoft",
     "signOut": "Logout",

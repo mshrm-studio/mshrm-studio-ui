@@ -1,4 +1,15 @@
 {
+    "homepage": {
+        "aboutUsMessage": {
+            "what": "定制应用程序、网站和软件",
+            "who": "我们的工作室与全球品牌合作"
+        },
+        "welcomeMessage": {
+            "afternoon": "下午好，让我们创建一个有效的数字解决方案",
+            "evening": "晚上好，让我们创建一个有效的数字解决方案",
+            "morning": "早上好，让我们创建一个有效的数字解决方案"
+        }
+    },
     "signIn": "登入",
     "signInWithMicrosoft": "使用微軟登入",
     "signOut": "登出",

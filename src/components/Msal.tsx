@@ -8,14 +8,12 @@ import {
     PublicClientApplication,
     SilentRequest,
 } from '@azure/msal-browser'
-import { useRouter } from 'next/navigation'
 import { useContext, useEffect, useState } from 'react'
 
 export default function Msal() {
     const [authResult, setAuthResult] = useState<AuthenticationResult>()
     const [authError, setAuthError] = useState<any>()
     const { user, setUser } = useContext(AuthContext)
-    const router = useRouter()
 
     useEffect(() => {
         async function initMsal(msalClientId: string) {
@@ -40,7 +38,6 @@ export default function Msal() {
                     if (response !== null) {
                         setAuthResult(response)
                         setUser(response.account)
-                        router.push('/')
                     } else {
                         const accounts: AccountInfo[] =
                             msalInstance.getAllAccounts()
@@ -113,7 +110,6 @@ export default function Msal() {
                 // Do something with the tokenResponse
                 setAuthResult(authenticationResult)
                 setUser(authenticationResult.account)
-                router.push('/')
             })
             .catch((error) => {
                 console.log('error', error)
@@ -152,6 +148,7 @@ export default function Msal() {
             .then((authenticationResult: AuthenticationResult) => {
                 console.log('authenticationResult', authenticationResult)
                 setAuthResult(authenticationResult)
+                setUser(authenticationResult.account)
             })
             .catch((error) => {
                 console.log('error', error)

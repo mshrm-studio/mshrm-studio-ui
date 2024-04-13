@@ -1,16 +1,20 @@
 import { Locale } from '@/utils/enums/locale'
 import { getDictionary } from '@/app/[lang]/dictionaries'
+import Hero from '@/components/HomePage/Hero'
+import AboutUsMessage from '@/components/HomePage/AboutUsMessage'
 
 export default async function Page({
     params: { lang },
 }: Readonly<{
     params: { lang: Locale }
 }>) {
-    const dict = await getDictionary(lang)
+    const dictionary = await getDictionary(lang)
 
     return (
         <div>
-            <h1 className="text-4xl">{dict.welcome}</h1>
+            <Hero dictionary={dictionary} />
+
+            <AboutUsMessage dictionary={dictionary} />
         </div>
     )
 }

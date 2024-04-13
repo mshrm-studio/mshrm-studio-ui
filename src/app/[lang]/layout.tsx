@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Rethink_Sans } from 'next/font/google'
 import '@/app/globals.css'
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
 import { Locale } from '@/utils/enums/locale'
-import LocaleContextProvider from '@/components/Context/LocaleProvider'
 import AuthContextProvider from '@/components/Context/AuthProvider'
+import DimensionsContextProvider from '@/components/Context/DimensionsProvider'
+import LocaleContextProvider from '@/components/Context/LocaleProvider'
 
-const inter = Inter({ subsets: ['latin'] })
+const rethinkSans = Rethink_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
     title: 'mshrm.studio',
@@ -16,9 +17,11 @@ export const metadata: Metadata = {
 
 export async function generateStaticParams() {
     return [
+        { lang: Locale.Arabic },
         { lang: Locale.Chinese },
         { lang: Locale.English },
         { lang: Locale.German },
+        { lang: Locale.Khmer },
         { lang: Locale.Spanish },
     ]
 }
@@ -33,15 +36,17 @@ export default function RootLayout({
     return (
         <html lang={params.lang}>
             <body
-                className={`${inter.className} dark:bg-black dark:text-white`}
+                className={`${rethinkSans.className} dark:bg-black dark:text-white`}
             >
                 <AuthContextProvider>
                     <LocaleContextProvider locale={params.lang}>
-                        <Header locale={params.lang} />
+                        <DimensionsContextProvider>
+                            <Header locale={params.lang} />
 
-                        <main>{children}</main>
+                            <main>{children}</main>
 
-                        <Footer />
+                            <Footer />
+                        </DimensionsContextProvider>
                     </LocaleContextProvider>
                 </AuthContextProvider>
             </body>

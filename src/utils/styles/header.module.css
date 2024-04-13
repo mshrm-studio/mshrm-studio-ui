@@ -1,4 +1,12 @@
 .header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media screen and (min-width: theme('screens.xl')) {
+    .header {
+        max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
