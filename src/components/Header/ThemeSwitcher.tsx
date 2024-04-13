@@ -8,19 +8,23 @@ import {
 } from '@heroicons/react/24/solid'
 import styles from '@/utils/styles/themeSwitcher.module.css'
 
-export default function ThemeSwitcher() {
-    const [currentTheme, setCurrentTheme] = useState(() => {
-        if (
-            localStorage.theme === 'dark' ||
-            (!('theme' in localStorage) &&
-                window.matchMedia('(prefers-color-scheme: dark)').matches)
-        ) {
-            return 'dark'
-        } else if (localStorage.theme === 'light') {
-            return 'light'
-        }
-        return 'system'
-    })
+export default function HeaderThemeSwitcher() {
+    const [currentTheme, setCurrentTheme] = useState('system')
+
+    useEffect(() => {
+        setCurrentTheme(() => {
+            if (
+                localStorage.theme === 'dark' ||
+                (!('theme' in localStorage) &&
+                    window.matchMedia('(prefers-color-scheme: dark)').matches)
+            ) {
+                return 'dark'
+            } else if (localStorage.theme === 'light') {
+                return 'light'
+            }
+            return 'system'
+        })
+    }, [])
 
     useEffect(() => {
         document.documentElement.classList.toggle(

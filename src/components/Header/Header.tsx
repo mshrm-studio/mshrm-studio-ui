@@ -1,4 +1,4 @@
-import ThemeSwitcher from '@/components/ThemeSwitcher'
+import ThemeSwitcher from '@/components/Header/ThemeSwitcher'
 import styles from '@/utils/styles/header.module.css'
 import { getDictionary } from '@/app/[lang]/dictionaries'
 import { Locale } from '@/utils/enums/locale'
