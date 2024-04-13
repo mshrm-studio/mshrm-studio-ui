@@ -1,4 +1,6 @@
 {
     "signIn": "anmelden",
+    "signInWithMicrosoft": "Melden Sie sich bei Microsoft an",
+    "signOut": "Ausloggen",
     "welcome": "Willkommen"
 }

@@ -1,7 +1,9 @@
 export enum Locale {
+    Arabic = 'ar',
     Chinese = 'zh',
     English = 'en',
     German = 'de',
+    Khmer = 'km',
     Spanish = 'es',
 }
 

@@ -1,0 +1,46 @@
+.options {
+    display: flex;
+    border-radius: 0px 0px 25px 25px;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+:global(html.dark) .options {
+    background-color: rgba(255, 255, 255, 0.33);
+}
+
+:global(html:not(.dark)) .options {
+    background-color: #f6f6f6;
+}
+
+.options > .button {
+    border-radius: 9999px;
+    padding: 0.25rem;
+}
+
+.options > .button:not(:last-child) {
+    margin-right: 0.25rem;
+}
+
+:global(html.dark) .options > .button.selected {
+    background-color: #ffffff;
+}
+
+:global(html.dark) .options > .button.selected > .icon {
+    color: #000000;
+}
+
+:global(html:not(.dark)) .options > .button.selected {
+    background-color: #000000;
+}
+
+:global(html:not(.dark)) .options > .button.selected > .icon {
+    color: #ffffff;
+}
+
+.options > .button > .icon {
+    height: 1.5rem;
+    width: 1.5rem;
+}

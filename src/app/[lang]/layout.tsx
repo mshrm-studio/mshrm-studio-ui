@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@/app/globals.css'
-import Footer from '@/components/Footer'
-import Header from '@/components/Header'
+import Footer from '@/components/Footer/Footer'
+import Header from '@/components/Header/Header'
 import { Locale } from '@/utils/enums/locale'
-import LocaleContextProvider from '@/components/LocaleContextProvider'
+import LocaleContextProvider from '@/components/Context/LocaleProvider'
+import AuthContextProvider from '@/components/Context/AuthProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,14 +32,18 @@ export default function RootLayout({
 }>) {
     return (
         <html lang={params.lang}>
-            <body className={inter.className}>
-                <LocaleContextProvider locale={params.lang}>
-                    <Header />
+            <body
+                className={`${inter.className} dark:bg-black dark:text-white`}
+            >
+                <AuthContextProvider>
+                    <LocaleContextProvider locale={params.lang}>
+                        <Header locale={params.lang} />
 
-                    <main>{children}</main>
+                        <main>{children}</main>
 
-                    <Footer />
-                </LocaleContextProvider>
+                        <Footer />
+                    </LocaleContextProvider>
+                </AuthContextProvider>
             </body>
         </html>
     )

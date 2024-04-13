@@ -1,154 +1,191 @@
 'use client'
 
+import AuthContext from '@/utils/context/Auth'
 import {
+    AccountInfo,
     AuthenticationResult,
-    Configuration,
     InteractionRequiredAuthError,
     PublicClientApplication,
     SilentRequest,
 } from '@azure/msal-browser'
-import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { useContext, useEffect, useState } from 'react'
 
 export default function Msal() {
     const [authResult, setAuthResult] = useState<AuthenticationResult>()
     const [authError, setAuthError] = useState<any>()
+    const { user, setUser } = useContext(AuthContext)
+    const router = useRouter()
 
     useEffect(() => {
-        const initMsal = async () => {
-            // Get the full URL
-            const fullUrl = window.location.href
-
-            // Get the protocol (e.g., "http:" or "https:")
-            const protocol = window.location.protocol
-
-            // Get the host (includes hostname and port if available)
-            const host = window.location.host
-
-            // Get the path of the URL
-            const pathname = window.location.pathname
-
-            // Get the query string (e.g., "?query=string")
-            const search = window.location.search
-
-            // Get the hash fragment (e.g., "#section")
-            const hash = window.location.hash
-
-            console.log('Full URL:', fullUrl)
-            console.log('Protocol:', protocol)
-            console.log('Host:', host)
-            console.log('Pathname:', pathname)
-            console.log('Search (Query Parameters):', search)
-            console.log('Hash Fragment:', hash)
-
-            const msalConfig: Configuration = {
+        async function initMsal(msalClientId: string) {
+            console.log('******************')
+            console.log('initMsal')
+            const msalConfig = {
                 auth: {
-                    clientId: process.env.NEXT_PUBLIC_OAUTH_CLIENT_ID as string,
+                    clientId: msalClientId,
                 },
             }
-
-            console.log('***********')
-            console.log('initMsal')
-            console.log('msalConfig:', msalConfig)
+            console.log('msalConfig', msalConfig)
 
             const msalInstance = new PublicClientApplication(msalConfig)
+
             await msalInstance.initialize()
 
             msalInstance
                 .handleRedirectPromise()
-                .then((authenticationResult) => {
-                    console.log('***********')
-                    console.log('msalInstance.handleRedirectPromise')
-                    console.log('authenticationResult:', authenticationResult)
+                .then((response: AuthenticationResult | null) => {
+                    console.log('response', response)
 
-                    if (!authenticationResult) {
-                        loginRedirect(msalInstance)
+                    if (response !== null) {
+                        setAuthResult(response)
+                        setUser(response.account)
+                        router.push('/')
                     } else {
-                        setAuthResult(authenticationResult)
+                        const accounts: AccountInfo[] =
+                            msalInstance.getAllAccounts()
+
+                        console.log('accounts', accounts)
+
+                        if (accounts.length > 0) {
+                            if (accounts.length === 1) {
+                                acquireTokenSilent(
+                                    msalInstance,
+                                    msalClientId,
+                                    accounts[0].homeAccountId
+                                )
+                            } else {
+                                acquireTokenSilent(
+                                    msalInstance,
+                                    msalClientId,
+                                    accounts[0].homeAccountId
+                                )
+                            }
+                        } else {
+                            ssoSilent(msalInstance, msalClientId)
+                        }
                     }
-                })
-                .catch((err) => {
-                    console.log('***********')
-                    console.log('msalInstance.handleRedirectPromise')
-                    console.log('err:', err)
-                    console.log('err.response:', err?.response || 'None')
-
-                    if (err instanceof InteractionRequiredAuthError) {
-                        loginRedirect(msalInstance)
-                    } else {
-                        setAuthError(err)
-                    }
-                })
-        }
-
-        if (authError === undefined) initMsal()
-    }, [])
-
-    const loginRedirect = (msalInstance: PublicClientApplication) => {
-        console.log('***********')
-        console.log('loginRedirect')
-        console.log('msalInstance', msalInstance)
-
-        const accounts = msalInstance.getAllAccounts()
-        const oauthClientId = process.env.NEXT_PUBLIC_OAUTH_CLIENT_ID as string
-        const scopes = [
-            'profile',
-            'email',
-            'offline_access',
-            `api://${oauthClientId}/mshrm.studio`,
-        ]
-
-        console.log('accounts:', accounts)
-        console.log('oauthClientId:', oauthClientId)
-        console.log('scopes:', scopes)
-
-        if (accounts.length > 0) {
-            const silentRequest: SilentRequest = {
-                scopes,
-                account: accounts[0],
-            }
-
-            console.log('silentRequest:', silentRequest)
-
-            msalInstance
-                .acquireTokenSilent(silentRequest)
-                .then((authenticationResult) => {
-                    console.log('***********')
-                    console.log('msalInstance.acquireTokenSilent')
-                    console.log('authenticationResult:', authenticationResult)
-                    setAuthResult(authenticationResult)
                 })
                 .catch((error) => {
-                    console.log('***********')
-                    console.log('msalInstance.acquireTokenSilent')
-                    console.log('error:', error)
-                    msalInstance.acquireTokenRedirect({ scopes })
+                    console.log('error', error)
+                    setAuthError(error)
                 })
-        } else {
-            msalInstance.loginRedirect({ scopes })
         }
+
+        const msalClientId = process.env.NEXT_PUBLIC_OAUTH_CLIENT_ID
+
+        if (typeof msalClientId === 'string') initMsal(msalClientId)
+    }, [])
+
+    function acquireTokenSilent(
+        msalInstance: PublicClientApplication,
+        msalClientId: string,
+        homeAccountId: string
+    ) {
+        console.log('******************')
+        console.log('acquireTokenSilent')
+
+        // TODO
+        // User interaction required?
+        // No - tokens returned
+        // Yes - acquireTokenRedirect
+
+        const accountFilter = {
+            homeAccountId: homeAccountId,
+        }
+
+        const request: SilentRequest = {
+            account: msalInstance.getAccount(accountFilter) || undefined,
+            scopes: [
+                'profile',
+                'email',
+                'offline_access',
+                `api://${msalClientId}/mshrm.studio`,
+            ],
+        }
+
+        console.log('request', request)
+
+        msalInstance
+            .acquireTokenSilent(request)
+            .then((authenticationResult: AuthenticationResult) => {
+                console.log('authenticationResult', authenticationResult)
+                // Do something with the tokenResponse
+                setAuthResult(authenticationResult)
+                setUser(authenticationResult.account)
+                router.push('/')
+            })
+            .catch((error) => {
+                console.log('error', error)
+                if (error instanceof InteractionRequiredAuthError) {
+                    // fallback to interaction when silent call fails
+                    msalInstance.acquireTokenRedirect(request)
+                } else {
+                    // handle other errors
+                    setAuthError(error)
+                }
+            })
+    }
+
+    function ssoSilent(
+        msalInstance: PublicClientApplication,
+        msalClientId: string
+    ) {
+        console.log('******************')
+        console.log('ssoSilent')
+        // TODO
+        // User interaction required?
+        // No - tokens returned
+        // Yes - acquireTokenRedirect
+
+        const request = {
+            scopes: [
+                'profile',
+                'email',
+                'offline_access',
+                `api://${msalClientId}/mshrm.studio`,
+            ],
+        }
+
+        msalInstance
+            .ssoSilent(request)
+            .then((authenticationResult: AuthenticationResult) => {
+                console.log('authenticationResult', authenticationResult)
+                setAuthResult(authenticationResult)
+            })
+            .catch((error) => {
+                console.log('error', error)
+                if (error instanceof InteractionRequiredAuthError) {
+                    // fallback to interaction when silent call fails
+                    msalInstance.loginRedirect(request)
+                } else {
+                    // handle other errors
+                    setAuthError(error)
+                }
+            })
     }
 
     return (
         <>
             <p>Access Token: {authResult ? authResult.accessToken : 'None'}</p>
 
-            <p>
+            <div>
                 Authentication Result:{' '}
                 {authResult ? (
                     <pre>{JSON.stringify(authResult, null, 4)}</pre>
                 ) : (
                     'None'
                 )}
-            </p>
+            </div>
 
-            <p>
+            <div>
                 Authentication Error:{' '}
                 {authError ? (
                     <pre>{JSON.stringify(authError, null, 4)}</pre>
                 ) : (
                     'None'
                 )}
-            </p>
+            </div>
         </>
     )
 }

@@ -1,4 +1,6 @@
 {
-    "signIn": "Sign In",
+    "signIn": "Login",
+    "signInWithMicrosoft": "Login with Microsoft",
+    "signOut": "Logout",
     "welcome": "Welcome"
 }

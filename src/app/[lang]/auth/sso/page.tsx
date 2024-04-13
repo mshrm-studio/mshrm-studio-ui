@@ -1,6 +1,6 @@
 import { Locale } from '@/utils/enums/locale'
 import { getDictionary } from '@/app/[lang]/dictionaries'
-import Msal from '@/components/MsalV2'
+import Msal from '@/components/Msal'
 
 export default async function Page({
     params: { lang },

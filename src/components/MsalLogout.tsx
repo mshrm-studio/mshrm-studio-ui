@@ -10,7 +10,11 @@ import {
 } from '@azure/msal-browser'
 import { useEffect, useState } from 'react'
 
-export default function MsalLogout() {
+export default function MsalLogout({
+    children,
+}: {
+    children: React.ReactNode
+}) {
     async function handleLogout() {
         console.log('******************')
         console.log('handleLogout')
@@ -49,5 +53,5 @@ export default function MsalLogout() {
             })
     }
 
-    return <button onClick={handleLogout}>logout</button>
+    return <button onClick={handleLogout}>{children}</button>
 }

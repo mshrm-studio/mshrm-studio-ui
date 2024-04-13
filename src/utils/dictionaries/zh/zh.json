@@ -1,4 +1,6 @@
 {
     "signIn": "登入",
+    "signInWithMicrosoft": "使用微軟登入",
+    "signOut": "登出",
     "welcome": "欢迎"
 }

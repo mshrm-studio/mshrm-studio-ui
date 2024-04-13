@@ -1,6 +1,5 @@
 import { Locale } from '@/utils/enums/locale'
 import { getDictionary } from '@/app/[lang]/dictionaries'
-import Link from '@/components/LocaleLink'
 
 export default async function Page({
     params: { lang },
@@ -10,10 +9,8 @@ export default async function Page({
     const dict = await getDictionary(lang)
 
     return (
-        <>
-            <h1>{dict.welcome}</h1>
-
-            <Link href="/auth/sign-in">{dict.signIn}</Link>
-        </>
+        <div>
+            <h1 className="text-4xl">{dict.welcome}</h1>
+        </div>
     )
 }

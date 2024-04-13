@@ -1,4 +1,6 @@
 {
     "signIn": "iniciar sesión",
+    "signInWithMicrosoft": "Iniciar sesión con Microsoft",
+    "signOut": "Cerrar sesión",
     "welcome": "bienvenido"
 }
