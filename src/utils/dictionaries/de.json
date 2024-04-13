@@ -1,4 +1,5 @@
 {
+    "contactUs": "kontaktiere uns",
     "homepage": {
         "aboutUsMessage": {
             "what": "Maßgeschneiderte Apps, Websites und Software",
@@ -9,6 +10,12 @@
             "evening": "Guten Abend, lassen Sie uns eine effektive digitale Lösung schaffen",
             "morning": "Guten Morgen, lassen Sie uns eine effektive digitale Lösung schaffen"
         }
+    },
+    "marketEntity": {
+        "lastUpdated": "Letzte Aktualisierung",
+        "marketCap": "Marktkapitalisierung",
+        "source": "Quelle",
+        "volume": "Volumen"
     },
     "signIn": "anmelden",
     "signInWithMicrosoft": "Melden Sie sich bei Microsoft an",

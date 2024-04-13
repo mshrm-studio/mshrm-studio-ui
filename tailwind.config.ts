@@ -8,7 +8,11 @@ const config: Config = {
     ],
     darkMode: 'selector',
     theme: {
-        extend: {},
+        extend: {
+            maxWidth: {
+                site: '1300px',
+            },
+        },
     },
     plugins: [],
 }

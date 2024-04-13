@@ -8,27 +8,27 @@ export interface Dictionary {
 
 const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
     ar: () =>
-        import('../../utils/dictionaries/ar/ar.json').then(
+        import('../../utils/dictionaries/ar.json').then(
             (module) => module.default
         ),
     de: () =>
-        import('../../utils/dictionaries/de/de.json').then(
+        import('../../utils/dictionaries/de.json').then(
             (module) => module.default
         ),
     en: () =>
-        import('../../utils/dictionaries/en/en.json').then(
+        import('../../utils/dictionaries/en.json').then(
             (module) => module.default
         ),
     es: () =>
-        import('../../utils/dictionaries/es/es.json').then(
+        import('../../utils/dictionaries/es.json').then(
             (module) => module.default
         ),
     km: () =>
-        import('../../utils/dictionaries/km/km.json').then(
+        import('../../utils/dictionaries/km.json').then(
             (module) => module.default
         ),
     zh: () =>
-        import('../../utils/dictionaries/zh/zh.json').then(
+        import('../../utils/dictionaries/zh.json').then(
             (module) => module.default
         ),
 }

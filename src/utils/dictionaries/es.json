@@ -1,4 +1,5 @@
 {
+    "contactUs": "Contacta con nosotros",
     "homepage": {
         "aboutUsMessage": {
             "what": "Aplicaciones, sitios y software personalizados",
@@ -9,6 +10,12 @@
             "evening": "Buenas noches, creemos una solución digital eficaz.",
             "morning": "Buenos días, creemos una solución digital efectiva."
         }
+    },
+    "marketEntity": {
+        "lastUpdated": "Última actualización",
+        "marketCap": "Tapa del mercado",
+        "source": "Fuente",
+        "volume": "Volumen"
     },
     "signIn": "iniciar sesión",
     "signInWithMicrosoft": "Iniciar sesión con Microsoft",

@@ -1,0 +1,22 @@
+.wrapper {
+    border-radius: 35px;
+    box-shadow: 0px 4px 13.8px 12px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(3.9000000953674316px);
+    padding: 2rem;
+}
+
+:global(html.dark) .wrapper {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+:global(html:not(.dark)) .wrapper {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+:global(html.dark) .lastUpdatedAndSource {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+:global(html:not(.dark)) .lastUpdatedAndSource {
+    color: rgba(0, 0, 0, 0.42);
+}

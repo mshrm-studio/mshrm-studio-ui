@@ -4,6 +4,7 @@ import { Dictionary } from '@/app/[lang]/dictionaries'
 import WelcomeMessage from '@/components/HomePage/WelcomeMessage'
 import DimensionsContext from '@/utils/context/Dimensions'
 import { useContext } from 'react'
+import Button from '@/components/Button'
 
 export default function HomePageHero({
     dictionary,
@@ -14,12 +15,16 @@ export default function HomePageHero({
 
     return (
         <div
-            className="flex items-center"
+            className="flex items-center xl:max-w-site xl:mx-auto"
             style={{
                 height: dimensions.viewportHeight - dimensions.headerHeight,
             }}
         >
-            <WelcomeMessage dictionary={dictionary} />
+            <div>
+                <WelcomeMessage dictionary={dictionary} />
+
+                <Button>{dictionary.contactUs}</Button>
+            </div>
         </div>
     )
 }

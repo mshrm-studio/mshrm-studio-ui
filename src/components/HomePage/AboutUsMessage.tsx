@@ -30,8 +30,10 @@ export default function HomePageAboutUsMessage({
     }, [messages.length])
 
     return (
-        <h2 className="text-[33px] leading-[1] font-extrabold xl:text-[55px]">
-            {messages[currentIndex]}
-        </h2>
+        <div className="xl:max-w-site xl:mx-auto">
+            <h2 className="text-[33px] leading-[1] font-extrabold xl:text-[55px]">
+                {messages[currentIndex]}
+            </h2>
+        </div>
     )
 }

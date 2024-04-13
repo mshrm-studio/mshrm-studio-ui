@@ -1,4 +1,5 @@
 {
+    "contactUs": "联系我们",
     "homepage": {
         "aboutUsMessage": {
             "what": "定制应用程序、网站和软件",
@@ -9,6 +10,12 @@
             "evening": "晚上好，让我们创建一个有效的数字解决方案",
             "morning": "早上好，让我们创建一个有效的数字解决方案"
         }
+    },
+    "marketEntity": {
+        "lastUpdated": "最近更新时间",
+        "marketCap": "市值",
+        "source": "来源",
+        "volume": "体积"
     },
     "signIn": "登入",
     "signInWithMicrosoft": "使用微軟登入",
