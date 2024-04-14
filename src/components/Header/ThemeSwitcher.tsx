@@ -29,7 +29,9 @@ export default function HeaderThemeSwitcher() {
     useEffect(() => {
         document.documentElement.classList.toggle(
             'dark',
-            currentTheme === 'dark'
+            currentTheme === 'dark' ||
+                (currentTheme === 'system' &&
+                    window.matchMedia('(prefers-color-scheme: dark)').matches)
         )
     }, [currentTheme])
 
