@@ -13,15 +13,12 @@ export default function HeaderThemeSwitcher() {
 
     useEffect(() => {
         setCurrentTheme(() => {
-            if (
-                localStorage.theme === 'dark' ||
-                (!('theme' in localStorage) &&
-                    window.matchMedia('(prefers-color-scheme: dark)').matches)
-            ) {
-                return 'dark'
-            } else if (localStorage.theme === 'light') {
-                return 'light'
+            const theme = localStorage.getItem('theme')
+
+            if (theme === 'dark' || theme === 'light') {
+                return theme
             }
+
             return 'system'
         })
     }, [])
@@ -40,12 +37,13 @@ export default function HeaderThemeSwitcher() {
 
         if (theme === 'system') {
             localStorage.removeItem('theme')
+
             document.documentElement.classList.toggle(
                 'dark',
                 window.matchMedia('(prefers-color-scheme: dark)').matches
             )
         } else {
-            localStorage.theme = theme
+            localStorage.setItem('theme', theme)
             document.documentElement.classList.toggle('dark', theme === 'dark')
         }
     }
