@@ -6,6 +6,7 @@ import AboutUsMessage from '@/components/HomePage/AboutUsMessage'
 import MarketEntityList from '@/components/MarketEntity/List'
 import DictionaryContextProvider from '@/components/Context/DictionaryProvider'
 import styles from '@/utils/styles/homepage.module.css'
+import WalletAddress from '@/components/WalletAddress'
 import WalletConnect from '@/components/WalletConnect'
 
 export default async function Page({
@@ -86,10 +87,16 @@ export default async function Page({
                     <MarketEntityList marketEntities={marketEntityList} />
                 </div>
 
-                <div className="mb-12 xl:max-w-site xl:mx-auto">
-                    <WalletConnect className="underline">
-                        {dictionary.homepage.loginWithCryptoWallet}
-                    </WalletConnect>
+                <div className="mb-12 space-y-6 xl:max-w-site xl:mx-auto">
+                    <div>
+                        <WalletConnect className="underline">
+                            {dictionary.homepage.loginWithCryptoWallet}
+                        </WalletConnect>
+                    </div>
+
+                    <div>
+                        <WalletAddress />
+                    </div>
                 </div>
             </section>
 
