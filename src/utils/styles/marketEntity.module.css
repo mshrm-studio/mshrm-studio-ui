@@ -13,10 +13,55 @@
     background: rgba(255, 255, 255, 0.9);
 }
 
+.nameAndLogo {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.nameAndLogo > *:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+.percentageChange {
+    margin-bottom: 1rem;
+}
+
+.marketCapAndVolume {
+    margin-bottom: 1rem;
+}
+
+.marketCap,
+.volume,
+.lastUpdated,
+.source {
+    display: flex;
+}
+
+.marketCap > *:not(:last-child),
+.volume > *:not(:last-child),
+.lastUpdated > *:not(:last-child),
+.source > *:not(:last-child) {
+    margin-right: 0.25rem;
+}
+
+.marketCap,
+.lastUpdated {
+    margin-bottom: 0.5rem;
+}
+
+.lastUpdatedAndSource {
+    font-size: 0.75rem;
+}
+
 :global(html.dark) .lastUpdatedAndSource {
     color: rgba(255, 255, 255, 0.6);
 }
 
 :global(html:not(.dark)) .lastUpdatedAndSource {
     color: rgba(0, 0, 0, 0.42);
+}
+
+.value {
+    font-weight: bold;
 }

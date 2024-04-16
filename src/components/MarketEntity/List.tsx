@@ -7,7 +7,8 @@ export default function MarketEntityList({
     marketEntities: MarketEntityDto[]
 }) {
     return (
-        <ul className="flex space-x-3">
+        <ul className="p-6 flex space-x-6 overflow-x-auto w-full">
+            {/* Y-padding for shadow */}
             {marketEntities.map((marketEntity, i) => (
                 <li key={i}>
                     <MarketEntity marketEntity={marketEntity} />

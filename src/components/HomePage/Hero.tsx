@@ -14,7 +14,7 @@ export default function HomePageHero({
     const { dimensions } = useContext(DimensionsContext)
 
     return (
-        <div
+        <section
             className="flex items-center xl:max-w-site xl:mx-auto"
             style={{
                 height: dimensions.viewportHeight - dimensions.headerHeight,
@@ -25,6 +25,6 @@ export default function HomePageHero({
 
                 <Button>{dictionary.contactUs}</Button>
             </div>
-        </div>
+        </section>
     )
 }

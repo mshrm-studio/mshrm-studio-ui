@@ -1,13 +1,15 @@
 'use client'
 
-import { Dictionary } from '@/app/[lang]/dictionaries'
-import { useEffect, useMemo, useState } from 'react'
+import DictionaryContext from '@/utils/context/Dictionary'
+import { useContext, useEffect, useMemo, useState } from 'react'
 
-export default function HomePageAboutUsMessage({
-    dictionary,
-}: {
-    dictionary: Dictionary
-}) {
+export default function HomePageAboutUsMessage() {
+    const dictionary = useContext(DictionaryContext)
+
+    if (!dictionary) {
+        throw new Error('No dictionary found')
+    }
+
     const messages = useMemo<string[]>(() => {
         return [
             dictionary.homepage.aboutUsMessage.what,
@@ -30,10 +32,8 @@ export default function HomePageAboutUsMessage({
     }, [messages.length])
 
     return (
-        <div className="xl:max-w-site xl:mx-auto">
-            <h2 className="text-[33px] leading-[1] font-extrabold xl:text-[55px]">
-                {messages[currentIndex]}
-            </h2>
-        </div>
+        <h2 className="text-[33px] leading-[1] font-extrabold xl:text-[55px]">
+            {messages[currentIndex]}
+        </h2>
     )
 }

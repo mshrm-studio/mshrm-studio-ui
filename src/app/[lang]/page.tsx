@@ -1,9 +1,12 @@
 import { Locale } from '@/utils/enums/locale'
 import { getDictionary } from '@/app/[lang]/dictionaries'
 import Hero from '@/components/HomePage/Hero'
+import Stack from '@/components/HomePage/Stack'
 import AboutUsMessage from '@/components/HomePage/AboutUsMessage'
 import MarketEntityList from '@/components/MarketEntity/List'
 import DictionaryContextProvider from '@/components/Context/DictionaryProvider'
+import styles from '@/utils/styles/homepage.module.css'
+import WalletConnect from '@/components/WalletConnect'
 
 export default async function Page({
     params: { lang },
@@ -24,17 +27,73 @@ export default async function Page({
             lastUpdated: '2024-04-13T15:45:30Z',
             source: 'Coin Gecko',
         },
+        {
+            currency: 'USD',
+            name: 'BTC',
+            logo: 'IMAGE_URL',
+            price: 71765,
+            priceChangePercentage: 12.3,
+            marketCap: 12000000000,
+            volume: 400000000,
+            lastUpdated: '2024-04-13T15:45:30Z',
+            source: 'Coin Gecko',
+        },
+        {
+            currency: 'USD',
+            name: 'BTC',
+            logo: 'IMAGE_URL',
+            price: 71765,
+            priceChangePercentage: 12.3,
+            marketCap: 12000000000,
+            volume: 400000000,
+            lastUpdated: '2024-04-13T15:45:30Z',
+            source: 'Coin Gecko',
+        },
+        {
+            currency: 'USD',
+            name: 'BTC',
+            logo: 'IMAGE_URL',
+            price: 71765,
+            priceChangePercentage: 12.3,
+            marketCap: 12000000000,
+            volume: 400000000,
+            lastUpdated: '2024-04-13T15:45:30Z',
+            source: 'Coin Gecko',
+        },
+        {
+            currency: 'USD',
+            name: 'BTC',
+            logo: 'IMAGE_URL',
+            price: 71765,
+            priceChangePercentage: 12.3,
+            marketCap: 12000000000,
+            volume: 400000000,
+            lastUpdated: '2024-04-13T15:45:30Z',
+            source: 'Coin Gecko',
+        },
     ]
 
     return (
         <DictionaryContextProvider dictionary={dictionary}>
             <Hero dictionary={dictionary} />
 
-            <div className="bg-[#F8F8F8] py-12 dark:bg-[#131313]">
-                <AboutUsMessage dictionary={dictionary} />
+            <section className={styles.aboutAndMarketEntitySection}>
+                <div className="mb-12 xl:max-w-site xl:mx-auto">
+                    <AboutUsMessage />
+                </div>
 
-                <MarketEntityList marketEntities={marketEntityList} />
-            </div>
+                <div className="mb-12">
+                    <MarketEntityList marketEntities={marketEntityList} />
+                </div>
+
+                <div className="mb-12 xl:max-w-site xl:mx-auto">
+                    <WalletConnect className="underline">
+                        {dictionary.homepage.loginWithCryptoWallet}
+                    </WalletConnect>
+                </div>
+            </section>
+
+            <Stack />
         </DictionaryContextProvider>
     )
 }

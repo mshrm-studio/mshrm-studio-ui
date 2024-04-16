@@ -7,8 +7,13 @@ import { Locale } from '@/utils/enums/locale'
 import AuthContextProvider from '@/components/Context/AuthProvider'
 import DimensionsContextProvider from '@/components/Context/DimensionsProvider'
 import LocaleContextProvider from '@/components/Context/LocaleProvider'
+import { Web3Modal } from '@/utils/context/Web3Modal'
 
-const rethinkSans = Rethink_Sans({ subsets: ['latin'] })
+const rethinkSans = Rethink_Sans({
+    subsets: ['latin'],
+    weight: ['400', '700', '800'],
+    style: 'normal',
+})
 
 export const metadata: Metadata = {
     title: 'mshrm.studio',
@@ -38,17 +43,19 @@ export default function RootLayout({
             <body
                 className={`${rethinkSans.className} dark:bg-black dark:text-white`}
             >
-                <AuthContextProvider>
-                    <LocaleContextProvider locale={params.lang}>
-                        <DimensionsContextProvider>
-                            <Header locale={params.lang} />
+                <Web3Modal>
+                    <AuthContextProvider>
+                        <LocaleContextProvider locale={params.lang}>
+                            <DimensionsContextProvider>
+                                <Header locale={params.lang} />
 
-                            <main>{children}</main>
+                                <main>{children}</main>
 
-                            <Footer />
-                        </DimensionsContextProvider>
-                    </LocaleContextProvider>
-                </AuthContextProvider>
+                                <Footer />
+                            </DimensionsContextProvider>
+                        </LocaleContextProvider>
+                    </AuthContextProvider>
+                </Web3Modal>
             </body>
         </html>
     )

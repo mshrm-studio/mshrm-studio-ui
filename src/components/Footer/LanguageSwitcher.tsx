@@ -26,7 +26,7 @@ export default function FooterLanguageSwitcher() {
     }
 
     return (
-        <ul className="grid gap-6 grid-cols-3">
+        <ul className="grid gap-6 grid-cols-3 text-center xl:flex xl:space-x-3">
             <li>
                 <button onClick={() => changeLanguage(Locale.English)}>
                     English

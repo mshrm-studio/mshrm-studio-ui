@@ -21,14 +21,14 @@ export default function MarketEntity({
 
     return (
         <div className={styles.wrapper}>
-            <div className="text-[58px] font-extrabold">
+            <div className="text-[58px] font-extrabold mb-2">
                 <Price
                     price={marketEntity.price}
                     currency={marketEntity.currency}
                 />
             </div>
 
-            <div className="flex items-center space-x-2">
+            <div className={styles.nameAndLogo}>
                 <div className="h-[25px] w-[25px] rounded-full bg-black dark:bg-white">
                     {/* LOGO */}
                 </div>
@@ -38,15 +38,17 @@ export default function MarketEntity({
                 </div>
             </div>
 
-            <PercentageChange
-                percentageChange={marketEntity.priceChangePercentage}
-            />
+            <div className={styles.percentageChange}>
+                <PercentageChange
+                    percentageChange={marketEntity.priceChangePercentage}
+                />
+            </div>
 
-            <div>
-                <div className="flex space-x-1">
+            <div className={styles.marketCapAndVolume}>
+                <div className={styles.marketCap}>
                     <label>{dictionary.marketEntity.marketCap}:</label>
 
-                    <div className="font-bold">
+                    <div className={styles.value}>
                         <Price
                             price={marketEntity.marketCap}
                             currency={marketEntity.currency}
@@ -54,10 +56,10 @@ export default function MarketEntity({
                     </div>
                 </div>
 
-                <div className="flex space-x-1">
+                <div className={styles.volume}>
                     <label>{dictionary.marketEntity.volume}:</label>
 
-                    <div className="font-bold">
+                    <div className={styles.value}>
                         <Price
                             price={marketEntity.volume}
                             currency={marketEntity.currency}
@@ -67,18 +69,18 @@ export default function MarketEntity({
             </div>
 
             <div className={styles.lastUpdatedAndSource}>
-                <div className="flex space-x-1">
+                <div className={styles.lastUpdated}>
                     <label>{dictionary.marketEntity.lastUpdated}:</label>
 
-                    <div className="font-bold">
+                    <div className={styles.value}>
                         <DateTime dateTime={marketEntity.lastUpdated} />
                     </div>
                 </div>
 
-                <div className="flex space-x-1">
+                <div className={styles.source}>
                     <label>{dictionary.marketEntity.source}:</label>
 
-                    <div className="font-bold">{marketEntity.source}</div>
+                    <div className={styles.value}>{marketEntity.source}</div>
                 </div>
             </div>
         </div>

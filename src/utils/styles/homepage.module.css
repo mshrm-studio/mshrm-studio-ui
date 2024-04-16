@@ -1,0 +1,12 @@
+.aboutAndMarketEntitySection {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+:global(html.dark) .aboutAndMarketEntitySection {
+    background: linear-gradient(to bottom, #131313 60%, #000000 40%);
+}
+
+:global(html:not(.dark)) .aboutAndMarketEntitySection {
+    background: linear-gradient(to bottom, #f8f8f8 60%, #ffffff 40%);
+}
