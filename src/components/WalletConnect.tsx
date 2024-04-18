@@ -18,9 +18,7 @@ export default function WalletConnect({
         </button>
     )
 
-    {
-        /* <button onClick={() => open({ view: 'Networks' })}>
+    /* <button onClick={() => open({ view: 'Networks' })}>
                 Open Network Modal
             </button> */
-    }
 }
