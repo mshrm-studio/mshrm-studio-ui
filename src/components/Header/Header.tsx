@@ -5,12 +5,15 @@ import { Locale } from '@/utils/enums/locale'
 import Link from '@/components/LocaleLink'
 import LoginLogoutOption from '@/components/Header/LoginLogoutOption'
 import MobileMenu from '@/components/Header/MobileMenu'
+import ProgressBar from '@/components/Header/ProgressBar'
 
 export default async function Header({ locale }: { locale: Locale }) {
     const dictionary = await getDictionary(locale)
 
     return (
         <header className={styles.header}>
+            <ProgressBar />
+
             <div className={styles.column}>
                 <Link href="/">M</Link>
             </div>
