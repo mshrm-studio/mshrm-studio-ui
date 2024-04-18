@@ -6,8 +6,15 @@ import AboutUsMessage from '@/components/HomePage/AboutUsMessage'
 import MarketEntityList from '@/components/MarketEntity/List'
 import DictionaryContextProvider from '@/components/Context/DictionaryProvider'
 import styles from '@/utils/styles/homepage.module.css'
-import WalletAddress from '@/components/WalletAddress'
-import WalletConnect from '@/components/WalletConnect'
+import dynamic from 'next/dynamic'
+
+const WalletAddress = dynamic(() => import('@/components/WalletAddress'), {
+    ssr: false,
+})
+
+const WalletConnect = dynamic(() => import('@/components/WalletConnect'), {
+    ssr: false,
+})
 
 export default async function Page({
     params: { lang },
