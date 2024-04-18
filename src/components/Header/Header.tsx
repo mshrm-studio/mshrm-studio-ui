@@ -1,9 +1,10 @@
 import ThemeSwitcher from '@/components/Header/ThemeSwitcher'
-import styles from '@/utils/styles/header.module.css'
+import styles from '@/utils/styles/header/header.module.css'
 import { getDictionary } from '@/app/[lang]/dictionaries'
 import { Locale } from '@/utils/enums/locale'
 import Link from '@/components/LocaleLink'
 import LoginLogoutOption from '@/components/Header/LoginLogoutOption'
+import MobileMenu from '@/components/Header/MobileMenu'
 
 export default async function Header({ locale }: { locale: Locale }) {
     const dictionary = await getDictionary(locale)
@@ -20,6 +21,10 @@ export default async function Header({ locale }: { locale: Locale }) {
 
             <div className={`${styles.column} text-right`}>
                 <LoginLogoutOption dictionary={dictionary} />
+            </div>
+
+            <div className="flex justify-end">
+                <MobileMenu />
             </div>
         </header>
     )
