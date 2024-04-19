@@ -1,10 +1,12 @@
 'use client'
 
-import dynamic from 'next/dynamic'
+import Web3Modal from '@/utils/context/Web3Modal'
 
-const Web3Modal = dynamic(() => import('@/utils/context/Web3Modal'), {
-    ssr: false,
-})
+// import dynamic from 'next/dynamic'
+
+// const Web3Modal = dynamic(() => import('@/utils/context/Web3Modal'), {
+//     ssr: false,
+// })
 
 export default function Web3ModalProvider({
     children,
