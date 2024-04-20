@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import styles from '@/utils/styles/header/main-navigation/toggle.module.css'
+import React from 'react'
 
 const Path = (props: any) => (
     <motion.path
@@ -11,8 +12,19 @@ const Path = (props: any) => (
     />
 )
 
-export const HeaderMainNavigationToggle = ({ toggle }: { toggle: any }) => (
-    <button className={styles.button} onClick={toggle}>
+export const HeaderMainNavigationToggle = ({
+    open,
+    toggle,
+}: {
+    open: boolean
+    toggle: (e: React.MouseEvent<HTMLButtonElement>) => void
+}) => (
+    <button
+        aria-controls="navigation"
+        aria-expanded={open}
+        className={styles.button}
+        onClick={toggle}
+    >
         <svg width="23" height="23" viewBox="0 0 23 23">
             <Path
                 variants={{

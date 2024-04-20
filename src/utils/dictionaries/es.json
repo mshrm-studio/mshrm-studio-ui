@@ -19,6 +19,10 @@
         "source": "Fuente",
         "volume": "Volumen"
     },
+    "notFoundPage": {
+        "heading": "Extraviado",
+        "returnHome": "Volver a casa"
+    },
     "signIn": "iniciar sesión",
     "signInWithMicrosoft": "Iniciar sesión con Microsoft",
     "signOut": "Cerrar sesión",

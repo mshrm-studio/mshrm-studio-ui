@@ -6,6 +6,10 @@
     width: 300px;
 }
 
+.nav[aria-expanded='false'] {
+    z-index: -1;
+}
+
 .background {
     position: absolute;
     top: 0;

@@ -19,6 +19,10 @@
         "source": "Quelle",
         "volume": "Volumen"
     },
+    "notFoundPage": {
+        "heading": "Nicht gefunden",
+        "returnHome": "Nach Hause zurückkehren"
+    },
     "signIn": "anmelden",
     "signInWithMicrosoft": "Melden Sie sich bei Microsoft an",
     "signOut": "Ausloggen",

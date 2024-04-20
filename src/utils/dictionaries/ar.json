@@ -19,6 +19,10 @@
         "source": "مصدر",
         "volume": "مقدار"
     },
+    "notFoundPage": {
+        "heading": "غير معثور عليه",
+        "returnHome": "العودة إلى المنزل"
+    },
     "signIn": "تسجيل الدخول",
     "signInWithMicrosoft": "تسجيل الدخول مع مايكروسوفت",
     "signOut": "تسجيل خروج",

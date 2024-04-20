@@ -14,21 +14,21 @@ export default async function Header({ locale }: { locale: Locale }) {
         <header className={styles.header}>
             <ProgressBar />
 
-            <div className={styles.column}>
+            <div>
                 <Link href="/">M</Link>
             </div>
 
-            <div className={`${styles.column} flex justify-center`}>
+            <div className={`flex justify-center`}>
                 <ThemeSwitcher />
             </div>
 
-            <div className={`${styles.column} text-right`}>
+            <div className={`text-right`}>
                 <LoginLogoutOption dictionary={dictionary} />
             </div>
 
-            <div className="flex justify-end">
+            {/* <div className="flex justify-end">
                 <MobileMenu />
-            </div>
+            </div> */}
         </header>
     )
 }

@@ -19,6 +19,10 @@
         "source": "来源",
         "volume": "体积"
     },
+    "notFoundPage": {
+        "heading": "未找到",
+        "returnHome": "回家"
+    },
     "signIn": "登入",
     "signInWithMicrosoft": "使用微軟登入",
     "signOut": "登出",

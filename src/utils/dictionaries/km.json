@@ -19,6 +19,10 @@
         "source": "ប្រភព",
         "volume": "កម្រិតសំឡេង"
     },
+    "notFoundPage": {
+        "heading": "រក​មិន​ឃើញ",
+        "returnHome": "ត្រលប់​មក​ផ្ទះ"
+    },
     "signIn": "ចូល",
     "signInWithMicrosoft": "ចូលជាមួយ Microsoft",
     "signOut": "ចាកចេញ",

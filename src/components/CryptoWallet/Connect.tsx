@@ -3,7 +3,7 @@
 import { useWeb3Modal } from '@web3modal/ethers/react'
 import React from 'react'
 
-export default function WalletConnect({
+export default function CryptoWalletConnect({
     children,
     className,
 }: {
@@ -17,8 +17,4 @@ export default function WalletConnect({
             {children}
         </button>
     )
-
-    /* <button onClick={() => open({ view: 'Networks' })}>
-                Open Network Modal
-            </button> */
 }

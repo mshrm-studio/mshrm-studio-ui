@@ -30,10 +30,13 @@ export default function Msal() {
 
             await msalInstance.initialize()
 
+            console.log('******************')
+            console.log('handleRedirectPromise')
+
             msalInstance
                 .handleRedirectPromise()
                 .then((response: AuthenticationResult | null) => {
-                    console.log('response', response)
+                    console.log('handleRedirectPromise response', response)
 
                     if (response !== null) {
                         setAuthResult(response)
@@ -42,7 +45,7 @@ export default function Msal() {
                         const accounts: AccountInfo[] =
                             msalInstance.getAllAccounts()
 
-                        console.log('accounts', accounts)
+                        console.log('handleRedirectPromise accounts', accounts)
 
                         if (accounts.length > 0) {
                             if (accounts.length === 1) {
@@ -64,7 +67,7 @@ export default function Msal() {
                     }
                 })
                 .catch((error) => {
-                    console.log('error', error)
+                    console.log('handleRedirectPromise error', error)
                     setAuthError(error)
                 })
         }
@@ -106,14 +109,20 @@ export default function Msal() {
         msalInstance
             .acquireTokenSilent(request)
             .then((authenticationResult: AuthenticationResult) => {
-                console.log('authenticationResult', authenticationResult)
+                console.log(
+                    'acquireTokenSilent authenticationResult',
+                    authenticationResult
+                )
                 // Do something with the tokenResponse
                 setAuthResult(authenticationResult)
                 setUser(authenticationResult.account)
             })
             .catch((error) => {
-                console.log('error', error)
+                console.log('acquireTokenSilent error', error)
                 if (error instanceof InteractionRequiredAuthError) {
+                    console.log(
+                        'acquireTokenSilent error instanceof InteractionRequiredAuthError'
+                    )
                     // fallback to interaction when silent call fails
                     msalInstance.acquireTokenRedirect(request)
                 } else {
@@ -146,13 +155,19 @@ export default function Msal() {
         msalInstance
             .ssoSilent(request)
             .then((authenticationResult: AuthenticationResult) => {
-                console.log('authenticationResult', authenticationResult)
+                console.log(
+                    'ssoSilent authenticationResult',
+                    authenticationResult
+                )
                 setAuthResult(authenticationResult)
                 setUser(authenticationResult.account)
             })
             .catch((error) => {
-                console.log('error', error)
+                console.log('ssoSilent error', error)
                 if (error instanceof InteractionRequiredAuthError) {
+                    console.log(
+                        'ssoSilent error instanceof InteractionRequiredAuthError'
+                    )
                     // fallback to interaction when silent call fails
                     msalInstance.loginRedirect(request)
                 } else {

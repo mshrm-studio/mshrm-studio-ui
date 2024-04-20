@@ -8,13 +8,19 @@ import DictionaryContextProvider from '@/components/Context/DictionaryProvider'
 import styles from '@/utils/styles/homepage.module.css'
 import dynamic from 'next/dynamic'
 
-const WalletAddress = dynamic(() => import('@/components/WalletAddress'), {
-    ssr: false,
-})
+const CryptoWalletAddress = dynamic(
+    () => import('@/components/CryptoWallet/Address'),
+    {
+        ssr: false,
+    }
+)
 
-const WalletConnect = dynamic(() => import('@/components/WalletConnect'), {
-    ssr: false,
-})
+const CryptoWalletConnect = dynamic(
+    () => import('@/components/CryptoWallet/Connect'),
+    {
+        ssr: false,
+    }
+)
 
 export default async function Page({
     params: { lang },
@@ -96,13 +102,13 @@ export default async function Page({
 
                 <div className="mb-12 space-y-6 xl:max-w-site xl:mx-auto">
                     <div>
-                        <WalletConnect className="underline">
+                        <CryptoWalletConnect className="underline">
                             {dictionary.homepage.loginWithCryptoWallet}
-                        </WalletConnect>
+                        </CryptoWalletConnect>
                     </div>
 
                     <div>
-                        <WalletAddress />
+                        <CryptoWalletAddress />
                     </div>
                 </div>
             </section>

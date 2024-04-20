@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { HeaderMainNavigationToggle } from '@/components/Header/MainNavigation/Toggle'
 import { HeaderMainNavigation } from '@/components/Header/MainNavigation/MainNavigation'
-import { useContext, useRef, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import DimensionsContext from '@/utils/context/Dimensions'
 import styles from '@/utils/styles/header/mobileMenu.module.css'
 
@@ -35,6 +35,7 @@ export default function HeaderMobileMenu() {
     return (
         <motion.nav
             className={styles.nav}
+            aria-expanded={mobileMenuOpen}
             initial={false}
             animate={mobileMenuOpen ? 'open' : 'closed'}
             custom={dimensions.viewportHeight}
@@ -45,7 +46,10 @@ export default function HeaderMobileMenu() {
             <HeaderMainNavigation />
 
             <HeaderMainNavigationToggle
-                toggle={() => setMobileMenuOpen((prev) => !prev)}
+                open={mobileMenuOpen}
+                toggle={(_e: React.MouseEvent<HTMLButtonElement>) =>
+                    setMobileMenuOpen((prev) => !prev)
+                }
             />
         </motion.nav>
     )
