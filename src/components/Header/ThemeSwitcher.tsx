@@ -49,44 +49,42 @@ export default function HeaderThemeSwitcher() {
     }
 
     return (
-        <div className="inline-block">
-            <div className={styles.options}>
-                <button
-                    className={
-                        currentTheme === 'dark'
-                            ? `${styles.button} ${styles.selected}`
-                            : styles.button
-                    }
-                    title="Dark Theme"
-                    onClick={() => updateTheme('dark')}
-                >
-                    <MoonIcon className={styles.icon} />
-                </button>
+        <div className={styles.options}>
+            <button
+                className={
+                    currentTheme === 'dark'
+                        ? `${styles.button} ${styles.selected}`
+                        : styles.button
+                }
+                title="Dark Theme"
+                onClick={() => updateTheme('dark')}
+            >
+                <MoonIcon className={styles.icon} />
+            </button>
 
-                <button
-                    className={
-                        currentTheme === 'system'
-                            ? `${styles.button} ${styles.selected}`
-                            : styles.button
-                    }
-                    title="System Theme"
-                    onClick={() => updateTheme('system')}
-                >
-                    <ComputerDesktopIcon className={styles.icon} />
-                </button>
+            <button
+                className={
+                    currentTheme === 'system'
+                        ? `${styles.button} ${styles.selected}`
+                        : styles.button
+                }
+                title="System Theme"
+                onClick={() => updateTheme('system')}
+            >
+                <ComputerDesktopIcon className={styles.icon} />
+            </button>
 
-                <button
-                    className={
-                        currentTheme === 'light'
-                            ? `${styles.button} ${styles.selected}`
-                            : styles.button
-                    }
-                    title="Light Theme"
-                    onClick={() => updateTheme('light')}
-                >
-                    <SunIcon className={styles.icon} />
-                </button>
-            </div>
+            <button
+                className={
+                    currentTheme === 'light'
+                        ? `${styles.button} ${styles.selected}`
+                        : styles.button
+                }
+                title="Light Theme"
+                onClick={() => updateTheme('light')}
+            >
+                <SunIcon className={styles.icon} />
+            </button>
         </div>
     )
 }

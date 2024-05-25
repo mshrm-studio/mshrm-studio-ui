@@ -1,22 +1,41 @@
-import { motion } from 'framer-motion'
-import { HeaderMainNavigationMenuItem } from '@/components/Header/MainNavigation/MenuItem'
-import styles from '@/utils/styles/header/main-navigation/mainNavigation.module.css'
+'use client'
 
-const variants = {
-    open: {
-        transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-    },
-    closed: {
-        transition: { staggerChildren: 0.05, staggerDirection: -1 },
-    },
+import DictionaryContext from '@/utils/context/Dictionary'
+import styles from '@/utils/styles/header/main-navigation/mainNavigation.module.css'
+import { useContext, useMemo } from 'react'
+
+type Props = {}
+
+const HeaderMainNavigation: React.FC<Props> = ({}) => {
+    const dictionary = useContext(DictionaryContext)
+
+    if (!dictionary) {
+        throw new Error('No dictionary found')
+    }
+
+    const menu = useMemo(() => {
+        const menuItemTranslation = dictionary.header.menuItem
+
+        return [
+            { id: 'chat', label: menuItemTranslation.chat },
+            { id: 'microsoftLogin', label: menuItemTranslation.microsoftLogin },
+            { id: 'connectWallet', label: menuItemTranslation.connectWallet },
+            { id: 'ourBrand', label: menuItemTranslation.ourBrand },
+            { id: 'ourGithub', label: menuItemTranslation.ourGithub },
+        ]
+    }, [])
+
+    return (
+        <nav>
+            <ul className={styles.ul}>
+                {menu.map((item) => (
+                    <li key={item.id} className={styles.li}>
+                        {item.label}
+                    </li>
+                ))}
+            </ul>
+        </nav>
+    )
 }
 
-export const HeaderMainNavigation = () => (
-    <motion.ul className={styles.ul} variants={variants}>
-        {itemIds.map((i) => (
-            <HeaderMainNavigationMenuItem i={i} key={i} />
-        ))}
-    </motion.ul>
-)
-
-const itemIds = [0, 1, 2, 3, 4]
+export default HeaderMainNavigation

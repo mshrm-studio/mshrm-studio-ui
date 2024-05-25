@@ -1,6 +1,8 @@
 .header {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding-right: theme('spacing.3');
 }
 
 @media screen and (min-width: theme('screens.xl')) {

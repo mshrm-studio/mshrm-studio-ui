@@ -1,17 +1,26 @@
 {
-    "contactUs": "联系我们",
+    "action": {
+        "contactUs": "联系我们",
+        "loginWithCryptoWallet": "使用加密钱包登录",
+        "signIn": "登入",
+        "signInWithMicrosoft": "使用微軟登入",
+        "signOut": "登出"
+    },
+    "header": {
+        "menuItem": {
+            "chat": "聊天",
+            "connectWallet": "连接钱包",
+            "microsoftLogin": "微软登录",
+            "ourBrand": "我们的品牌",
+            "ourGithub": "我们的Github"
+        }
+    },
     "homepage": {
         "aboutUsMessage": {
             "what": "定制应用程序、网站和软件",
             "who": "我们的工作室与全球品牌合作"
         },
-        "loginWithCryptoWallet": "使用加密钱包登录",
-        "ourStack": "我们的工具",
-        "welcomeMessage": {
-            "afternoon": "下午好，让我们创建一个有效的数字解决方案",
-            "evening": "晚上好，让我们创建一个有效的数字解决方案",
-            "morning": "早上好，让我们创建一个有效的数字解决方案"
-        }
+        "ourStack": "我们的工具"
     },
     "marketEntity": {
         "lastUpdated": "最近更新时间",
@@ -22,9 +31,5 @@
     "notFoundPage": {
         "heading": "未找到",
         "returnHome": "回家"
-    },
-    "signIn": "登入",
-    "signInWithMicrosoft": "使用微軟登入",
-    "signOut": "登出",
-    "welcome": "欢迎"
+    }
 }

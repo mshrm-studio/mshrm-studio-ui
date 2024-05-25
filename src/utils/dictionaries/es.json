@@ -1,17 +1,26 @@
 {
-    "contactUs": "Contacta con nosotros",
+    "action": {
+        "contactUs": "Contacta con nosotros",
+        "loginWithCryptoWallet": "Iniciar sesión con una billetera criptográfica",
+        "signIn": "iniciar sesión",
+        "signInWithMicrosoft": "Iniciar sesión con Microsoft",
+        "signOut": "Cerrar sesión"
+    },
+    "header": {
+        "menuItem": {
+            "chat": "Chat",
+            "connectWallet": "Conectar Billetera",
+            "microsoftLogin": "Inicio de sesión de Microsoft",
+            "ourBrand": "Nuestra Marca",
+            "ourGithub": "Nuestro Github"
+        }
+    },
     "homepage": {
         "aboutUsMessage": {
             "what": "Aplicaciones, sitios y software personalizados",
             "who": "Nuestro estudio trabaja con marcas globales."
         },
-        "loginWithCryptoWallet": "Iniciar sesión con una billetera criptográfica",
-        "ourStack": "Nuestras herramientas",
-        "welcomeMessage": {
-            "afternoon": "Buenas tardes, creemos una solución digital efectiva.",
-            "evening": "Buenas noches, creemos una solución digital eficaz.",
-            "morning": "Buenos días, creemos una solución digital efectiva."
-        }
+        "ourStack": "Nuestras herramientas"
     },
     "marketEntity": {
         "lastUpdated": "Última actualización",
@@ -22,9 +31,5 @@
     "notFoundPage": {
         "heading": "Extraviado",
         "returnHome": "Volver a casa"
-    },
-    "signIn": "iniciar sesión",
-    "signInWithMicrosoft": "Iniciar sesión con Microsoft",
-    "signOut": "Cerrar sesión",
-    "welcome": "bienvenido"
+    }
 }

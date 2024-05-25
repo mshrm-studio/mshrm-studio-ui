@@ -1,17 +1,26 @@
 {
-    "contactUs": "ទាក់ទង​មក​ពួក​យើង",
+    "action": {
+        "contactUs": "ទាក់ទង​មក​ពួក​យើង",
+        "loginWithCryptoWallet": "ចូលដោយប្រើកាបូបលុយគ្រីប",
+        "signIn": "ចូល",
+        "signInWithMicrosoft": "ចូលជាមួយ Microsoft",
+        "signOut": "ចាកចេញ"
+    },
+    "header": {
+        "menuItem": {
+            "chat": "ការជជែក",
+            "connectWallet": "ភ្ជាប់កាបូប",
+            "microsoftLogin": "ការចូលទៅម៉ាយក្រូសូហ្វ",
+            "ourBrand": "ម៉ាករបស់យើង",
+            "ourGithub": "Github របស់យើង"
+        }
+    },
     "homepage": {
         "aboutUsMessage": {
             "what": "កម្មវិធី គេហទំព័រ និងកម្មវិធីផ្ទាល់ខ្លួន",
             "who": "ស្ទូឌីយោរបស់យើងធ្វើការជាមួយ Global Brands"
         },
-        "loginWithCryptoWallet": "ចូលដោយប្រើកាបូបលុយគ្រីប",
-        "ourStack": "ឧបករណ៍របស់យើង។",
-        "welcomeMessage": {
-            "afternoon": "អរុណសួស្តី តោះបង្កើតដំណោះស្រាយឌីជីថលដ៏មានប្រសិទ្ធភាព",
-            "evening": "រាត្រីសួស្តី តោះបង្កើតដំណោះស្រាយឌីជីថលដ៏មានប្រសិទ្ធភាព",
-            "morning": "អរុណសួស្តី តោះបង្កើតដំណោះស្រាយឌីជីថលដ៏មានប្រសិទ្ធភាព"
-        }
+        "ourStack": "ឧបករណ៍របស់យើង។"
     },
     "marketEntity": {
         "lastUpdated": "ធ្វើ​ឱ្យ​ទាន់សម័យ​ចុងក្រោយ",
@@ -22,9 +31,5 @@
     "notFoundPage": {
         "heading": "រក​មិន​ឃើញ",
         "returnHome": "ត្រលប់​មក​ផ្ទះ"
-    },
-    "signIn": "ចូល",
-    "signInWithMicrosoft": "ចូលជាមួយ Microsoft",
-    "signOut": "ចាកចេញ",
-    "welcome": "ស្វាគមន៍"
+    }
 }

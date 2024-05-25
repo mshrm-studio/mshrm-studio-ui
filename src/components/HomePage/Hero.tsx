@@ -1,29 +1,26 @@
 'use client'
 
-import { Dictionary } from '@/app/[lang]/dictionaries'
 import WelcomeMessage from '@/components/HomePage/WelcomeMessage'
 import DimensionsContext from '@/utils/context/Dimensions'
-import { useContext } from 'react'
-import Button from '@/components/Button'
+import { useContext, useMemo } from 'react'
+import ContactUsBtn from '@/components/ContactUsBtn'
 
-export default function HomePageHero({
-    dictionary,
-}: {
-    dictionary: Dictionary
-}) {
+export default function HomePageHero() {
     const { dimensions } = useContext(DimensionsContext)
+
+    const sectionHeight = useMemo(() => {
+        return dimensions.viewportHeight - dimensions.headerHeight
+    }, [dimensions.headerHeight, dimensions.viewportHeight])
 
     return (
         <section
-            className="flex items-center xl:max-w-site xl:mx-auto"
-            style={{
-                height: dimensions.viewportHeight - dimensions.headerHeight,
-            }}
+            className="flex items-center px-6 xl:max-w-site xl:mx-auto"
+            style={{ height: sectionHeight }}
         >
             <div>
-                <WelcomeMessage dictionary={dictionary} />
+                <WelcomeMessage />
 
-                <Button>{dictionary.contactUs}</Button>
+                <ContactUsBtn />
             </div>
         </section>
     )

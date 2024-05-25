@@ -22,6 +22,7 @@ const metadata = {
     url: 'https://mshrm.studio', // origin must match your domain & subdomain
     icons: ['https://avatars.mywebsite.com/'],
 }
+
 // 4. Create Ethers config
 const ethersConfig = defaultConfig({
     /*Required*/

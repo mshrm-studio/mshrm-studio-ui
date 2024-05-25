@@ -2,17 +2,14 @@
 
 import DictionaryContext from '@/utils/context/Dictionary'
 import { useContext } from 'react'
+import Button from '@/components/Button'
 
-export default function HomePageWelcomeMessage() {
+export default function ContactUsBtn() {
     const dictionary = useContext(DictionaryContext)
 
     if (!dictionary) {
         throw new Error('No dictionary found')
     }
 
-    return (
-        <h1 className="text-[80px] leading-[1] font-extrabold xl:text-[131px]">
-            {dictionary.homepage.aboutUsMessage.what}
-        </h1>
-    )
+    return <Button size="threexl">{dictionary.action.contactUs}</Button>
 }

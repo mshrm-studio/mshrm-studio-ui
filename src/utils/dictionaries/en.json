@@ -1,17 +1,26 @@
 {
-    "contactUs": "Contact us",
+    "action": {
+        "contactUs": "Contact us",
+        "loginWithCryptoWallet": "Login with a crypto wallet",
+        "signIn": "Login",
+        "signInWithMicrosoft": "Login with Microsoft",
+        "signOut": "Logout"
+    },
+    "header": {
+        "menuItem": {
+            "chat": "Chat",
+            "connectWallet": "Connect Wallet",
+            "microsoftLogin": "Microsoft Login",
+            "ourBrand": "Our Brand",
+            "ourGithub": "Our Github"
+        }
+    },
     "homepage": {
         "aboutUsMessage": {
             "what": "Bespoke apps, sites & software",
             "who": "Our studio works with Global Brands"
         },
-        "loginWithCryptoWallet": "Login with a crypto wallet",
-        "ourStack": "Our Stack",
-        "welcomeMessage": {
-            "afternoon": "Good afternoon, let's create an effective digital solution",
-            "evening": "Good evening, let's create an effective digital solution",
-            "morning": "Good morning, let's create an effective digital solution"
-        }
+        "ourStack": "Our Stack"
     },
     "marketEntity": {
         "lastUpdated": "Last updated",
@@ -22,9 +31,5 @@
     "notFoundPage": {
         "heading": "Not found",
         "returnHome": "Return home"
-    },
-    "signIn": "Login",
-    "signInWithMicrosoft": "Login with Microsoft",
-    "signOut": "Logout",
-    "welcome": "Welcome"
+    }
 }

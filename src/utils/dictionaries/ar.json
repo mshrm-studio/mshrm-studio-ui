@@ -1,17 +1,26 @@
 {
-    "contactUs": "اتصل بنا",
+    "action": {
+        "contactUs": "اتصل بنا",
+        "loginWithCryptoWallet": "تسجيل الدخول باستخدام محفظة التشفير",
+        "signIn": "تسجيل الدخول",
+        "signInWithMicrosoft": "تسجيل الدخول مع مايكروسوفت",
+        "signOut": "تسجيل خروج"
+    },
+    "header": {
+        "menuItem": {
+            "chat": "دردشة",
+            "connectWallet": "اتصال المحفظة",
+            "microsoftLogin": "تسجيل الدخول إلى مايكروسوفت",
+            "ourBrand": "علامتنا التجارية",
+            "ourGithub": "مستودعنا على جيتهاب"
+        }
+    },
     "homepage": {
         "aboutUsMessage": {
             "what": "تطبيقات ومواقع وبرامج مخصصة",
             "who": "يعمل الاستوديو الخاص بنا مع العلامات التجارية العالمية"
         },
-        "loginWithCryptoWallet": "تسجيل الدخول باستخدام محفظة التشفير",
-        "ourStack": "أدواتنا",
-        "welcomeMessage": {
-            "afternoon": "مساء الخير، دعونا نبتكر حلاً رقميًا فعالاً",
-            "evening": "مساء الخير، دعونا نبتكر حلاً رقميًا فعالاً",
-            "morning": "صباح الخير، دعونا نبتكر حلاً رقميًا فعالاً"
-        }
+        "ourStack": "أدواتنا"
     },
     "marketEntity": {
         "lastUpdated": "آخر تحديث",
@@ -22,9 +31,5 @@
     "notFoundPage": {
         "heading": "غير معثور عليه",
         "returnHome": "العودة إلى المنزل"
-    },
-    "signIn": "تسجيل الدخول",
-    "signInWithMicrosoft": "تسجيل الدخول مع مايكروسوفت",
-    "signOut": "تسجيل خروج",
-    "welcome": "مرحباً"
+    }
 }
