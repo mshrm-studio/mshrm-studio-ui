@@ -7,6 +7,7 @@ import { Locale, locales } from '@/utils/enums/locale'
 import AuthContextProvider from '@/components/Context/AuthProvider'
 import DimensionsContextProvider from '@/components/Context/DimensionsProvider'
 import LocaleContextProvider from '@/components/Context/LocaleProvider'
+import ThemeContextProvider from '@/components/Context/ThemeProvider'
 import Web3ModalProvider from '@/components/Context/Web3ModalProvider'
 
 const rethinkSans = Rethink_Sans({
@@ -37,17 +38,19 @@ export default function RootLayout({
                 className={`${rethinkSans.className} dark:bg-black dark:text-white`}
             >
                 <Web3ModalProvider>
-                    <AuthContextProvider>
-                        <LocaleContextProvider locale={params.lang}>
-                            <DimensionsContextProvider>
-                                <Header locale={params.lang} />
+                    <ThemeContextProvider>
+                        <AuthContextProvider>
+                            <LocaleContextProvider locale={params.lang}>
+                                <DimensionsContextProvider>
+                                    <Header locale={params.lang} />
 
-                                <main>{children}</main>
+                                    <main>{children}</main>
 
-                                <Footer />
-                            </DimensionsContextProvider>
-                        </LocaleContextProvider>
-                    </AuthContextProvider>
+                                    <Footer />
+                                </DimensionsContextProvider>
+                            </LocaleContextProvider>
+                        </AuthContextProvider>
+                    </ThemeContextProvider>
                 </Web3ModalProvider>
             </body>
         </html>

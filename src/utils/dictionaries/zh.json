@@ -20,7 +20,36 @@
             "what": "定制应用程序、网站和软件",
             "who": "我们的工作室与全球品牌合作"
         },
-        "ourStack": "我们的工具"
+        "ourStack": "我们的工具",
+        "title": {
+            "art": {
+                "mobile": {
+                    "line1": "艺术",
+                    "line2": "工作室"
+                },
+                "desktop": {
+                    "line1": "艺术",
+                    "line2": "工作室"
+                }
+            },
+            "design": {
+                "mobile": {
+                    "line1": "设计",
+                    "line2": "机构"
+                },
+                "desktop": {
+                    "line1": "设计",
+                    "line2": "机构"
+                }
+            },
+            "dev": {
+                "mobile": {
+                    "line1": "<网络>",
+                    "line2": "//:开发"
+                },
+                "desktop": "定制应用程序、网站和软件"
+            }
+        }
     },
     "marketEntity": {
         "lastUpdated": "最近更新时间",

@@ -1,87 +1,52 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useContext } from 'react'
 import {
     ComputerDesktopIcon,
     MoonIcon,
     SunIcon,
 } from '@heroicons/react/24/solid'
 import styles from '@/utils/styles/themeSwitcher.module.css'
+import ThemeContext from '@/utils/context/Theme'
+import { Theme } from '@/utils/enums/theme'
 
 export default function HeaderThemeSwitcher() {
-    const [currentTheme, setCurrentTheme] = useState('system')
-
-    useEffect(() => {
-        setCurrentTheme(() => {
-            const theme = localStorage.getItem('theme')
-
-            if (theme === 'dark' || theme === 'light') {
-                return theme
-            }
-
-            return 'system'
-        })
-    }, [])
-
-    useEffect(() => {
-        document.documentElement.classList.toggle(
-            'dark',
-            currentTheme === 'dark' ||
-                (currentTheme === 'system' &&
-                    window.matchMedia('(prefers-color-scheme: dark)').matches)
-        )
-    }, [currentTheme])
-
-    function updateTheme(theme: 'light' | 'dark' | 'system') {
-        setCurrentTheme(theme)
-
-        if (theme === 'system') {
-            localStorage.removeItem('theme')
-
-            document.documentElement.classList.toggle(
-                'dark',
-                window.matchMedia('(prefers-color-scheme: dark)').matches
-            )
-        } else {
-            localStorage.setItem('theme', theme)
-            document.documentElement.classList.toggle('dark', theme === 'dark')
-        }
-    }
+    const { theme, setTheme } = useContext(ThemeContext)
 
     return (
         <div className={styles.options}>
             <button
                 className={
-                    currentTheme === 'dark'
+                    theme === Theme.Dark
                         ? `${styles.button} ${styles.selected}`
                         : styles.button
                 }
                 title="Dark Theme"
-                onClick={() => updateTheme('dark')}
+                onClick={() => setTheme(Theme.Dark)}
             >
                 <MoonIcon className={styles.icon} />
             </button>
 
             <button
                 className={
-                    currentTheme === 'system'
+                    theme === Theme.System
                         ? `${styles.button} ${styles.selected}`
                         : styles.button
                 }
                 title="System Theme"
-                onClick={() => updateTheme('system')}
+                onClick={() => setTheme(Theme.System)}
             >
                 <ComputerDesktopIcon className={styles.icon} />
             </button>
 
             <button
                 className={
-                    currentTheme === 'light'
+                    theme === Theme.Light
                         ? `${styles.button} ${styles.selected}`
                         : styles.button
                 }
                 title="Light Theme"
-                onClick={() => updateTheme('light')}
+                onClick={() => setTheme(Theme.Light)}
             >
                 <SunIcon className={styles.icon} />
             </button>

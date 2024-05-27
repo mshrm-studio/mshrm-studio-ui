@@ -20,7 +20,36 @@
             "what": "Maßgeschneiderte Apps, Websites und Software",
             "who": "Unser Studio arbeitet mit globalen Marken zusammen"
         },
-        "ourStack": "Unsere Werkzeuge"
+        "ourStack": "Unsere Werkzeuge",
+        "title": {
+            "art": {
+                "mobile": {
+                    "line1": "kunst",
+                    "line2": "studio"
+                },
+                "desktop": {
+                    "line1": "kunst",
+                    "line2": "studio"
+                }
+            },
+            "design": {
+                "mobile": {
+                    "line1": "design",
+                    "line2": "agentur"
+                },
+                "desktop": {
+                    "line1": "design",
+                    "line2": "agentur"
+                }
+            },
+            "dev": {
+                "mobile": {
+                    "line1": "<web>",
+                    "line2": "//:entwicklung"
+                },
+                "desktop": "Maßgeschneiderte Apps, Websites & Software"
+            }
+        }
     },
     "marketEntity": {
         "lastUpdated": "Letzte Aktualisierung",

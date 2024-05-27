@@ -16,6 +16,7 @@
         "@web3modal/ethers": "^4.1.9",
         "ethers": "^6.11.1",
         "framer-motion": "^11.1.5",
+        "grapheme-splitter": "^1.0.4",
         "luxon": "^3.4.4",
         "negotiator": "^0.6.3",
         "next": "^14.2.2",

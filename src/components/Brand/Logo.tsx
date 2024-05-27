@@ -1,17 +1,25 @@
 'use client'
 
 import SpacesImg from '@/components/SpacesImg'
+import { useMemo } from 'react'
 
 type Props = {
     className?: string
+    color?: 'black' | 'white'
 }
 
-const BrandLogo: React.FC<Props> = ({ className }) => {
+const BrandLogo: React.FC<Props> = ({ className, color }) => {
+    const imgSrc = useMemo(() => {
+        return color === 'black'
+            ? 'static/brand/MshrmStudioLogoBlack.svg'
+            : 'static/brand/MshrmStudioLogoWhite.svg'
+    }, [color])
+
     return (
         <SpacesImg
             className={className}
-            src="static/brand/MshrmStudioLogoBlack.svg"
-            alt="Mshrm Studio Logo (Black)"
+            src={imgSrc}
+            alt={`MSHRM Studio Logo (${color})`}
         />
     )
 }

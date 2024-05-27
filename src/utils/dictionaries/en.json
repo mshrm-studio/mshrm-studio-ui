@@ -20,7 +20,36 @@
             "what": "Bespoke apps, sites & software",
             "who": "Our studio works with Global Brands"
         },
-        "ourStack": "Our Stack"
+        "ourStack": "Our Stack",
+        "title": {
+            "art": {
+                "mobile": {
+                    "line1": "art",
+                    "line2": "studio"
+                },
+                "desktop": {
+                    "line1": "art",
+                    "line2": "studio"
+                }
+            },
+            "design": {
+                "mobile": {
+                    "line1": "design",
+                    "line2": "agency"
+                },
+                "desktop": {
+                    "line1": "design",
+                    "line2": "agency"
+                }
+            },
+            "dev": {
+                "mobile": {
+                    "line1": "<web>",
+                    "line2": "//:dev"
+                },
+                "desktop": "Bespoke apps, sites & software"
+            }
+        }
     },
     "marketEntity": {
         "lastUpdated": "Last updated",

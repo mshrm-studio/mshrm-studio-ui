@@ -1,10 +1,10 @@
 import { Locale } from '@/utils/enums/locale'
 import { getDictionary } from '@/app/[lang]/dictionaries'
-import Hero from '@/components/HomePage/Hero'
+import Hero from '@/components/HomePage/Hero/Hero'
 import Stack from '@/components/HomePage/Stack'
 import MarketEntityList from '@/components/MarketEntity/List'
 import DictionaryContextProvider from '@/components/Context/DictionaryProvider'
-import styles from '@/utils/styles/homepage.module.css'
+import styles from '@/utils/styles/homepage/homepage.module.css'
 import dynamic from 'next/dynamic'
 
 const CryptoWalletAddress = dynamic(

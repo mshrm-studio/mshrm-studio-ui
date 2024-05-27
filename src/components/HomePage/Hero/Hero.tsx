@@ -1,9 +1,8 @@
 'use client'
 
-import WelcomeMessage from '@/components/HomePage/WelcomeMessage'
+import Title from '@/components/HomePage/Hero/Title/Title'
 import DimensionsContext from '@/utils/context/Dimensions'
 import { useContext, useMemo } from 'react'
-import ContactUsBtn from '@/components/ContactUsBtn'
 
 export default function HomePageHero() {
     const { dimensions } = useContext(DimensionsContext)
@@ -14,14 +13,10 @@ export default function HomePageHero() {
 
     return (
         <section
-            className="flex items-center px-6 xl:max-w-site xl:mx-auto"
+            className="px-6 xl:max-w-site xl:mx-auto"
             style={{ height: sectionHeight }}
         >
-            <div>
-                <WelcomeMessage />
-
-                <ContactUsBtn />
-            </div>
+            <Title />
         </section>
     )
 }

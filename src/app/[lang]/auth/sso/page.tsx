@@ -11,7 +11,7 @@ export default async function Page({
 
     return (
         <>
-            <h1>{dict.signIn}</h1>
+            <h1>{dict.action.signIn}</h1>
 
             <Msal />
         </>
