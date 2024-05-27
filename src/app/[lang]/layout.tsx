@@ -35,7 +35,7 @@ export default function RootLayout({
     return (
         <html lang={params.lang}>
             <body
-                className={`${rethinkSans.className} dark:bg-black dark:text-white`}
+                className={`${rethinkSans.className} overflow-x-hidden dark:bg-black dark:text-white`}
             >
                 <Web3ModalProvider>
                     <ThemeContextProvider>

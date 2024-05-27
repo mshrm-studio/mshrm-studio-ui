@@ -2,6 +2,7 @@ import { createContext, Dispatch, SetStateAction } from 'react'
 
 // Define the shape of the dimensions object
 export interface Dimensions {
+    documentHeight: number
     headerHeight: number
     viewportHeight: number
     viewportWidth: number
@@ -14,6 +15,7 @@ const DimensionsContext = createContext<{
     setDimensions: Dispatch<SetStateAction<Dimensions>>
 }>({
     dimensions: {
+        documentHeight: 0,
         headerHeight: 0,
         viewportHeight: 0,
         viewportWidth: 0,

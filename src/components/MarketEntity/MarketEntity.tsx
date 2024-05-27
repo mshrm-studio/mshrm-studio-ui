@@ -7,6 +7,7 @@ import PercentageChange from '@/components/PercentageChange'
 import { useContext } from 'react'
 import DictionaryContext from '@/utils/context/Dictionary'
 import DateTime from '@/components/DateTime'
+import { motion } from 'framer-motion'
 
 export default function MarketEntity({
     marketEntity,
@@ -20,7 +21,11 @@ export default function MarketEntity({
     }
 
     return (
-        <div className={styles.wrapper}>
+        <motion.div
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+            className={styles.wrapper}
+        >
             <div className="text-[58px] font-extrabold mb-2">
                 <Price
                     price={marketEntity.price}
@@ -83,6 +88,6 @@ export default function MarketEntity({
                     <div className={styles.value}>{marketEntity.source}</div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

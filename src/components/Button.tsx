@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { MutableRefObject } from 'react'
 import styles from '@/utils/styles/button.module.css'
 
 type Props = {

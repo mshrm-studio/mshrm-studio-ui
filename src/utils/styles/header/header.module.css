@@ -1,5 +1,6 @@
 .header {
     position: relative;
+    z-index: 99;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     padding-right: theme('spacing.3');

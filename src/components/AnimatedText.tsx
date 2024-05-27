@@ -71,9 +71,9 @@ export const AnimatedText = ({
 
     return (
         <Wrapper className={className}>
-            {/* <span className="sr-only">{textArray.join(' ')}</span> */}
+            <span className="sr-only">{textArray.join(' ')}</span>
 
-            <span className="block">{textArray.join(' ')}</span>
+            {/* <span className="block">{textArray.join(' ')}</span>
 
             <span className="block">
                 {textArray.map((line, lineIndex) => (
@@ -83,7 +83,7 @@ export const AnimatedText = ({
                         ))}
                     </span>
                 ))}
-            </span>
+            </span> */}
 
             <motion.span
                 ref={ref}
