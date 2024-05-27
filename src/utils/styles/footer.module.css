@@ -1,0 +1,12 @@
+.footer {
+    padding-top: theme('spacing.12');
+    padding-bottom: theme('spacing.12');
+}
+
+@media screen and (min-width: theme('screens.xl')) {
+    .footer {
+        max-width: theme('maxWidth.site');
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

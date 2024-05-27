@@ -1,11 +1,9 @@
 import LanguageSwitcher from '@/components/Footer/LanguageSwitcher'
-import ContactFormModal from '@/components/ContactForm/Modal'
+import styles from '@/utils/styles/footer.module.css'
 
 export default function Footer() {
     return (
-        <footer>
-            <ContactFormModal />
-
+        <footer className={styles.footer}>
             <LanguageSwitcher />
         </footer>
     )
