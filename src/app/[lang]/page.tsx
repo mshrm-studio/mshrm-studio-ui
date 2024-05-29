@@ -95,11 +95,11 @@ export default async function Page({
                 <Hero />
 
                 <section className={styles.aboutAndMarketEntitySection}>
-                    <div className="mb-12">
+                    <div>
                         <MarketEntityList marketEntities={marketEntityList} />
                     </div>
 
-                    <div className="mb-12 space-y-6 xl:max-w-site xl:mx-auto">
+                    {/* <div className="mb-12 space-y-6 xl:max-w-site xl:mx-auto">
                         <div>
                             <CryptoWalletConnect className="underline">
                                 {dictionary.homepage.loginWithCryptoWallet}
@@ -109,7 +109,7 @@ export default async function Page({
                         <div>
                             <CryptoWalletAddress />
                         </div>
-                    </div>
+                    </div> */}
                 </section>
 
                 <Stack />

@@ -1,5 +1,6 @@
 {
     "action": {
+        "clickToMessageUs": "Klicken Sie, um uns zu kontaktieren",
         "contactUs": "kontaktiere uns",
         "loginWithCryptoWallet": "Melden Sie sich mit einer Krypto-Wallet an",
         "signIn": "anmelden",

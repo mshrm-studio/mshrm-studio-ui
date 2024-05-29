@@ -1,5 +1,6 @@
 {
     "action": {
+        "clickToMessageUs": "Haga clic para enviarnos un mensaje",
         "contactUs": "Contacta con nosotros",
         "loginWithCryptoWallet": "Iniciar sesión con una billetera criptográfica",
         "signIn": "iniciar sesión",

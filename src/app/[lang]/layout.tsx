@@ -12,7 +12,7 @@ import Web3ModalProvider from '@/components/Context/Web3ModalProvider'
 
 const rethinkSans = Rethink_Sans({
     subsets: ['latin'],
-    weight: ['400', '700', '800'],
+    weight: ['400', '500', '600', '700', '800'],
     style: 'normal',
 })
 
@@ -46,7 +46,7 @@ export default function RootLayout({
 
                                     <main>{children}</main>
 
-                                    <Footer />
+                                    <Footer locale={params.lang} />
                                 </DimensionsContextProvider>
                             </LocaleContextProvider>
                         </AuthContextProvider>

@@ -2,8 +2,12 @@
 
 import { isLocale, Locale } from '@/utils/enums/locale'
 import { usePathname, useRouter } from 'next/navigation'
+import styles from '@/utils/styles/footer/languageSwitcher.module.css'
+import { useContext, useMemo } from 'react'
+import LocaleContext from '@/utils/context/Locale'
 
 export default function FooterLanguageSwitcher() {
+    const locale = useContext(LocaleContext)
     const router = useRouter()
     const pathname = usePathname()
 
@@ -25,43 +29,55 @@ export default function FooterLanguageSwitcher() {
         router.push(newPathname)
     }
 
+    const options = useMemo(() => {
+        return [
+            {
+                label: 'English',
+                value: Locale.English,
+            },
+            {
+                label: 'عربي',
+                value: Locale.Arabic,
+            },
+            {
+                label: 'Español',
+                value: Locale.Spanish,
+            },
+            {
+                label: 'Deutsch',
+                value: Locale.German,
+            },
+            {
+                label: '日本語',
+                value: Locale.Chinese,
+            },
+            {
+                label: 'ខ្មែរ',
+                value: Locale.Khmer,
+            },
+        ].map((option) => ({
+            ...option,
+            active: option.value === locale,
+        }))
+    }, [locale])
+
     return (
-        <ul className="grid gap-6 grid-cols-3 text-center xl:flex xl:space-x-3">
-            <li>
-                <button onClick={() => changeLanguage(Locale.English)}>
-                    English
-                </button>
-            </li>
-
-            <li>
-                <button onClick={() => changeLanguage(Locale.Arabic)}>
-                    عربي
-                </button>
-            </li>
-
-            <li>
-                <button onClick={() => changeLanguage(Locale.Spanish)}>
-                    Español
-                </button>
-            </li>
-
-            <li>
-                <button onClick={() => changeLanguage(Locale.German)}>
-                    Deutsch
-                </button>
-            </li>
-
-            <li>
-                <button onClick={() => changeLanguage(Locale.Chinese)}>
-                    日本語
-                </button>
-            </li>
-
-            <li>
-                <button onClick={() => changeLanguage(Locale.Khmer)}>
-                    ខ្មែរ
-                </button>
-            </li>
+        <ul className={styles.ul}>
+            {options.map((option) => (
+                <li>
+                    <button
+                        className={
+                            option.active
+                                ? styles.activeLocale
+                                : styles.inactiveLocale
+                        }
+                        disabled={option.active}
+                        onClick={() => changeLanguage(option.value)}
+                    >
+                        {option.label}
+                    </button>
+                </li>
+            ))}
         </ul>
     )
 }

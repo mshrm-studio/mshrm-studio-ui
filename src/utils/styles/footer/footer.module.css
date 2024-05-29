@@ -1,0 +1,26 @@
+.footer {
+    padding-left: theme('spacing.6');
+    padding-right: theme('spacing.6');
+    padding-top: theme('spacing.24');
+    padding-bottom: theme('spacing.24');
+}
+
+.footer > :global(*:not(:last-child)) {
+    margin-bottom: theme('spacing.6');
+}
+
+@media screen and (min-width: theme('screens.xl')) {
+    .footer {
+        max-width: theme('maxWidth.site');
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .footer > :global(*:not(:last-child)) {
+        margin-bottom: 0;
+        margin-right: theme('spacing.12');
+    }
+}

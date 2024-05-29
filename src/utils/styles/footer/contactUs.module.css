@@ -1,0 +1,63 @@
+.title {
+    font-size: 33px;
+    font-weight: 800;
+    text-transform: lowercase;
+    line-height: 1;
+}
+
+.buttonAndEmail {
+    margin-top: theme('spacing.6');
+}
+
+.buttonContainer {
+    margin-bottom: theme('spacing.6');
+}
+
+.button {
+    font-size: theme('fontSize.xl');
+    font-weight: 400;
+    border-width: 3px;
+    border-style: solid;
+    padding-left: theme('spacing.6');
+    padding-right: theme('spacing.6');
+    padding-top: theme('spacing.3');
+    padding-bottom: theme('spacing.3');
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+:global(html.dark) .button {
+    border-color: #ffffff;
+}
+
+:global(html:not(.dark)) .button {
+    border-color: #000000;
+}
+
+.emailContainer {
+    text-align: center;
+}
+
+.email {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+@media screen and (min-width: theme('screens.xl')) {
+    .container {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .container > :global(*:not(:last-child)) {
+        margin-right: theme('spacing.12');
+    }
+
+    .buttonAndEmail {
+        margin-top: 0;
+    }
+
+    .title {
+        font-size: 55px;
+    }
+}

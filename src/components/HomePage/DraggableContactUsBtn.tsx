@@ -28,28 +28,43 @@ export default function HomePageDraggableContactUsBtn() {
         }
     }, [])
 
+    const bottom = useMemo(() => {
+        return 16
+    }, [dimensions.viewportWidth])
+
+    const right = useMemo(() => {
+        return dimensions.viewportWidth >= 1024
+            ? 16
+            : dimensions.viewportWidth / 2 - buttonDimensions.width / 2
+    }, [buttonDimensions.width, dimensions.viewportWidth])
+
     const leftConstraint = useMemo(() => {
-        return -(dimensions.viewportWidth - buttonDimensions.width)
-    }, [dimensions.viewportWidth, buttonDimensions.width])
+        return -(dimensions.viewportWidth - (buttonDimensions.width + right))
+    }, [dimensions.viewportWidth, buttonDimensions.width, right])
 
     const topConstraint = useMemo(() => {
-        return -(dimensions.viewportHeight - buttonDimensions.height)
-    }, [dimensions.viewportHeight, buttonDimensions.height])
+        return -(dimensions.viewportHeight - (buttonDimensions.height + bottom))
+    }, [bottom, dimensions.viewportHeight, buttonDimensions.height])
 
     const bottomConstraint = useMemo(() => {
-        return dimensions.documentHeight - dimensions.viewportHeight
-    }, [dimensions.documentHeight, dimensions.viewportHeight])
+        return dimensions.documentHeight - (dimensions.viewportHeight - bottom)
+    }, [bottom, dimensions.documentHeight, dimensions.viewportHeight])
+
+    const rightConstraint = useMemo(() => {
+        return right
+    }, [right])
 
     return (
         <motion.div
             ref={buttonRef}
-            className="absolute bottom-0 right-0 z-[100]"
+            className="absolute z-[100]"
+            style={{ bottom: bottom, right: right }}
             drag
             dragControls={controls}
             dragConstraints={{
                 top: topConstraint,
                 left: leftConstraint,
-                right: 0,
+                right: rightConstraint,
                 bottom: bottomConstraint,
             }}
             data-document-height={dimensions.documentHeight}

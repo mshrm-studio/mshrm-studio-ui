@@ -32,12 +32,12 @@ export default function HomePageHeroTitle() {
 
     return (
         <div className="relative flex items-center min-h-[200px]">
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[15px]">
+            {/* <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[15px]">
                 <Selector
                     activeTitle={activeTitle}
                     setActiveTitle={setActiveTitle}
                 />
-            </div>
+            </div> */}
 
             {titleComponent}
         </div>

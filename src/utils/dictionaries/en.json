@@ -1,5 +1,6 @@
 {
     "action": {
+        "clickToMessageUs": "Click to message us",
         "contactUs": "Contact us",
         "loginWithCryptoWallet": "Login with a crypto wallet",
         "signIn": "Login",
@@ -20,7 +21,7 @@
             "what": "Bespoke apps, sites & software",
             "who": "Our studio works with Global Brands"
         },
-        "ourStack": "Our Stack",
+        "ourStack": "our tools",
         "title": {
             "art": {
                 "mobile": {

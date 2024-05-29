@@ -1,0 +1,27 @@
+.ul {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    font-size: 22px;
+    text-align: center;
+    font-weight: 800;
+}
+
+.activeLocale {
+    color: #c1c1c1;
+    cursor: not-allowed;
+}
+
+.inactiveLocale {
+    color: #000000;
+}
+
+@media screen and (min-width: theme('screens.xl')) {
+    .ul {
+        display: flex;
+    }
+
+    .ul > :global(*:not(:last-child)) {
+        margin-right: theme('spacing.3');
+    }
+}
