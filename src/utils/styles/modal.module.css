@@ -1,0 +1,30 @@
+.modal {
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:global(html.dark) .modal {
+    background-color: #000000;
+}
+
+:global(html:not(.dark)) .modal {
+    background-color: #e9e3e6;
+}
+
+.closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.closeButtonIcon {
+    height: theme('height.6');
+    width: theme('width.6');
+}

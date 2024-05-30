@@ -7,6 +7,20 @@
         "signInWithMicrosoft": "ចូលជាមួយ Microsoft",
         "signOut": "ចាកចេញ"
     },
+    "contactForm": {
+        "email": {
+            "placeholder": "អ៊ីម៉ែល"
+        },
+        "message": {
+            "placeholder": "សរសេរ​សាររបស់អ្នកនៅទីនេះ..."
+        },
+        "name": {
+            "placeholder": "ឈ្មោះ"
+        },
+        "website": {
+            "placeholder": "គេហទំព័រ"
+        }
+    },
     "header": {
         "menuItem": {
             "chat": "ការជជែក",

@@ -21,9 +21,11 @@ export default function HomePageHeroDevTitle({ version }: Props) {
     }
 
     const title = useMemo(() => {
-        return version === 'desktop'
-            ? dictionary.homepage.title.dev.desktop
-            : dictionary.homepage.title.dev.mobile
+        return dictionary.homepage.title.dev.desktop
+
+        // return version === 'desktop'
+        //     ? dictionary.homepage.title.dev.desktop
+        //     : dictionary.homepage.title.dev.mobile
     }, [version])
 
     const localHeading1Styles = useMemo(() => {

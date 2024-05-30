@@ -7,6 +7,20 @@
         "signInWithMicrosoft": "Melden Sie sich bei Microsoft an",
         "signOut": "Ausloggen"
     },
+    "contactForm": {
+        "email": {
+            "placeholder": "E-Mail"
+        },
+        "message": {
+            "placeholder": "Schreiben Sie Ihre Nachricht hier..."
+        },
+        "name": {
+            "placeholder": "Name"
+        },
+        "website": {
+            "placeholder": "Webseite"
+        }
+    },
     "header": {
         "menuItem": {
             "chat": "Chat",

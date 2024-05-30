@@ -7,8 +7,10 @@ import { Locale, locales } from '@/utils/enums/locale'
 import AuthContextProvider from '@/components/Context/AuthProvider'
 import DimensionsContextProvider from '@/components/Context/DimensionsProvider'
 import LocaleContextProvider from '@/components/Context/LocaleProvider'
+import ContactFormModalContextProvider from '@/components/Context/ContactFormModalProvider'
 import ThemeContextProvider from '@/components/Context/ThemeProvider'
 import Web3ModalProvider from '@/components/Context/Web3ModalProvider'
+import ContactFormModal from '@/components/ContactForm/Modal'
 
 const rethinkSans = Rethink_Sans({
     subsets: ['latin'],
@@ -42,11 +44,17 @@ export default function RootLayout({
                         <AuthContextProvider>
                             <LocaleContextProvider locale={params.lang}>
                                 <DimensionsContextProvider>
-                                    <Header locale={params.lang} />
+                                    <ContactFormModalContextProvider>
+                                        <Header locale={params.lang} />
 
-                                    <main>{children}</main>
+                                        <main>{children}</main>
 
-                                    <Footer locale={params.lang} />
+                                        <Footer locale={params.lang} />
+
+                                        <ContactFormModal
+                                            locale={params.lang}
+                                        />
+                                    </ContactFormModalContextProvider>
                                 </DimensionsContextProvider>
                             </LocaleContextProvider>
                         </AuthContextProvider>

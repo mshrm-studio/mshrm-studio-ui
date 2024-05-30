@@ -1,0 +1,3 @@
+.contactForm > *:not(:last-child) {
+    margin-bottom: theme('spacing.12');
+}

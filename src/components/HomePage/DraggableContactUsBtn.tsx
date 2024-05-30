@@ -1,11 +1,14 @@
 'use client'
 
 import ContactUsBtn from '@/components/ContactUsBtn'
+import ContactFormModalContext from '@/utils/context/ContactFormModal'
 import DimensionsContext from '@/utils/context/Dimensions'
 import { motion, useDragControls } from 'framer-motion'
 import { useContext, useEffect, useMemo, useRef, useState } from 'react'
 
 export default function HomePageDraggableContactUsBtn() {
+    const { showContactFormModal } = useContext(ContactFormModalContext)
+
     const { dimensions } = useContext(DimensionsContext)
 
     const controls = useDragControls()
@@ -53,6 +56,8 @@ export default function HomePageDraggableContactUsBtn() {
     const rightConstraint = useMemo(() => {
         return right
     }, [right])
+
+    if (showContactFormModal) return null
 
     return (
         <motion.div

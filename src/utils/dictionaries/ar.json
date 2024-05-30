@@ -7,6 +7,20 @@
         "signInWithMicrosoft": "تسجيل الدخول مع مايكروسوفت",
         "signOut": "تسجيل خروج"
     },
+    "contactForm": {
+        "email": {
+            "placeholder": "البريد الإلكتروني"
+        },
+        "message": {
+            "placeholder": "اكتب رسالتك هنا..."
+        },
+        "name": {
+            "placeholder": "الاسم"
+        },
+        "website": {
+            "placeholder": "الموقع الإلكتروني"
+        }
+    },
     "header": {
         "menuItem": {
             "chat": "دردشة",

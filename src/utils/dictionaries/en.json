@@ -7,6 +7,20 @@
         "signInWithMicrosoft": "Login with Microsoft",
         "signOut": "Logout"
     },
+    "contactForm": {
+        "email": {
+            "placeholder": "Email"
+        },
+        "message": {
+            "placeholder": "Write your message here..."
+        },
+        "name": {
+            "placeholder": "Name"
+        },
+        "website": {
+            "placeholder": "Website"
+        }
+    },
     "header": {
         "menuItem": {
             "chat": "Chat",

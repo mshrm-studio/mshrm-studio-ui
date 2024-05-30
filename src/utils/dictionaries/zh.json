@@ -7,6 +7,20 @@
         "signInWithMicrosoft": "使用微軟登入",
         "signOut": "登出"
     },
+    "contactForm": {
+        "email": {
+            "placeholder": "电子邮件"
+        },
+        "message": {
+            "placeholder": "在此处输入您的消息..."
+        },
+        "name": {
+            "placeholder": "姓名"
+        },
+        "website": {
+            "placeholder": "网站"
+        }
+    },
     "header": {
         "menuItem": {
             "chat": "聊天",
