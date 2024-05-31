@@ -7,6 +7,17 @@
         "signInWithMicrosoft": "ចូលជាមួយ Microsoft",
         "signOut": "ចាកចេញ"
     },
+    "admin": {
+        "header": {
+            "mainNavigation": {
+                "contactFormSubmissions": "ការដាក់ស្នើទម្រង់ទំនាក់ទំនង",
+                "dashboard": "ផ្ទាំងគ្រប់គ្រង",
+                "home": "ទំព័រដើម",
+                "marketEntities": "អង្គភាពទីផ្សារ",
+                "tools": "ឧបករណ៍"
+            }
+        }
+    },
     "contactForm": {
         "email": {
             "placeholder": "អ៊ីម៉ែល"
@@ -24,6 +35,7 @@
     "header": {
         "menuItem": {
             "chat": "ការជជែក",
+            "cms": "ប្រព័ន្ធគ្រប់គ្រងការយល់ព្រម",
             "connectWallet": "ភ្ជាប់កាបូប",
             "microsoftLogin": "ការចូលទៅម៉ាយក្រូសូហ្វ",
             "ourBrand": "ម៉ាករបស់យើង",

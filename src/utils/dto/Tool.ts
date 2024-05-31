@@ -1,5 +1,5 @@
 export default interface Tool {
     name: string
-    link?: string
+    link?: string | null
     logo: string
 }

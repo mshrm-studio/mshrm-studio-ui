@@ -7,6 +7,17 @@
         "signInWithMicrosoft": "Melden Sie sich bei Microsoft an",
         "signOut": "Ausloggen"
     },
+    "admin": {
+        "header": {
+            "mainNavigation": {
+                "contactFormSubmissions": "Kontaktformular Einsendungen",
+                "dashboard": "Instrumententafel",
+                "home": "Startseite",
+                "marketEntities": "Markteinheiten",
+                "tools": "Werkzeuge"
+            }
+        }
+    },
     "contactForm": {
         "email": {
             "placeholder": "E-Mail"
@@ -24,6 +35,7 @@
     "header": {
         "menuItem": {
             "chat": "Chat",
+            "cms": "Einwilligungsverwaltungssystem",
             "connectWallet": "Wallet verbinden",
             "microsoftLogin": "Microsoft-Anmeldung",
             "ourBrand": "Unsere Marke",

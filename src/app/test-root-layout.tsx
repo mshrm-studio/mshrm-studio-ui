@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Rethink_Sans } from 'next/font/google'
-import '@/app/globals.css'
+import '@/app/app.css'
 
 const rethinkSans = Rethink_Sans({
     subsets: ['latin'],

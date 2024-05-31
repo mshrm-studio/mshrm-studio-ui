@@ -7,6 +7,17 @@
         "signInWithMicrosoft": "تسجيل الدخول مع مايكروسوفت",
         "signOut": "تسجيل خروج"
     },
+    "admin": {
+        "header": {
+            "mainNavigation": {
+                "contactFormSubmissions": "تقديمات استمارة الاتصال",
+                "dashboard": "لوحة القيادة",
+                "home": "الصفحة الرئيسية",
+                "marketEntities": "الكيانات السوقية",
+                "tools": "أدوات"
+            }
+        }
+    },
     "contactForm": {
         "email": {
             "placeholder": "البريد الإلكتروني"
@@ -24,6 +35,7 @@
     "header": {
         "menuItem": {
             "chat": "دردشة",
+            "cms": "نظام إدارة الموافقة",
             "connectWallet": "اتصال المحفظة",
             "microsoftLogin": "تسجيل الدخول إلى مايكروسوفت",
             "ourBrand": "علامتنا التجارية",

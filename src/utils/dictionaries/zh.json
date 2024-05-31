@@ -7,6 +7,17 @@
         "signInWithMicrosoft": "使用微軟登入",
         "signOut": "登出"
     },
+    "admin": {
+        "header": {
+            "mainNavigation": {
+                "contactFormSubmissions": "联系表单提交",
+                "dashboard": "仪表板",
+                "home": "首页",
+                "marketEntities": "市场实体",
+                "tools": "工具"
+            }
+        }
+    },
     "contactForm": {
         "email": {
             "placeholder": "电子邮件"
@@ -24,6 +35,7 @@
     "header": {
         "menuItem": {
             "chat": "聊天",
+            "cms": "同意管理系统",
             "connectWallet": "连接钱包",
             "microsoftLogin": "微软登录",
             "ourBrand": "我们的品牌",

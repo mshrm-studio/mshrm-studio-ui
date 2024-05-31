@@ -7,6 +7,17 @@
         "signInWithMicrosoft": "Login with Microsoft",
         "signOut": "Logout"
     },
+    "admin": {
+        "header": {
+            "mainNavigation": {
+                "contactFormSubmissions": "Contact form submissions",
+                "dashboard": "Dashboard",
+                "home": "Home",
+                "marketEntities": "Market entities",
+                "tools": "Tools"
+            }
+        }
+    },
     "contactForm": {
         "email": {
             "placeholder": "Email"
@@ -24,6 +35,7 @@
     "header": {
         "menuItem": {
             "chat": "Chat",
+            "cms": "Content Management System",
             "connectWallet": "Connect Wallet",
             "microsoftLogin": "Microsoft Login",
             "ourBrand": "Our Brand",
