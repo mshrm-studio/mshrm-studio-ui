@@ -1,11 +1,11 @@
 'use client'
 
-import DictionaryContext from '@/utils/context/Dictionary'
 import LocaleContext from '@/utils/context/Locale'
 import { useContext, useMemo } from 'react'
 import styles from '@/utils/styles/homepage/devTitle.module.css'
 import { Locale } from '@/utils/enums/locale'
 import AnimatedText from '@/components/AnimatedText'
+import useDictionary from '@/utils/hooks/useDictionary'
 
 type Props = {
     version: 'desktop' | 'mobile'
@@ -14,19 +14,15 @@ type Props = {
 export default function HomePageHeroDevTitle({ version }: Props) {
     const locale = useContext(LocaleContext)
 
-    const dictionary = useContext(DictionaryContext)
-
-    if (!dictionary) {
-        throw new Error('No dictionary found')
-    }
+    const dict = useDictionary()
 
     const title = useMemo(() => {
-        return dictionary.homepage.title.dev.desktop
+        return dict.homepage.title.dev.desktop
 
         // return version === 'desktop'
         //     ? dictionary.homepage.title.dev.desktop
         //     : dictionary.homepage.title.dev.mobile
-    }, [version])
+    }, [dict, version])
 
     const localHeading1Styles = useMemo(() => {
         switch (locale) {

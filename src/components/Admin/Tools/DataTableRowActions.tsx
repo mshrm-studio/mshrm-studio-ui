@@ -12,12 +12,15 @@ import {
 } from '@/components/Admin/shadcnui/dropdown-menu'
 import Tool from '@/utils/dto/Tool'
 import { useToast } from '@/components/Admin/shadcnui/use-toast'
+import useDictionary from '@/utils/hooks/useDictionary'
 
 export default function AdminToolsDataTableRowActions({
     tool,
 }: {
     tool: Tool
 }) {
+    const dict = useDictionary()
+
     const { toast } = useToast()
 
     function copy(content: string) {
@@ -25,7 +28,6 @@ export default function AdminToolsDataTableRowActions({
 
         toast({
             title: '(TODO) Copied',
-            description: content,
         })
     }
 
@@ -40,23 +42,25 @@ export default function AdminToolsDataTableRowActions({
             </DropdownMenuTrigger>
 
             <DropdownMenuContent align="end">
-                <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                <DropdownMenuLabel>
+                    {dict.admin.dataTable.actions}
+                </DropdownMenuLabel>
 
                 <DropdownMenuItem onClick={() => copy(tool.logo)}>
-                    Copy logo url (TODO)
+                    {dict.admin.dataTable.copy.logoUrl}
                 </DropdownMenuItem>
 
                 {tool.link && (
                     <DropdownMenuItem onClick={() => copy(tool.link as string)}>
-                        Copy link url (TODO)
+                        {dict.admin.dataTable.copy.link}
                     </DropdownMenuItem>
                 )}
 
                 <DropdownMenuSeparator />
 
-                <DropdownMenuItem>View customer (TODO)</DropdownMenuItem>
-
-                <DropdownMenuItem>View payment details (TODO)</DropdownMenuItem>
+                <DropdownMenuItem>
+                    {dict.admin.dataTable.view.tool}
+                </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
     )

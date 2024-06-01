@@ -1,20 +1,16 @@
 'use client'
 
-import DictionaryContext from '@/utils/context/Dictionary'
 import { useContext } from 'react'
 import Button from '@/components/App/Button'
 import ContactFormModalContext from '@/utils/context/ContactFormModal'
+import useDictionary from '@/utils/hooks/useDictionary'
 
 export default function ContactUsBtn() {
+    const dict = useDictionary()
+
     const { showContactFormModal, setShowContactFormModal } = useContext(
         ContactFormModalContext
     )
-
-    const dictionary = useContext(DictionaryContext)
-
-    if (!dictionary) {
-        throw new Error('No dictionary found')
-    }
 
     function onClick(_e: React.MouseEvent<HTMLButtonElement>) {
         setShowContactFormModal((prev) => !prev)
@@ -24,7 +20,7 @@ export default function ContactUsBtn() {
 
     return (
         <Button size="threexl" onClick={onClick}>
-            {dictionary.action.contactUs}
+            {dict.action.contactUs}
         </Button>
     )
 }

@@ -1,17 +1,12 @@
 'use client'
 
-import DictionaryContext from '@/utils/context/Dictionary'
-import { useContext } from 'react'
 import Button from '@/components/App/Button'
 import Input from '@/components/App/Input/Input'
 import styles from '@/utils/styles/contactForm.module.css'
+import useDictionary from '@/utils/hooks/useDictionary'
 
 export default function ContactForm() {
-    const dictionary = useContext(DictionaryContext)
-
-    if (!dictionary) {
-        throw new Error('No dictionary found')
-    }
+    const dict = useDictionary()
 
     function onSubmit(_e: React.FormEvent<HTMLFormElement>) {
         // TODO
@@ -22,7 +17,7 @@ export default function ContactForm() {
             <div>
                 <Input
                     name="name"
-                    placeholder={dictionary.contactForm.name.placeholder}
+                    placeholder={dict.contactForm.name.placeholder}
                     required
                 />
             </div>
@@ -30,7 +25,7 @@ export default function ContactForm() {
             <div>
                 <Input
                     name="email"
-                    placeholder={dictionary.contactForm.email.placeholder}
+                    placeholder={dict.contactForm.email.placeholder}
                     required
                     type="email"
                 />
@@ -39,13 +34,13 @@ export default function ContactForm() {
             <div>
                 <Input
                     name="website"
-                    placeholder={dictionary.contactForm.website.placeholder}
+                    placeholder={dict.contactForm.website.placeholder}
                     required
                     type="url"
                 />
             </div>
 
-            <Button>{dictionary.action.contactUs}</Button>
+            <Button>{dict.action.contactUs}</Button>
         </form>
     )
 }

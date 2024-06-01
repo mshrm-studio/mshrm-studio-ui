@@ -1,11 +1,10 @@
 'use client'
 
-import DictionaryContext from '@/utils/context/Dictionary'
 import { useContext } from 'react'
 import styles from '@/utils/styles/footer/contactUs.module.css'
-
 import { Caprasimo } from 'next/font/google'
 import ContactFormModalContext from '@/utils/context/ContactFormModal'
+import useDictionary from '@/utils/hooks/useDictionary'
 
 const caprasimo = Caprasimo({
     subsets: ['latin'],
@@ -14,13 +13,9 @@ const caprasimo = Caprasimo({
 })
 
 export default function FooterContactUs() {
+    const dict = useDictionary()
+
     const { setShowContactFormModal } = useContext(ContactFormModalContext)
-
-    const dictionary = useContext(DictionaryContext)
-
-    if (!dictionary) {
-        throw new Error('No dictionary found')
-    }
 
     function toggleContactFormModal(_e: React.MouseEvent<HTMLButtonElement>) {
         setShowContactFormModal((prev) => !prev)
@@ -29,7 +24,7 @@ export default function FooterContactUs() {
     return (
         <div className={styles.container}>
             <div>
-                <h2 className={styles.title}>{dictionary.action.contactUs}</h2>
+                <h2 className={styles.title}>{dict.action.contactUs}</h2>
             </div>
 
             <div className={styles.buttonAndEmail}>
@@ -39,7 +34,7 @@ export default function FooterContactUs() {
                         onClick={toggleContactFormModal}
                         type="button"
                     >
-                        {dictionary.action.clickToMessageUs}
+                        {dict.action.clickToMessageUs}
                     </button>
                 </div>
 

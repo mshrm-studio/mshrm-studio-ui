@@ -8,15 +8,92 @@
         "signOut": "ចាកចេញ"
     },
     "admin": {
-        "header": {
-            "mainNavigation": {
-                "contactFormSubmissions": "ការដាក់ស្នើទម្រង់ទំនាក់ទំនង",
-                "dashboard": "ផ្ទាំងគ្រប់គ្រង",
-                "home": "ទំព័រដើម",
-                "marketEntities": "អង្គភាពទីផ្សារ",
-                "tools": "ឧបករណ៍"
+        "dataTable": {
+            "actions": "សកម្មភាព",
+            "columns": "ជួរ",
+            "copy": {
+                "logoUrl": "ចម្លង URL នៃរូបសញ្ញា",
+                "link": "ចម្លងតំណភ្ជាប់"
+            },
+            "edit": {
+                "marketEntity": "កែសម្រួលអង្គភាពទីផ្សារ",
+                "tool": "កែសម្រួលឧបករណ៍",
+                "user": "កែសម្រួលអ្នកប្រើប្រាស់"
+            },
+            "next": "បន្ទាប់",
+            "noResults": "គ្មានលទ្ធផល",
+            "previous": "មុន",
+            "resultsMeta": "បង្ហាញ :numberOfResultsShown នៃ :totalResults",
+            "search": "ស្វែងរក",
+            "view": {
+                "marketEntity": "មើលអង្គភាពទីផ្សារ",
+                "tool": "មើលឧបករណ៍",
+                "user": "មើលអ្នកប្រើប្រាស់"
             }
+        },
+        "form": {
+            "rule": {
+                "image": "ឯកសារត្រូវតែជារូបភាព (jpg, png, gif)",
+                "max": {
+                    "length": "ប្រវែងអតិបរមា គឺ :maximum",
+                    "size": "ទំហំអតិបរមា គឺ :size"
+                },
+                "min": {
+                    "length": "ប្រវែងអប្បបរមា គឺ :minimum"
+                },
+                "required": "ត្រូវការ",
+                "url": "ត្រូវតែជាអាសយដ្ឋាន URL ដែលត្រឹមត្រូវ"
+            },
+            "submit": "ដាក់ស្នើ",
+            "tool": {
+                "link": {
+                    "label": "តំណភ្ជាប់",
+                    "description": "តំណភ្ជាប់គេហទំព័រសម្រាប់ឧបករណ៍នេះ",
+                    "placeholder": "https://react.dev"
+                },
+                "logo": {
+                    "label": "និមិត្តសញ្ញា",
+                    "description": "និមិត្តសញ្ញានៃឧបករណ៍"
+                },
+                "name": {
+                    "label": "ឈ្មោះ",
+                    "description": "ឈ្មោះបង្ហាញនៃឧបករណ៍",
+                    "placeholder": "React.js"
+                }
+            }
+        },
+        "mainNavigation": {
+            "contactFormSubmissions": "ការដាក់ស្នើទម្រង់ទំនាក់ទំនង",
+            "dashboard": "ផ្ទាំងគ្រប់គ្រង",
+            "home": "ទំព័រដើម",
+            "marketEntities": "អង្គភាពទីផ្សារ",
+            "tools": "ឧបករណ៍",
+            "users": "អ្នកប្រើប្រាស់"
+        },
+        "sidebar": {
+            "inputPlaceholder": "វាយបញ្ជា ឬ ស្វែងរក...",
+            "menu": "ម៉ឺនុយ",
+            "noResults": "គ្មានលទ្ធផល"
         }
+    },
+    "attribute": {
+        "createdDate": "កាលបរិច្ឆេទបង្កើត",
+        "currency": "រូបិយប័ណ្ណ",
+        "description": "ការពិពណ៌នា",
+        "firstName": "នាមខ្លួន",
+        "label": "ស្លាកស្នាម",
+        "lastName": "នាមត្រកូល",
+        "lastUpdated": "បន្ទាប់បន្ថែមចុងក្រោយ",
+        "link": "តំណភ្ជាប់",
+        "logo": "និមិត្តសញ្ញា",
+        "marketCap": "តម្លៃទីផ្សារ",
+        "name": "ឈ្មោះ",
+        "percentageChange": "ការផ្លាស់ប្តូរពហិការ",
+        "price": "តម្លៃ",
+        "source": "ប្រភព",
+        "title": "ចំណងជើង",
+        "value": "តម្លៃ",
+        "volume": "បរិមាណ"
     },
     "contactForm": {
         "email": {
@@ -87,5 +164,10 @@
     "notFoundPage": {
         "heading": "រក​មិន​ឃើញ",
         "returnHome": "ត្រលប់​មក​ផ្ទះ"
+    },
+    "theme": {
+        "dark": "ងងឹត",
+        "light": "ស",
+        "system": "ប្រព័ន្ធ"
     }
 }

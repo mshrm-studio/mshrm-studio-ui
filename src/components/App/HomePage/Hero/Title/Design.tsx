@@ -1,24 +1,20 @@
 'use client'
 
-import DictionaryContext from '@/utils/context/Dictionary'
-import { useContext, useMemo } from 'react'
+import useDictionary from '@/utils/hooks/useDictionary'
+import { useMemo } from 'react'
 
 type Props = {
     version: 'desktop' | 'mobile'
 }
 
 export default function HomePageHeroDesignTitle({ version }: Props) {
-    const dictionary = useContext(DictionaryContext)
-
-    if (!dictionary) {
-        throw new Error('No dictionary found')
-    }
+    const dict = useDictionary()
 
     const title = useMemo(() => {
         return version === 'desktop'
-            ? dictionary.homepage.title.design.desktop
-            : dictionary.homepage.title.design.mobile
-    }, [version])
+            ? dict.homepage.title.design.desktop
+            : dict.homepage.title.design.mobile
+    }, [dict, version])
 
     if (typeof title === 'object')
         return (

@@ -4,21 +4,16 @@ import styles from '@/utils/styles/marketEntity.module.css'
 import MarketEntityDto from '@/utils/dto/MarketEntity'
 import Price from '@/components/Price'
 import PercentageChange from '@/components/App/PercentageChange'
-import { useContext } from 'react'
-import DictionaryContext from '@/utils/context/Dictionary'
 import DateTime from '@/components/DateTime'
 import { motion } from 'framer-motion'
+import useDictionary from '@/utils/hooks/useDictionary'
 
 export default function MarketEntity({
     marketEntity,
 }: {
     marketEntity: MarketEntityDto
 }) {
-    const dictionary = useContext(DictionaryContext)
-
-    if (!dictionary) {
-        throw new Error('No dictionary found')
-    }
+    const dict = useDictionary()
 
     return (
         <motion.div
@@ -51,7 +46,7 @@ export default function MarketEntity({
 
             <div className={styles.marketCapAndVolume}>
                 <div className={styles.marketCap}>
-                    <label>{dictionary.marketEntity.marketCap}:</label>
+                    <label>{dict.marketEntity.marketCap}:</label>
 
                     <div className={styles.value}>
                         <Price
@@ -62,7 +57,7 @@ export default function MarketEntity({
                 </div>
 
                 <div className={styles.volume}>
-                    <label>{dictionary.marketEntity.volume}:</label>
+                    <label>{dict.marketEntity.volume}:</label>
 
                     <div className={styles.value}>
                         <Price
@@ -75,7 +70,7 @@ export default function MarketEntity({
 
             <div className={styles.lastUpdatedAndSource}>
                 <div className={styles.lastUpdated}>
-                    <label>{dictionary.marketEntity.lastUpdated}:</label>
+                    <label>{dict.marketEntity.lastUpdated}:</label>
 
                     <div className={styles.value}>
                         <DateTime dateTime={marketEntity.lastUpdated} />
@@ -83,7 +78,7 @@ export default function MarketEntity({
                 </div>
 
                 <div className={styles.source}>
-                    <label>{dictionary.marketEntity.source}:</label>
+                    <label>{dict.marketEntity.source}:</label>
 
                     <div className={styles.value}>{marketEntity.source}</div>
                 </div>

@@ -8,15 +8,92 @@
         "signOut": "Cerrar sesión"
     },
     "admin": {
-        "header": {
-            "mainNavigation": {
-                "contactFormSubmissions": "Envíos de formularios de contacto",
-                "dashboard": "Tablero",
-                "home": "Inicio",
-                "marketEntities": "Entidades de mercado",
-                "tools": "Herramientas"
+        "dataTable": {
+            "actions": "Acciones",
+            "columns": "Columnas",
+            "copy": {
+                "logoUrl": "Copiar URL del logo",
+                "link": "Copiar enlace"
+            },
+            "edit": {
+                "marketEntity": "Editar entidad del mercado",
+                "tool": "Editar herramienta",
+                "user": "Editar usuario"
+            },
+            "next": "Siguiente",
+            "noResults": "Sin resultados",
+            "previous": "Anterior",
+            "resultsMeta": "Mostrando :numberOfResultsShown de :totalResults",
+            "search": "Buscar",
+            "view": {
+                "marketEntity": "Ver entidad del mercado",
+                "tool": "Ver herramienta",
+                "user": "Ver usuario"
             }
+        },
+        "form": {
+            "rule": {
+                "image": "El archivo debe ser una imagen (jpg, png, gif)",
+                "max": {
+                    "length": "La longitud máxima es :maximum",
+                    "size": "El tamaño máximo es :size"
+                },
+                "min": {
+                    "length": "La longitud mínima es :minimum"
+                },
+                "required": "Requerido",
+                "url": "Debe ser una URL válida"
+            },
+            "submit": "Enviar",
+            "tool": {
+                "link": {
+                    "label": "Enlace",
+                    "description": "El enlace del sitio web para esta herramienta",
+                    "placeholder": "https://react.dev"
+                },
+                "logo": {
+                    "label": "Logo",
+                    "description": "El logo de la herramienta"
+                },
+                "name": {
+                    "label": "Nombre",
+                    "description": "El nombre de visualización de la herramienta",
+                    "placeholder": "React.js"
+                }
+            }
+        },
+        "mainNavigation": {
+            "contactFormSubmissions": "Envíos de formularios de contacto",
+            "dashboard": "Tablero",
+            "home": "Inicio",
+            "marketEntities": "Entidades de mercado",
+            "tools": "Herramientas",
+            "users": "Usuarios"
+        },
+        "sidebar": {
+            "inputPlaceholder": "Escribe un comando o busca...",
+            "menu": "Menú",
+            "noResults": "Sin resultados"
         }
+    },
+    "attribute": {
+        "createdDate": "Fecha de creación",
+        "currency": "Moneda",
+        "description": "Descripción",
+        "firstName": "Nombre",
+        "label": "Etiqueta",
+        "lastName": "Apellido",
+        "lastUpdated": "Última actualización",
+        "link": "Enlace",
+        "logo": "Logo",
+        "marketCap": "Capitalización de mercado",
+        "name": "Nombre",
+        "percentageChange": "Cambio porcentual",
+        "price": "Precio",
+        "source": "Fuente",
+        "title": "Título",
+        "value": "Valor",
+        "volume": "Volumen"
     },
     "contactForm": {
         "email": {
@@ -87,5 +164,10 @@
     "notFoundPage": {
         "heading": "Extraviado",
         "returnHome": "Volver a casa"
+    },
+    "theme": {
+        "dark": "Oscuro",
+        "light": "Claro",
+        "system": "Sistema"
     }
 }

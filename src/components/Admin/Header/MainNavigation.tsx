@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useContext, useMemo } from 'react'
+import React, { useMemo } from 'react'
 import Link from 'next/link'
 import { cn } from '@/utils/shadcnui'
 import {
@@ -10,46 +10,45 @@ import {
     NavigationMenuList,
     navigationMenuTriggerStyle,
 } from '@/components/Admin/shadcnui/navigation-menu'
-import DictionaryContext from '@/utils/context/Dictionary'
+import useDictionary from '@/utils/hooks/useDictionary'
 
 export default function AdminHeaderMainNavigation() {
-    const dictionary = useContext(DictionaryContext)
-
-    if (!dictionary) {
-        throw new Error('No dictionary found')
-    }
+    const dict = useDictionary()
 
     const menu = useMemo(() => {
         return [
             {
-                title: dictionary.admin.header.mainNavigation.home,
+                title: dict.admin.mainNavigation.home,
                 href: '/',
             },
             {
-                title: dictionary.admin.header.mainNavigation.dashboard,
+                title: dict.admin.mainNavigation.dashboard,
                 href: '/admin/dashboard',
             },
             {
-                title: dictionary.admin.header.mainNavigation.marketEntities,
+                title: dict.admin.mainNavigation.marketEntities,
                 href: '/admin/market-entities',
             },
             {
-                title: dictionary.admin.header.mainNavigation.tools,
+                title: dict.admin.mainNavigation.tools,
                 href: '/admin/tools',
             },
             {
-                title: dictionary.admin.header.mainNavigation
-                    .contactFormSubmissions,
+                title: dict.admin.mainNavigation.contactFormSubmissions,
                 href: '/admin/contact-form-submissions',
             },
+            {
+                title: dict.admin.mainNavigation.users,
+                href: '/admin/users',
+            },
         ]
-    }, [dictionary])
+    }, [dict])
 
     return (
         <NavigationMenu>
             <NavigationMenuList>
-                {menu.map((item) => (
-                    <NavigationMenuItem>
+                {menu.map((item, index) => (
+                    <NavigationMenuItem key={index}>
                         <Link href={item.href} legacyBehavior passHref>
                             <NavigationMenuLink
                                 className={navigationMenuTriggerStyle()}

@@ -1,21 +1,17 @@
 'use client'
 
-import DictionaryContext from '@/utils/context/Dictionary'
+import useDictionary from '@/utils/hooks/useDictionary'
 import styles from '@/utils/styles/header/main-navigation/mainNavigation.module.css'
 import Link from 'next/link'
-import { useContext, useMemo } from 'react'
+import { useMemo } from 'react'
 
 type Props = {}
 
 const HeaderMainNavigation: React.FC<Props> = ({}) => {
-    const dictionary = useContext(DictionaryContext)
-
-    if (!dictionary) {
-        throw new Error('No dictionary found')
-    }
+    const dict = useDictionary()
 
     const menu = useMemo(() => {
-        const menuItemTranslation = dictionary.header.menuItem
+        const menuItemTranslation = dict.header.menuItem
 
         return [
             { id: 'chat', title: menuItemTranslation.chat },
@@ -25,7 +21,7 @@ const HeaderMainNavigation: React.FC<Props> = ({}) => {
             { id: 'ourGithub', title: menuItemTranslation.ourGithub },
             { id: 'cms', title: menuItemTranslation.cms, href: '/admin' },
         ]
-    }, [])
+    }, [dict])
 
     return (
         <nav>

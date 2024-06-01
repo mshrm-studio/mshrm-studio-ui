@@ -6,6 +6,7 @@ import { Locale } from '@/utils/enums/locale'
 import Header from '@/components/Admin/Header/Header'
 import { ThemeProvider } from '@/components/Admin/Provider/Theme'
 import { Toaster } from '@/components/Admin/shadcnui/toaster'
+import Sidebar from '@/components/Admin/Sidebar/Sidebar'
 
 const fontSans = FontSans({
     subsets: ['latin'],
@@ -40,7 +41,11 @@ export default function Layout({
             >
                 <Header locale={params.lang} />
 
-                <main className="p-6">{children}</main>
+                <div className="grid grid-cols-4 gap-x-12 p-6">
+                    <Sidebar locale={params.lang} />
+
+                    <main className="col-span-3">{children}</main>
+                </div>
 
                 <footer></footer>
 
