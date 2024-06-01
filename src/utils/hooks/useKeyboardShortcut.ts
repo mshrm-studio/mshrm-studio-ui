@@ -4,6 +4,7 @@ const useKeyboardShortcut = (key: string, callback: () => void) => {
     useEffect(() => {
         const handler = (event: KeyboardEvent) => {
             if (
+                event.key &&
                 event.key.toLowerCase() === key.toLocaleLowerCase() &&
                 (event.metaKey || event.ctrlKey)
             ) {
