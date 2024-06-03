@@ -2,6 +2,7 @@
 
 import ToolList from '@/components/App/Tool/List'
 import tools from '@/utils/content/tools'
+import { ToolType } from '@/utils/enums/ToolType'
 import useDictionary from '@/utils/hooks/useDictionary'
 
 export default function HomePageTools() {
@@ -15,7 +16,16 @@ export default function HomePageTools() {
                 </h2>
             </div>
 
-            <ToolList tools={tools} />
+            <ToolList
+                tools={tools.map((tool) => ({
+                    ...tool,
+                    guidId: 'TODO',
+                    rank: 0,
+                    toolType: ToolType.Technology,
+                    description: null,
+                    logoGuidId: 'TODO',
+                }))}
+            />
         </section>
     )
 }

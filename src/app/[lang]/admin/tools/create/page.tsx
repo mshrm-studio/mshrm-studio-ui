@@ -15,7 +15,7 @@ export default async function Page({
     return (
         <DictionaryContextProvider dictionary={dictionary}>
             <div id="admin-create-tool">
-                <div className="pb-6 px-6">
+                <div className="mb-6 px-6">
                     <Breadcrumbs
                         items={[
                             {
