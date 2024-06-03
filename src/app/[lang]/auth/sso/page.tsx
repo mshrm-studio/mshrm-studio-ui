@@ -1,4 +1,4 @@
-import { Locale } from '@/utils/enums/locale'
+import { Locale } from '@/utils/enums/Locale'
 import { getDictionary } from '@/app/[lang]/dictionaries'
 import Msal from '@/components/Msal'
 

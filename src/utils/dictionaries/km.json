@@ -8,6 +8,12 @@
         "signOut": "ចាកចេញ"
     },
     "admin": {
+        "breadcrumbs": {
+            "create": "បង្កើត",
+            "edit": "កែប្រែ",
+            "details": "ព័ត៌មានលម្អិត",
+            "list": "បញ្ជី"
+        },
         "dataTable": {
             "actions": "សកម្មភាព",
             "columns": "ជួរ",
@@ -44,23 +50,7 @@
                 "required": "ត្រូវការ",
                 "url": "ត្រូវតែជាអាសយដ្ឋាន URL ដែលត្រឹមត្រូវ"
             },
-            "submit": "ដាក់ស្នើ",
-            "tool": {
-                "link": {
-                    "label": "តំណភ្ជាប់",
-                    "description": "តំណភ្ជាប់គេហទំព័រសម្រាប់ឧបករណ៍នេះ",
-                    "placeholder": "https://react.dev"
-                },
-                "logo": {
-                    "label": "និមិត្តសញ្ញា",
-                    "description": "និមិត្តសញ្ញានៃឧបករណ៍"
-                },
-                "name": {
-                    "label": "ឈ្មោះ",
-                    "description": "ឈ្មោះបង្ហាញនៃឧបករណ៍",
-                    "placeholder": "React.js"
-                }
-            }
+            "submit": "ដាក់ស្នើ"
         },
         "mainNavigation": {
             "contactFormSubmissions": "ការដាក់ស្នើទម្រង់ទំនាក់ទំនង",
@@ -74,6 +64,48 @@
             "inputPlaceholder": "វាយបញ្ជា ឬ ស្វែងរក...",
             "menu": "ម៉ឺនុយ",
             "noResults": "គ្មានលទ្ធផល"
+        },
+        "tool": {
+            "action": {
+                "create": "បង្កើតឧបករណ៍",
+                "edit": "កែប្រែឧបករណ៍",
+                "update": "អាប់ដេតឧបករណ៍"
+            },
+            "form": {
+                "description": "បន្ថែមឧបករណ៍ថ្មីទៅគេហទំព័រ",
+                "item": {
+                    "description": {
+                        "label": "ការពិពណ៌នា",
+                        "description": "ការពិពណ៌នាអំពីឧបករណ៍",
+                        "placeholder": "បណ្ណាល័យ JavaScript សម្រាប់ការបង្កើតផ្ទាំងប្រើប្រាស់"
+                    },
+                    "link": {
+                        "label": "តំណភ្ជាប់",
+                        "description": "តំណភ្ជាប់គេហទំព័រសម្រាប់ឧបករណ៍នេះ",
+                        "placeholder": "https://react.dev"
+                    },
+                    "logo": {
+                        "label": "ឡូហ្គោ",
+                        "description": "ឡូហ្គោរបស់ឧបករណ៍"
+                    },
+                    "name": {
+                        "label": "ឈ្មោះ",
+                        "description": "ឈ្មោះបង្ហាញនៃឧបករណ៍",
+                        "placeholder": "React.js"
+                    },
+                    "rank": {
+                        "label": "ចំណាត់ថ្នាក់",
+                        "description": "ចំណាត់ថ្នាក់នៃឧបករណ៍។ ចំណាត់ថ្នាក់ទាបបង្អស់បង្ហាញមុនគេ។",
+                        "placeholder": "1"
+                    },
+                    "type": {
+                        "label": "ប្រភេទ",
+                        "description": "ប្រភេទនៃឧបករណ៍",
+                        "placeholder": "ជ្រើសរើសប្រភេទ"
+                    }
+                },
+                "title": "បង្កើតឧបករណ៍ថ្មី"
+            }
         }
     },
     "attribute": {
@@ -107,6 +139,16 @@
         },
         "website": {
             "placeholder": "គេហទំព័រ"
+        }
+    },
+    "enum": {
+        "RoleType": {
+            "Admin": "អ្នកគ្រប់គ្រង",
+            "User": "អ្នកប្រើ"
+        },
+        "ToolType": {
+            "Application": "កម្មវិធី",
+            "Technology": "បច្ចេកវិទ្យា"
         }
     },
     "header": {

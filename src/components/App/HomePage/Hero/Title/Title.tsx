@@ -6,7 +6,7 @@ import DevTitle from '@/components/App/HomePage/Hero/Title/Dev'
 import DimensionsContext from '@/utils/context/Dimensions'
 import { useContext, useMemo, useState } from 'react'
 import Selector from '@/components/App/HomePage/Hero/Title/Selector'
-import { HomepageHeroTitle } from '@/utils/enums/homepageHeroTitle'
+import { HomepageHeroTitle } from '@/utils/enums/HomepageHeroTitle'
 
 export default function HomePageHeroTitle() {
     const { dimensions } = useContext(DimensionsContext)

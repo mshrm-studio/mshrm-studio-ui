@@ -8,6 +8,12 @@
         "signOut": "登出"
     },
     "admin": {
+        "breadcrumbs": {
+            "create": "创建",
+            "edit": "编辑",
+            "details": "详情",
+            "list": "列表"
+        },
         "dataTable": {
             "actions": "操作",
             "columns": "列",
@@ -44,23 +50,7 @@
                 "required": "必填",
                 "url": "必须是有效的 URL"
             },
-            "submit": "提交",
-            "tool": {
-                "link": {
-                    "label": "链接",
-                    "description": "此工具的网站链接",
-                    "placeholder": "https://react.dev"
-                },
-                "logo": {
-                    "label": "标志",
-                    "description": "工具的标志"
-                },
-                "name": {
-                    "label": "名称",
-                    "description": "工具的显示名称",
-                    "placeholder": "React.js"
-                }
-            }
+            "submit": "提交"
         },
         "mainNavigation": {
             "contactFormSubmissions": "联系表单提交",
@@ -74,6 +64,48 @@
             "inputPlaceholder": "输入命令或搜索...",
             "menu": "菜单",
             "noResults": "没有结果"
+        },
+        "tool": {
+            "action": {
+                "create": "创建工具",
+                "edit": "编辑工具",
+                "update": "更新工具"
+            },
+            "form": {
+                "description": "将新工具添加到网站",
+                "item": {
+                    "description": {
+                        "label": "描述",
+                        "description": "工具的描述",
+                        "placeholder": "用于构建用户界面的 JavaScript 库"
+                    },
+                    "link": {
+                        "label": "链接",
+                        "description": "该工具的网站链接",
+                        "placeholder": "https://react.dev"
+                    },
+                    "logo": {
+                        "label": "标志",
+                        "description": "工具的标志"
+                    },
+                    "name": {
+                        "label": "名称",
+                        "description": "工具的显示名称",
+                        "placeholder": "React.js"
+                    },
+                    "rank": {
+                        "label": "排名",
+                        "description": "工具的排名。较低的排名会优先显示。",
+                        "placeholder": "1"
+                    },
+                    "type": {
+                        "label": "类型",
+                        "description": "工具的类型",
+                        "placeholder": "选择类型"
+                    }
+                },
+                "title": "创建新工具"
+            }
         }
     },
     "attribute": {
@@ -107,6 +139,16 @@
         },
         "website": {
             "placeholder": "网站"
+        }
+    },
+    "enum": {
+        "RoleType": {
+            "Admin": "管理员",
+            "User": "用户"
+        },
+        "ToolType": {
+            "Application": "应用程序",
+            "Technology": "技术"
         }
     },
     "header": {

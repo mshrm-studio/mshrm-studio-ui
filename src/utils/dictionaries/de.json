@@ -8,6 +8,12 @@
         "signOut": "Ausloggen"
     },
     "admin": {
+        "breadcrumbs": {
+            "create": "Erstellen",
+            "edit": "Bearbeiten",
+            "details": "Details",
+            "list": "Liste"
+        },
         "dataTable": {
             "actions": "Aktionen",
             "columns": "Spalten",
@@ -44,23 +50,7 @@
                 "required": "Erforderlich",
                 "url": "Muss eine gültige URL sein"
             },
-            "submit": "Absenden",
-            "tool": {
-                "link": {
-                    "label": "Link",
-                    "description": "Der Webseiten-Link für dieses Werkzeug",
-                    "placeholder": "https://react.dev"
-                },
-                "logo": {
-                    "label": "Logo",
-                    "description": "Das Logo des Werkzeugs"
-                },
-                "name": {
-                    "label": "Name",
-                    "description": "Der Anzeigename des Werkzeugs",
-                    "placeholder": "React.js"
-                }
-            }
+            "submit": "Absenden"
         },
         "mainNavigation": {
             "contactFormSubmissions": "Kontaktformular Einsendungen",
@@ -74,6 +64,48 @@
             "inputPlaceholder": "Geben Sie einen Befehl ein oder suchen Sie...",
             "menu": "Menü",
             "noResults": "Keine Ergebnisse"
+        },
+        "tool": {
+            "action": {
+                "create": "Werkzeug erstellen",
+                "edit": "Werkzeug bearbeiten",
+                "update": "Werkzeug aktualisieren"
+            },
+            "form": {
+                "description": "Ein neues Werkzeug zur Website hinzufügen",
+                "item": {
+                    "description": {
+                        "label": "Beschreibung",
+                        "description": "Die Beschreibung des Werkzeugs",
+                        "placeholder": "Eine JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen"
+                    },
+                    "link": {
+                        "label": "Link",
+                        "description": "Der Website-Link für dieses Werkzeug",
+                        "placeholder": "https://react.dev"
+                    },
+                    "logo": {
+                        "label": "Logo",
+                        "description": "Das Logo des Werkzeugs"
+                    },
+                    "name": {
+                        "label": "Name",
+                        "description": "Der Anzeigename des Werkzeugs",
+                        "placeholder": "React.js"
+                    },
+                    "rank": {
+                        "label": "Rang",
+                        "description": "Der Rang des Werkzeugs. Niedrigere Ränge erscheinen zuerst.",
+                        "placeholder": "1"
+                    },
+                    "type": {
+                        "label": "Typ",
+                        "description": "Der Typ des Werkzeugs",
+                        "placeholder": "Wählen Sie einen Typ aus"
+                    }
+                },
+                "title": "Neues Werkzeug erstellen"
+            }
         }
     },
     "attribute": {
@@ -107,6 +139,16 @@
         },
         "website": {
             "placeholder": "Webseite"
+        }
+    },
+    "enum": {
+        "RoleType": {
+            "Admin": "Administrator",
+            "User": "Benutzer"
+        },
+        "ToolType": {
+            "Application": "Anwendung",
+            "Technology": "Technologie"
         }
     },
     "header": {

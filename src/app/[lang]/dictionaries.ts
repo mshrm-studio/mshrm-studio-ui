@@ -1,6 +1,6 @@
 import 'server-only'
 
-import { Locale } from '@/utils/enums/locale'
+import { Locale } from '@/utils/enums/Locale'
 
 export interface Dictionary {
     [key: string]: any

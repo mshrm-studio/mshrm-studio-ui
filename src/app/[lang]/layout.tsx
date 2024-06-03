@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Locale, locales } from '@/utils/enums/locale'
+import { Locale, locales } from '@/utils/enums/Locale'
 import AuthContextProvider from '@/components/Provider/Auth'
 import DimensionsContextProvider from '@/components/Provider/Dimensions'
 import LocaleContextProvider from '@/components/Provider/Locale'

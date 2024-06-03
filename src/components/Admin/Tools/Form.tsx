@@ -3,19 +3,15 @@
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
-import {
-    Form,
-    FormControl,
-    FormDescription,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage,
-} from '@/components/Admin/shadcnui/form'
 import { Input } from '@/components/Admin/shadcnui/input'
 import { Button } from '@/components/Admin/shadcnui/button'
 import { useMemo } from 'react'
 import useDictionary from '@/utils/hooks/useDictionary'
+import { Textarea } from '@/components/Admin/shadcnui/textarea'
+import { toolTypes } from '@/utils/enums/ToolType'
+import FormItem from '@/components/Admin/FormItem/FormItem'
+import SelectFormItem from '@/components/Admin/FormItem/Select'
+import { Form, FormField } from '@/components/Admin/shadcnui/form'
 
 export default function AdminToolsForm() {
     const dict = useDictionary()
@@ -27,6 +23,7 @@ export default function AdminToolsForm() {
 
     const formSchema = useMemo(() => {
         return z.object({
+            description: z.string(),
             link: z.string().url({ message: dict.admin.form.rule.url }),
             logo: z
                 .instanceof(File)
@@ -62,15 +59,18 @@ export default function AdminToolsForm() {
                         '50'
                     ),
                 }),
+            type: z.string(),
         })
     }, [dict])
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
+            description: '',
             logo: undefined,
             link: '',
             name: '',
+            type: undefined,
         },
     })
 
@@ -85,25 +85,18 @@ export default function AdminToolsForm() {
                     control={form.control}
                     name="name"
                     render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>
-                                {dict.admin.form.tool.name.label}
-                            </FormLabel>
-
-                            <FormControl>
-                                <Input
-                                    placeholder={
-                                        dict.admin.form.tool.name.placeholder
-                                    }
-                                    {...field}
-                                />
-                            </FormControl>
-
-                            <FormDescription>
-                                {dict.admin.form.tool.name.description}
-                            </FormDescription>
-
-                            <FormMessage />
+                        <FormItem
+                            label={dict.admin.tool.form.item.name.label}
+                            description={
+                                dict.admin.tool.form.item.name.description
+                            }
+                        >
+                            <Input
+                                placeholder={
+                                    dict.admin.tool.form.item.name.placeholder
+                                }
+                                {...field}
+                            />
                         </FormItem>
                     )}
                 />
@@ -112,25 +105,19 @@ export default function AdminToolsForm() {
                     control={form.control}
                     name="link"
                     render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>
-                                {dict.admin.form.tool.link.label}
-                            </FormLabel>
-
-                            <FormControl>
-                                <Input
-                                    placeholder={
-                                        dict.admin.form.tool.link.placeholder
-                                    }
-                                    {...field}
-                                />
-                            </FormControl>
-
-                            <FormDescription>
-                                {dict.admin.form.tool.link.description}
-                            </FormDescription>
-
-                            <FormMessage />
+                        <FormItem
+                            label={dict.admin.tool.form.item.link.label}
+                            description={
+                                dict.admin.tool.form.item.link.description
+                            }
+                        >
+                            <Input
+                                placeholder={
+                                    dict.admin.tool.form.item.link.placeholder
+                                }
+                                type="url"
+                                {...field}
+                            />
                         </FormItem>
                     )}
                 />
@@ -139,30 +126,65 @@ export default function AdminToolsForm() {
                     control={form.control}
                     name="logo"
                     render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>
-                                {dict.admin.form.tool.logo.label}
-                            </FormLabel>
-
-                            <FormControl>
-                                <Input
-                                    type="file"
-                                    onChange={(e) =>
-                                        field.onChange(
-                                            e.target.files?.[0] || null
-                                        )
-                                    }
-                                />
-                            </FormControl>
-
-                            <FormDescription>
-                                {dict.admin.form.tool.logo.description}
-                            </FormDescription>
-
-                            <FormMessage />
+                        <FormItem
+                            label={dict.admin.tool.form.item.logo.label}
+                            description={
+                                dict.admin.tool.form.item.logo.description
+                            }
+                        >
+                            <Input
+                                type="file"
+                                onChange={(e) =>
+                                    field.onChange(e.target.files?.[0] || null)
+                                }
+                            />
                         </FormItem>
                     )}
                 />
+
+                <FormField
+                    control={form.control}
+                    name="type"
+                    render={({ field }) => (
+                        <SelectFormItem
+                            field={field}
+                            label={dict.admin.tool.form.item.type.label}
+                            placeholder={
+                                dict.admin.tool.form.item.type.placeholder
+                            }
+                            description={
+                                dict.admin.tool.form.item.type.description
+                            }
+                            options={toolTypes.map((type) => ({
+                                value: type,
+                                label: dict.enum['ToolType'][type],
+                            }))}
+                        />
+                    )}
+                />
+
+                <FormField
+                    control={form.control}
+                    name="description"
+                    render={({ field }) => (
+                        <FormItem
+                            label={dict.admin.tool.form.item.description.label}
+                            description={
+                                dict.admin.tool.form.item.description
+                                    .description
+                            }
+                        >
+                            <Textarea
+                                placeholder={
+                                    dict.admin.tool.form.item.description
+                                        .description
+                                }
+                                {...field}
+                            />
+                        </FormItem>
+                    )}
+                />
+
                 <Button type="submit">{dict.admin.form.submit}</Button>
             </form>
         </Form>

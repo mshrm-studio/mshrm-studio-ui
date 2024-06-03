@@ -1,6 +1,6 @@
 import { useContext, useMemo } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
-import { Locale, isLocale } from '@/utils/enums/locale'
+import { Locale, isLocale } from '@/utils/enums/Locale'
 import LocaleContext from '@/utils/context/Locale'
 
 const useLanguage = () => {

@@ -1,7 +1,7 @@
 'use client'
 
 import LocaleContext from '@/utils/context/Locale'
-import { Locale } from '@/utils/enums/locale'
+import { Locale } from '@/utils/enums/Locale'
 import { useEffect } from 'react'
 
 export default function LocaleContextProvider({

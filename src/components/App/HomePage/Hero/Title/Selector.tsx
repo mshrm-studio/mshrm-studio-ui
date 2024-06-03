@@ -3,7 +3,7 @@
 import {
     homepageHeroTitles,
     HomepageHeroTitle,
-} from '@/utils/enums/homepageHeroTitle'
+} from '@/utils/enums/HomepageHeroTitle'
 import React, { Dispatch, SetStateAction, useMemo } from 'react'
 
 type Props = {

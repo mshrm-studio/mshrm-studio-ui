@@ -10,7 +10,7 @@ type Props = {
     items: { title: string; href: string }[]
 }
 
-export default function BreadcrumbDemo({ items }: Props) {
+export default function Breadcrumbs({ items }: Props) {
     return (
         <Breadcrumb>
             <BreadcrumbList>

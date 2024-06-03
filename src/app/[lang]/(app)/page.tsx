@@ -1,4 +1,4 @@
-import { Locale } from '@/utils/enums/locale'
+import { Locale } from '@/utils/enums/Locale'
 import { getDictionary } from '@/app/[lang]/dictionaries'
 import Hero from '@/components/App/HomePage/Hero/Hero'
 import Stack from '@/components/App/HomePage/Stack'
@@ -7,6 +7,7 @@ import DictionaryContextProvider from '@/components/Provider/Dictionary'
 import styles from '@/utils/styles/homepage/homepage.module.css'
 import dynamic from 'next/dynamic'
 import DraggableContactUsBtn from '@/components/App/HomePage/DraggableContactUsBtn'
+import marketEntities from '@/utils/content/marketEntities'
 
 const CryptoWalletAddress = dynamic(
     () => import('@/components/CryptoWallet/Address'),
@@ -29,64 +30,6 @@ export default async function Page({
 }>) {
     const dictionary = await getDictionary(lang)
 
-    const marketEntityList = [
-        {
-            currency: 'USD',
-            name: 'BTC',
-            logo: 'IMAGE_URL',
-            price: 71765,
-            priceChangePercentage: 12.3,
-            marketCap: 12000000000,
-            volume: 400000000,
-            lastUpdated: '2024-04-13T15:45:30Z',
-            source: 'Coin Gecko',
-        },
-        {
-            currency: 'USD',
-            name: 'BTC',
-            logo: 'IMAGE_URL',
-            price: 71765,
-            priceChangePercentage: 12.3,
-            marketCap: 12000000000,
-            volume: 400000000,
-            lastUpdated: '2024-04-13T15:45:30Z',
-            source: 'Coin Gecko',
-        },
-        {
-            currency: 'USD',
-            name: 'BTC',
-            logo: 'IMAGE_URL',
-            price: 71765,
-            priceChangePercentage: 12.3,
-            marketCap: 12000000000,
-            volume: 400000000,
-            lastUpdated: '2024-04-13T15:45:30Z',
-            source: 'Coin Gecko',
-        },
-        {
-            currency: 'USD',
-            name: 'BTC',
-            logo: 'IMAGE_URL',
-            price: 71765,
-            priceChangePercentage: 12.3,
-            marketCap: 12000000000,
-            volume: 400000000,
-            lastUpdated: '2024-04-13T15:45:30Z',
-            source: 'Coin Gecko',
-        },
-        {
-            currency: 'USD',
-            name: 'BTC',
-            logo: 'IMAGE_URL',
-            price: 71765,
-            priceChangePercentage: 12.3,
-            marketCap: 12000000000,
-            volume: 400000000,
-            lastUpdated: '2024-04-13T15:45:30Z',
-            source: 'Coin Gecko',
-        },
-    ]
-
     return (
         <DictionaryContextProvider dictionary={dictionary}>
             <div id="homepage">
@@ -96,7 +39,7 @@ export default async function Page({
 
                 <section className={styles.aboutAndMarketEntitySection}>
                     <div>
-                        <MarketEntityList marketEntities={marketEntityList} />
+                        <MarketEntityList marketEntities={marketEntities} />
                     </div>
 
                     {/* <div className="mb-12 space-y-6 xl:max-w-site xl:mx-auto">

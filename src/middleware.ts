@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { match } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
-import { Locale, isLocale, locales } from '@/utils/enums/locale'
+import { Locale, isLocale, locales } from '@/utils/enums/Locale'
 import type { NextRequest } from 'next/server'
 
 // Helper function to convert Next.js Headers to a simple object

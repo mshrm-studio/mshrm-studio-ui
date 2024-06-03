@@ -1,7 +1,7 @@
 'use client'
 
 import ThemeContext from '@/utils/context/Theme'
-import { Theme } from '@/utils/enums/theme'
+import { Theme } from '@/utils/enums/Theme'
 import { useEffect, useState } from 'react'
 
 export default function ThemeContextProvider({

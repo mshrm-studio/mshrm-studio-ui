@@ -8,7 +8,7 @@ import {
 } from '@heroicons/react/24/solid'
 import styles from '@/utils/styles/themeSwitcher.module.css'
 import ThemeContext from '@/utils/context/Theme'
-import { Theme } from '@/utils/enums/theme'
+import { Theme } from '@/utils/enums/Theme'
 
 export default function HeaderThemeSwitcher() {
     const { theme, setTheme } = useContext(ThemeContext)

@@ -3,7 +3,7 @@
 import LocaleContext from '@/utils/context/Locale'
 import { useContext, useMemo } from 'react'
 import styles from '@/utils/styles/homepage/devTitle.module.css'
-import { Locale } from '@/utils/enums/locale'
+import { Locale } from '@/utils/enums/Locale'
 import AnimatedText from '@/components/AnimatedText'
 import useDictionary from '@/utils/hooks/useDictionary'
 

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import '@/app/app.css'
-import { Locale } from '@/utils/enums/locale'
+import { Locale } from '@/utils/enums/Locale'
 import { Rethink_Sans } from 'next/font/google'
 import Header from '@/components/App/Header/Header'
 import Footer from '@/components/App/Footer/Footer'

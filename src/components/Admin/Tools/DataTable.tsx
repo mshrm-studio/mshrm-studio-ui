@@ -20,11 +20,11 @@ export default function AdminToolsDataTable({ tools }: { tools: Tool[] }) {
                     return (
                         <div className="flex items-center space-x-3">
                             <Avatar
-                                src={`static/stack/${row.original.logo}`}
+                                src={`static/stack/${row.original.logoUrl}`}
                                 alt={row.original.name}
                             />
 
-                            <div>{row.original.logo}</div>
+                            <div>{row.original.logoUrl}</div>
                         </div>
                     )
                 },

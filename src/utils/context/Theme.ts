@@ -1,5 +1,5 @@
 import { createContext, Dispatch, SetStateAction } from 'react'
-import { Theme } from '@/utils/enums/theme'
+import { Theme } from '@/utils/enums/Theme'
 
 const ThemeContext = createContext<{
     darkClassToggled?: boolean

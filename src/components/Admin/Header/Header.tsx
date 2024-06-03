@@ -1,5 +1,5 @@
 import { getDictionary } from '@/app/[lang]/dictionaries'
-import { Locale } from '@/utils/enums/locale'
+import { Locale } from '@/utils/enums/Locale'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
 import MainNavigation from '@/components/Admin/Header/MainNavigation'
 import ThemeSwitcher from '@/components/Admin/Header/ThemeSwitcher'

@@ -8,6 +8,12 @@
         "signOut": "تسجيل خروج"
     },
     "admin": {
+        "breadcrumbs": {
+            "create": "إنشاء",
+            "edit": "تعديل",
+            "details": "التفاصيل",
+            "list": "قائمة"
+        },
         "dataTable": {
             "actions": "الإجراءات",
             "columns": "الأعمدة",
@@ -44,23 +50,7 @@
                 "required": "مطلوب",
                 "url": "يجب أن يكون رابط URL صالح"
             },
-            "submit": "إرسال",
-            "tool": {
-                "link": {
-                    "label": "رابط",
-                    "description": "رابط الموقع لهذا الأداة",
-                    "placeholder": "https://react.dev"
-                },
-                "logo": {
-                    "label": "الشعار",
-                    "description": "شعار الأداة"
-                },
-                "name": {
-                    "label": "الاسم",
-                    "description": "اسم العرض للأداة",
-                    "placeholder": "React.js"
-                }
-            }
+            "submit": "إرسال"
         },
         "mainNavigation": {
             "contactFormSubmissions": "تقديمات استمارة الاتصال",
@@ -74,6 +64,48 @@
             "inputPlaceholder": "اكتب أمراً أو ابحث...",
             "menu": "القائمة",
             "noResults": "لا توجد نتائج"
+        },
+        "tool": {
+            "action": {
+                "create": "إنشاء أداة",
+                "edit": "تعديل أداة",
+                "update": "تحديث أداة"
+            },
+            "form": {
+                "description": "إضافة أداة جديدة إلى الموقع",
+                "item": {
+                    "description": {
+                        "label": "الوصف",
+                        "description": "وصف الأداة",
+                        "placeholder": "مكتبة JavaScript لبناء واجهات المستخدم"
+                    },
+                    "link": {
+                        "label": "الرابط",
+                        "description": "رابط موقع الويب لهذه الأداة",
+                        "placeholder": "https://react.dev"
+                    },
+                    "logo": {
+                        "label": "الشعار",
+                        "description": "شعار الأداة"
+                    },
+                    "name": {
+                        "label": "الاسم",
+                        "description": "اسم العرض للأداة",
+                        "placeholder": "React.js"
+                    },
+                    "rank": {
+                        "label": "الترتيب",
+                        "description": "ترتيب الأداة. الترتيبات الأقل تظهر أولاً.",
+                        "placeholder": "1"
+                    },
+                    "type": {
+                        "label": "النوع",
+                        "description": "نوع الأداة",
+                        "placeholder": "اختر نوعًا"
+                    }
+                },
+                "title": "إنشاء أداة جديدة"
+            }
         }
     },
     "attribute": {
@@ -107,6 +139,16 @@
         },
         "website": {
             "placeholder": "الموقع الإلكتروني"
+        }
+    },
+    "enum": {
+        "RoleType": {
+            "Admin": "مسؤول",
+            "User": "مستخدم"
+        },
+        "ToolType": {
+            "Application": "تطبيق",
+            "Technology": "تكنولوجيا"
         }
     },
     "header": {
