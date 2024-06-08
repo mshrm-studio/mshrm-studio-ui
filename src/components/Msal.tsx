@@ -33,43 +33,43 @@ export default function Msal() {
             console.log('******************')
             console.log('handleRedirectPromise')
 
-            msalInstance
-                .handleRedirectPromise()
-                .then((response: AuthenticationResult | null) => {
-                    console.log('handleRedirectPromise response', response)
+            // msalInstance
+            //     .handleRedirectPromise()
+            //     .then((response: AuthenticationResult | null) => {
+            //         console.log('handleRedirectPromise response', response)
 
-                    if (response !== null) {
-                        setAuthResult(response)
-                        setUser(response.account)
-                    } else {
-                        const accounts: AccountInfo[] =
-                            msalInstance.getAllAccounts()
+            //         if (response !== null) {
+            //             setAuthResult(response)
+            //             setUser(response.account)
+            //         } else {
+            //             const accounts: AccountInfo[] =
+            //                 msalInstance.getAllAccounts()
 
-                        console.log('handleRedirectPromise accounts', accounts)
+            //             console.log('handleRedirectPromise accounts', accounts)
 
-                        if (accounts.length > 0) {
-                            if (accounts.length === 1) {
-                                acquireTokenSilent(
-                                    msalInstance,
-                                    msalClientId,
-                                    accounts[0].homeAccountId
-                                )
-                            } else {
-                                acquireTokenSilent(
-                                    msalInstance,
-                                    msalClientId,
-                                    accounts[0].homeAccountId
-                                )
-                            }
-                        } else {
-                            ssoSilent(msalInstance, msalClientId)
-                        }
-                    }
-                })
-                .catch((error) => {
-                    console.log('handleRedirectPromise error', error)
-                    setAuthError(error)
-                })
+            //             if (accounts.length > 0) {
+            //                 if (accounts.length === 1) {
+            //                     acquireTokenSilent(
+            //                         msalInstance,
+            //                         msalClientId,
+            //                         accounts[0].homeAccountId
+            //                     )
+            //                 } else {
+            //                     acquireTokenSilent(
+            //                         msalInstance,
+            //                         msalClientId,
+            //                         accounts[0].homeAccountId
+            //                     )
+            //                 }
+            //             } else {
+            //                 ssoSilent(msalInstance, msalClientId)
+            //             }
+            //         }
+            //     })
+            //     .catch((error) => {
+            //         console.log('handleRedirectPromise error', error)
+            //         setAuthError(error)
+            //     })
         }
 
         const msalClientId = process.env.NEXT_PUBLIC_OAUTH_CLIENT_ID

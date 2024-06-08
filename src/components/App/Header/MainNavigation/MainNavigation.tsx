@@ -15,7 +15,11 @@ const HeaderMainNavigation: React.FC<Props> = ({}) => {
 
         return [
             { id: 'chat', title: menuItemTranslation.chat },
-            { id: 'microsoftLogin', title: menuItemTranslation.microsoftLogin },
+            {
+                id: 'microsoftLogin',
+                title: menuItemTranslation.microsoftLogin,
+                href: '/auth/sso',
+            },
             { id: 'connectWallet', title: menuItemTranslation.connectWallet },
             { id: 'ourBrand', title: menuItemTranslation.ourBrand },
             { id: 'ourGithub', title: menuItemTranslation.ourGithub },

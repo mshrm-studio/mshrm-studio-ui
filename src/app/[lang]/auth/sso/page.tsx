@@ -1,6 +1,6 @@
 import { Locale } from '@/utils/enums/Locale'
 import { getDictionary } from '@/app/[lang]/dictionaries'
-import Msal from '@/components/Msal'
+import MsalReact from '@/components/MsalReact'
 
 export default async function Page({
     params: { lang },
@@ -9,11 +9,5 @@ export default async function Page({
 }>) {
     const dict = await getDictionary(lang)
 
-    return (
-        <>
-            <h1>{dict.action.signIn}</h1>
-
-            <Msal />
-        </>
-    )
+    return <MsalReact />
 }
