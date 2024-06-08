@@ -1,6 +1,5 @@
 'use client'
 
-import * as React from 'react'
 import { Languages } from 'lucide-react'
 import useLanguage from '@/utils/hooks/useLanguage'
 import { Button } from '@/components/Admin/shadcnui/button'
@@ -17,7 +16,7 @@ export default function LanguageSwitcher() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="icon">
+                <Button variant="ghost" size="icon">
                     <Languages className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all" />
 
                     <span className="sr-only">Toggle language</span>

@@ -12,6 +12,7 @@ import { toolTypes } from '@/utils/enums/ToolType'
 import FormItem from '@/components/Admin/FormItem/FormItem'
 import SelectFormItem from '@/components/Admin/FormItem/Select'
 import { Form, FormField } from '@/components/Admin/shadcnui/form'
+import { Separator } from '@/components/Admin/shadcnui/separator'
 
 export default function AdminToolsForm() {
     const dict = useDictionary()
@@ -80,7 +81,7 @@ export default function AdminToolsForm() {
 
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <form onSubmit={form.handleSubmit(onSubmit)}>
                 <FormField
                     control={form.control}
                     name="name"
@@ -100,6 +101,8 @@ export default function AdminToolsForm() {
                         </FormItem>
                     )}
                 />
+
+                <Separator className="my-4" />
 
                 <FormField
                     control={form.control}
@@ -122,6 +125,8 @@ export default function AdminToolsForm() {
                     )}
                 />
 
+                <Separator className="my-4" />
+
                 <FormField
                     control={form.control}
                     name="logo"
@@ -141,6 +146,8 @@ export default function AdminToolsForm() {
                         </FormItem>
                     )}
                 />
+
+                <Separator className="my-4" />
 
                 <FormField
                     control={form.control}
@@ -163,6 +170,8 @@ export default function AdminToolsForm() {
                     )}
                 />
 
+                <Separator className="my-4" />
+
                 <FormField
                     control={form.control}
                     name="description"
@@ -184,6 +193,8 @@ export default function AdminToolsForm() {
                         </FormItem>
                     )}
                 />
+
+                <Separator className="my-4" />
 
                 <Button type="submit">{dict.admin.form.submit}</Button>
             </form>

@@ -1,12 +1,12 @@
+import { Locale } from '@/utils/enums/Locale'
+import { ThemeProvider } from 'next-themes'
 import type { Metadata } from 'next'
 import '@/app/admin.css'
 import { Inter as FontSans } from 'next/font/google'
 import { cn } from '@/utils/shadcnui'
-import { Locale } from '@/utils/enums/Locale'
-import Header from '@/components/Admin/Header/Header'
-import { ThemeProvider } from '@/components/Admin/Provider/Theme'
 import { Toaster } from '@/components/Admin/shadcnui/toaster'
-import Sidebar from '@/components/Admin/Sidebar/Sidebar'
+import AdminLayoutSidebar from '@/components/Admin/Layout/Sidebar'
+import AdminLayoutHeader from '@/components/Admin/Layout/Header'
 
 const fontSans = FontSans({
     subsets: ['latin'],
@@ -26,31 +26,30 @@ export default function Layout({
     params: { lang: Locale }
 }>) {
     return (
-        <div
-            id="admin-layout"
-            className={cn(
-                'min-h-screen bg-background font-sans antialiased',
-                fontSans.variable
-            )}
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
         >
-            <ThemeProvider
-                attribute="class"
-                defaultTheme="system"
-                enableSystem
-                disableTransitionOnChange
+            <div
+                id="admin-layout"
+                className={cn('font-sans antialiased', fontSans.variable)}
             >
-                <Header locale={params.lang} />
+                <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
+                    <AdminLayoutSidebar locale={params.lang} />
 
-                <div className="grid grid-cols-4 gap-x-12 p-6">
-                    <Sidebar locale={params.lang} />
+                    <div className="max-w-[100vw] flex flex-col">
+                        <AdminLayoutHeader locale={params.lang} />
 
-                    <main className="col-span-3">{children}</main>
+                        <main className="w-full flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
+                            {children}
+                        </main>
+                    </div>
                 </div>
+            </div>
 
-                <footer></footer>
-
-                <Toaster />
-            </ThemeProvider>
-        </div>
+            <Toaster />
+        </ThemeProvider>
     )
 }

@@ -20,13 +20,23 @@ export default function FormItem({
 }) {
     return (
         <FormField>
-            <FormLabel>{label}</FormLabel>
+            <div className="space-y-2 lg:space-y-0 lg:grid lg:gap-x-6 lg:grid-cols-3">
+                <div className="lg:pt-2">
+                    <FormLabel>{label}</FormLabel>
+                </div>
 
-            {isSelect ? children : <FormControl>{children}</FormControl>}
+                <div className="space-y-2 lg:col-span-2">
+                    {isSelect ? (
+                        children
+                    ) : (
+                        <FormControl>{children}</FormControl>
+                    )}
 
-            <FormDescription>{description}</FormDescription>
+                    <FormDescription>{description}</FormDescription>
 
-            <FormMessage />
+                    <FormMessage />
+                </div>
+            </div>
         </FormField>
     )
 }

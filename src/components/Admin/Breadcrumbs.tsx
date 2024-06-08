@@ -18,7 +18,7 @@ export default function Breadcrumbs({ items }: Props) {
                     <>
                         {index > 0 && <BreadcrumbSeparator />}
 
-                        <BreadcrumbItem>
+                        <BreadcrumbItem key={index}>
                             <BreadcrumbLink href={item.href}>
                                 {item.title}
                             </BreadcrumbLink>

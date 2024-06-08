@@ -15,27 +15,7 @@ export default async function Page({
     return (
         <DictionaryContextProvider dictionary={dictionary}>
             <div id="admin-create-tool">
-                <div className="mb-6 px-6">
-                    <Breadcrumbs
-                        items={[
-                            {
-                                title: dictionary.admin.breadcrumbs.list,
-                                href: '/admin/tools',
-                            },
-                            {
-                                title: dictionary.admin.breadcrumbs.create,
-                                href: '#',
-                            },
-                        ]}
-                    />
-                </div>
-
-                <Card
-                    title={dictionary.admin.tool.form.title}
-                    description={dictionary.admin.tool.form.description}
-                >
-                    <ToolForm />
-                </Card>
+                <ToolForm />
             </div>
         </DictionaryContextProvider>
     )
