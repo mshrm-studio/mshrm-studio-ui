@@ -53,17 +53,20 @@
             "submit": "ដាក់ស្នើ"
         },
         "mainNavigation": {
-            "contactFormSubmissions": "ការដាក់ស្នើទម្រង់ទំនាក់ទំនង",
+            "conversations": "ការសន្ទនា",
             "dashboard": "ផ្ទាំងគ្រប់គ្រង",
             "home": "ទំព័រដើម",
             "marketEntities": "អង្គភាពទីផ្សារ",
             "tools": "ឧបករណ៍",
             "users": "អ្នកប្រើប្រាស់"
         },
-        "sidebar": {
-            "inputPlaceholder": "វាយបញ្ជា ឬ ស្វែងរក...",
-            "menu": "ម៉ឺនុយ",
-            "noResults": "គ្មានលទ្ធផល"
+        "pageTitle": {
+            "conversations": "ការសន្ទនា",
+            "dashboard": "ផ្ទាំងគ្រប់គ្រង",
+            "home": "ទំព័រដើម",
+            "marketEntities": "អង្គភាពទីផ្សារ",
+            "tools": "ឧបករណ៍",
+            "users": "អ្នកប្រើប្រាស់"
         },
         "tool": {
             "action": {

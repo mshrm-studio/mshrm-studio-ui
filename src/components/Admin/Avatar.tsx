@@ -30,7 +30,7 @@ export default function Avatar({
         <ShadcnuiAvatar>
             <AvatarImage src={imgSrc} alt={alt} />
 
-            <AvatarFallback>{fallback || alt}</AvatarFallback>
+            {fallback && <AvatarFallback>{fallback}</AvatarFallback>}
         </ShadcnuiAvatar>
     )
 }

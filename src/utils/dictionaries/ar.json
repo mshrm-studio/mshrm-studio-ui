@@ -53,17 +53,20 @@
             "submit": "إرسال"
         },
         "mainNavigation": {
-            "contactFormSubmissions": "تقديمات استمارة الاتصال",
+            "conversations": "محادثات",
             "dashboard": "لوحة القيادة",
             "home": "الصفحة الرئيسية",
             "marketEntities": "الكيانات السوقية",
             "tools": "أدوات",
             "users": "المستخدمون"
         },
-        "sidebar": {
-            "inputPlaceholder": "اكتب أمراً أو ابحث...",
-            "menu": "القائمة",
-            "noResults": "لا توجد نتائج"
+        "pageTitle": {
+            "conversations": "محادثات",
+            "dashboard": "لوحة القيادة",
+            "home": "الصفحة الرئيسية",
+            "marketEntities": "الكيانات السوقية",
+            "tools": "أدوات",
+            "users": "المستخدمون"
         },
         "tool": {
             "action": {

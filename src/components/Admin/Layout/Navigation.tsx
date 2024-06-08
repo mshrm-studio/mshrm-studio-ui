@@ -41,8 +41,8 @@ export default function AdminLayoutNavigation() {
                 shortcut: 'O',
             },
             {
-                title: dict.admin.mainNavigation.contactFormSubmissions,
-                href: '/admin/contact-form-submissions',
+                title: dict.admin.mainNavigation.conversations,
+                href: '/admin/conversations',
                 icon: <Mail className={iconClassName} />,
                 shortcut: 'S',
             },

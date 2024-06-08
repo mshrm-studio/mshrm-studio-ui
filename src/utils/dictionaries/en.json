@@ -53,17 +53,20 @@
             "submit": "Submit"
         },
         "mainNavigation": {
-            "contactFormSubmissions": "Contact form submissions",
+            "conversations": "Conversations",
             "dashboard": "Dashboard",
             "home": "Home",
             "marketEntities": "Market entities",
             "tools": "Tools",
             "users": "Users"
         },
-        "sidebar": {
-            "inputPlaceholder": "Type a command or search...",
-            "menu": "Menu",
-            "noResults": "No results"
+        "pageTitle": {
+            "conversations": "Conversations",
+            "dashboard": "Dashboard",
+            "home": "Home",
+            "marketEntities": "Market Entities",
+            "tools": "Tools",
+            "users": "Users"
         },
         "tool": {
             "action": {

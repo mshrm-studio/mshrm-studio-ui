@@ -74,7 +74,7 @@ export function DataTable<TData, TValue>({
 
     return (
         <div className="w-full">
-            <div className="flex items-center mb-4">
+            <div className="flex space-x-3 justify-between items-center mb-4">
                 <Input
                     placeholder={`${dict.admin.dataTable.search}...`}
                     value={

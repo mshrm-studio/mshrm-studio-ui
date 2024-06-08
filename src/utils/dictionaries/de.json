@@ -53,17 +53,20 @@
             "submit": "Absenden"
         },
         "mainNavigation": {
-            "contactFormSubmissions": "Kontaktformular Einsendungen",
+            "conversations": "Gespräche",
             "dashboard": "Instrumententafel",
             "home": "Startseite",
             "marketEntities": "Markteinheiten",
             "tools": "Werkzeuge",
             "users": "Benutzer"
         },
-        "sidebar": {
-            "inputPlaceholder": "Geben Sie einen Befehl ein oder suchen Sie...",
-            "menu": "Menü",
-            "noResults": "Keine Ergebnisse"
+        "pageTitle": {
+            "conversations": "Gespräche",
+            "dashboard": "Instrumententafel",
+            "home": "Startseite",
+            "marketEntities": "Markteinheiten",
+            "tools": "Werkzeuge",
+            "users": "Benutzer"
         },
         "tool": {
             "action": {

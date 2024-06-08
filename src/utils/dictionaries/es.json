@@ -53,17 +53,20 @@
             "submit": "Enviar"
         },
         "mainNavigation": {
-            "contactFormSubmissions": "Envíos de formularios de contacto",
+            "conversations": "Conversaciones",
             "dashboard": "Tablero",
             "home": "Inicio",
             "marketEntities": "Entidades de mercado",
             "tools": "Herramientas",
             "users": "Usuarios"
         },
-        "sidebar": {
-            "inputPlaceholder": "Escribe un comando o busca...",
-            "menu": "Menú",
-            "noResults": "Sin resultados"
+        "pageTitle": {
+            "conversations": "Conversaciones",
+            "dashboard": "Tablero",
+            "home": "Inicio",
+            "marketEntities": "Entidades de mercado",
+            "tools": "Herramientas",
+            "users": "Usuarios"
         },
         "tool": {
             "action": {

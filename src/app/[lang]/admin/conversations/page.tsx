@@ -11,9 +11,7 @@ export default async function Page({
 
     return (
         <DictionaryContextProvider dictionary={dictionary}>
-            <div id="admin-contact-form-submissions">
-                TODO: contact form submissions
-            </div>
+            <div id="admin-conversations">TODO: contact form submissions</div>
         </DictionaryContextProvider>
     )
 }
