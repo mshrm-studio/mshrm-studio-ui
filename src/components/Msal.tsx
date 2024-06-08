@@ -90,18 +90,23 @@ export default function Msal() {
         // No - tokens returned
         // Yes - acquireTokenRedirect
 
-        const accountFilter = {
-            homeAccountId: homeAccountId,
-        }
-
         const request: SilentRequest = {
-            account: msalInstance.getAccount(accountFilter) || undefined,
             scopes: [
                 'profile',
                 'email',
                 'offline_access',
                 `api://${msalClientId}/mshrm.studio`,
             ],
+        }
+
+        if (homeAccountId) {
+            const account = msalInstance.getAccount({
+                homeAccountId: homeAccountId,
+            })
+
+            if (account) {
+                request.account = account
+            }
         }
 
         console.log('request', request)
@@ -151,6 +156,7 @@ export default function Msal() {
                 `api://${msalClientId}/mshrm.studio`,
             ],
         }
+        console.log('request:', request)
 
         msalInstance
             .ssoSilent(request)
