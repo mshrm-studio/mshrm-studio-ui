@@ -1,18 +1,18 @@
 'use client'
 
 import BrandLogo from '@/components/Brand/Logo'
-import ThemeContext from '@/utils/context/Theme'
+import { useTheme } from 'next-themes'
 import Link from 'next/link'
-import { useContext, useMemo } from 'react'
+import { useMemo } from 'react'
 
 type Props = {}
 
 const HeaderLogo: React.FC<Props> = ({}) => {
-    const { darkClassToggled } = useContext(ThemeContext)
+    const { resolvedTheme } = useTheme()
 
     const logoColor = useMemo(() => {
-        return darkClassToggled ? 'white' : 'black'
-    }, [darkClassToggled])
+        return resolvedTheme === 'dark' ? 'white' : 'black'
+    }, [resolvedTheme])
 
     return (
         <Link href="/">

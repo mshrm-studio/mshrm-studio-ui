@@ -1,5 +1,4 @@
 import { Locale } from '@/utils/enums/Locale'
-import { ThemeProvider } from 'next-themes'
 import type { Metadata } from 'next'
 import '@/app/admin.css'
 import { Inter as FontSans } from 'next/font/google'
@@ -26,12 +25,7 @@ export default function Layout({
     params: { lang: Locale }
 }>) {
     return (
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-        >
+        <>
             <div
                 id="admin-layout"
                 className={cn('font-sans antialiased', fontSans.variable)}
@@ -50,6 +44,6 @@ export default function Layout({
             </div>
 
             <Toaster />
-        </ThemeProvider>
+        </>
     )
 }

@@ -12,7 +12,11 @@
     cursor: not-allowed;
 }
 
-.inactiveLocale {
+:global(html.dark) .inactiveLocale {
+    color: #ffffff;
+}
+
+:global(html:not(.dark)) .inactiveLocale {
     color: #000000;
 }
 

@@ -15,7 +15,7 @@ import useDictionary from '@/utils/hooks/useDictionary'
 export default function ThemeSwitcher() {
     const dict = useDictionary()
 
-    const { setTheme } = useTheme()
+    const { theme, setTheme } = useTheme()
 
     return (
         <DropdownMenu>
@@ -30,15 +30,24 @@ export default function ThemeSwitcher() {
             </DropdownMenuTrigger>
 
             <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setTheme('light')}>
+                <DropdownMenuItem
+                    disabled={theme === 'light'}
+                    onClick={() => setTheme('light')}
+                >
                     {dict.theme.light}
                 </DropdownMenuItem>
 
-                <DropdownMenuItem onClick={() => setTheme('dark')}>
+                <DropdownMenuItem
+                    disabled={theme === 'dark'}
+                    onClick={() => setTheme('dark')}
+                >
                     {dict.theme.dark}
                 </DropdownMenuItem>
 
-                <DropdownMenuItem onClick={() => setTheme('system')}>
+                <DropdownMenuItem
+                    disabled={theme === 'system'}
+                    onClick={() => setTheme('system')}
+                >
                     {dict.theme.system}
                 </DropdownMenuItem>
             </DropdownMenuContent>

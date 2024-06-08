@@ -1,21 +1,21 @@
 'use client'
 
 import SpacesImage from '@/components/SpacesImg'
-import ThemeContext from '@/utils/context/Theme'
-import React, { useContext, useMemo } from 'react'
+import { useTheme } from 'next-themes'
+import React, { useMemo } from 'react'
 
 type Props = {
     onClick: (e: React.MouseEvent) => void
 }
 
 export default function HeaderMainNavigationToggle({ onClick }: Props) {
-    const { darkClassToggled } = useContext(ThemeContext)
+    const { resolvedTheme } = useTheme()
 
     const imgSrc = useMemo(() => {
-        return darkClassToggled
+        return resolvedTheme === 'dark'
             ? 'static/misc/MobileMenuToggle-White.svg'
             : 'static/misc/MobileMenuToggle-Black.svg'
-    }, [darkClassToggled])
+    }, [resolvedTheme])
 
     return (
         <button className="dark:text-white" type="button" onClick={onClick}>

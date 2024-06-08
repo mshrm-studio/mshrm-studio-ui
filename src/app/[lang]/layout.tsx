@@ -4,6 +4,7 @@ import AuthContextProvider from '@/components/Provider/Auth'
 import DimensionsContextProvider from '@/components/Provider/Dimensions'
 import LocaleContextProvider from '@/components/Provider/Locale'
 import Web3ModalProvider from '@/components/Provider/Web3Modal'
+import { ThemeProvider } from 'next-themes'
 
 export const metadata: Metadata = {
     title: 'mshrm.studio',
@@ -24,15 +25,22 @@ export default function RootLayout({
     return (
         <html lang={params.lang}>
             <body>
-                <Web3ModalProvider>
-                    <AuthContextProvider>
-                        <LocaleContextProvider locale={params.lang}>
-                            <DimensionsContextProvider>
-                                {children}
-                            </DimensionsContextProvider>
-                        </LocaleContextProvider>
-                    </AuthContextProvider>
-                </Web3ModalProvider>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    <Web3ModalProvider>
+                        <AuthContextProvider>
+                            <LocaleContextProvider locale={params.lang}>
+                                <DimensionsContextProvider>
+                                    {children}
+                                </DimensionsContextProvider>
+                            </LocaleContextProvider>
+                        </AuthContextProvider>
+                    </Web3ModalProvider>
+                </ThemeProvider>
             </body>
         </html>
     )

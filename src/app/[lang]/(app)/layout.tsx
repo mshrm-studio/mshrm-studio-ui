@@ -6,7 +6,6 @@ import Header from '@/components/App/Header/Header'
 import Footer from '@/components/App/Footer/Footer'
 import ContactFormModal from '@/components/App/ContactForm/Modal'
 import ContactFormModalContextProvider from '@/components/App/Provider/ContactFormModal'
-import ThemeProvider from '@/components/App/Provider/Theme'
 
 const rethinkSans = Rethink_Sans({
     subsets: ['latin'],
@@ -27,21 +26,19 @@ export default function Layout({
     params: { lang: Locale }
 }>) {
     return (
-        <div
-            id="app-layout"
-            className={`${rethinkSans.className} overflow-x-hidden dark:bg-black dark:text-white`}
-        >
-            <ThemeProvider>
-                <ContactFormModalContextProvider>
-                    <Header locale={params.lang} />
+        <ContactFormModalContextProvider>
+            <div
+                id="app-layout"
+                className={`${rethinkSans.className} overflow-x-hidden dark:bg-black dark:text-white`}
+            >
+                <Header locale={params.lang} />
 
-                    <main>{children}</main>
+                <main>{children}</main>
 
-                    <Footer locale={params.lang} />
+                <Footer locale={params.lang} />
 
-                    <ContactFormModal locale={params.lang} />
-                </ContactFormModalContextProvider>
-            </ThemeProvider>
-        </div>
+                <ContactFormModal locale={params.lang} />
+            </div>
+        </ContactFormModalContextProvider>
     )
 }
