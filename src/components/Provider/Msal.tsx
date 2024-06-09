@@ -1,8 +1,10 @@
 'use client'
 
 import { msalConfig } from '@/utils/msal/Auth'
+import CustomNavigationClient from '@/utils/msal/NavigationClient'
 import { EventType, PublicClientApplication } from '@azure/msal-browser'
 import { MsalProvider } from '@azure/msal-react'
+import { useRouter } from 'next/navigation'
 
 console.log('******************')
 console.log('Msal')
@@ -37,5 +39,9 @@ export default function AuthContextProvider({
 }: Readonly<{
     children: React.ReactNode
 }>) {
+    const router = useRouter()
+    const navigationClient = new CustomNavigationClient(router)
+    msalInstance.setNavigationClient(navigationClient)
+
     return <MsalProvider instance={msalInstance}>{children}</MsalProvider>
 }

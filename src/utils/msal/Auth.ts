@@ -2,9 +2,9 @@ export const msalConfig = {
     auth: {
         clientId: process.env.NEXT_PUBLIC_OAUTH_CLIENT_ID as string,
     },
-    system: {
-        allowNativeBroker: false, // Disables WAM Broker
-    },
+    // system: {
+    //     allowNativeBroker: false, // Disables WAM Broker
+    // },
 }
 
 // Add here scopes for id token to be used at MS Identity Platform endpoints.
