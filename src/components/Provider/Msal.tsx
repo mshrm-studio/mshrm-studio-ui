@@ -4,6 +4,9 @@ import { msalConfig } from '@/utils/msal/Auth'
 import { EventType, PublicClientApplication } from '@azure/msal-browser'
 import { MsalProvider } from '@azure/msal-react'
 
+console.log('******************')
+console.log('Msal')
+console.log('msalConfig', msalConfig)
 export const msalInstance = new PublicClientApplication(msalConfig)
 
 msalInstance.initialize().then(() => {

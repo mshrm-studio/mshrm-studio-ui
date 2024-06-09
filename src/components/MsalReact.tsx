@@ -20,10 +20,16 @@ export default function Msal() {
     )
 
     useEffect(() => {
+        console.log('******************')
+        console.log('MsalReact')
+        console.log('loginRequest', loginRequest)
         if (inProgress === InteractionStatus.None && accounts.length > 0) {
+            console.log('callMsGraph')
+
             callMsGraph()
                 .then((response) => setGraphData(response))
                 .catch((e) => {
+                    console.log('e', e)
                     if (e instanceof InteractionRequiredAuthError) {
                         instance.acquireTokenRedirect({
                             ...loginRequest,
