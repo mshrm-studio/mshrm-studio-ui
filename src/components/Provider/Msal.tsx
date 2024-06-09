@@ -39,9 +39,9 @@ export default function AuthContextProvider({
 }: Readonly<{
     children: React.ReactNode
 }>) {
-    const router = useRouter()
-    const navigationClient = new CustomNavigationClient(router)
-    msalInstance.setNavigationClient(navigationClient)
+    // const router = useRouter()
+    // const navigationClient = new CustomNavigationClient(router)
+    // msalInstance.setNavigationClient(navigationClient)
 
     return <MsalProvider instance={msalInstance}>{children}</MsalProvider>
 }
