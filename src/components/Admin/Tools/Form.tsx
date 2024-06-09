@@ -24,7 +24,20 @@ export default function AdminToolsForm() {
 
     const formSchema = useMemo(() => {
         return z.object({
-            description: z.string(),
+            description: z
+                .string()
+                .min(25, {
+                    message: dict.admin.form.rule.min.length.replace(
+                        ':minimum',
+                        '25'
+                    ),
+                })
+                .max(500, {
+                    message: dict.admin.form.rule.max.length.replace(
+                        ':maximum',
+                        '500'
+                    ),
+                }),
             link: z.string().url({ message: dict.admin.form.rule.url }),
             logo: z
                 .instanceof(File)
@@ -81,7 +94,10 @@ export default function AdminToolsForm() {
 
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)}>
+            <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-8 lg:space-y-0 lg:grid lg:gap-8 lg:grid-cols-2"
+            >
                 <FormField
                     control={form.control}
                     name="name"
@@ -101,8 +117,6 @@ export default function AdminToolsForm() {
                         </FormItem>
                     )}
                 />
-
-                <Separator className="my-4" />
 
                 <FormField
                     control={form.control}
@@ -125,8 +139,6 @@ export default function AdminToolsForm() {
                     )}
                 />
 
-                <Separator className="my-4" />
-
                 <FormField
                     control={form.control}
                     name="logo"
@@ -146,8 +158,6 @@ export default function AdminToolsForm() {
                         </FormItem>
                     )}
                 />
-
-                <Separator className="my-4" />
 
                 <FormField
                     control={form.control}
@@ -169,8 +179,6 @@ export default function AdminToolsForm() {
                         />
                     )}
                 />
-
-                <Separator className="my-4" />
 
                 <FormField
                     control={form.control}
@@ -194,9 +202,9 @@ export default function AdminToolsForm() {
                     )}
                 />
 
-                <Separator className="my-4" />
-
-                <Button type="submit">{dict.admin.form.submit}</Button>
+                <div className="lg:col-span-2">
+                    <Button type="submit">{dict.admin.form.submit}</Button>
+                </div>
             </form>
         </Form>
     )
