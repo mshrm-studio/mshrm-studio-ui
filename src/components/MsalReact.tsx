@@ -10,6 +10,7 @@ import {
 import { useMsal, useMsalAuthentication } from '@azure/msal-react'
 import { loginRequest } from '@/utils/msal/Auth'
 import { callMsGraph } from '@/utils/msal/Graph'
+import CopyToClipboard from '@/components/Admin/CopyToClipboard'
 
 export default function Msal() {
     const { instance, accounts, inProgress } = useMsal()
@@ -48,6 +49,12 @@ export default function Msal() {
 
     return (
         <div className="space-y-8">
+            {result && result.accessToken && (
+                <CopyToClipboard content={result.accessToken}>
+                    Copy Access Token
+                </CopyToClipboard>
+            )}
+
             {accounts && (
                 <div className="space-y-4">
                     <h1 className="text-lg">Accounts</h1>
