@@ -18,6 +18,7 @@
             "actions": "الإجراءات",
             "columns": "الأعمدة",
             "copy": {
+                "email": "نسخ البريد الإلكتروني",
                 "logoUrl": "نسخ رابط الشعار",
                 "link": "نسخ الرابط"
             },
@@ -109,12 +110,46 @@
                 },
                 "title": "إنشاء أداة جديدة"
             }
+        },
+        "user": {
+            "action": {
+                "create": "إنشاء مستخدم",
+                "edit": "تحرير المستخدم",
+                "update": "تحديث المستخدم"
+            },
+            "form": {
+                "description": "إضافة مستخدم جديد",
+                "item": {
+                    "email": {
+                        "label": "البريد الإلكتروني",
+                        "description": "بريد المستخدم الإلكتروني",
+                        "placeholder": "tom@mshrm.studio"
+                    },
+                    "firstName": {
+                        "label": "الاسم الأول",
+                        "description": "الاسم الأول للمستخدم",
+                        "placeholder": "Thomas"
+                    },
+                    "lastName": {
+                        "label": "الاسم الأخير",
+                        "description": "اسم العائلة للمستخدم",
+                        "placeholder": "Maltby"
+                    },
+                    "role": {
+                        "label": "الدور",
+                        "description": "دور المستخدم",
+                        "placeholder": "اختر دورا"
+                    }
+                },
+                "title": "إنشاء مستخدم جديد"
+            }
         }
     },
     "attribute": {
         "createdDate": "تاريخ الإنشاء",
         "currency": "العملة",
         "description": "الوصف",
+        "email": "البريد الإلكتروني",
         "firstName": "الاسم الأول",
         "label": "التسمية",
         "lastName": "الاسم الأخير",

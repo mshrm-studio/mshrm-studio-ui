@@ -18,6 +18,7 @@
             "actions": "Acciones",
             "columns": "Columnas",
             "copy": {
+                "email": "Copiar correo electrónico",
                 "logoUrl": "Copiar URL del logo",
                 "link": "Copiar enlace"
             },
@@ -109,12 +110,46 @@
                 },
                 "title": "Crear nueva herramienta"
             }
+        },
+        "user": {
+            "action": {
+                "create": "Crear usuario",
+                "edit": "Editar usuario",
+                "update": "Actualizar usuario"
+            },
+            "form": {
+                "description": "Agregar un nuevo usuario",
+                "item": {
+                    "email": {
+                        "label": "Correo electrónico",
+                        "description": "El correo electrónico del usuario",
+                        "placeholder": "tom@mshrm.studio"
+                    },
+                    "firstName": {
+                        "label": "Nombre",
+                        "description": "El nombre del usuario",
+                        "placeholder": "Thomas"
+                    },
+                    "lastName": {
+                        "label": "Apellido",
+                        "description": "El apellido del usuario",
+                        "placeholder": "Maltby"
+                    },
+                    "role": {
+                        "label": "Rol",
+                        "description": "El rol del usuario",
+                        "placeholder": "Selecciona un rol"
+                    }
+                },
+                "title": "Crear nuevo usuario"
+            }
         }
     },
     "attribute": {
         "createdDate": "Fecha de creación",
         "currency": "Moneda",
         "description": "Descripción",
+        "email": "Correo electrónico",
         "firstName": "Nombre",
         "label": "Etiqueta",
         "lastName": "Apellido",

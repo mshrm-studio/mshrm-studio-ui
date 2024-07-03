@@ -18,6 +18,7 @@
             "actions": "操作",
             "columns": "列",
             "copy": {
+                "email": "复制电子邮件",
                 "logoUrl": "复制标志URL",
                 "link": "复制链接"
             },
@@ -109,12 +110,46 @@
                 },
                 "title": "创建新工具"
             }
+        },
+        "user": {
+            "action": {
+                "create": "创建用户",
+                "edit": "编辑用户",
+                "update": "更新用户"
+            },
+            "form": {
+                "description": "添加新用户",
+                "item": {
+                    "email": {
+                        "label": "电子邮件",
+                        "description": "用户的电子邮件",
+                        "placeholder": "tom@mshrm.studio"
+                    },
+                    "firstName": {
+                        "label": "名字",
+                        "description": "用户的名字",
+                        "placeholder": "Thomas"
+                    },
+                    "lastName": {
+                        "label": "姓氏",
+                        "description": "用户的姓氏",
+                        "placeholder": "Maltby"
+                    },
+                    "role": {
+                        "label": "角色",
+                        "description": "用户的角色",
+                        "placeholder": "选择一个角色"
+                    }
+                },
+                "title": "创建新用户"
+            }
         }
     },
     "attribute": {
         "createdDate": "创建日期",
         "currency": "货币",
         "description": "描述",
+        "email": "电子邮件",
         "firstName": "名",
         "label": "标签",
         "lastName": "姓",

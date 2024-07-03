@@ -1,7 +1,7 @@
-import { CurrencyType } from '@/utils/enums/CurrencyType'
 import { PricingProviderType } from '@/utils/enums/PricingProviderType'
+import { AssetType } from '@/utils/enums/AssetType'
 
-export default interface Currency {
+export default interface Asset {
     guidId: string
     name: string | null
     symbol: string | null
@@ -9,8 +9,9 @@ export default interface Currency {
     description: string | null
     active: boolean
     providerType: PricingProviderType
-    currencyType: CurrencyType
+    assetType: AssetType
     createdDate: string
     logoUrl: string | null
     logoGuidId: string | null
+    decimalPlaces: number
 }
