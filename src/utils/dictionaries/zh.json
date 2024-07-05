@@ -189,6 +189,10 @@
             "Technology": "技术"
         }
     },
+    "event": {
+        "copied": "已复制",
+        "error": "错误"
+    },
     "header": {
         "menuItem": {
             "chat": "聊天",

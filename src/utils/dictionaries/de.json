@@ -189,6 +189,10 @@
             "Technology": "Technologie"
         }
     },
+    "event": {
+        "copied": "Kopiert",
+        "error": "Fehler"
+    },
     "header": {
         "menuItem": {
             "chat": "Chat",

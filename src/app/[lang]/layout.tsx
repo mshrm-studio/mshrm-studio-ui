@@ -3,6 +3,7 @@ import { Locale, locales } from '@/utils/enums/Locale'
 import AuthContextProvider from '@/components/Provider/Msal'
 import DimensionsContextProvider from '@/components/Provider/Dimensions'
 import LocaleContextProvider from '@/components/Provider/Locale'
+import UserContextProvider from '@/components/Provider/User'
 import Web3ModalProvider from '@/components/Provider/Web3Modal'
 import { ThemeProvider } from 'next-themes'
 
@@ -32,13 +33,15 @@ export default function RootLayout({
                     disableTransitionOnChange
                 >
                     <AuthContextProvider>
-                        <Web3ModalProvider>
-                            <LocaleContextProvider locale={params.lang}>
-                                <DimensionsContextProvider>
-                                    {children}
-                                </DimensionsContextProvider>
-                            </LocaleContextProvider>
-                        </Web3ModalProvider>
+                        <UserContextProvider>
+                            <Web3ModalProvider>
+                                <LocaleContextProvider locale={params.lang}>
+                                    <DimensionsContextProvider>
+                                        {children}
+                                    </DimensionsContextProvider>
+                                </LocaleContextProvider>
+                            </Web3ModalProvider>
+                        </UserContextProvider>
                     </AuthContextProvider>
                 </ThemeProvider>
             </body>

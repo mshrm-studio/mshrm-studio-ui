@@ -189,6 +189,10 @@
             "Technology": "បច្ចេកវិទ្យា"
         }
     },
+    "event": {
+        "copied": "បានចម្លង",
+        "error": "កំហុស"
+    },
     "header": {
         "menuItem": {
             "chat": "ការជជែក",

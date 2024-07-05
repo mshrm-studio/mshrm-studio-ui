@@ -189,6 +189,10 @@
             "Technology": "تكنولوجيا"
         }
     },
+    "event": {
+        "copied": "تم النسخ",
+        "error": "خطأ"
+    },
     "header": {
         "menuItem": {
             "chat": "دردشة",
