@@ -9,9 +9,9 @@ import {
 } from '@azure/msal-browser'
 import { useMsal, useMsalAuthentication } from '@azure/msal-react'
 import { loginRequest } from '@/utils/msal/Auth'
-import { getProfile } from '@/utils/msal/Profile'
 import CopyToClipboard from '@/components/Admin/CopyToClipboard'
 import useAxios from '@/utils/hooks/useAxios'
+import { AxiosError } from 'axios'
 
 export default function Msal() {
     const { instance, accounts, inProgress } = useMsal()
@@ -23,56 +23,32 @@ export default function Msal() {
     )
     const axios = useAxios()
 
-    useEffect(() => {
-        console.log('******************')
-        console.log('result useEffect')
-        console.log('result?.accessToken', result?.accessToken)
-        if (result && result.accessToken) {
-            localStorage.setItem('accessToken', result.accessToken)
-        }
-    }, [result])
+    function createUser() {
+        axios
+            .post(`/auth/api/v1/user/sso`)
+            .then(console.log)
+            .catch(console.error)
+    }
 
     useEffect(() => {
         if (inProgress === InteractionStatus.None && accounts.length > 0) {
             axios
                 .get(`/aggregator/api/v1/users`)
                 .then(console.log)
-                .catch(console.log)
-
-            // getProfile()
-            //     .then((response) => {
-            //         console.log('response')
-            //         console.log(response)
-            //         setUserResponse(response)
-            //     })
-            //     .catch((error) => {
-            //         console.log('error')
-            //         console.log(error)
-            //         setUserError(error)
-            //     })
+                .catch((error: AxiosError) => {
+                    if (error.status === 401) {
+                        instance.acquireTokenRedirect({
+                            ...loginRequest,
+                            account: instance.getActiveAccount() || undefined,
+                        })
+                    } else if (error.status === 404) {
+                        createUser()
+                    } else {
+                        // todo: handle other errors
+                    }
+                })
         }
     }, [inProgress, accounts, instance])
-
-    // useEffect(() => {
-    //     console.log('******************')
-    //     console.log('MsalReact')
-    //     console.log('loginRequest', loginRequest)
-    //     if (inProgress === InteractionStatus.None && accounts.length > 0) {
-    //         console.log('callMsGraph')
-
-    //         callMsGraph()
-    //             .then((response) => setGraphData(response))
-    //             .catch((e) => {
-    //                 console.log('e', e)
-    //                 if (e instanceof InteractionRequiredAuthError) {
-    //                     instance.acquireTokenRedirect({
-    //                         ...loginRequest,
-    //                         account: instance.getActiveAccount() as AccountInfo,
-    //                     })
-    //                 }
-    //             })
-    //     }
-    // }, [inProgress, accounts, instance])
 
     useEffect(() => {
         if (error instanceof InteractionRequiredAuthError) {
