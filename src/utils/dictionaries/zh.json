@@ -75,6 +75,11 @@
                 "edit": "编辑工具",
                 "update": "更新工具"
             },
+            "event": {
+                "created": "工具已创建",
+                "deleted": "工具已删除",
+                "updated": "工具已更新"
+            },
             "form": {
                 "description": "将新工具添加到网站",
                 "item": {
@@ -116,6 +121,11 @@
                 "create": "创建用户",
                 "edit": "编辑用户",
                 "update": "更新用户"
+            },
+            "event": {
+                "created": "用户已创建",
+                "deleted": "用户已删除",
+                "updated": "用户已更新"
             },
             "form": {
                 "description": "添加新用户",

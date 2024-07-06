@@ -3,12 +3,15 @@
 import { DataTable } from '@/components/Admin/shadcnui/data-table'
 import { ColumnDef } from '@tanstack/react-table'
 import DataTableRowActions from '@/components/Admin/Tools/DataTableRowActions'
-import Tool from '@/utils/dto/Tool'
-import { useMemo } from 'react'
+import Tool, { isToolList } from '@/utils/dto/Tool'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import useDictionary from '@/utils/hooks/useDictionary'
 import Avatar from '@/components/Admin/Avatar'
+import useAxios from '@/utils/hooks/useAxios'
+import { isApiPaginatedResponse } from '@/utils/dto/ApiPaginatedResponse'
+import { error } from 'console'
 
-export default function AdminToolsDataTable({ tools }: { tools: Tool[] }) {
+export default function AdminToolsDataTable() {
     const dict = useDictionary()
 
     const columns = useMemo<ColumnDef<Tool>[]>(() => {
@@ -47,5 +50,34 @@ export default function AdminToolsDataTable({ tools }: { tools: Tool[] }) {
         ]
     }, [dict])
 
-    return <DataTable columns={columns} data={tools} />
+    const axios = useAxios()
+
+    const [tools, setTools] = useState<Tool[]>()
+
+    const getData = useCallback(() => {
+        axios
+            .get('/aggregator/api/v1/tools')
+            .then((response) => {
+                if (
+                    isApiPaginatedResponse(response.data) &&
+                    isToolList(response.data.results)
+                ) {
+                    setTools(response.data.results)
+                } else {
+                    // TODO: unexpected response
+                }
+            })
+            .catch((error) => {
+                // TODO: handle failure
+                console.error(error)
+            })
+    }, [axios])
+
+    useEffect(() => {
+        getData()
+    }, [])
+
+    if (!tools) return null
+
+    return <DataTable columns={columns} columnToSearch="name" data={tools} />
 }

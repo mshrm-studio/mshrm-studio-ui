@@ -75,6 +75,11 @@
                 "edit": "Editar herramienta",
                 "update": "Actualizar herramienta"
             },
+            "event": {
+                "created": "Herramienta creada",
+                "deleted": "Herramienta eliminada",
+                "updated": "Herramienta actualizada"
+            },
             "form": {
                 "description": "Agregar una nueva herramienta al sitio web",
                 "item": {
@@ -116,6 +121,11 @@
                 "create": "Crear usuario",
                 "edit": "Editar usuario",
                 "update": "Actualizar usuario"
+            },
+            "event": {
+                "created": "Usuario creado",
+                "deleted": "Usuario eliminado",
+                "updated": "Usuario actualizado"
             },
             "form": {
                 "description": "Agregar un nuevo usuario",

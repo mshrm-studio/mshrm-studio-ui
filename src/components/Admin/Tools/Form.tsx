@@ -1,21 +1,28 @@
 'use client'
 
-import { useForm } from 'react-hook-form'
+import { set, useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Input } from '@/components/Admin/shadcnui/input'
 import { Button } from '@/components/Admin/shadcnui/button'
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import useDictionary from '@/utils/hooks/useDictionary'
 import { Textarea } from '@/components/Admin/shadcnui/textarea'
 import { toolTypes } from '@/utils/enums/ToolType'
 import FormItem from '@/components/Admin/FormItem/FormItem'
 import SelectFormItem from '@/components/Admin/FormItem/Select'
 import { Form, FormField } from '@/components/Admin/shadcnui/form'
-import { Separator } from '@/components/Admin/shadcnui/separator'
+import useAxios from '@/utils/hooks/useAxios'
+import TemporaryFile, { isTemporaryFile } from '@/utils/dto/TemporaryFile'
+import { isTool } from '@/utils/dto/Tool'
+import { useRouter } from 'next/navigation'
+import { useToast } from '@/components/Admin/shadcnui/use-toast'
 
 export default function AdminToolsForm() {
     const dict = useDictionary()
+    const router = useRouter()
+    const axios = useAxios()
+    const { toast } = useToast()
 
     // 1 KB = 1 * 1024 bytes
     // 200 KB = 200 * 1024 bytes
@@ -26,10 +33,10 @@ export default function AdminToolsForm() {
         return z.object({
             description: z
                 .string()
-                .min(25, {
+                .min(5, {
                     message: dict.admin.form.rule.min.length.replace(
                         ':minimum',
-                        '25'
+                        '5'
                     ),
                 })
                 .max(500, {
@@ -54,6 +61,7 @@ export default function AdminToolsForm() {
                             'image/jpeg',
                             'image/png',
                             'image/gif',
+                            'image/svg',
                         ].includes(file.type),
                     {
                         message: dict.admin.form.rule.image,
@@ -88,8 +96,60 @@ export default function AdminToolsForm() {
         },
     })
 
+    function saveTool(
+        values: z.infer<typeof formSchema>,
+        temporaryFile: TemporaryFile
+    ) {
+        const data = {
+            ...values,
+            logo: {
+                temporaryKey: temporaryFile.key,
+                fileName: values.logo.name,
+            },
+        }
+
+        axios.post('/aggregator/api/v1/tools', data).then((response) => {
+            console.log('post tools response')
+            console.log(response)
+
+            if (isTool(response.data)) {
+                toast({
+                    title: dict.admin.tool.event.created,
+                })
+
+                router.push(`/admin/tools/${response.data.guidId}`)
+            } else {
+                // TODO: handle unexpected response
+            }
+        })
+    }
+
+    function uploadFile(values: z.infer<typeof formSchema>) {
+        const formData = new FormData()
+
+        formData.append('file', values.logo)
+
+        const options = {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        }
+
+        axios
+            .post('/aggregator/api/v1/files/temporary', formData, options)
+            .then((response) => {
+                if (isTemporaryFile(response.data)) {
+                    saveTool(values, response.data)
+                } else {
+                    // TODO: handle unexpected response
+                }
+            })
+    }
+
     function onSubmit(values: z.infer<typeof formSchema>) {
         console.log(values)
+
+        uploadFile(values)
     }
 
     return (

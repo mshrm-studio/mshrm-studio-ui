@@ -1,6 +1,7 @@
 import { Locale } from '@/utils/enums/Locale'
 import { getDictionary } from '@/app/[lang]/dictionaries'
 import MsalReact from '@/components/MsalReact'
+import DictionaryContextProvider from '@/components/Provider/Dictionary'
 
 export default async function Page({
     params: { lang },
@@ -9,5 +10,9 @@ export default async function Page({
 }>) {
     const dict = await getDictionary(lang)
 
-    return <MsalReact />
+    return (
+        <DictionaryContextProvider dictionary={dict}>
+            <MsalReact />
+        </DictionaryContextProvider>
+    )
 }

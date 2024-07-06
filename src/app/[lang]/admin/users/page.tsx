@@ -18,17 +18,17 @@ export default async function Page({
 }: Readonly<{
     params: { lang: Locale }
 }>) {
-    const dictionary = await getDictionary(lang)
+    const dict = await getDictionary(lang)
 
     const data = await getData()
 
     return (
-        <DictionaryContextProvider dictionary={dictionary}>
+        <DictionaryContextProvider dictionary={dict}>
             <div id="admin-users">
                 <div className="mb-4">
                     <Button asChild>
                         <Link href="/admin/users/create">
-                            {dictionary.admin.user.action.create}
+                            {dict.admin.user.action.create}
                         </Link>
                     </Button>
                 </div>

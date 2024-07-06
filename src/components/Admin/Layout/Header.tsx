@@ -4,7 +4,7 @@ import AdminLayoutTouchMenu from '@/components/Admin/Layout/TouchMenu'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
 import ThemeSwitcher from '@/components/Admin/Layout/ThemeSwitcher'
 import LanguageSwitcher from '@/components/Admin/Layout/LanguageSwitcher'
-import AdminLayoutProfileMenu from '@/components/Admin/Layout/ProfileMenu'
+import AdminLayoutAuthMenu from '@/components/Admin/Layout/AuthMenu'
 import AdminLayoutPageTitle from '@/components/Admin/Layout/PageTitle'
 
 export default async function AdminLayoutHeader({
@@ -29,7 +29,7 @@ export default async function AdminLayoutHeader({
 
                         <ThemeSwitcher />
 
-                        <AdminLayoutProfileMenu />
+                        <AdminLayoutAuthMenu />
                     </div>
                 </div>
             </header>

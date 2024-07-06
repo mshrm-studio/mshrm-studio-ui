@@ -10,3 +10,16 @@ export default interface Tool {
     logoGuidId: string
     logoUrl: string
 }
+
+export function isTool(input: unknown): input is Tool {
+    return (
+        typeof input === 'object' &&
+        input !== null &&
+        'guidId' in input &&
+        'name' in input
+    )
+}
+
+export function isToolList(input: unknown): input is Tool[] {
+    return Array.isArray(input) && input.every((item) => isTool(item))
+}

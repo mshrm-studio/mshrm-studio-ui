@@ -28,10 +28,10 @@ export default async function Page({
 }: Readonly<{
     params: { lang: Locale }
 }>) {
-    const dictionary = await getDictionary(lang)
+    const dict = await getDictionary(lang)
 
     return (
-        <DictionaryContextProvider dictionary={dictionary}>
+        <DictionaryContextProvider dictionary={dict}>
             <div id="homepage">
                 <DraggableContactUsBtn />
 
@@ -45,7 +45,7 @@ export default async function Page({
                     {/* <div className="mb-12 space-y-6 xl:max-w-site xl:mx-auto">
                         <div>
                             <CryptoWalletConnect className="underline">
-                                {dictionary.homepage.loginWithCryptoWallet}
+                                {dict.homepage.loginWithCryptoWallet}
                             </CryptoWalletConnect>
                         </div>
 

@@ -34,5 +34,5 @@ export default function AdminUsersDataTable({ users }: { users: User[] }) {
         ]
     }, [dict])
 
-    return <DataTable columns={columns} data={users} />
+    return <DataTable columns={columns} columnToSearch="email" data={users} />
 }

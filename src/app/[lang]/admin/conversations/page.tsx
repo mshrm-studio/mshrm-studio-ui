@@ -7,10 +7,10 @@ export default async function Page({
 }: Readonly<{
     params: { lang: Locale }
 }>) {
-    const dictionary = await getDictionary(lang)
+    const dict = await getDictionary(lang)
 
     return (
-        <DictionaryContextProvider dictionary={dictionary}>
+        <DictionaryContextProvider dictionary={dict}>
             <div id="admin-conversations">TODO: contact form submissions</div>
         </DictionaryContextProvider>
     )

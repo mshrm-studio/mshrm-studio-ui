@@ -38,7 +38,7 @@ export default function Msal() {
                 if (isUser(response.data)) {
                     setUser(response.data)
 
-                    // TODO: navigate, add user to context.
+                    // TODO: navigate
                 } else {
                     // TODO: handle error
                 }
@@ -69,7 +69,7 @@ export default function Msal() {
 
                         // TODO: navigate, add user to context.
                     } else {
-                        // TODO: handle error
+                        // TODO: handle unexpected response
                     }
                 })
                 .catch((error: AxiosError) => {

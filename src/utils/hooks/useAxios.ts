@@ -1,4 +1,3 @@
-// src/hooks/useAxios.js
 import { useMemo } from 'react'
 import axios from 'axios'
 import getAccessToken from '@/utils/msal/AccessToken'

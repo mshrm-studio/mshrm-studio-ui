@@ -27,7 +27,8 @@ export default function AdminUsersDataTableRowActions({
         navigator.clipboard.writeText(content)
 
         toast({
-            title: '(TODO) Copied',
+            title: dict.event.copied,
+            description: content,
         })
     }
 

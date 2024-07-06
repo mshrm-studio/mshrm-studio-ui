@@ -35,12 +35,16 @@ import useDictionary from '@/utils/hooks/useDictionary'
 interface DataTableProps<TData, TValue> {
     columns: ColumnDef<TData, TValue>[]
     data: TData[]
+    columnToSearch: string
 }
 
 export function DataTable<TData, TValue>({
     columns,
     data,
+    columnToSearch,
 }: DataTableProps<TData, TValue>) {
+    // TODO: Add searching of multiple columns
+
     const dict = useDictionary()
 
     const [sorting, setSorting] = useState<SortingState>([])
@@ -75,19 +79,22 @@ export function DataTable<TData, TValue>({
     return (
         <div className="w-full">
             <div className="flex space-x-3 justify-between items-center mb-4">
-                <Input
-                    placeholder={`${dict.admin.dataTable.search}...`}
-                    value={
-                        (table.getColumn('name')?.getFilterValue() as string) ??
-                        ''
-                    }
-                    onChange={(event) =>
-                        table
-                            .getColumn('name')
-                            ?.setFilterValue(event.target.value)
-                    }
-                    className="max-w-sm"
-                />
+                {table.getColumn(columnToSearch) && (
+                    <Input
+                        placeholder={`${dict.admin.dataTable.search}...`}
+                        value={
+                            (table
+                                .getColumn(columnToSearch)
+                                ?.getFilterValue() as string) ?? ''
+                        }
+                        onChange={(event) =>
+                            table
+                                .getColumn(columnToSearch)
+                                ?.setFilterValue(event.target.value)
+                        }
+                        className="max-w-sm"
+                    />
+                )}
 
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
@@ -96,6 +103,7 @@ export function DataTable<TData, TValue>({
                             <ChevronDown className="ml-2 h-4 w-4" />
                         </Button>
                     </DropdownMenuTrigger>
+
                     <DropdownMenuContent align="end">
                         {table
                             .getAllColumns()
@@ -142,6 +150,7 @@ export function DataTable<TData, TValue>({
                             </TableRow>
                         ))}
                     </TableHeader>
+
                     <TableBody>
                         {table.getRowModel().rows?.length ? (
                             table.getRowModel().rows.map((row) => (

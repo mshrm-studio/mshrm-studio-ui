@@ -75,6 +75,11 @@
                 "edit": "Edit tool",
                 "update": "Update tool"
             },
+            "event": {
+                "created": "Tool created",
+                "deleted": "Tool deleted",
+                "updated": "Tool updated"
+            },
             "form": {
                 "description": "Add a new tool to the website",
                 "item": {
@@ -116,6 +121,11 @@
                 "create": "Create user",
                 "edit": "Edit user",
                 "update": "Update user"
+            },
+            "event": {
+                "created": "User created",
+                "deleted": "User deleted",
+                "updated": "User updated"
             },
             "form": {
                 "description": "Add a new user",
