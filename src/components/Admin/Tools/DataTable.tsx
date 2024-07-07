@@ -9,7 +9,6 @@ import useDictionary from '@/utils/hooks/useDictionary'
 import Avatar from '@/components/Admin/Avatar'
 import useAxios from '@/utils/hooks/useAxios'
 import { isApiPaginatedResponse } from '@/utils/dto/ApiPaginatedResponse'
-import { error } from 'console'
 
 export default function AdminToolsDataTable() {
     const dict = useDictionary()
@@ -21,14 +20,10 @@ export default function AdminToolsDataTable() {
                 header: dict.attribute.logo,
                 cell: ({ row }) => {
                     return (
-                        <div className="flex items-center space-x-3">
-                            <Avatar
-                                src={`static/stack/${row.original.logoUrl}`}
-                                alt={row.original.name}
-                            />
-
-                            <div>{row.original.logoUrl}</div>
-                        </div>
+                        <Avatar
+                            src={`static/stack/${row.original.logoUrl}`}
+                            alt={row.original.name}
+                        />
                     )
                 },
             },

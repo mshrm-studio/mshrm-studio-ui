@@ -14,11 +14,12 @@ import SelectFormItem from '@/components/Admin/FormItem/Select'
 import { Form, FormField } from '@/components/Admin/shadcnui/form'
 import useAxios from '@/utils/hooks/useAxios'
 import TemporaryFile, { isTemporaryFile } from '@/utils/dto/TemporaryFile'
-import { isTool } from '@/utils/dto/Tool'
+import Tool, { isTool } from '@/utils/dto/Tool'
 import { useRouter } from 'next/navigation'
 import { useToast } from '@/components/Admin/shadcnui/use-toast'
+import { AxiosError } from 'axios'
 
-export default function AdminToolsForm() {
+export default function AdminToolsForm({ tool }: { tool?: Tool }) {
     const dict = useDictionary()
     const router = useRouter()
     const axios = useAxios()
@@ -88,13 +89,29 @@ export default function AdminToolsForm() {
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
-            description: '',
+            description: tool?.description || '',
             logo: undefined,
-            link: '',
-            name: '',
-            type: undefined,
+            link: tool?.link || '',
+            name: tool?.name || '',
+            type: tool?.toolType || undefined,
         },
     })
+
+    function handleSuccess(response: any) {
+        if (isTool(response.data)) {
+            toast({
+                title: dict.admin.tool.event.created,
+            })
+
+            router.push(`/admin/tools/${response.data.guidId}`)
+        } else {
+            // TODO: handle unexpected response
+        }
+    }
+
+    function handleFailure(error: AxiosError) {
+        // TODO: handle failure
+    }
 
     function saveTool(
         values: z.infer<typeof formSchema>,
@@ -108,20 +125,17 @@ export default function AdminToolsForm() {
             },
         }
 
-        axios.post('/aggregator/api/v1/tools', data).then((response) => {
-            console.log('post tools response')
-            console.log(response)
-
-            if (isTool(response.data)) {
-                toast({
-                    title: dict.admin.tool.event.created,
-                })
-
-                router.push(`/admin/tools/${response.data.guidId}`)
-            } else {
-                // TODO: handle unexpected response
-            }
-        })
+        if (tool) {
+            axios
+                .patch(`/aggregator/api/v1/tools/${tool.guidId}`, data)
+                .then(handleSuccess)
+                .catch(handleFailure)
+        } else {
+            axios
+                .post('/aggregator/api/v1/tools', data)
+                .then(handleSuccess)
+                .catch(handleFailure)
+        }
     }
 
     function uploadFile(values: z.infer<typeof formSchema>) {

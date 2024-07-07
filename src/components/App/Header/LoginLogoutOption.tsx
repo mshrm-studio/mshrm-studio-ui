@@ -1,9 +1,9 @@
 'use client'
 
-import MsalLogout from '@/components/MsalLogout'
 import Link from '@/components/LocaleLink'
 import { Dictionary } from '@/app/[lang]/dictionaries'
 import { useIsAuthenticated } from '@azure/msal-react'
+import useLogout from '@/utils/hooks/useMsalLogout'
 
 export default function HeaderLoginLogoutOption({
     dictionary,
@@ -11,11 +11,12 @@ export default function HeaderLoginLogoutOption({
     dictionary: Dictionary
 }) {
     const isAuthenticated = useIsAuthenticated()
+    const logout = useLogout()
 
     return (
         <>
             {isAuthenticated ? (
-                <MsalLogout>{dictionary.signOut}</MsalLogout>
+                <button onClick={logout}>{dictionary.signOut}</button>
             ) : (
                 <Link href="/auth/sso">{dictionary.signInWithMicrosoft}</Link>
             )}

@@ -170,8 +170,10 @@
         "name": "名称",
         "percentageChange": "百分比变化",
         "price": "价格",
+        "rank": "等级",
         "source": "来源",
         "title": "标题",
+        "type": "类型",
         "value": "价值",
         "volume": "成交量"
     },

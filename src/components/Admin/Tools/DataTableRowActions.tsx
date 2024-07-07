@@ -13,6 +13,7 @@ import {
 import Tool from '@/utils/dto/Tool'
 import { useToast } from '@/components/Admin/shadcnui/use-toast'
 import useDictionary from '@/utils/hooks/useDictionary'
+import Link from 'next/link'
 
 export default function AdminToolsDataTableRowActions({
     tool,
@@ -60,7 +61,15 @@ export default function AdminToolsDataTableRowActions({
                 <DropdownMenuSeparator />
 
                 <DropdownMenuItem>
-                    {dict.admin.dataTable.view.tool}
+                    <Link href={`/admin/tools/${tool.guidId}`}>
+                        {dict.admin.dataTable.view.tool}
+                    </Link>
+                </DropdownMenuItem>
+
+                <DropdownMenuItem>
+                    <Link href={`/admin/tools/${tool.guidId}/edit`}>
+                        {dict.admin.dataTable.edit.tool}
+                    </Link>
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>

@@ -170,8 +170,10 @@
         "name": "Name",
         "percentageChange": "Prozentuale Veränderung",
         "price": "Preis",
+        "rank": "Rang",
         "source": "Quelle",
         "title": "Titel",
+        "type": "Typ",
         "value": "Wert",
         "volume": "Volumen"
     },

@@ -1,9 +1,9 @@
 'use client'
 
 import { useToast } from '@/components/Admin/shadcnui/use-toast'
-import { Button } from '@/components/Admin/shadcnui/button'
 import React from 'react'
 import useDictionary from '@/utils/hooks/useDictionary'
+import { ClipboardCopy } from 'lucide-react'
 
 export default function CopyToClipboard({
     children,
@@ -25,5 +25,13 @@ export default function CopyToClipboard({
         })
     }
 
-    return <Button onClick={onClick}>{children}</Button>
+    return (
+        <div className="flex">
+            <button className="flex-shrink-0 mr-2" onClick={onClick}>
+                <ClipboardCopy />
+            </button>
+
+            <div>{children}</div>
+        </div>
+    )
 }
