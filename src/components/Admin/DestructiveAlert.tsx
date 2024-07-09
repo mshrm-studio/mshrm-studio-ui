@@ -21,7 +21,9 @@ export default function DestructiveAlert({
 
             <AlertTitle>{dict.event.error}</AlertTitle>
 
-            <AlertDescription>{children}</AlertDescription>
+            <AlertDescription className="break-all">
+                {children}
+            </AlertDescription>
         </Alert>
     )
 }

@@ -6,9 +6,6 @@ import { EventType, PublicClientApplication } from '@azure/msal-browser'
 import { MsalProvider } from '@azure/msal-react'
 import { useRouter } from 'next/navigation'
 
-console.log('******************')
-console.log('Msal')
-console.log('msalConfig', msalConfig)
 export const msalInstance = new PublicClientApplication(msalConfig)
 
 msalInstance.initialize().then(() => {
@@ -20,9 +17,6 @@ msalInstance.initialize().then(() => {
     }
 
     msalInstance.addEventCallback((event) => {
-        console.log('******************')
-        console.log('addEventCallback')
-        console.log('event', event)
         if (
             event.eventType === EventType.LOGIN_SUCCESS &&
             event.payload &&

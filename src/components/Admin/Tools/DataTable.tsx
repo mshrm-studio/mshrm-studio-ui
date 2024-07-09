@@ -3,12 +3,12 @@
 import { DataTable } from '@/components/Admin/shadcnui/data-table'
 import { ColumnDef } from '@tanstack/react-table'
 import DataTableRowActions from '@/components/Admin/Tools/DataTableRowActions'
-import Tool, { isToolList } from '@/utils/dto/Tool'
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import Tool from '@/utils/dto/Tool'
+import { useEffect, useMemo } from 'react'
 import useDictionary from '@/utils/hooks/useDictionary'
 import Avatar from '@/components/Admin/Avatar'
-import useAxios from '@/utils/hooks/useAxios'
-import { isApiPaginatedResponse } from '@/utils/dto/ApiPaginatedResponse'
+import useTools from '@/utils/hooks/useTools'
+import ConditionalFeedback from '@/components/Admin/ConditionalFeedback'
 
 export default function AdminToolsDataTable() {
     const dict = useDictionary()
@@ -45,34 +45,19 @@ export default function AdminToolsDataTable() {
         ]
     }, [dict])
 
-    const axios = useAxios()
+    const { error, fetching, fetchTools, toolList } = useTools()
 
-    const [tools, setTools] = useState<Tool[]>()
+    useEffect(() => fetchTools(), [])
 
-    const getData = useCallback(() => {
-        axios
-            .get('/aggregator/api/v1/tools')
-            .then((response) => {
-                if (
-                    isApiPaginatedResponse(response.data) &&
-                    isToolList(response.data.results)
-                ) {
-                    setTools(response.data.results)
-                } else {
-                    // TODO: unexpected response
-                }
-            })
-            .catch((error) => {
-                // TODO: handle failure
-                console.error(error)
-            })
-    }, [axios])
-
-    useEffect(() => {
-        getData()
-    }, [])
-
-    if (!tools) return null
-
-    return <DataTable columns={columns} columnToSearch="name" data={tools} />
+    return (
+        <ConditionalFeedback fetching={fetching} error={error}>
+            {toolList && (
+                <DataTable
+                    columns={columns}
+                    columnToSearch="name"
+                    data={toolList}
+                />
+            )}
+        </ConditionalFeedback>
+    )
 }

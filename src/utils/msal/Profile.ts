@@ -20,7 +20,5 @@ export async function getProfile() {
         },
     }
 
-    console.log('options', options)
-
     return axios.get(endpoint, options)
 }

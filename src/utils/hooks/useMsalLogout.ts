@@ -9,23 +9,16 @@ const useLogout = () => {
     const { setUser } = useContext(UserContext)
 
     const logout = useCallback(() => {
-        console.log('******************')
-        console.log('logout')
-
-        console.log('authenticated', authenticated)
-
         if (!authenticated) return null
 
         instance
             .logoutRedirect({
                 onRedirectNavigate: (url) => {
-                    console.log('onRedirectNavigate, url:', url)
                     // Return false if you would like to stop navigation after local logout
                     return false
                 },
             })
-            .then((response) => {
-                console.log('response', response)
+            .then((_response) => {
                 setUser(null)
             })
             .catch(console.error)

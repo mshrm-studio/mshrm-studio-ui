@@ -32,9 +32,6 @@ export default function Msal() {
         axios
             .post(`/auth/api/v1/user/sso`)
             .then((response) => {
-                console.log('createUser response')
-                console.log(response)
-
                 if (isUser(response.data)) {
                     setUser(response.data)
 
@@ -44,10 +41,6 @@ export default function Msal() {
                 }
             })
             .catch((error: AxiosError) => {
-                // TODO: handle error
-                console.log('createUser error.response')
-                console.log(error.response)
-
                 if (isApiError(error.response?.data)) {
                     setApiError(error.response?.data)
                 } else {
@@ -61,9 +54,6 @@ export default function Msal() {
             axios
                 .get(`/aggregator/api/v1/users`)
                 .then((response) => {
-                    console.log('/aggregator/api/v1/users response')
-                    console.log(response)
-
                     if (isUser(response.data)) {
                         setUser(response.data)
 
@@ -73,10 +63,6 @@ export default function Msal() {
                     }
                 })
                 .catch((error: AxiosError) => {
-                    console.log('/aggregator/api/v1/users error.response')
-
-                    console.log(error.response)
-
                     if (error.response?.status === 401) {
                         instance.acquireTokenRedirect({
                             ...loginRequest,

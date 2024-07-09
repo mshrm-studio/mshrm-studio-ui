@@ -161,8 +161,6 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
     }
 
     function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values)
-
         uploadFile(values)
     }
 
