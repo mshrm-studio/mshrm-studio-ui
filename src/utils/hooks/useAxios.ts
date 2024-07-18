@@ -4,8 +4,14 @@ import getAccessToken from '@/utils/msal/AccessToken'
 
 const useAxios = () => {
     const axiosInstance = useMemo(() => {
+        const nonNormalisedApiUrl = process.env.NEXT_PUBLIC_API_URL as string
+
+        const apiUrl = nonNormalisedApiUrl.endsWith('/')
+            ? nonNormalisedApiUrl.slice(0, -1)
+            : nonNormalisedApiUrl
+
         const instance = axios.create({
-            baseURL: process.env.NEXT_PUBLIC_API_URL,
+            baseURL: apiUrl,
         })
 
         // Add a request interceptor to include the bearer token in headers
