@@ -216,40 +216,8 @@
         }
     },
     "homepage": {
-        "aboutUsMessage": {
-            "what": "Aplicaciones, sitios y software personalizados",
-            "who": "Nuestro estudio trabaja con marcas globales."
-        },
         "ourStack": "Nuestras herramientas",
-        "title": {
-            "art": {
-                "mobile": {
-                    "line1": "estudio",
-                    "line2": "de arte"
-                },
-                "desktop": {
-                    "line1": "estudio",
-                    "line2": "de arte"
-                }
-            },
-            "design": {
-                "mobile": {
-                    "line1": "agencia",
-                    "line2": "de diseño"
-                },
-                "desktop": {
-                    "line1": "agencia",
-                    "line2": "de diseño"
-                }
-            },
-            "dev": {
-                "mobile": {
-                    "line1": "<web>",
-                    "line2": "//:desarrollo"
-                },
-                "desktop": "Aplicaciones, sitios y software a medida"
-            }
-        }
+        "title": "Aplicaciones, sitios y software a medida"
     },
     "marketEntity": {
         "lastUpdated": "Última actualización",

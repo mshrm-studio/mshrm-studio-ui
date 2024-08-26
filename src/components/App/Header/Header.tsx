@@ -13,12 +13,14 @@ export default async function Header({ locale }: { locale: Locale }) {
     return (
         <DictionaryContextProvider dictionary={dictionary}>
             <header className={styles.header}>
-                <div>
-                    <Logo />
-                </div>
+                <div className={styles.logoAndThemeSwitcher}>
+                    <div className={styles.logoContainer}>
+                        <Logo />
+                    </div>
 
-                <div className="flex items-center justify-center">
-                    <ThemeSwitcher />
+                    <div className={styles.themeSwitcherContainer}>
+                        <ThemeSwitcher />
+                    </div>
                 </div>
 
                 {/* <div className={`text-right`}>

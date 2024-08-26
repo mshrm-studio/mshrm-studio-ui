@@ -1,4 +1,4 @@
-import { isToolList } from '@/utils/dto/Tool'
+import { isToolListResponse } from '@/utils/dto/Tool'
 import { useCallback, useMemo } from 'react'
 import useFetch from '@/utils/hooks/useFetch'
 
@@ -15,9 +15,7 @@ const useTool = () => {
     )
 
     const toolList = useMemo(() => {
-        const data = response?.data?.results
-
-        return isToolList(data) ? data : undefined
+        return isToolListResponse(response) ? response.data.results : undefined
     }, [response])
 
     return { error, fetching, fetchTools, toolList }

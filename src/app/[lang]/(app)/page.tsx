@@ -1,12 +1,11 @@
 import { Locale } from '@/utils/enums/Locale'
 import { getDictionary } from '@/app/[lang]/dictionaries'
-import Hero from '@/components/App/HomePage/Hero/Hero'
+import Hero from '@/components/App/HomePage/Hero'
 import Stack from '@/components/App/HomePage/Stack'
 import MarketEntityList from '@/components/App/MarketEntity/List'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
 import styles from '@/utils/styles/homepage/homepage.module.css'
 import dynamic from 'next/dynamic'
-import DraggableContactUsBtn from '@/components/App/HomePage/DraggableContactUsBtn'
 import marketEntities from '@/utils/content/marketEntities'
 
 const CryptoWalletAddress = dynamic(
@@ -33,8 +32,6 @@ export default async function Page({
     return (
         <DictionaryContextProvider dictionary={dict}>
             <div id="homepage">
-                <DraggableContactUsBtn />
-
                 <Hero />
 
                 <section className={styles.aboutAndMarketEntitySection}>

@@ -21,7 +21,7 @@ export default function HeaderMainNavigationToggle({ onClick }: Props) {
         <button className="dark:text-white" type="button" onClick={onClick}>
             <SpacesImage
                 className="h-[16px]"
-                alt="Mobile Menu Toggle"
+                alt="TODO (translate): Mobile Menu Toggle"
                 src={imgSrc}
             />
         </button>

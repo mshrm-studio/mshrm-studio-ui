@@ -2,7 +2,6 @@
 
 import DimensionsContext from '@/utils/context/Dimensions'
 import { useContext, useEffect, useMemo } from 'react'
-import ContactUsBtn from '@/components/App/ContactUsBtn'
 
 type Props = {
     children: React.ReactNode
@@ -34,13 +33,7 @@ const HeaderTouchMenu: React.FC<Props> = ({ children }) => {
             className="absolute z-[999] top-full w-full bg-white dark:bg-black"
             style={{ height: navHeight }}
         >
-            <div className="h-full px-16 pt-32 pb-24 flex flex-col justify-between">
-                <div>{children}</div>
-
-                <div>
-                    <ContactUsBtn />
-                </div>
-            </div>
+            <div className="h-full px-16 pt-32 pb-24">{children}</div>
         </div>
     )
 }

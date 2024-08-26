@@ -19,7 +19,7 @@ const BrandLogo: React.FC<Props> = ({ className, color }) => {
         <SpacesImg
             className={className}
             src={imgSrc}
-            alt={`MSHRM Studio Logo (${color})`}
+            alt={`TODO (translate): MSHRM Studio Logo (${color})`}
         />
     )
 }
