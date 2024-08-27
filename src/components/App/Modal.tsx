@@ -1,6 +1,6 @@
 'use client'
 
-import styles from '@/utils/styles/modal.module.css'
+import styles from '@/styles/modal.module.css'
 import React, { useEffect } from 'react'
 import { XMarkIcon } from '@heroicons/react/24/solid'
 

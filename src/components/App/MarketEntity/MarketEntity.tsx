@@ -1,9 +1,9 @@
 'use client'
 
-import styles from '@/utils/styles/marketEntity.module.css'
+import styles from '@/styles/marketEntity.module.css'
 import MarketEntityDto from '@/utils/dto/MarketEntity'
 import Price from '@/components/Price'
-import PercentageChange from '@/components/App/PercentageChange'
+import PercentageChange from '@/components/App/MarketEntity/PercentageChange'
 import DateTime from '@/components/DateTime'
 import { motion } from 'framer-motion'
 import useDictionary from '@/utils/hooks/useDictionary'

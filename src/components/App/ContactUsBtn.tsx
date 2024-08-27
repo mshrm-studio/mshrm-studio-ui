@@ -19,7 +19,7 @@ export default function ContactUsBtn() {
     if (showContactFormModal) return null
 
     return (
-        <Button size="threexl" onClick={onClick}>
+        <Button size="xl" onClick={onClick}>
             {dict.action.contactUs}
         </Button>
     )

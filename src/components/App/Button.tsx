@@ -1,8 +1,8 @@
-import styles from '@/utils/styles/button.module.css'
+import styles from '@/styles/button.module.css'
 
 type Props = {
     children: React.ReactNode
-    size?: 'base' | 'threexl' | 'fourxl'
+    size?: 'base' | 'lg' | 'xl'
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 

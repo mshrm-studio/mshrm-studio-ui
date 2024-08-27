@@ -1,4 +1,4 @@
-import styles from '@/utils/styles/input.module.css'
+import styles from '@/styles/input.module.css'
 import { useMemo } from 'react'
 
 type Props = {

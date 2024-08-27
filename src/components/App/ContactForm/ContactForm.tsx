@@ -2,7 +2,7 @@
 
 import Button from '@/components/App/Button'
 import Input from '@/components/App/Input/Input'
-import styles from '@/utils/styles/contactForm.module.css'
+import styles from '@/styles/contactForm.module.css'
 import useDictionary from '@/utils/hooks/useDictionary'
 
 export default function ContactForm() {

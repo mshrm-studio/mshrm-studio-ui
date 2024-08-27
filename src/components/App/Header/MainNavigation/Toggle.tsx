@@ -1,29 +1,15 @@
 'use client'
 
-import SpacesImage from '@/components/SpacesImg'
-import { useTheme } from 'next-themes'
-import React, { useMemo } from 'react'
+import { Bars3Icon } from '@heroicons/react/24/outline'
 
 type Props = {
     onClick: (e: React.MouseEvent) => void
 }
 
 export default function HeaderMainNavigationToggle({ onClick }: Props) {
-    const { resolvedTheme } = useTheme()
-
-    const imgSrc = useMemo(() => {
-        return resolvedTheme === 'dark'
-            ? 'static/misc/MobileMenuToggle-White.svg'
-            : 'static/misc/MobileMenuToggle-Black.svg'
-    }, [resolvedTheme])
-
     return (
         <button className="dark:text-white" type="button" onClick={onClick}>
-            <SpacesImage
-                className="h-[16px]"
-                alt="TODO (translate): Mobile Menu Toggle"
-                src={imgSrc}
-            />
+            <Bars3Icon className="h-6 w-6" />
         </button>
     )
 }

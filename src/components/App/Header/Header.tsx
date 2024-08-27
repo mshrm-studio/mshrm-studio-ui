@@ -1,5 +1,5 @@
 import ThemeSwitcher from '@/components/App/Header/ThemeSwitcher'
-import styles from '@/utils/styles/header/header.module.css'
+import styles from '@/styles/header/header.module.css'
 import { getDictionary } from '@/app/[lang]/dictionaries'
 import { Locale } from '@/utils/enums/Locale'
 import LoginLogoutOption from '@/components/App/Header/LoginLogoutOption'

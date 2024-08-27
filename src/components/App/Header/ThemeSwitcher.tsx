@@ -1,7 +1,7 @@
 'use client'
 
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline'
-import styles from '@/utils/styles/themeSwitcher.module.css'
+import styles from '@/styles/themeSwitcher.module.css'
 import { useTheme } from 'next-themes'
 
 export default function HeaderThemeSwitcher() {

@@ -4,23 +4,8 @@ import Hero from '@/components/App/HomePage/Hero'
 import Stack from '@/components/App/HomePage/Stack'
 import MarketEntityList from '@/components/App/MarketEntity/List'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
-import styles from '@/utils/styles/homepage/homepage.module.css'
-import dynamic from 'next/dynamic'
+import styles from '@/styles/homepage/homepage.module.css'
 import marketEntities from '@/utils/content/marketEntities'
-
-const CryptoWalletAddress = dynamic(
-    () => import('@/components/CryptoWallet/Address'),
-    {
-        ssr: false,
-    }
-)
-
-const CryptoWalletConnect = dynamic(
-    () => import('@/components/CryptoWallet/Connect'),
-    {
-        ssr: false,
-    }
-)
 
 export default async function Page({
     params: { lang },
@@ -34,22 +19,8 @@ export default async function Page({
             <div id="homepage">
                 <Hero />
 
-                <section className={styles.aboutAndMarketEntitySection}>
-                    <div>
-                        <MarketEntityList marketEntities={marketEntities} />
-                    </div>
-
-                    {/* <div className="mb-12 space-y-6 xl:max-w-site xl:mx-auto">
-                        <div>
-                            <CryptoWalletConnect className="underline">
-                                {dict.homepage.loginWithCryptoWallet}
-                            </CryptoWalletConnect>
-                        </div>
-
-                        <div>
-                            <CryptoWalletAddress />
-                        </div>
-                    </div> */}
+                <section className={styles.marketEntityListSection}>
+                    <MarketEntityList marketEntities={marketEntities} />
                 </section>
 
                 <Stack />

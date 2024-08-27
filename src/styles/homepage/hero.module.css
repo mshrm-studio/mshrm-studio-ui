@@ -1,0 +1,58 @@
+.heroSection {
+    padding-left: theme('spacing.6');
+    padding-right: theme('spacing.6');
+}
+
+.heading1 {
+    font-size: 2.0625rem;
+    font-weight: 800;
+}
+
+.authOptionsAndContactBtn {
+    margin-top: theme('spacing.12');
+}
+
+.authOptionsAndContactBtn > .authOptions {
+    display: flex;
+    align-items: center;
+}
+
+.authOptionsAndContactBtn > .authOptions > .authOption:not(:first-child) {
+    margin-left: theme('spacing.6');
+}
+
+.authOptionsAndContactBtn > .authOptions > .microsoftAuthOption > .ssoLink {
+    text-decoration: underline;
+}
+
+.authOptionsAndContactBtn > .authOptions > .cryptoAuthOption {
+    display: flex;
+    align-items: center;
+}
+
+.authOptionsAndContactBtn > .authOptions > .cryptoAuthOption > .cryptoLoginBtn {
+    text-decoration: underline;
+}
+
+.authOptionsAndContactBtn > .authOptions > .cryptoAuthOption > .cryptoAddress {
+    margin-right: theme('spacing.3');
+}
+
+.authOptionsAndContactBtn
+    > .authOptions
+    > .cryptoAuthOption
+    > .cryptoLogoutBtn {
+    text-decoration: underline;
+}
+
+.authOptionsAndContactBtn > .contactBtnContainer {
+    margin-top: theme('spacing.12');
+}
+
+@media screen and (min-width: theme('screens.xl')) {
+    .heroSection {
+        max-width: theme('maxWidth.site');
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

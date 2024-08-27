@@ -1,7 +1,7 @@
 'use client'
 
 import useDictionary from '@/utils/hooks/useDictionary'
-import styles from '@/utils/styles/header/main-navigation/mainNavigation.module.css'
+import styles from '@/styles/header/main-navigation/mainNavigation.module.css'
 import Link from 'next/link'
 import { useMemo } from 'react'
 
