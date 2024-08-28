@@ -76,7 +76,7 @@ export default [
     { name: 'Web3', link: null, logoUrl: 'eth.png' },
     { name: 'Forge', link: 'https://forge.laravel.com', logoUrl: 'forge.png' },
     { name: 'Trello', link: 'https://trello.com', logoUrl: 'trello.png' },
-    { name: 'Solidity', logoUrl: 'solidity.png' },
-    { name: 'Typescript', logoUrl: 'typescript.png' },
-    { name: 'Sentry', logoUrl: 'sentry.png' },
+    { name: 'Solidity', link: null, logoUrl: 'solidity.png' },
+    { name: 'Typescript', link: null, logoUrl: 'typescript.png' },
+    { name: 'Sentry', link: null, logoUrl: 'sentry.png' },
 ]
