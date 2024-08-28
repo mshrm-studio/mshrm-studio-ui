@@ -10,6 +10,7 @@ import { ThemeProvider } from 'next-themes'
 export const metadata: Metadata = {
     title: 'mshrm.studio',
     description: 'Bespoke apps, sites & software',
+    icons: `${process.env.NEXT_PUBLIC_DO_STORAGE_URL}/static/brand/glyph/m-glyph-black.png`,
 }
 
 export async function generateStaticParams() {

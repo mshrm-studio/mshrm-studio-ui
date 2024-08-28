@@ -1,6 +1,6 @@
 import { Locale } from '@/utils/enums/Locale'
 import { getDictionary } from '@/app/[lang]/dictionaries'
-import Hero from '@/components/App/HomePage/Hero'
+import Hero from '@/components/App/HomePage/Hero/Hero'
 import Stack from '@/components/App/HomePage/Stack'
 import MarketEntityList from '@/components/App/MarketEntity/List'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'

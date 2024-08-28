@@ -1,4 +1,4 @@
-.heroSection {
+.headingAuthOptionsAndContactBtn {
     padding-left: theme('spacing.6');
     padding-right: theme('spacing.6');
 }
@@ -6,47 +6,74 @@
 .heading1 {
     font-size: 2.0625rem;
     font-weight: 800;
+    line-height: normal;
 }
 
 .authOptionsAndContactBtn {
     margin-top: theme('spacing.12');
 }
 
-.authOptionsAndContactBtn > .authOptions {
+.authOptions > .authOption:not(:first-child) {
+    margin-top: theme('spacing.6');
+}
+
+.authOptions > .microsoftAuthOption > .ssoLink {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.authOptions > .cryptoAuthOption {
     display: flex;
     align-items: center;
 }
 
-.authOptionsAndContactBtn > .authOptions > .authOption:not(:first-child) {
-    margin-left: theme('spacing.6');
-}
-
-.authOptionsAndContactBtn > .authOptions > .microsoftAuthOption > .ssoLink {
+.authOptions > .cryptoAuthOption > .cryptoLoginBtn {
     text-decoration: underline;
+    font-weight: 700;
 }
 
-.authOptionsAndContactBtn > .authOptions > .cryptoAuthOption {
-    display: flex;
-    align-items: center;
-}
-
-.authOptionsAndContactBtn > .authOptions > .cryptoAuthOption > .cryptoLoginBtn {
-    text-decoration: underline;
-}
-
-.authOptionsAndContactBtn > .authOptions > .cryptoAuthOption > .cryptoAddress {
+.authOptions > .cryptoAuthOption > .cryptoAddress {
     margin-right: theme('spacing.3');
 }
 
-.authOptionsAndContactBtn
-    > .authOptions
-    > .cryptoAuthOption
-    > .cryptoLogoutBtn {
+.authOptions > .cryptoAuthOption > .cryptoLogoutBtn {
     text-decoration: underline;
+    font-weight: 700;
 }
 
-.authOptionsAndContactBtn > .contactBtnContainer {
+.contactBtnContainer {
     margin-top: theme('spacing.12');
+}
+
+@media screen and (min-width: theme('screens.sm')) {
+    .heroSection {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: start;
+        padding-top: theme('spacing.36');
+    }
+
+    .mapContainer {
+        transform: translateY(-25px);
+    }
+
+    .headingAuthOptionsAndContactBtn {
+        z-index: 1;
+    }
+
+    .heading1 {
+        font-size: 3.44rem;
+    }
+
+    .authOptions {
+        display: flex;
+        align-items: center;
+    }
+
+    .authOptions > .authOption:not(:first-child) {
+        margin-left: theme('spacing.6');
+        margin-top: 0;
+    }
 }
 
 @media screen and (min-width: theme('screens.xl')) {
@@ -54,5 +81,33 @@
         max-width: theme('maxWidth.site');
         margin-left: auto;
         margin-right: auto;
+        position: relative;
+    }
+
+    .mapWrapper {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 55%;
+    }
+
+    .heading1Container {
+        max-width: theme('maxWidth.screen-lg');
+    }
+
+    .heading1 {
+        font-size: 4.81rem;
+    }
+
+    .authOptionsAndContactBtn {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .contactBtnContainer {
+        margin-top: 0;
+        margin-right: theme('spacing.12');
     }
 }

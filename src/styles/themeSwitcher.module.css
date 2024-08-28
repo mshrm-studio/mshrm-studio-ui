@@ -1,6 +1,7 @@
 .button {
     border-radius: 9999px;
     padding: 0.25rem;
+    display: block;
 }
 
 .button > .icon {

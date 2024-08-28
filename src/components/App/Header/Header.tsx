@@ -3,9 +3,9 @@ import styles from '@/styles/header/header.module.css'
 import { getDictionary } from '@/app/[lang]/dictionaries'
 import { Locale } from '@/utils/enums/Locale'
 import LoginLogoutOption from '@/components/App/Header/LoginLogoutOption'
-import Menu from '@/components/App/Header/Menu'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
 import Logo from '@/components/App/Header/Logo'
+import Menu from '@/components/App/Header/Menu'
 
 export default async function Header({ locale }: { locale: Locale }) {
     const dictionary = await getDictionary(locale)
@@ -27,9 +27,7 @@ export default async function Header({ locale }: { locale: Locale }) {
                 <LoginLogoutOption dictionary={dictionary} />
             </div> */}
 
-                <div className="flex justify-end items-center">
-                    <Menu />
-                </div>
+                <Menu />
             </header>
         </DictionaryContextProvider>
     )

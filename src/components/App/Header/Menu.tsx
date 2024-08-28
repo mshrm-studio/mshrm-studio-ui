@@ -16,7 +16,9 @@ const HeaderMenu: React.FC<Props> = ({}) => {
 
     return (
         <>
-            <MainNavigationToggle onClick={handleMainNavToggleClick} />
+            <div className="flex justify-end items-center">
+                <MainNavigationToggle onClick={handleMainNavToggleClick} />
+            </div>
 
             {showTouchMenu && (
                 <TouchMenu>

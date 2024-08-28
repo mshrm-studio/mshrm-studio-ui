@@ -18,9 +18,13 @@ export default [
     {
         name: 'Visual Studio',
         link: 'https://visualstudio.microsoft.com',
-        logoUrl: 'visstudio.png',
+        logoUrl: 'visualstudio.png',
     },
-    { name: '.NET', link: 'https://dotnet.microsoft.com', logoUrl: 'net.png' },
+    {
+        name: '.NET',
+        link: 'https://dotnet.microsoft.com',
+        logoUrl: 'dotnet.png',
+    },
     {
         name: 'Teams',
         link: 'https://www.microsoft.com/en-us/microsoft-teams/group-chat-software',
@@ -29,7 +33,7 @@ export default [
     {
         name: 'C#',
         link: 'https://learn.microsoft.com/en-us/dotnet/csharp',
-        logoUrl: 'c.png',
+        logoUrl: 'csharp.png',
     },
     { name: 'MySQL', link: 'https://mysql.com', logoUrl: 'mysql.png' },
     {
@@ -50,7 +54,7 @@ export default [
     {
         name: 'Digital Ocean',
         link: 'https://digitalocean.com',
-        logoUrl: 'digital-ocean.png',
+        logoUrl: 'digitalocean.png',
     },
     { name: 'AWS', link: 'https://aws.amazon.com', logoUrl: 'aws.png' },
     { name: 'Mailgun', link: 'https://mailgun.com', logoUrl: 'mailgun.png' },
@@ -72,4 +76,7 @@ export default [
     { name: 'Web3', link: null, logoUrl: 'eth.png' },
     { name: 'Forge', link: 'https://forge.laravel.com', logoUrl: 'forge.png' },
     { name: 'Trello', link: 'https://trello.com', logoUrl: 'trello.png' },
+    { name: 'Solidity', logoUrl: 'solidity.png' },
+    { name: 'Typescript', logoUrl: 'typescript.png' },
+    { name: 'Sentry', logoUrl: 'sentry.png' },
 ]

@@ -1,5 +1,5 @@
 import ToolDto from '@/utils/dto/Tool'
-import SpacesImg from '@/components/SpacesImg'
+import SpacesImg from '@/components/SpacesImage'
 
 export default function Tool({ tool }: { tool: ToolDto }) {
     return (
@@ -7,7 +7,7 @@ export default function Tool({ tool }: { tool: ToolDto }) {
             <div>
                 <SpacesImg
                     className="h-[63px] w-[63px]"
-                    src={`static/stack/${tool.logoUrl}`}
+                    src={`static/tools/${tool.logoUrl}`}
                     alt={tool.name}
                 />
             </div>

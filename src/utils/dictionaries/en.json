@@ -1,7 +1,6 @@
 {
     "action": {
-        "clickToMessageUs": "Click to message us",
-        "contactUs": "Contact us",
+        "contactUs": "Contact",
         "loginWithCryptoWallet": "Login with a crypto wallet",
         "signIn": "Login",
         "signInWithMicrosoft": "Login with Microsoft",
@@ -217,7 +216,7 @@
     },
     "homepage": {
         "ourStack": "our tools",
-        "title": "Bespoke apps, sites & software"
+        "title": "MSHRM.studio build apps, sites & software."
     },
     "marketEntity": {
         "lastUpdated": "Last updated",

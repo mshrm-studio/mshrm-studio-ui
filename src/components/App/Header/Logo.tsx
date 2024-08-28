@@ -16,7 +16,11 @@ const HeaderLogo: React.FC<Props> = ({}) => {
 
     return (
         <Link href="/">
-            <BrandLogo className="h-[48px]" color={logoColor} />
+            <BrandLogo
+                className="h-[23px] w-[52px]"
+                color={logoColor}
+                priority
+            />
         </Link>
     )
 }
