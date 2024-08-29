@@ -204,6 +204,11 @@
         "copied": "تم النسخ",
         "error": "خطأ"
     },
+    "footer": {
+        "allRightsReserved": "جميع الحقوق محفوظة",
+        "approvalCode": "رمز الموافقة",
+        "dateOfPreparation": "تاريخ التحضير"
+    },
     "header": {
         "menuItem": {
             "chat": "دردشة",

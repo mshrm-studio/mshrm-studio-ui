@@ -204,6 +204,11 @@
         "copied": "Copiado",
         "error": "Error"
     },
+    "footer": {
+        "allRightsReserved": "Todos los derechos reservados",
+        "approvalCode": "Código de aprobación",
+        "dateOfPreparation": "Fecha de preparación"
+    },
     "header": {
         "menuItem": {
             "chat": "Chat",

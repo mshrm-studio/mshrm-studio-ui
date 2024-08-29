@@ -4,6 +4,7 @@ import ContactUs from '@/components/App/Footer/ContactUs'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
 import { Locale } from '@/utils/enums/Locale'
 import { getDictionary } from '@/app/[lang]/dictionaries'
+import JobBag from '@/components/App/Footer/JobBag'
 
 export default async function Footer({ locale }: { locale: Locale }) {
     const dictionary = await getDictionary(locale)
@@ -14,6 +15,8 @@ export default async function Footer({ locale }: { locale: Locale }) {
                 <ContactUs />
 
                 <LanguageSwitcher />
+
+                <JobBag />
             </footer>
         </DictionaryContextProvider>
     )

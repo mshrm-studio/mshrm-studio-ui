@@ -8,8 +8,8 @@ export default function FooterContactUs() {
 
     return (
         <div>
-            <a href="mailto:hello@mshrm.studio" className={styles.email}>
-                hello@mshrm.studio
+            <a href="mailto:tom@mshrm.studio" className={styles.email}>
+                tom@mshrm.studio
             </a>
         </div>
     )
