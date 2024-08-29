@@ -1,12 +1,12 @@
 .marketEntityListSection {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: theme('spacing.12');
+    margin-bottom: theme('spacing.12');
 }
 
 :global(html.dark) .marketEntityListSection {
-    background: linear-gradient(to bottom, #131313 60%, #000000 40%);
+    background-color: rgba(248, 248, 248, 0.09);
 }
 
 :global(html:not(.dark)) .marketEntityListSection {
-    background: linear-gradient(to bottom, #f8f8f8 60%, #ffffff 40%);
+    background-color: rgba(248, 248, 248, 1);
 }

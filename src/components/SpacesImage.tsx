@@ -6,6 +6,7 @@ import Image from 'next/image'
 type Props = {
     alt: string
     className?: string
+    imgClassName?: string
     priority?: boolean
     src: string
 }
@@ -13,6 +14,7 @@ type Props = {
 const SpacesImage: React.FC<Props> = ({
     alt,
     className = 'relative',
+    imgClassName = 'object-cover',
     priority,
     src,
 }) => {
@@ -22,7 +24,7 @@ const SpacesImage: React.FC<Props> = ({
         return src.startsWith('http')
             ? src
             : src.startsWith('/')
-            ? `${spacesStorageUrl}${src}`
+            ? spacesStorageUrl + src
             : `${spacesStorageUrl}/${src}`
     }, [src])
 
@@ -31,7 +33,7 @@ const SpacesImage: React.FC<Props> = ({
             <Image
                 src={fullImageSrc}
                 fill
-                className="object-cover"
+                className={imgClassName}
                 priority={priority}
                 alt={alt}
             />

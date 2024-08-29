@@ -215,8 +215,10 @@
         }
     },
     "homepage": {
-        "ourStack": "our tools",
-        "title": "MSHRM.studio build apps, sites & software."
+        "changeCurrency": "Change currency",
+        "ourStack": "Our tools",
+        "title": "MSHRM.studio build apps, sites & software.",
+        "weHaveWorkedWith": "We have worked with"
     },
     "marketEntity": {
         "lastUpdated": "Last updated",

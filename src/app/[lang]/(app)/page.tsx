@@ -1,11 +1,10 @@
 import { Locale } from '@/utils/enums/Locale'
 import { getDictionary } from '@/app/[lang]/dictionaries'
 import Hero from '@/components/App/HomePage/Hero/Hero'
-import Stack from '@/components/App/HomePage/Stack'
-import MarketEntityList from '@/components/App/MarketEntity/List'
+import Stack from '@/components/App/HomePage/Tools'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
-import styles from '@/styles/homepage/homepage.module.css'
-import marketEntities from '@/utils/content/marketEntities'
+import Clients from '@/components/App/HomePage/Clients'
+import MarketEntities from '@/components/App/HomePage/MarketEntities'
 
 export default async function Page({
     params: { lang },
@@ -19,9 +18,9 @@ export default async function Page({
             <div id="homepage">
                 <Hero />
 
-                <section className={styles.marketEntityListSection}>
-                    <MarketEntityList marketEntities={marketEntities} />
-                </section>
+                <Clients />
+
+                <MarketEntities />
 
                 <Stack />
             </div>

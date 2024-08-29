@@ -91,6 +91,10 @@
         width: 55%;
     }
 
+    .mapContainer {
+        transform: translateY(0);
+    }
+
     .heading1Container {
         max-width: theme('maxWidth.screen-lg');
     }

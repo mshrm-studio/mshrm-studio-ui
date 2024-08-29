@@ -11,7 +11,7 @@ export default function HomePageTools() {
     return (
         <section className="px-6 xl:max-w-site xl:mx-auto">
             <div className="mb-12">
-                <h2 className="font-extrabold text-[33px] md:text-[44px] xl:text-[55px]">
+                <h2 className="font-extrabold text-[2.0625rem] xl:text-[3.4375rem]">
                     {dict.homepage.ourStack}
                 </h2>
             </div>

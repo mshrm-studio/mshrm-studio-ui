@@ -1,8 +1,13 @@
 .footer {
     padding-left: theme('spacing.6');
     padding-right: theme('spacing.6');
-    padding-top: theme('spacing.24');
-    padding-bottom: theme('spacing.24');
+    padding-top: theme('spacing.12');
+    padding-bottom: theme('spacing.12');
+}
+
+.email {
+    font-size: 2.0625rem;
+    font-weight: 700;
 }
 
 .footer > :global(*:not(:last-child)) {
@@ -14,5 +19,11 @@
         max-width: theme('maxWidth.site');
         margin-left: auto;
         margin-right: auto;
+        padding-top: theme('spacing.24');
+        padding-bottom: theme('spacing.24');
+    }
+
+    .email {
+        font-size: 3.4375rem;
     }
 }

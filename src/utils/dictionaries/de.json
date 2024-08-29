@@ -215,8 +215,10 @@
         }
     },
     "homepage": {
+        "changeCurrency": "Währung ändern",
         "ourStack": "Unsere Werkzeuge",
-        "title": "Maßgeschneiderte Apps, Websites & Software"
+        "title": "Maßgeschneiderte Apps, Websites & Software",
+        "weHaveWorkedWith": "Wir haben gearbeitet mit"
     },
     "marketEntity": {
         "lastUpdated": "Letzte Aktualisierung",

@@ -21,7 +21,7 @@ export default function MarketEntity({
             transition={{ type: 'spring', stiffness: 400, damping: 10 }}
             className={styles.wrapper}
         >
-            <div className="text-[58px] font-extrabold mb-2">
+            <div className="text-[58px] font-extrabold mb-2 xl:text-4xl">
                 <Price
                     price={marketEntity.price}
                     currency={marketEntity.currency}

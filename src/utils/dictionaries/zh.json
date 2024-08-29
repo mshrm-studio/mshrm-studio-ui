@@ -215,8 +215,10 @@
         }
     },
     "homepage": {
+        "changeCurrency": "更改货币",
         "ourStack": "我们的工具",
-        "title": "定制应用程序、网站和软件"
+        "title": "定制应用程序、网站和软件",
+        "weHaveWorkedWith": "我们合作过的"
     },
     "marketEntity": {
         "lastUpdated": "最近更新时间",
