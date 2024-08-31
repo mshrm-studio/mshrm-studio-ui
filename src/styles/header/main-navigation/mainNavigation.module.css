@@ -1,11 +1,9 @@
 .li {
     list-style: none;
-    align-items: center;
-    cursor: pointer;
-    font-weight: 800;
-    font-size: theme('fontSize.4xl');
+    font-weight: 700;
+    font-size: theme('fontSize.lg');
 }
 
 .li:not(:last-child) {
-    margin-bottom: theme('spacing.2');
+    margin-bottom: theme('spacing.6');
 }

@@ -15,6 +15,15 @@ export default function ContactFormModalClient() {
             show={showContactFormModal}
             close={() => setShowContactFormModal(false)}
         >
+            <div className="mb-8">
+                <a
+                    href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`}
+                    className="uppercase font-extrabold text-xl"
+                >
+                    {process.env.NEXT_PUBLIC_CONTACT_EMAIL}
+                </a>
+            </div>
+
             <ContactForm />
         </Modal>
     )

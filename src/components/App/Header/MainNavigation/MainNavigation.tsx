@@ -2,41 +2,95 @@
 
 import useDictionary from '@/utils/hooks/useDictionary'
 import styles from '@/styles/header/main-navigation/mainNavigation.module.css'
-import Link from 'next/link'
-import { useMemo } from 'react'
+import { useContext, useMemo } from 'react'
+import { useIsAuthenticated } from '@azure/msal-react'
+import { useWeb3ModalAccount } from '@web3modal/ethers/react'
+import UserContext from '@/utils/context/User'
+import MainNavigationItem from '@/utils/dto/MainNavigationItem'
+import MainNavigationAction from '@/components/App/Header/MainNavigation/Action'
+import { FolderArrowDownIcon } from '@heroicons/react/24/outline'
+import DimensionsContext from '@/utils/context/Dimensions'
 
 type Props = {}
 
 const HeaderMainNavigation: React.FC<Props> = ({}) => {
     const dict = useDictionary()
+    const { address, isConnected: isCryptoAuthenticated } =
+        useWeb3ModalAccount()
+    const isAuthenticated = useIsAuthenticated()
+    const { user } = useContext(UserContext)
+    const { dimensions } = useContext(DimensionsContext)
 
-    const menu = useMemo(() => {
-        const menuItemTranslation = dict.header.menuItem
+    const cryptoWalletMenuItem = useMemo(() => {
+        const identifier = address || 'ETH'
 
+        return isCryptoAuthenticated
+            ? {
+                  id: 'cryptoLogout',
+                  actionText: dict.header.menuItem.logOut,
+                  prependedLabel:
+                      dict.header.menuItem.loggedInWithEthAddress.replace(
+                          ':ethAddress',
+                          dimensions.viewportWidth < 640
+                              ? `${identifier.slice(0, 4)}...`
+                              : identifier
+                      ),
+              }
+            : {
+                  id: 'cryptoLogin',
+                  actionText: dict.header.menuItem.connectWallet,
+              }
+    }, [address, dict, dimensions.viewportWidth, isCryptoAuthenticated])
+
+    const ssoMenuItem = useMemo(() => {
+        const identifier = user?.email || 'SSO'
+
+        return isAuthenticated
+            ? {
+                  id: 'microsoftLogout',
+                  actionText: dict.header.menuItem.logOut,
+                  href: '/auth/sso/logout',
+                  prependedLabel:
+                      dict.header.menuItem.loggedInWithEmail.replace(
+                          ':email',
+                          dimensions.viewportWidth < 640
+                              ? `${identifier.slice(0, 4)}...`
+                              : identifier
+                      ),
+              }
+            : {
+                  id: 'microsoftLogin',
+                  actionText: dict.header.menuItem.microsoftLogin,
+                  href: '/auth/sso',
+              }
+    }, [dict, dimensions.viewportWidth, isAuthenticated, user])
+
+    const menu = useMemo<MainNavigationItem[]>(() => {
         return [
-            { id: 'chat', title: menuItemTranslation.chat },
+            ssoMenuItem,
+            cryptoWalletMenuItem,
             {
-                id: 'microsoftLogin',
-                title: menuItemTranslation.microsoftLogin,
-                href: '/auth/sso',
+                id: 'ourBrand',
+                actionText: dict.header.menuItem.ourBrand,
+                href: 'https://www.figma.com/design/qlL67hLsYStO1HlJbEcNtB/MSHRM.studio',
+                appendedIcon: FolderArrowDownIcon,
             },
-            { id: 'connectWallet', title: menuItemTranslation.connectWallet },
-            { id: 'ourBrand', title: menuItemTranslation.ourBrand },
-            { id: 'ourGithub', title: menuItemTranslation.ourGithub },
-            { id: 'cms', title: menuItemTranslation.cms, href: '/admin' },
+            { id: 'cms', actionText: dict.header.menuItem.cms, href: '/admin' },
+            { id: 'contactUs', actionText: dict.header.menuItem.contactUs },
+            {
+                id: 'email',
+                actionText: process.env.NEXT_PUBLIC_CONTACT_EMAIL,
+                href: `mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`,
+            },
         ]
-    }, [dict])
+    }, [cryptoWalletMenuItem, dict, ssoMenuItem])
 
     return (
         <nav>
             <ul className={styles.ul}>
                 {menu.map((item) => (
                     <li key={item.id} className={styles.li}>
-                        {item.href ? (
-                            <Link href={item.href}>{item.title}</Link>
-                        ) : (
-                            item.title
-                        )}
+                        <MainNavigationAction item={item} />
                     </li>
                 ))}
             </ul>

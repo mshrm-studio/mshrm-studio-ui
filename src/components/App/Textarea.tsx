@@ -1,4 +1,4 @@
-import styles from '@/styles/input.module.css'
+import styles from '@/styles/textarea.module.css'
 import { useMemo } from 'react'
 import FormField from '@/components/App/FormField'
 
@@ -8,7 +8,6 @@ type Props = {
     name: string
     placeholder?: string
     required?: boolean
-    type?: 'text' | 'email' | 'url'
 }
 
 export default function Input({
@@ -17,7 +16,6 @@ export default function Input({
     name,
     placeholder,
     required,
-    type = 'text',
 }: Props) {
     const labelWithAsterisk = useMemo(() => {
         if (!label) return undefined
@@ -33,14 +31,13 @@ export default function Input({
 
     return (
         <FormField fieldId={id || name} label={labelWithAsterisk}>
-            <input
+            <textarea
                 id={id || name}
-                className={styles.input}
+                className={styles.textarea}
                 name={name}
                 placeholder={placeholderWithAsterisk}
                 required={required}
-                type={type}
-            />
+            ></textarea>
         </FormField>
     )
 }

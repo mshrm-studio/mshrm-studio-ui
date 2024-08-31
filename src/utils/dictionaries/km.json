@@ -178,15 +178,19 @@
     },
     "contactForm": {
         "email": {
+            "label": "អ៊ីម៉ែល",
             "placeholder": "អ៊ីម៉ែល"
         },
         "message": {
+            "label": "សរសេរ​សាររបស់អ្នកនៅទីនេះ...",
             "placeholder": "សរសេរ​សាររបស់អ្នកនៅទីនេះ..."
         },
         "name": {
+            "label": "ឈ្មោះ",
             "placeholder": "ឈ្មោះ"
         },
         "website": {
+            "label": "គេហទំព័រ",
             "placeholder": "គេហទំព័រ"
         }
     },
@@ -211,12 +215,14 @@
     },
     "header": {
         "menuItem": {
-            "chat": "ការជជែក",
             "cms": "ប្រព័ន្ធគ្រប់គ្រងការយល់ព្រម",
             "connectWallet": "ភ្ជាប់កាបូប",
+            "contactUs": "ទាក់ទង​មក​ពួក​យើង",
+            "loggedInWithEmail": "ចូលជាមួយ :email",
+            "loggedInWithEthAddress": "ចូលជាមួយ :ethAddress",
+            "logOut": "ចេញពីប្រព័ន្ធ",
             "microsoftLogin": "ការចូលទៅម៉ាយក្រូសូហ្វ",
-            "ourBrand": "ម៉ាករបស់យើង",
-            "ourGithub": "Github របស់យើង"
+            "ourBrand": "ម៉ាករបស់យើង"
         }
     },
     "homepage": {

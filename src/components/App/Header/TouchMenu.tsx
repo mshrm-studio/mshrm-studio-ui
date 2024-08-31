@@ -30,10 +30,10 @@ const HeaderTouchMenu: React.FC<Props> = ({ children }) => {
 
     return (
         <div
-            className="absolute z-[999] top-full w-full bg-white dark:bg-black"
+            className="absolute z-[999] top-full left-0 w-full bg-white dark:bg-black"
             style={{ height: navHeight }}
         >
-            <div className="h-full">{children}</div>
+            <div className="h-full px-6 flex items-center">{children}</div>
         </div>
     )
 }

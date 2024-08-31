@@ -15,7 +15,7 @@
 }
 
 :global(html:not(.dark)) .modal {
-    background-color: #e9e3e6;
+    background-color: #ffffff;
 }
 
 .closeButton {

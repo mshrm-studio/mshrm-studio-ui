@@ -178,15 +178,19 @@
     },
     "contactForm": {
         "email": {
+            "label": "البريد الإلكتروني",
             "placeholder": "البريد الإلكتروني"
         },
         "message": {
+            "label": "اكتب رسالتك هنا...",
             "placeholder": "اكتب رسالتك هنا..."
         },
         "name": {
+            "label": "الاسم",
             "placeholder": "الاسم"
         },
         "website": {
+            "label": "الموقع الإلكتروني",
             "placeholder": "الموقع الإلكتروني"
         }
     },
@@ -211,12 +215,14 @@
     },
     "header": {
         "menuItem": {
-            "chat": "دردشة",
             "cms": "نظام إدارة الموافقة",
             "connectWallet": "اتصال المحفظة",
+            "contactUs": "اتصل بنا",
+            "loggedInWithEmail": "تم تسجيل الدخول باستخدام :email",
+            "loggedInWithEthAddress": "تم تسجيل الدخول باستخدام :ethAddress",
+            "logOut": "تسجيل الخروج",
             "microsoftLogin": "تسجيل الدخول إلى مايكروسوفت",
-            "ourBrand": "علامتنا التجارية",
-            "ourGithub": "مستودعنا على جيتهاب"
+            "ourBrand": "علامتنا التجارية"
         }
     },
     "homepage": {

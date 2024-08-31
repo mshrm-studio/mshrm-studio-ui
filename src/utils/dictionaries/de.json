@@ -178,15 +178,19 @@
     },
     "contactForm": {
         "email": {
+            "label": "E-Mail",
             "placeholder": "E-Mail"
         },
         "message": {
+            "label": "Schreiben Sie Ihre Nachricht hier...",
             "placeholder": "Schreiben Sie Ihre Nachricht hier..."
         },
         "name": {
+            "label": "Name",
             "placeholder": "Name"
         },
         "website": {
+            "label": "Webseite",
             "placeholder": "Webseite"
         }
     },
@@ -211,12 +215,14 @@
     },
     "header": {
         "menuItem": {
-            "chat": "Chat",
             "cms": "Einwilligungsverwaltungssystem",
             "connectWallet": "Wallet verbinden",
+            "contactUs": "kontaktiere uns",
+            "loggedInWithEmail": "Angemeldet mit :email",
+            "loggedInWithEthAddress": "Angemeldet mit :ethAddress",
+            "logOut": "Abmelden",
             "microsoftLogin": "Microsoft-Anmeldung",
-            "ourBrand": "Unsere Marke",
-            "ourGithub": "Unser Github"
+            "ourBrand": "Unsere Marke"
         }
     },
     "homepage": {

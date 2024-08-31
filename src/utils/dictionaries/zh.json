@@ -178,15 +178,19 @@
     },
     "contactForm": {
         "email": {
+            "label": "电子邮件",
             "placeholder": "电子邮件"
         },
         "message": {
+            "label": "在此处输入您的消息...",
             "placeholder": "在此处输入您的消息..."
         },
         "name": {
+            "label": "姓名",
             "placeholder": "姓名"
         },
         "website": {
+            "label": "网站",
             "placeholder": "网站"
         }
     },
@@ -211,12 +215,14 @@
     },
     "header": {
         "menuItem": {
-            "chat": "聊天",
             "cms": "同意管理系统",
             "connectWallet": "连接钱包",
+            "contactUs": "联系我们",
+            "loggedInWithEmail": "使用 :email 登录",
+            "loggedInWithEthAddress": "使用 :ethAddress 登录",
+            "logOut": "退出登录",
             "microsoftLogin": "微软登录",
-            "ourBrand": "我们的品牌",
-            "ourGithub": "我们的Github"
+            "ourBrand": "我们的品牌"
         }
     },
     "homepage": {

@@ -25,10 +25,10 @@ export default function HomePageMarketEntities() {
 
     return (
         <section className={styles.marketEntityListSection}>
-            <div className="xl:max-w-site xl:mx-auto">
+            <div className="pt-6 xl:pt-0 xl:max-w-site xl:mx-auto">
                 <MarketEntityList marketEntities={marketEntities} />
 
-                <div className="px-6">
+                <div className="mt-6 px-6 xl:mt-0">
                     <label htmlFor="currencySelect" className="mr-1">
                         {dict.homepage.changeCurrency}
                     </label>
