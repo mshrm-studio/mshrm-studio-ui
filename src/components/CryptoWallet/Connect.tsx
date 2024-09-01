@@ -13,7 +13,12 @@ export default function CryptoWalletConnect({
     const { open } = useWeb3Modal()
 
     return (
-        <button className={className} onClick={() => open()}>
+        <button
+            className={className}
+            aria-label={`TODO (translate): Connect Crypto Wallet`}
+            title={`TODO (translate): Connect Crypto Wallet`}
+            onClick={() => open()}
+        >
             {children}
         </button>
     )

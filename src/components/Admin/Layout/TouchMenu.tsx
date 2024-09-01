@@ -14,7 +14,13 @@ export default function AdminLayoutTouchMenu() {
     return (
         <Sheet>
             <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="lg:hidden">
+                <Button
+                    aria-label={`TODO (translate): Toggle navigation menu`}
+                    title={`TODO (translate): Toggle navigation menu`}
+                    variant="outline"
+                    size="icon"
+                    className="lg:hidden"
+                >
                     <Menu className="h-6 w-6" />
 
                     <span className="sr-only">Toggle navigation menu</span>

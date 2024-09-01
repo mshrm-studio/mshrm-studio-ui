@@ -27,7 +27,12 @@ export default function CopyToClipboard({
 
     return (
         <div className="flex">
-            <button className="flex-shrink-0 mr-2" onClick={onClick}>
+            <button
+                className="flex-shrink-0 mr-2"
+                aria-label={`TODO (translate): Copy to clipboard`}
+                title={`TODO (translate): Copy to clipboard`}
+                onClick={onClick}
+            >
                 <ClipboardCopy />
             </button>
 

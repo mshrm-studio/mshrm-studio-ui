@@ -52,6 +52,8 @@ export default function HomePageHeroAuthOptions() {
 
                         <button
                             className={styles.cryptoLogoutBtn}
+                            aria-label={`TODO (translate): Disconnect wallet`}
+                            title={`TODO (translate): Disconnect wallet`}
                             onClick={() => disconnect()}
                         >
                             {dict.action.signOut}

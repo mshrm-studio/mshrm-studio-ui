@@ -8,7 +8,7 @@ export default function Tool({ tool }: { tool: ToolDto }) {
                 <SpacesImg
                     className="h-[63px] w-[63px]"
                     src={`static/tools/${tool.logoUrl}`}
-                    alt={tool.name}
+                    alt={`TODO (translate): ${tool.name} logo`}
                 />
             </div>
 

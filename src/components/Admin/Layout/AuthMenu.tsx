@@ -27,7 +27,13 @@ export default function AdminLayoutProfileMenu() {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="rounded-full">
+                <Button
+                    aria-label={`TODO (translate): Toggle user menu`}
+                    title={`TODO (translate): Toggle user menu`}
+                    variant="ghost"
+                    size="icon"
+                    className="rounded-full"
+                >
                     <User />
 
                     <span className="sr-only">Toggle user menu</span>

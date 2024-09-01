@@ -17,7 +17,12 @@ export default function HomePageHeroContact() {
 
     return (
         <div className={styles.contactBtnContainer}>
-            <Button size="xl" onClick={onClick}>
+            <Button
+                aria-label={`TODO (translate): Open contact form`}
+                title={`TODO (translate): Open contact form`}
+                size="xl"
+                onClick={onClick}
+            >
                 {dict.action.contactUs}
             </Button>
         </div>

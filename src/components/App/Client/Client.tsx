@@ -11,14 +11,14 @@ export default function Client({ client }: { client: ClientDto }) {
                 className={`${styles.clientImg} ${styles.lightClientImg}`}
                 imgClassName="object-contain"
                 src={`static/companies/${client.lightLogoUrl}`}
-                alt={client.name}
+                alt={`TODO (translate): dark ${client.name} logo`}
             />
 
             <SpacesImg
                 className={`${styles.clientImg} ${styles.darkClientImg}`}
                 imgClassName="object-contain"
                 src={`static/companies/${client.darkLogoUrl}`}
-                alt={client.name}
+                alt={`TODO (translate): light ${client.name} logo`}
             />
         </>
     )

@@ -10,6 +10,11 @@ export default function HeaderThemeSwitcher() {
     return (
         <button
             className={styles.button}
+            aria-label={
+                resolvedTheme === 'dark'
+                    ? 'TODO (translate): Switch to light theme'
+                    : 'TODO (translate): Switch to dark theme'
+            }
             title={
                 resolvedTheme === 'dark'
                     ? 'TODO (translate): Switch to light theme'

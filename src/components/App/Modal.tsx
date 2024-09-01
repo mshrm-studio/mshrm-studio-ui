@@ -32,6 +32,8 @@ export default function Modal({
             <button
                 className={styles.closeButton}
                 type="button"
+                aria-label={`TODO (translate): Close Modal`}
+                title={`TODO (translate): Close Modal`}
                 onClick={(_e: React.MouseEvent<HTMLButtonElement>) => close()}
             >
                 <XMarkIcon className={styles.closeButtonIcon} />

@@ -16,7 +16,13 @@ export default function HeaderLoginLogoutOption({
     return (
         <>
             {isAuthenticated ? (
-                <button onClick={logout}>{dictionary.signOut}</button>
+                <button
+                    aria-label={`TODO (translate): Logout`}
+                    title={`TODO (translate): Logout`}
+                    onClick={logout}
+                >
+                    {dictionary.signOut}
+                </button>
             ) : (
                 <Link href="/auth/sso">{dictionary.signInWithMicrosoft}</Link>
             )}

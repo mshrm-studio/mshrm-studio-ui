@@ -19,6 +19,8 @@ export default function FooterLanguageSwitcher() {
                             }
                             disabled={option.active}
                             lang={option.value}
+                            aria-label={`TODO (translate): Change language`}
+                            title={`TODO (translate): Change language`}
                             onClick={() => changeLanguage(option.value)}
                         >
                             {option.label}

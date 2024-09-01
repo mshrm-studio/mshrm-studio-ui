@@ -98,7 +98,12 @@ export function DataTable<TData, TValue>({
 
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                        <Button variant="outline" className="ml-auto">
+                        <Button
+                            aria-label={`TODO (translate): Toggle table column options`}
+                            title={`TODO (translate): Toggle table column options`}
+                            variant="outline"
+                            className="ml-auto"
+                        >
                             {dict.admin.dataTable.columns}{' '}
                             <ChevronDown className="ml-2 h-4 w-4" />
                         </Button>
@@ -199,6 +204,8 @@ export function DataTable<TData, TValue>({
 
                 <div className="space-x-2">
                     <Button
+                        aria-label={`TODO (translate): Go to previous page`}
+                        title={`TODO (translate): Go to previous page`}
                         variant="outline"
                         size="sm"
                         onClick={() => table.previousPage()}
@@ -208,6 +215,8 @@ export function DataTable<TData, TValue>({
                     </Button>
 
                     <Button
+                        aria-label={`TODO (translate): Go to next page`}
+                        title={`TODO (translate): Go to next page`}
                         variant="outline"
                         size="sm"
                         onClick={() => table.nextPage()}

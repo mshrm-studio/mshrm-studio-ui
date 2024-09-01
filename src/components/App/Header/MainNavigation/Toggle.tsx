@@ -12,7 +12,17 @@ export default function HeaderMainNavigationToggle({
     onClick,
 }: Props) {
     return (
-        <button className="dark:text-white" type="button" onClick={onClick}>
+        <button
+            className="dark:text-white"
+            type="button"
+            aria-label={`TODO (translate): ${
+                menuVisible ? 'Close menu' : 'Open menu'
+            }`}
+            title={`TODO (translate): ${
+                menuVisible ? 'Close menu' : 'Open menu'
+            }`}
+            onClick={onClick}
+        >
             {menuVisible ? (
                 <XMarkIcon className="h-6 w-6" />
             ) : (

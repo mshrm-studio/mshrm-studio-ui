@@ -47,6 +47,8 @@ export default function HeaderMainNavigationAction({ item }: Props) {
                         ? 'underline text-black/50 dark:text-white/50'
                         : ''
                 }`}
+                aria-label={item.actionText}
+                title={item.actionText}
                 onClick={onClick}
             >
                 {item.actionText}

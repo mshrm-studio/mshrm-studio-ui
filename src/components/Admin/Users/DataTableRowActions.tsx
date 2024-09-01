@@ -35,7 +35,12 @@ export default function AdminUsersDataTableRowActions({
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="h-8 w-8 p-0">
+                <Button
+                    aria-label={`TODO (translate): Toggle table row options`}
+                    title={`TODO (translate): Toggle table row options`}
+                    variant="ghost"
+                    className="h-8 w-8 p-0"
+                >
                     <span className="sr-only">Open menu</span>
 
                     <MoreHorizontal className="h-4 w-4" />
