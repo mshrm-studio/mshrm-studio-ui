@@ -32,6 +32,10 @@ export function localeMiddleware(request: NextRequest) {
     // Check if there is any supported locale in the pathname
     const { pathname } = request.nextUrl
 
+    if (pathname === '/robots.txt' || pathname === '/sitemap.xml') {
+        return // Skip middleware logic
+    }
+
     const pathnameHasLocale = locales.some(
         (locale) =>
             pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
