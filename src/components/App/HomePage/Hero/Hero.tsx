@@ -19,7 +19,7 @@ export default function HomePageHero() {
     return (
         <section
             className={styles.heroSection}
-            style={{ height: sectionHeight }}
+            style={{ minHeight: sectionHeight }}
         >
             <div className={styles.mapWrapper}>
                 <div className={styles.mapContainer}>
