@@ -6,6 +6,7 @@ import LocaleContextProvider from '@/components/Provider/Locale'
 import UserContextProvider from '@/components/Provider/User'
 import Web3ModalProvider from '@/components/Provider/Web3Modal'
 import { ThemeProvider } from 'next-themes'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
     title: 'mshrm.studio',
@@ -45,6 +46,8 @@ export default function RootLayout({
                         </UserContextProvider>
                     </AuthContextProvider>
                 </ThemeProvider>
+
+                <Analytics />
             </body>
         </html>
     )
