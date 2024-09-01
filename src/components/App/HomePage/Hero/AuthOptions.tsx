@@ -1,7 +1,7 @@
 'use client'
 
 import CryptoWalletConnect from '@/components/CryptoWallet/Connect'
-import { useWeb3ModalAccount } from '@web3modal/ethers/react'
+import { useDisconnect, useWeb3ModalAccount } from '@web3modal/ethers/react'
 import EthAddress from '@/components/EthAddress'
 import { useIsAuthenticated } from '@azure/msal-react'
 import UserContext from '@/utils/context/User'
@@ -15,6 +15,7 @@ export default function HomePageHeroAuthOptions() {
         useWeb3ModalAccount()
     const isAuthenticated = useIsAuthenticated()
     const { user } = useContext(UserContext)
+    const { disconnect } = useDisconnect()
 
     return (
         <div className={styles.authOptions}>
@@ -29,8 +30,8 @@ export default function HomePageHeroAuthOptions() {
                             </span>
                         )}
 
-                        <a href="#" className={styles.ssoLogoutLink}>
-                            TODO: Logout
+                        <a href="#TODO" className={styles.ssoLogoutLink}>
+                            {dict.action.signOut}
                         </a>
                     </>
                 ) : (
@@ -49,8 +50,11 @@ export default function HomePageHeroAuthOptions() {
                             </span>
                         )}
 
-                        <button className={styles.cryptoLogoutBtn}>
-                            TODO: Logout
+                        <button
+                            className={styles.cryptoLogoutBtn}
+                            onClick={() => disconnect()}
+                        >
+                            {dict.action.signOut}
                         </button>
                     </>
                 ) : (

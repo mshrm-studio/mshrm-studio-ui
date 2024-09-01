@@ -31,8 +31,8 @@ const HeaderMainNavigation: React.FC<Props> = ({}) => {
                   prependedLabel:
                       dict.header.menuItem.loggedInWithEthAddress.replace(
                           ':ethAddress',
-                          dimensions.viewportWidth < 640
-                              ? `${identifier.slice(0, 4)}...`
+                          dimensions.viewportWidth < 1024
+                              ? `${identifier.slice(0, 6)}...`
                               : identifier
                       ),
               }

@@ -9,9 +9,15 @@ type Props = {
 
 export default function HeaderMainNavigationLink({ item }: Props) {
     return (
-        <div className="flex items-center">
+        <div
+            className={
+                item.prependedLabel || item.appendedIcon
+                    ? 'flex items-center'
+                    : ''
+            }
+        >
             {item.prependedLabel && (
-                <span className="mr-2">{item.prependedLabel}</span>
+                <span className="mr-3">{item.prependedLabel}</span>
             )}
 
             <Link
@@ -26,7 +32,7 @@ export default function HeaderMainNavigationLink({ item }: Props) {
                 {item.actionText}
             </Link>
 
-            {item.appendedIcon !== undefined && (
+            {item.appendedIcon && (
                 <item.appendedIcon className="ml-2 h-4 w-4 text-black/50 dark:text-white/50" />
             )}
         </div>
