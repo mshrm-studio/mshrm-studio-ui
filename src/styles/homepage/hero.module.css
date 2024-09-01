@@ -1,5 +1,6 @@
 .heroSection {
     margin-bottom: theme('spacing.12');
+    min-height: calc(theme('height.screen') - 56px);
 }
 
 .headingAuthOptionsAndContactBtn {

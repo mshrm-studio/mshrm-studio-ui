@@ -1,0 +1,20 @@
+.brandLogo {
+    height: 23px;
+    width: 52px;
+}
+
+:global(html.dark) .blackBrandLogo {
+    display: none;
+}
+
+:global(html:not(.dark)) .blackBrandLogo {
+    display: block;
+}
+
+:global(html.dark) .whiteBrandLogo {
+    display: block;
+}
+
+:global(html:not(.dark)) .whiteBrandLogo {
+    display: none;
+}

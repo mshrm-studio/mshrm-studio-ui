@@ -16,7 +16,7 @@ export default async function Footer({ locale }: { locale: Locale }) {
 
                 <LanguageSwitcher />
 
-                <AllRightsReserved />
+                <AllRightsReserved dict={dictionary} />
             </footer>
         </DictionaryContextProvider>
     )

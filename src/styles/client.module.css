@@ -1,0 +1,22 @@
+.clientImg {
+    min-height: 65px;
+    min-width: 80px;
+    max-height: 80px;
+    max-width: 210px;
+}
+
+:global(html.dark) .darkClientImg {
+    display: block;
+}
+
+:global(html:not(.dark)) .darkClientImg {
+    display: none;
+}
+
+:global(html.dark) .lightClientImg {
+    display: none;
+}
+
+:global(html:not(.dark)) .lightClientImg {
+    display: block;
+}

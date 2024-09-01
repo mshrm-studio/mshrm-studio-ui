@@ -18,6 +18,7 @@ export default function HomePageHeroMap() {
             className="h-[320px] w-full sm:h-[520px] xl:h-[650px]"
             src={mapImgSrc}
             alt="TODO (translate): Map"
+            priority
         />
     )
 }

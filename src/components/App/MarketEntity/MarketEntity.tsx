@@ -1,26 +1,20 @@
-'use client'
-
 import styles from '@/styles/marketEntity.module.css'
 import MarketEntityDto from '@/utils/dto/MarketEntity'
 import Price from '@/components/Price'
 import PercentageChange from '@/components/App/MarketEntity/PercentageChange'
 import DateTime from '@/components/DateTime'
-import { motion } from 'framer-motion'
-import useDictionary from '@/utils/hooks/useDictionary'
+import { Dictionary } from '@/app/[lang]/dictionaries'
+import MotionCard from '@/components/App/MarketEntity/MotionCard'
 
 export default function MarketEntity({
+    dict,
     marketEntity,
 }: {
+    dict: Dictionary
     marketEntity: MarketEntityDto
 }) {
-    const dict = useDictionary()
-
     return (
-        <motion.div
-            whileHover={{ scale: 1.1 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-            className={styles.wrapper}
-        >
+        <MotionCard>
             <div className="text-[58px] font-extrabold mb-2 xl:text-4xl">
                 <Price
                     price={marketEntity.price}
@@ -83,6 +77,6 @@ export default function MarketEntity({
                     <div className={styles.value}>{marketEntity.source}</div>
                 </div>
             </div>
-        </motion.div>
+        </MotionCard>
     )
 }

@@ -1,6 +1,3 @@
-'use client'
-
-import React, { useMemo } from 'react'
 import Image from 'next/image'
 
 type Props = {
@@ -18,20 +15,16 @@ const SpacesImage: React.FC<Props> = ({
     priority,
     src,
 }) => {
-    const spacesStorageUrl = process.env.NEXT_PUBLIC_DO_STORAGE_URL
-
-    const fullImageSrc = useMemo(() => {
-        return src.startsWith('http')
-            ? src
-            : src.startsWith('/')
-            ? spacesStorageUrl + src
-            : `${spacesStorageUrl}/${src}`
-    }, [src])
-
     return (
         <div className={`${className} relative`}>
             <Image
-                src={fullImageSrc}
+                src={
+                    src.startsWith('http')
+                        ? src
+                        : src.startsWith('/')
+                        ? process.env.NEXT_PUBLIC_DO_STORAGE_URL + src
+                        : `${process.env.NEXT_PUBLIC_DO_STORAGE_URL}/${src}`
+                }
                 fill
                 className={imgClassName}
                 priority={priority}

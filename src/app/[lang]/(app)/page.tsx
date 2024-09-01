@@ -16,13 +16,13 @@ export default async function Page({
     return (
         <DictionaryContextProvider dictionary={dict}>
             <div id="homepage">
-                <Hero />
+                <Hero dict={dict} />
 
-                <Clients />
+                <Clients dict={dict} />
 
-                <MarketEntities />
+                <MarketEntities dict={dict} />
 
-                <Stack />
+                <Stack dict={dict} />
             </div>
         </DictionaryContextProvider>
     )
