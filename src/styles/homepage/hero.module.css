@@ -1,3 +1,7 @@
+.heroSection {
+    margin-bottom: theme('spacing.12');
+}
+
 .headingAuthOptionsAndContactBtn {
     padding-left: theme('spacing.6');
     padding-right: theme('spacing.6');
@@ -51,6 +55,7 @@
         flex-direction: column-reverse;
         justify-content: start;
         padding-top: theme('spacing.36');
+        margin-bottom: 0;
     }
 
     .mapContainer {

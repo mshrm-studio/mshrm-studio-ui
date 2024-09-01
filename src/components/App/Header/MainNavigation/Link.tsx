@@ -21,6 +21,7 @@ export default function HeaderMainNavigationLink({ item }: Props) {
                         : ''
                 }`}
                 href={item.href}
+                target={item.href.includes('http') ? '_blank' : undefined}
             >
                 {item.actionText}
             </Link>
