@@ -32,7 +32,8 @@ export default function Layout({
         name: 'mshrm.studio',
         url: process.env.NEXT_PUBLIC_URL || 'https://mshrm.studio',
         logo: `${process.env.NEXT_PUBLIC_DO_STORAGE_URL}/static/brand/glyph/m-glyph-black.png`,
-        description: 'Bespoke apps, sites & software development services.',
+        description:
+            'TODO (translate): Bespoke apps, sites & software development services.',
         sameAs: [
             'https://x.com/MSHRMDAO',
             'https://www.linkedin.com/company/mshrmstudio',
