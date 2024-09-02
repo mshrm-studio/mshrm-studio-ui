@@ -53,7 +53,11 @@ export default function AdminToolsDataTableRowActions({
                     {dict.admin.dataTable.actions}
                 </DropdownMenuLabel>
 
-                <DropdownMenuItem onClick={() => copy(tool.logoUrl)}>
+                <DropdownMenuItem onClick={() => copy(tool.lightLogoUrl)}>
+                    {dict.admin.dataTable.copy.logoUrl}
+                </DropdownMenuItem>
+
+                <DropdownMenuItem onClick={() => copy(tool.darkLogoUrl)}>
                     {dict.admin.dataTable.copy.logoUrl}
                 </DropdownMenuItem>
 

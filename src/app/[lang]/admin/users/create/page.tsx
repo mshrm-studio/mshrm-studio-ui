@@ -1,5 +1,5 @@
 import { Locale } from '@/utils/enums/Locale'
-import { getDictionary } from '@/app/[lang]/dictionaries'
+import { loadDictionaries } from '@/app/[lang]/dictionaries'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
 import UserForm from '@/components/Admin/Users/Form'
 
@@ -8,7 +8,7 @@ export default async function Page({
 }: Readonly<{
     params: { lang: Locale }
 }>) {
-    const dict = await getDictionary(lang)
+    const dict = await loadDictionaries(lang, ['admin', 'enum'])
 
     return (
         <DictionaryContextProvider dictionary={dict}>

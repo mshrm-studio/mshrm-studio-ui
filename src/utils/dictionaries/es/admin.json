@@ -1,0 +1,148 @@
+{
+    "breadcrumbs": {
+        "create": "Crear",
+        "edit": "Editar",
+        "details": "Detalles",
+        "list": "Lista"
+    },
+    "dataTable": {
+        "actions": "Acciones",
+        "columns": "Columnas",
+        "copy": {
+            "email": "Copiar correo electrónico",
+            "logoUrl": "Copiar URL del logo",
+            "link": "Copiar enlace"
+        },
+        "edit": {
+            "marketEntity": "Editar entidad del mercado",
+            "tool": "Editar herramienta",
+            "user": "Editar usuario"
+        },
+        "next": "Siguiente",
+        "noResults": "Sin resultados",
+        "previous": "Anterior",
+        "resultsMeta": "Mostrando :numberOfResultsShown de :totalResults",
+        "search": "Buscar",
+        "view": {
+            "marketEntity": "Ver entidad del mercado",
+            "tool": "Ver herramienta",
+            "user": "Ver usuario"
+        }
+    },
+    "form": {
+        "rule": {
+            "image": "El archivo debe ser una imagen (jpg, png, gif)",
+            "max": {
+                "length": "La longitud máxima es :maximum",
+                "size": "El tamaño máximo es :size"
+            },
+            "min": {
+                "length": "La longitud mínima es :minimum"
+            },
+            "required": "Requerido",
+            "url": "Debe ser una URL válida"
+        },
+        "submit": "Enviar"
+    },
+    "mainNavigation": {
+        "conversations": "Conversaciones",
+        "dashboard": "Tablero",
+        "home": "Inicio",
+        "marketEntities": "Entidades de mercado",
+        "tools": "Herramientas",
+        "users": "Usuarios"
+    },
+    "pageTitle": {
+        "conversations": "Conversaciones",
+        "dashboard": "Tablero",
+        "home": "Inicio",
+        "marketEntities": "Entidades de mercado",
+        "tools": "Herramientas",
+        "users": "Usuarios"
+    },
+    "tool": {
+        "action": {
+            "create": "Crear herramienta",
+            "edit": "Editar herramienta",
+            "update": "Actualizar herramienta"
+        },
+        "event": {
+            "created": "Herramienta creada",
+            "deleted": "Herramienta eliminada",
+            "updated": "Herramienta actualizada"
+        },
+        "form": {
+            "description": "Agregar una nueva herramienta al sitio web",
+            "item": {
+                "description": {
+                    "label": "Descripción",
+                    "description": "La descripción de la herramienta",
+                    "placeholder": "Una biblioteca de JavaScript para construir interfaces de usuario"
+                },
+                "link": {
+                    "label": "Enlace",
+                    "description": "El enlace del sitio web para esta herramienta",
+                    "placeholder": "https://react.dev"
+                },
+                "logo": {
+                    "label": "Logo",
+                    "description": "El logo de la herramienta"
+                },
+                "name": {
+                    "label": "Nombre",
+                    "description": "El nombre de la herramienta",
+                    "placeholder": "React.js"
+                },
+                "rank": {
+                    "label": "Rango",
+                    "description": "El rango de la herramienta. Los rangos más bajos aparecen primero.",
+                    "placeholder": "1"
+                },
+                "type": {
+                    "label": "Tipo",
+                    "description": "El tipo de herramienta",
+                    "placeholder": "Seleccione un tipo"
+                }
+            },
+            "title": "Crear nueva herramienta"
+        }
+    },
+    "user": {
+        "action": {
+            "create": "Crear usuario",
+            "edit": "Editar usuario",
+            "update": "Actualizar usuario"
+        },
+        "event": {
+            "created": "Usuario creado",
+            "deleted": "Usuario eliminado",
+            "updated": "Usuario actualizado"
+        },
+        "form": {
+            "description": "Agregar un nuevo usuario",
+            "item": {
+                "email": {
+                    "label": "Correo electrónico",
+                    "description": "El correo electrónico del usuario",
+                    "placeholder": "tom@mshrm.studio"
+                },
+                "firstName": {
+                    "label": "Nombre",
+                    "description": "El nombre del usuario",
+                    "placeholder": "Thomas"
+                },
+                "lastName": {
+                    "label": "Apellido",
+                    "description": "El apellido del usuario",
+                    "placeholder": "Maltby"
+                },
+                "role": {
+                    "label": "Rol",
+                    "description": "El rol del usuario",
+                    "placeholder": "Selecciona un rol"
+                }
+            },
+            "title": "Crear nuevo usuario"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "createdDate": "Erstellungsdatum",
+    "currency": "Währung",
+    "description": "Beschreibung",
+    "email": "E-Mail",
+    "firstName": "Vorname",
+    "label": "Bezeichnung",
+    "lastName": "Nachname",
+    "lastUpdated": "Zuletzt aktualisiert",
+    "link": "Link",
+    "logo": "Logo",
+    "marketCap": "Marktkapitalisierung",
+    "name": "Name",
+    "percentageChange": "Prozentuale Veränderung",
+    "price": "Preis",
+    "rank": "Rang",
+    "source": "Quelle",
+    "title": "Titel",
+    "type": "Typ",
+    "value": "Wert",
+    "volume": "Volumen"
+}

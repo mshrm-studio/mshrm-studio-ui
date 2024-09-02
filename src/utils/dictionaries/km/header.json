@@ -1,0 +1,12 @@
+{
+    "menuItem": {
+        "cms": "ប្រព័ន្ធគ្រប់គ្រងការយល់ព្រម",
+        "connectWallet": "ភ្ជាប់កាបូប",
+        "contactUs": "ទាក់ទង​មក​ពួក​យើង",
+        "loggedInWithEmail": "ចូលជាមួយ :email",
+        "loggedInWithEthAddress": "ចូលជាមួយ :ethAddress",
+        "logOut": "ចេញពីប្រព័ន្ធ",
+        "microsoftLogin": "ការចូលទៅម៉ាយក្រូសូហ្វ",
+        "ourBrand": "ម៉ាករបស់យើង"
+    }
+}

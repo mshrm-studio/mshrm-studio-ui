@@ -42,7 +42,15 @@ export const loadDictionary = (l: Locale, ns: string): Promise<Dictionary> =>
 
 export const loadDictionaries = async (l: Locale, nsList: string[]) => {
     const dictionaries = await Promise.all(
-        nsList.map((ns) => loadDictionary(l, ns))
+        nsList.map(async (ns) => {
+            const dict = await loadDictionary(l, ns)
+
+            const formattedNs = ns.startsWith('app/pages/')
+                ? `${ns.split('/')[2]}page`
+                : ns
+
+            return { [formattedNs]: dict }
+        })
     )
 
     return Object.assign({}, ...dictionaries)

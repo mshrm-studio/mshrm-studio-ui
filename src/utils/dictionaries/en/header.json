@@ -1,0 +1,12 @@
+{
+    "menuItem": {
+        "cms": "Content Management System",
+        "connectWallet": "Connect Wallet",
+        "contactUs": "Contact us",
+        "loggedInWithEmail": "Logged in with :email",
+        "loggedInWithEthAddress": "Logged in with :ethAddress",
+        "logOut": "Log out",
+        "microsoftLogin": "Microsoft Login",
+        "ourBrand": "Our Brand"
+    }
+}

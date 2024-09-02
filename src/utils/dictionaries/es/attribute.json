@@ -1,0 +1,22 @@
+{
+    "createdDate": "Fecha de creación",
+    "currency": "Moneda",
+    "description": "Descripción",
+    "email": "Correo electrónico",
+    "firstName": "Nombre",
+    "label": "Etiqueta",
+    "lastName": "Apellido",
+    "lastUpdated": "Última actualización",
+    "link": "Enlace",
+    "logo": "Logo",
+    "marketCap": "Capitalización de mercado",
+    "name": "Nombre",
+    "percentageChange": "Cambio porcentual",
+    "price": "Precio",
+    "rank": "Rango",
+    "source": "Fuente",
+    "title": "Título",
+    "type": "Tipo",
+    "value": "Valor",
+    "volume": "Volumen"
+}

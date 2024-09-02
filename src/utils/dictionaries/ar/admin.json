@@ -1,0 +1,148 @@
+{
+    "breadcrumbs": {
+        "create": "إنشاء",
+        "edit": "تعديل",
+        "details": "التفاصيل",
+        "list": "قائمة"
+    },
+    "dataTable": {
+        "actions": "الإجراءات",
+        "columns": "الأعمدة",
+        "copy": {
+            "email": "نسخ البريد الإلكتروني",
+            "logoUrl": "نسخ رابط الشعار",
+            "link": "نسخ الرابط"
+        },
+        "edit": {
+            "marketEntity": "تحرير الكيان السوقي",
+            "tool": "تحرير الأداة",
+            "user": "تحرير المستخدم"
+        },
+        "next": "التالي",
+        "noResults": "لا توجد نتائج",
+        "previous": "السابق",
+        "resultsMeta": "إظهار :numberOfResultsShown من :totalResults",
+        "search": "بحث",
+        "view": {
+            "marketEntity": "عرض الكيان السوقي",
+            "tool": "عرض الأداة",
+            "user": "عرض المستخدم"
+        }
+    },
+    "form": {
+        "rule": {
+            "image": "يجب أن يكون الملف صورة (jpg, png, gif)",
+            "max": {
+                "length": "الحد الأقصى للطول هو :maximum",
+                "size": "الحد الأقصى للحجم هو :size"
+            },
+            "min": {
+                "length": "الحد الأدنى للطول هو :minimum"
+            },
+            "required": "مطلوب",
+            "url": "يجب أن يكون رابط URL صالح"
+        },
+        "submit": "إرسال"
+    },
+    "mainNavigation": {
+        "conversations": "محادثات",
+        "dashboard": "لوحة القيادة",
+        "home": "الصفحة الرئيسية",
+        "marketEntities": "الكيانات السوقية",
+        "tools": "أدوات",
+        "users": "المستخدمون"
+    },
+    "pageTitle": {
+        "conversations": "محادثات",
+        "dashboard": "لوحة القيادة",
+        "home": "الصفحة الرئيسية",
+        "marketEntities": "الكيانات السوقية",
+        "tools": "أدوات",
+        "users": "المستخدمون"
+    },
+    "tool": {
+        "action": {
+            "create": "إنشاء أداة",
+            "edit": "تعديل أداة",
+            "update": "تحديث أداة"
+        },
+        "event": {
+            "created": "تم إنشاء الأداة",
+            "deleted": "تم حذف الأداة",
+            "updated": "تم تحديث الأداة"
+        },
+        "form": {
+            "description": "إضافة أداة جديدة إلى الموقع",
+            "item": {
+                "description": {
+                    "label": "الوصف",
+                    "description": "وصف الأداة",
+                    "placeholder": "مكتبة JavaScript لبناء واجهات المستخدم"
+                },
+                "link": {
+                    "label": "الرابط",
+                    "description": "رابط موقع الويب لهذه الأداة",
+                    "placeholder": "https://react.dev"
+                },
+                "logo": {
+                    "label": "الشعار",
+                    "description": "شعار الأداة"
+                },
+                "name": {
+                    "label": "الاسم",
+                    "description": "اسم العرض للأداة",
+                    "placeholder": "React.js"
+                },
+                "rank": {
+                    "label": "الترتيب",
+                    "description": "ترتيب الأداة. الترتيبات الأقل تظهر أولاً.",
+                    "placeholder": "1"
+                },
+                "type": {
+                    "label": "النوع",
+                    "description": "نوع الأداة",
+                    "placeholder": "اختر نوعًا"
+                }
+            },
+            "title": "إنشاء أداة جديدة"
+        }
+    },
+    "user": {
+        "action": {
+            "create": "إنشاء مستخدم",
+            "edit": "تحرير المستخدم",
+            "update": "تحديث المستخدم"
+        },
+        "event": {
+            "created": "تم إنشاء المستخدم",
+            "deleted": "تم حذف المستخدم",
+            "updated": "تم تحديث المستخدم"
+        },
+        "form": {
+            "description": "إضافة مستخدم جديد",
+            "item": {
+                "email": {
+                    "label": "البريد الإلكتروني",
+                    "description": "بريد المستخدم الإلكتروني",
+                    "placeholder": "tom@mshrm.studio"
+                },
+                "firstName": {
+                    "label": "الاسم الأول",
+                    "description": "الاسم الأول للمستخدم",
+                    "placeholder": "Thomas"
+                },
+                "lastName": {
+                    "label": "الاسم الأخير",
+                    "description": "اسم العائلة للمستخدم",
+                    "placeholder": "Maltby"
+                },
+                "role": {
+                    "label": "الدور",
+                    "description": "دور المستخدم",
+                    "placeholder": "اختر دورا"
+                }
+            },
+            "title": "إنشاء مستخدم جديد"
+        }
+    }
+}

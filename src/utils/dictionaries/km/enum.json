@@ -1,0 +1,10 @@
+{
+    "RoleType": {
+        "Admin": "អ្នកគ្រប់គ្រង",
+        "User": "អ្នកប្រើ"
+    },
+    "ToolType": {
+        "Application": "កម្មវិធី",
+        "Technology": "បច្ចេកវិទ្យា"
+    }
+}

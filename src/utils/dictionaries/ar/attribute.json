@@ -1,0 +1,22 @@
+{
+    "createdDate": "تاريخ الإنشاء",
+    "currency": "العملة",
+    "description": "الوصف",
+    "email": "البريد الإلكتروني",
+    "firstName": "الاسم الأول",
+    "label": "التسمية",
+    "lastName": "الاسم الأخير",
+    "lastUpdated": "آخر تحديث",
+    "link": "الرابط",
+    "logo": "الشعار",
+    "marketCap": "رأس المال السوقي",
+    "name": "الاسم",
+    "percentageChange": "التغير بالنسبة المئوية",
+    "price": "السعر",
+    "rank": "رتبة",
+    "source": "المصدر",
+    "title": "العنوان",
+    "type": "نوع",
+    "value": "القيمة",
+    "volume": "الحجم"
+}

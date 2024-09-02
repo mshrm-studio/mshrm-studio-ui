@@ -1,0 +1,10 @@
+{
+    "RoleType": {
+        "Admin": "Administrador",
+        "User": "Usuario"
+    },
+    "ToolType": {
+        "Application": "Aplicación",
+        "Technology": "Tecnología"
+    }
+}

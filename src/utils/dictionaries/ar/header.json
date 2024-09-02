@@ -1,0 +1,12 @@
+{
+    "menuItem": {
+        "cms": "نظام إدارة الموافقة",
+        "connectWallet": "اتصال المحفظة",
+        "contactUs": "اتصل بنا",
+        "loggedInWithEmail": "تم تسجيل الدخول باستخدام :email",
+        "loggedInWithEthAddress": "تم تسجيل الدخول باستخدام :ethAddress",
+        "logOut": "تسجيل الخروج",
+        "microsoftLogin": "تسجيل الدخول إلى مايكروسوفت",
+        "ourBrand": "علامتنا التجارية"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "email": {
+        "label": "អ៊ីម៉ែល",
+        "placeholder": "អ៊ីម៉ែល"
+    },
+    "message": {
+        "label": "សរសេរ​សាររបស់អ្នកនៅទីនេះ...",
+        "placeholder": "សរសេរ​សាររបស់អ្នកនៅទីនេះ..."
+    },
+    "name": {
+        "label": "ឈ្មោះ",
+        "placeholder": "ឈ្មោះ"
+    },
+    "website": {
+        "label": "គេហទំព័រ",
+        "placeholder": "គេហទំព័រ"
+    }
+}

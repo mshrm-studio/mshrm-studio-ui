@@ -1,0 +1,18 @@
+{
+    "email": {
+        "label": "电子邮件",
+        "placeholder": "电子邮件"
+    },
+    "message": {
+        "label": "在此处输入您的消息...",
+        "placeholder": "在此处输入您的消息..."
+    },
+    "name": {
+        "label": "姓名",
+        "placeholder": "姓名"
+    },
+    "website": {
+        "label": "网站",
+        "placeholder": "网站"
+    }
+}

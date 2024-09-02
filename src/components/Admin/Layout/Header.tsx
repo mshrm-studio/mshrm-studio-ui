@@ -1,4 +1,4 @@
-import { getDictionary } from '@/app/[lang]/dictionaries'
+import { loadDictionaries } from '@/app/[lang]/dictionaries'
 import { Locale } from '@/utils/enums/Locale'
 import AdminLayoutTouchMenu from '@/components/Admin/Layout/TouchMenu'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
@@ -12,10 +12,10 @@ export default async function AdminLayoutHeader({
 }: {
     locale: Locale
 }) {
-    const dictionary = await getDictionary(locale)
+    const dict = await loadDictionaries(locale, ['action', 'admin', 'theme'])
 
     return (
-        <DictionaryContextProvider dictionary={dictionary}>
+        <DictionaryContextProvider dictionary={dict}>
             <header className="flex h-14 lg:h-[60px] items-center justify-between gap-4 border-b bg-gray-100/40 px-6 dark:bg-gray-800/40">
                 <AdminLayoutTouchMenu />
 

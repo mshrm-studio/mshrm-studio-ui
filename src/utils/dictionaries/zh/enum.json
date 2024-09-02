@@ -1,0 +1,10 @@
+{
+    "RoleType": {
+        "Admin": "管理员",
+        "User": "用户"
+    },
+    "ToolType": {
+        "Application": "应用程序",
+        "Technology": "技术"
+    }
+}

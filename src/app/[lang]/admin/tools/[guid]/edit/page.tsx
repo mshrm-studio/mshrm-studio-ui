@@ -1,5 +1,5 @@
 import { Locale } from '@/utils/enums/Locale'
-import { getDictionary } from '@/app/[lang]/dictionaries'
+import { loadDictionaries } from '@/app/[lang]/dictionaries'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
 import EditTool from '@/components/Admin/Tools/Edit'
 
@@ -8,7 +8,7 @@ type PageProps = {
 }
 
 export default async function Page({ params }: Readonly<PageProps>) {
-    const dict = await getDictionary(params.lang)
+    const dict = await loadDictionaries(params.lang, ['admin', 'enum'])
 
     return (
         <DictionaryContextProvider dictionary={dict}>

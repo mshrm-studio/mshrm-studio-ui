@@ -9,9 +9,11 @@ import useDictionary from '@/utils/hooks/useDictionary'
 import Avatar from '@/components/Admin/Avatar'
 import useTools from '@/utils/hooks/useTools'
 import ConditionalFeedback from '@/components/Admin/ConditionalFeedback'
+import { useTheme } from 'next-themes'
 
 export default function AdminToolsDataTable() {
     const dict = useDictionary()
+    const { resolvedTheme } = useTheme()
 
     const columns = useMemo<ColumnDef<Tool>[]>(() => {
         return [
@@ -21,7 +23,11 @@ export default function AdminToolsDataTable() {
                 cell: ({ row }) => {
                     return (
                         <Avatar
-                            src={`static/stack/${row.original.logoUrl}`}
+                            src={`static/stack/${
+                                resolvedTheme === 'dark'
+                                    ? row.original.darkLogoUrl
+                                    : row.original.lightLogoUrl
+                            }`}
                             alt={row.original.name}
                         />
                     )

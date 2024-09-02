@@ -1,5 +1,5 @@
 import { Locale } from '@/utils/enums/Locale'
-import { getDictionary } from '@/app/[lang]/dictionaries'
+import { getDictionary, loadDictionaries } from '@/app/[lang]/dictionaries'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
 import ToolsDataTable from '@/components/Admin/Tools/DataTable'
 import { Button } from '@/components/Admin/shadcnui/button'
@@ -10,7 +10,12 @@ export default async function Page({
 }: Readonly<{
     params: { lang: Locale }
 }>) {
-    const dict = await getDictionary(lang)
+    const dict = await loadDictionaries(lang, [
+        'action',
+        'admin',
+        'attribute',
+        'event',
+    ])
 
     return (
         <DictionaryContextProvider dictionary={dict}>

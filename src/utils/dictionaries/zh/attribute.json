@@ -1,0 +1,22 @@
+{
+    "createdDate": "创建日期",
+    "currency": "货币",
+    "description": "描述",
+    "email": "电子邮件",
+    "firstName": "名",
+    "label": "标签",
+    "lastName": "姓",
+    "lastUpdated": "最后更新",
+    "link": "链接",
+    "logo": "标志",
+    "marketCap": "市值",
+    "name": "名称",
+    "percentageChange": "百分比变化",
+    "price": "价格",
+    "rank": "等级",
+    "source": "来源",
+    "title": "标题",
+    "type": "类型",
+    "value": "价值",
+    "volume": "成交量"
+}

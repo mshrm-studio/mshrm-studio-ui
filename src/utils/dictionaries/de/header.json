@@ -1,0 +1,12 @@
+{
+    "menuItem": {
+        "cms": "Einwilligungsverwaltungssystem",
+        "connectWallet": "Wallet verbinden",
+        "contactUs": "kontaktiere uns",
+        "loggedInWithEmail": "Angemeldet mit :email",
+        "loggedInWithEthAddress": "Angemeldet mit :ethAddress",
+        "logOut": "Abmelden",
+        "microsoftLogin": "Microsoft-Anmeldung",
+        "ourBrand": "Unsere Marke"
+    }
+}

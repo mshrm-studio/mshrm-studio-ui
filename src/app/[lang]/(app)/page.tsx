@@ -1,5 +1,5 @@
 import { Locale } from '@/utils/enums/Locale'
-import { getDictionary } from '@/app/[lang]/dictionaries'
+import { getDictionary, loadDictionaries } from '@/app/[lang]/dictionaries'
 import Hero from '@/components/App/HomePage/Hero/Hero'
 import Stack from '@/components/App/HomePage/Tools'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
@@ -11,7 +11,11 @@ export default async function Page({
 }: Readonly<{
     params: { lang: Locale }
 }>) {
-    const dict = await getDictionary(lang)
+    const dict = await loadDictionaries(lang, [
+        'action',
+        'app/pages/home',
+        'marketEntity',
+    ])
 
     return (
         <DictionaryContextProvider dictionary={dict}>
