@@ -2,6 +2,7 @@
 
 import Button from '@/components/App/Button'
 import Input from '@/components/App/Input/Input'
+import File from '@/components/App/Input/File'
 import Textarea from '@/components/App/Textarea'
 import styles from '@/styles/contactForm.module.css'
 import useDictionary from '@/utils/hooks/useDictionary'
@@ -45,12 +46,19 @@ export default function ContactForm() {
                 required
             />
 
+            <File
+                label={dict.contactForm.attachments.label}
+                name="attachments"
+                placeholder={dict.contactForm.attachments.placeholder}
+                multiple
+            />
+
             <Button
                 aria-label={`TODO (translate): Submit contact form`}
                 title={`TODO (translate): Submit contact form`}
                 size="xl"
             >
-                {dict.action.contactUs}
+                {dict.contactForm.buttonText}
             </Button>
         </form>
     )

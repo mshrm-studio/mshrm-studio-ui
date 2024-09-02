@@ -29,11 +29,17 @@ export default function Input({
         return required ? `${placeholder}*` : placeholder
     }, [placeholder, required])
 
+    const invalid = useMemo(() => {
+        return false
+    }, [])
+
     return (
         <FormField fieldId={id || name} label={labelWithAsterisk}>
             <textarea
                 id={id || name}
-                className={styles.textarea}
+                className={`${styles.textarea} ${
+                    invalid ? styles.invalid : ''
+                }`}
                 name={name}
                 placeholder={placeholderWithAsterisk}
                 required={required}

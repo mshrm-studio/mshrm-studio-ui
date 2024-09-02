@@ -1,4 +1,9 @@
 {
+    "attachments": {
+        "label": "ឯកសារភ្ជាប់",
+        "placeholder": "បន្ថែមឯកសារ"
+    },
+    "buttonText": "ទាក់ទង​មក​ពួក​យើង",
     "email": {
         "label": "អ៊ីម៉ែល",
         "placeholder": "អ៊ីម៉ែល"

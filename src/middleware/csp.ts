@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 export function cspMiddleware(request: NextRequest) {
-    // disabled as cannot get msal-react to work
+    // todo: disabled as cannot get msal-react to work
     return
 
     // tried but stuff like WalletConnect just does not work

@@ -1,4 +1,9 @@
 {
+    "attachments": {
+        "label": "المرفقات",
+        "placeholder": "إضافة ملف(ملفات)"
+    },
+    "buttonText": "اتصل بنا",
     "email": {
         "label": "البريد الإلكتروني",
         "placeholder": "البريد الإلكتروني"

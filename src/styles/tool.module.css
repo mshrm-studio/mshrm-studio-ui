@@ -18,3 +18,7 @@
 :global(html:not(.dark)) .lightToolImg {
     display: block;
 }
+
+.toolLink {
+    display: block;
+}

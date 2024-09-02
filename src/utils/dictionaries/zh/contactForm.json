@@ -1,4 +1,9 @@
 {
+    "attachments": {
+        "label": "附件",
+        "placeholder": "添加文件"
+    },
+    "buttonText": "联系我们",
     "email": {
         "label": "电子邮件",
         "placeholder": "电子邮件"

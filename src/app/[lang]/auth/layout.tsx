@@ -10,11 +10,6 @@ const fontSans = FontSans({
     variable: '--font-sans',
 })
 
-export const metadata: Metadata = {
-    title: 'mshrm.studio',
-    description: 'Administration area',
-}
-
 export default function Layout({
     children,
     params,

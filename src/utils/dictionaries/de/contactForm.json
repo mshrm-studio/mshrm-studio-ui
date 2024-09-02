@@ -1,4 +1,9 @@
 {
+    "attachments": {
+        "label": "Anhänge",
+        "placeholder": "Datei(en) hinzufügen"
+    },
+    "buttonText": "kontaktiere uns",
     "email": {
         "label": "E-Mail",
         "placeholder": "E-Mail"

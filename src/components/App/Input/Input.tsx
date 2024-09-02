@@ -1,4 +1,4 @@
-import styles from '@/styles/input.module.css'
+import styles from '@/styles/input/input.module.css'
 import { useMemo } from 'react'
 import FormField from '@/components/App/FormField'
 
@@ -31,11 +31,15 @@ export default function Input({
         return required ? `${placeholder}*` : placeholder
     }, [placeholder, required])
 
+    const invalid = useMemo(() => {
+        return false
+    }, [])
+
     return (
         <FormField fieldId={id || name} label={labelWithAsterisk}>
             <input
                 id={id || name}
-                className={styles.input}
+                className={`${styles.input} ${invalid ? styles.invalid : ''}`}
                 name={name}
                 placeholder={placeholderWithAsterisk}
                 required={required}

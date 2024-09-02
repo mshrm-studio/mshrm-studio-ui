@@ -1,4 +1,9 @@
 {
+    "attachments": {
+        "label": "Attachments",
+        "placeholder": "Add file(s)"
+    },
+    "buttonText": "Contact us",
     "email": {
         "label": "Email",
         "placeholder": "Email"

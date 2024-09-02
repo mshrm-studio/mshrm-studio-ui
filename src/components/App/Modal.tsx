@@ -39,7 +39,7 @@ export default function Modal({
                 <XMarkIcon className={styles.closeButtonIcon} />
             </button>
 
-            <div className="max-w-full max-h-full overflow-y-auto px-6">
+            <div className="max-w-full max-h-full overflow-y-auto p-6 py-12">
                 {children}
             </div>
         </div>
