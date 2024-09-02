@@ -1,5 +1,5 @@
 import { Locale } from '@/utils/enums/Locale'
-import { getDictionary, loadDictionaries } from '@/app/[lang]/dictionaries'
+import { loadDictionaries } from '@/app/[lang]/dictionaries'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
 import ToolsDataTable from '@/components/Admin/Tools/DataTable'
 import { Button } from '@/components/Admin/shadcnui/button'
