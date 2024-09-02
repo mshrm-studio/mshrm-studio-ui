@@ -88,8 +88,8 @@ const HeaderMainNavigation: React.FC<Props> = ({}) => {
     return (
         <nav>
             <ul className={styles.ul}>
-                {menu.map((item) => (
-                    <li key={item.id} className={styles.li}>
+                {menu.map((item, i) => (
+                    <li key={i} className={styles.li}>
                         <MainNavigationAction item={item} />
                     </li>
                 ))}

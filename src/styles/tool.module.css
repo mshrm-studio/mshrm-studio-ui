@@ -1,0 +1,20 @@
+.toolImg {
+    height: 63px;
+    width: 63px;
+}
+
+:global(html.dark) .darkToolImg {
+    display: block;
+}
+
+:global(html:not(.dark)) .darkToolImg {
+    display: none;
+}
+
+:global(html.dark) .lightToolImg {
+    display: none;
+}
+
+:global(html:not(.dark)) .lightToolImg {
+    display: block;
+}

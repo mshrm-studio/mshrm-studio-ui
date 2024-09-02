@@ -34,3 +34,16 @@ const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
 }
 
 export const getDictionary = async (locale: Locale) => dictionaries[locale]()
+
+export const loadDictionary = (l: Locale, ns: string): Promise<Dictionary> =>
+    import(`../../utils/dictionaries/${l}/${ns}.json`).then(
+        (module) => module.default
+    )
+
+export const loadDictionaries = async (l: Locale, nsList: string[]) => {
+    const dictionaries = await Promise.all(
+        nsList.map((ns) => loadDictionary(l, ns))
+    )
+
+    return Object.assign({}, ...dictionaries)
+}

@@ -19,7 +19,8 @@ export default function HomePageTools({ dict }: { dict: Dictionary }) {
                     rank: 0,
                     toolType: ToolType.Technology,
                     description: null,
-                    logoGuidId: 'TODO',
+                    darkLogoGuidId: 'TODO',
+                    lightLogoGuidId: 'TODO',
                 }))}
             />
         </section>

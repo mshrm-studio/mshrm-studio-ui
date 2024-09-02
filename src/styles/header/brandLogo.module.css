@@ -1,8 +1,3 @@
-.brandLogo {
-    height: 23px;
-    width: 52px;
-}
-
 :global(html.dark) .blackBrandLogo {
     display: none;
 }

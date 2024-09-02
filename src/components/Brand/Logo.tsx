@@ -12,11 +12,13 @@ const BrandLogo: React.FC<Props> = ({ className, color, priority }) => {
             className={className}
             src={
                 color === 'black'
-                    ? 'static/brand/glyph/m-glyph-black.png'
-                    : 'static/brand/glyph/m-glyph-white.png'
+                    ? 'static/brand/m-glyph-black.png'
+                    : 'static/brand/m-glyph-white.png'
             }
             alt={`TODO (translate): ${color} MSHRM Studio Logo`}
             priority={priority}
+            height={23}
+            width={52}
         />
     )
 }

@@ -8,13 +8,13 @@ const HeaderLogo: React.FC<Props> = ({}) => {
     return (
         <Link href="/">
             <BrandLogo
-                className={`${styles.brandLogo} ${styles.blackBrandLogo}`}
+                className={styles.blackBrandLogo}
                 color="black"
                 priority
             />
 
             <BrandLogo
-                className={`${styles.brandLogo} ${styles.whiteBrandLogo}`}
+                className={styles.whiteBrandLogo}
                 color="white"
                 priority
             />

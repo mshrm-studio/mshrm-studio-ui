@@ -96,7 +96,7 @@ export default function Msal() {
             {apiError && (
                 <DestructiveAlert>
                     {Object.entries(apiError).map(([key, value]) => (
-                        <p>
+                        <p key={key}>
                             {key}: {value}
                         </p>
                     ))}

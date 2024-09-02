@@ -19,6 +19,7 @@ export default function HomePageHeroMap() {
             src={mapImgSrc}
             alt="TODO (translate): Map"
             priority
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, (max-width: 1280px) 100vw, (min-width: 1281px) 715px"
         />
     )
 }

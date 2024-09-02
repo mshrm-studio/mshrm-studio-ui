@@ -7,8 +7,10 @@ export default interface Tool {
     rank: number
     toolType: ToolType
     description: string | null
-    logoGuidId: string
-    logoUrl: string
+    darkLogoGuidId: string
+    darkLogoUrl: string
+    lightLogoGuidId: string
+    lightLogoUrl: string
 }
 
 export interface ToolResponse {
