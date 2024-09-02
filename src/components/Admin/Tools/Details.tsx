@@ -31,7 +31,11 @@ export default function AdminToolsDetails({ guid }: { guid: string }) {
                     <Separator />
 
                     <DataDisplayItem label={dict.attribute.logo}>
-                        <img src={tool.logoUrl} alt={tool.name} />
+                        <img src={tool.darkLogoUrl} alt={tool.name} />
+                    </DataDisplayItem>
+
+                    <DataDisplayItem label={dict.attribute.logo}>
+                        <img src={tool.lightLogoUrl} alt={tool.name} />
                     </DataDisplayItem>
 
                     <Separator />
