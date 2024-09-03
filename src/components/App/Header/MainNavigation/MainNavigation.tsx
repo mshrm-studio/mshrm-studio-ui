@@ -76,7 +76,11 @@ const HeaderMainNavigation: React.FC<Props> = ({}) => {
                 appendedIcon: FolderArrowDownIcon,
             },
             { id: 'cms', actionText: dict.header.menuItem.cms, href: '/admin' },
-            { id: 'contactUs', actionText: dict.header.menuItem.contactUs },
+            {
+                id: 'contactUs',
+                actionText: dict.header.menuItem.contactUs,
+                href: '/contact',
+            },
             {
                 id: 'email',
                 actionText: process.env.NEXT_PUBLIC_CONTACT_EMAIL,

@@ -30,7 +30,7 @@ export default function Msal() {
 
     function createUser() {
         axios
-            .post(`/auth/api/v1/user/sso`)
+            .post(`/api/v1/user/sso`)
             .then((response) => {
                 if (isUser(response.data)) {
                     setUser(response.data)
@@ -52,7 +52,7 @@ export default function Msal() {
     useEffect(() => {
         if (inProgress === InteractionStatus.None && accounts.length > 0) {
             axios
-                .get(`/aggregator/api/v1/users`)
+                .get(`/api/v1/users`)
                 .then((response) => {
                     if (isUser(response.data)) {
                         setUser(response.data)
@@ -84,6 +84,10 @@ export default function Msal() {
             login(InteractionType.Redirect, loginRequest)
         }
     }, [error])
+
+    if (inProgress !== InteractionStatus.None) {
+        return <div className="h-full w-full"></div>
+    }
 
     return (
         <div className="space-y-8">

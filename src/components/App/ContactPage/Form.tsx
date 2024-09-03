@@ -7,7 +7,7 @@ import Textarea from '@/components/App/Textarea'
 import styles from '@/styles/contactForm.module.css'
 import useDictionary from '@/utils/hooks/useDictionary'
 
-export default function ContactForm() {
+export default function ContactPageForm() {
     const dict = useDictionary()
 
     function onSubmit(_e: React.FormEvent<HTMLFormElement>) {

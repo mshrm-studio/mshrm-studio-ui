@@ -7,7 +7,7 @@ const useTool = () => {
 
     const fetchTools = useCallback(
         (params?: URLSearchParams) => {
-            const endpoint = `/aggregator/api/v1/tools`
+            const endpoint = `/api/v1/tools`
 
             fetchData(params ? `${endpoint}?${params.toString()}` : endpoint)
         },

@@ -2,8 +2,6 @@
 
 import MainNavigationItem from '@/utils/dto/MainNavigationItem'
 import MainNavigationLink from '@/components/App/Header/MainNavigation/Link'
-import { useContext } from 'react'
-import ContactFormModalContext from '@/utils/context/ContactFormModal'
 import { useDisconnect, useWeb3Modal } from '@web3modal/ethers/react'
 
 type Props = {
@@ -13,7 +11,6 @@ type Props = {
 export default function HeaderMainNavigationAction({ item }: Props) {
     const { open } = useWeb3Modal()
     const { disconnect } = useDisconnect()
-    const { setShowContactFormModal } = useContext(ContactFormModalContext)
 
     function onClick(_e: React.MouseEvent<HTMLButtonElement>) {
         console.log('mainnavigation/action onClick() item.id', item.id)
@@ -21,8 +18,6 @@ export default function HeaderMainNavigationAction({ item }: Props) {
             open()
         } else if (item.id === 'cryptoLogout') {
             disconnect()
-        } else if (item.id === 'contactUs') {
-            setShowContactFormModal((prev) => !prev)
         } else {
             // TODO
         }

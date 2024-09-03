@@ -21,7 +21,7 @@ export default function HomePageHero({ dict }: { dict: Dictionary }) {
                 <div className={styles.authOptionsAndContactBtn}>
                     <AuthOptions />
 
-                    <Contact />
+                    <Contact dict={dict} />
                 </div>
             </div>
         </section>

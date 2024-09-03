@@ -1,5 +1,4 @@
 import { Locale } from '@/utils/enums/Locale'
-import type { Metadata } from 'next'
 import '@/app/admin.css'
 import { Inter as FontSans } from 'next/font/google'
 import { cn } from '@/utils/shadcnui'
