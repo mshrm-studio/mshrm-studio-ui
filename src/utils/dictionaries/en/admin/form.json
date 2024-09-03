@@ -1,0 +1,15 @@
+{
+    "rule": {
+        "image": "File must be an image (jpg, png, gif)",
+        "max": {
+            "length": "Maximum length is :maximum",
+            "size": "Maximum size is :size"
+        },
+        "min": {
+            "length": "Minimum length is :minimum"
+        },
+        "required": "Required",
+        "url": "Must be a valid URL"
+    },
+    "submit": "Submit"
+}

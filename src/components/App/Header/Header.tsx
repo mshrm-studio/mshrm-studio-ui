@@ -7,7 +7,7 @@ import Logo from '@/components/App/Header/Logo'
 import Menu from '@/components/App/Header/Menu'
 
 export default async function Header({ locale }: { locale: Locale }) {
-    const dictionary = await loadDictionaries(locale, ['header'])
+    const dictionary = await loadDictionaries(locale, ['app/header'])
 
     return (
         <DictionaryContextProvider dictionary={dictionary}>

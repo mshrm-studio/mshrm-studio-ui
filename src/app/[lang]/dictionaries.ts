@@ -16,8 +16,10 @@ export const loadDictionaries = async (l: Locale, nsList: string[]) => {
         nsList.map(async (ns) => {
             const dict = await loadDictionary(l, ns)
 
-            const formattedNs = ns.startsWith('app/pages/')
-                ? `${ns.split('/')[2]}page`
+            const normalisedNs = ns.replace('app/', '').replace('admin/', '')
+
+            const formattedNs = normalisedNs.startsWith('pages/')
+                ? normalisedNs.split('/')[1]
                 : ns
 
             return { [formattedNs]: dict }

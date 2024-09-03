@@ -14,7 +14,7 @@ export default async function Page({
     const dict = await loadDictionaries(lang, [
         'action',
         'app/pages/home',
-        'marketEntity',
+        'common',
     ])
 
     return (

@@ -1,0 +1,25 @@
+{
+    "mainNavigation": {
+        "conversations": "Conversaciones",
+        "dashboard": "Tablero",
+        "home": "Inicio",
+        "marketEntities": "Entidades de mercado",
+        "tools": "Herramientas",
+        "users": "Usuarios"
+    },
+    "pageTitle": {
+        "conversations": "Conversaciones",
+        "dashboard": "Tablero",
+        "home": "Inicio",
+        "marketEntities": "Entidades de mercado",
+        "tools": "Herramientas",
+        "users": "Usuarios"
+    },
+    "ssoSignOut": "Cerrar sesión",
+    "ssoSignIn": "Iniciar sesión con Microsoft",
+    "theme": {
+        "dark": "Oscuro",
+        "light": "Claro",
+        "system": "Sistema"
+    }
+}

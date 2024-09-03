@@ -11,7 +11,7 @@ export default function HomePageHeroContact({ dict }: { dict: Dictionary }) {
                     title={`TODO (translate): Go to contact page`}
                     size="xl"
                 >
-                    {dict.action.contactUs}
+                    {dict.home.contact}
                 </Button>
             </a>
         </div>

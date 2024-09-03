@@ -40,7 +40,7 @@ export default function MarketEntity({
 
             <div className={styles.marketCapAndVolume}>
                 <div className={styles.marketCap}>
-                    <label>{dict.marketEntity.marketCap}:</label>
+                    <label>{dict.home.marketEntity.marketCap}:</label>
 
                     <div className={styles.value}>
                         <Price
@@ -51,7 +51,7 @@ export default function MarketEntity({
                 </div>
 
                 <div className={styles.volume}>
-                    <label>{dict.marketEntity.volume}:</label>
+                    <label>{dict.home.marketEntity.volume}:</label>
 
                     <div className={styles.value}>
                         <Price
@@ -64,7 +64,7 @@ export default function MarketEntity({
 
             <div className={styles.lastUpdatedAndSource}>
                 <div className={styles.lastUpdated}>
-                    <label>{dict.marketEntity.lastUpdated}:</label>
+                    <label>{dict.home.marketEntity.lastUpdated}:</label>
 
                     <div className={styles.value}>
                         <DateTime dateTime={marketEntity.lastUpdated} />
@@ -72,7 +72,7 @@ export default function MarketEntity({
                 </div>
 
                 <div className={styles.source}>
-                    <label>{dict.marketEntity.source}:</label>
+                    <label>{dict.home.marketEntity.source}:</label>
 
                     <div className={styles.value}>{marketEntity.source}</div>
                 </div>

@@ -8,7 +8,12 @@ export default async function Page({
 }: Readonly<{
     params: { lang: Locale }
 }>) {
-    const dict = await loadDictionaries(lang, ['admin', 'enum'])
+    const dict = await loadDictionaries(lang, [
+        'admin',
+        'admin/form',
+        'common',
+        'enum',
+    ])
 
     return (
         <DictionaryContextProvider dictionary={dict}>

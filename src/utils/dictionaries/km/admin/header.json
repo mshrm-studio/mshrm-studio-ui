@@ -1,0 +1,25 @@
+{
+    "mainNavigation": {
+        "conversations": "ការសន្ទនា",
+        "dashboard": "ផ្ទាំងគ្រប់គ្រង",
+        "home": "ទំព័រដើម",
+        "marketEntities": "អង្គភាពទីផ្សារ",
+        "tools": "ឧបករណ៍",
+        "users": "អ្នកប្រើប្រាស់"
+    },
+    "pageTitle": {
+        "conversations": "ការសន្ទនា",
+        "dashboard": "ផ្ទាំងគ្រប់គ្រង",
+        "home": "ទំព័រដើម",
+        "marketEntities": "អង្គភាពទីផ្សារ",
+        "tools": "ឧបករណ៍",
+        "users": "អ្នកប្រើប្រាស់"
+    },
+    "ssoSignOut": "ចាកចេញ",
+    "ssoSignIn": "ចូលជាមួយ Microsoft",
+    "theme": {
+        "dark": "ងងឹត",
+        "light": "ស",
+        "system": "ប្រព័ន្ធ"
+    }
+}

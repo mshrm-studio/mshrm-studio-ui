@@ -1,6 +1,17 @@
 {
     "changeCurrency": "تغيير العملة",
+    "connectWallet": "تسجيل الدخول باستخدام محفظة التشفير",
+    "contact": "اتصل بنا",
+    "disconnectWallet": "تسجيل خروج",
+    "marketEntity": {
+        "lastUpdated": "آخر تحديث",
+        "marketCap": "القيمة السوقية",
+        "source": "مصدر",
+        "volume": "مقدار"
+    },
     "ourStack": "أدواتنا",
+    "ssoSignOut": "تسجيل خروج",
+    "ssoSignIn": "تسجيل الدخول مع مايكروسوفت",
     "title": "تطبيقات، مواقع وبرمجيات مخصصة",
     "weHaveWorkedWith": "لقد عملنا مع"
 }

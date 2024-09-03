@@ -1,6 +1,17 @@
 {
     "changeCurrency": "更改货币",
+    "connectWallet": "使用加密钱包登录",
+    "contact": "联系我们",
+    "disconnectWallet": "登出",
+    "marketEntity": {
+        "lastUpdated": "最近更新时间",
+        "marketCap": "市值",
+        "source": "来源",
+        "volume": "体积"
+    },
     "ourStack": "我们的工具",
+    "ssoSignOut": "登出",
+    "ssoSignIn": "使用微軟登入",
     "title": "定制应用程序、网站和软件",
     "weHaveWorkedWith": "我们合作过的"
 }

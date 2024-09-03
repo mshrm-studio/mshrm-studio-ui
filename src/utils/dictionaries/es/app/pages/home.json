@@ -1,6 +1,17 @@
 {
     "changeCurrency": "Cambiar moneda",
+    "connectWallet": "Iniciar sesión con una billetera criptográfica",
+    "contact": "Contacta con nosotros",
+    "disconnectWallet": "Cerrar sesión",
+    "marketEntity": {
+        "lastUpdated": "Última actualización",
+        "marketCap": "Tapa del mercado",
+        "source": "Fuente",
+        "volume": "Volumen"
+    },
     "ourStack": "Nuestras herramientas",
+    "ssoSignOut": "Cerrar sesión",
+    "ssoSignIn": "Iniciar sesión con Microsoft",
     "title": "Aplicaciones, sitios y software a medida",
     "weHaveWorkedWith": "Hemos trabajado con"
 }

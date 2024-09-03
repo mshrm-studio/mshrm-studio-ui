@@ -7,7 +7,7 @@ export default async function Page({
 }: Readonly<{
     params: { lang: Locale }
 }>) {
-    const dict = await loadDictionaries(lang, ['admin'])
+    const dict = await loadDictionaries(lang, ['admin', 'common'])
 
     return (
         <DictionaryContextProvider dictionary={dict}>

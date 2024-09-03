@@ -29,7 +29,7 @@ export default function AdminLayoutPageTitle() {
 
     return (
         <h1 className="font-semibold text-lg">
-            {dict.admin.pageTitle[translationKey]}
+            {dict.header.pageTitle[translationKey]}
         </h1>
     )
 }

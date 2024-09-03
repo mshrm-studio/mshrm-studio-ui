@@ -23,31 +23,31 @@ export default function AdminLayoutNavigation() {
 
         return [
             {
-                title: dict.admin.mainNavigation.home,
+                title: dict.header.mainNavigation.home,
                 href: '/',
                 icon: <Home className={iconClassName} />,
                 shortcut: 'H',
             },
             {
-                title: dict.admin.mainNavigation.marketEntities,
+                title: dict.header.mainNavigation.marketEntities,
                 href: '/admin/market-entities',
                 icon: <CandlestickChart className={iconClassName} />,
                 shortcut: 'M',
             },
             {
-                title: dict.admin.mainNavigation.tools,
+                title: dict.header.mainNavigation.tools,
                 href: '/admin/tools',
                 icon: <DraftingCompass className={iconClassName} />,
                 shortcut: 'O',
             },
             {
-                title: dict.admin.mainNavigation.conversations,
+                title: dict.header.mainNavigation.conversations,
                 href: '/admin/conversations',
                 icon: <Mail className={iconClassName} />,
                 shortcut: 'S',
             },
             {
-                title: dict.admin.mainNavigation.users,
+                title: dict.header.mainNavigation.users,
                 href: '/admin/users',
                 icon: <User className={iconClassName} />,
                 shortcut: 'U',

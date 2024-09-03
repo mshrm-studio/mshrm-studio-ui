@@ -6,7 +6,7 @@ export default function HomePageClients({ dict }: { dict: Dictionary }) {
     return (
         <section className="mb-6 md:mb-12 xl:max-w-site xl:mx-auto">
             <div className="px-6 mb-6 md:mb-12">
-                <h2 className="font-bold">{dict.homepage.weHaveWorkedWith}</h2>
+                <h2 className="font-bold">{dict.home.weHaveWorkedWith}</h2>
             </div>
 
             <ClientList

@@ -29,37 +29,6 @@
             "user": "查看用户"
         }
     },
-    "form": {
-        "rule": {
-            "image": "文件必须是图片 (jpg, png, gif)",
-            "max": {
-                "length": "最大长度为 :maximum",
-                "size": "最大大小为 :size"
-            },
-            "min": {
-                "length": "最小长度为 :minimum"
-            },
-            "required": "必填",
-            "url": "必须是有效的 URL"
-        },
-        "submit": "提交"
-    },
-    "mainNavigation": {
-        "conversations": "对话",
-        "dashboard": "仪表板",
-        "home": "首页",
-        "marketEntities": "市场实体",
-        "tools": "工具",
-        "users": "用户"
-    },
-    "pageTitle": {
-        "conversations": "对话",
-        "dashboard": "仪表板",
-        "home": "首页",
-        "marketEntities": "市场实体",
-        "tools": "工具",
-        "users": "用户"
-    },
     "tool": {
         "action": {
             "create": "创建工具",

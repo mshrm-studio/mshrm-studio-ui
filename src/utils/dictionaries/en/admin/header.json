@@ -1,0 +1,25 @@
+{
+    "mainNavigation": {
+        "conversations": "Conversations",
+        "dashboard": "Dashboard",
+        "home": "Home",
+        "marketEntities": "Market entities",
+        "tools": "Tools",
+        "users": "Users"
+    },
+    "pageTitle": {
+        "conversations": "Conversations",
+        "dashboard": "Dashboard",
+        "home": "Home",
+        "marketEntities": "Market Entities",
+        "tools": "Tools",
+        "users": "Users"
+    },
+    "ssoSignOut": "Logout",
+    "ssoSignIn": "Login with Microsoft",
+    "theme": {
+        "dark": "Dark",
+        "light": "Light",
+        "system": "System"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "mainNavigation": {
+        "conversations": "محادثات",
+        "dashboard": "لوحة القيادة",
+        "home": "الصفحة الرئيسية",
+        "marketEntities": "الكيانات السوقية",
+        "tools": "أدوات",
+        "users": "المستخدمون"
+    },
+    "pageTitle": {
+        "conversations": "محادثات",
+        "dashboard": "لوحة القيادة",
+        "home": "الصفحة الرئيسية",
+        "marketEntities": "الكيانات السوقية",
+        "tools": "أدوات",
+        "users": "المستخدمون"
+    },
+    "ssoSignOut": "تسجيل خروج",
+    "ssoSignIn": "تسجيل الدخول مع مايكروسوفت",
+    "theme": {
+        "dark": "داكن",
+        "light": "فاتح",
+        "system": "النظام"
+    }
+}

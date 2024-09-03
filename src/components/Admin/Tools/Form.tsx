@@ -35,25 +35,19 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
             description: z
                 .string()
                 .min(5, {
-                    message: dict.admin.form.rule.min.length.replace(
-                        ':minimum',
-                        '5'
-                    ),
+                    message: dict.form.rule.min.length.replace(':minimum', '5'),
                 })
                 .max(500, {
-                    message: dict.admin.form.rule.max.length.replace(
+                    message: dict.form.rule.max.length.replace(
                         ':maximum',
                         '500'
                     ),
                 }),
-            link: z.string().url({ message: dict.admin.form.rule.url }),
+            link: z.string().url({ message: dict.form.rule.url }),
             logo: z
                 .instanceof(File)
                 .refine((file) => file.size <= 200 * 1024, {
-                    message: dict.admin.form.rule.max.size.replace(
-                        ':size',
-                        '200KB'
-                    ),
+                    message: dict.form.rule.max.size.replace(':size', '200KB'),
                 })
                 .refine(
                     (file) =>
@@ -65,19 +59,16 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
                             'image/svg',
                         ].includes(file.type),
                     {
-                        message: dict.admin.form.rule.image,
+                        message: dict.form.rule.image,
                     }
                 ),
             name: z
                 .string()
                 .min(2, {
-                    message: dict.admin.form.rule.min.length.replace(
-                        ':minimum',
-                        '2'
-                    ),
+                    message: dict.form.rule.min.length.replace(':minimum', '2'),
                 })
                 .max(50, {
-                    message: dict.admin.form.rule.max.length.replace(
+                    message: dict.form.rule.max.length.replace(
                         ':maximum',
                         '50'
                     ),
@@ -280,7 +271,7 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
                         title={`TODO (translate): Save tool`}
                         type="submit"
                     >
-                        {dict.admin.form.submit}
+                        {dict.form.submit}
                     </Button>
                 </div>
             </form>

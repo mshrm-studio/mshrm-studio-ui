@@ -40,21 +40,21 @@ export default function ThemeSwitcher() {
                     disabled={theme === 'light'}
                     onClick={() => setTheme('light')}
                 >
-                    {dict.theme.light}
+                    {dict.header.theme.light}
                 </DropdownMenuItem>
 
                 <DropdownMenuItem
                     disabled={theme === 'dark'}
                     onClick={() => setTheme('dark')}
                 >
-                    {dict.theme.dark}
+                    {dict.header.theme.dark}
                 </DropdownMenuItem>
 
                 <DropdownMenuItem
                     disabled={theme === 'system'}
                     onClick={() => setTheme('system')}
                 >
-                    {dict.theme.system}
+                    {dict.header.theme.system}
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>

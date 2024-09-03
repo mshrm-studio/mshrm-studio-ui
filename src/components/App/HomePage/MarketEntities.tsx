@@ -1,8 +1,6 @@
-import useDictionary from '@/utils/hooks/useDictionary'
 import MarketEntityList from '@/components/App/MarketEntity/List'
 import styles from '@/styles/homepage/homepage.module.css'
 import marketEntities from '@/utils/content/marketEntities'
-import { useMemo } from 'react'
 import { Dictionary } from '@/app/[lang]/dictionaries'
 
 export default function HomePageMarketEntities({ dict }: { dict: Dictionary }) {
@@ -25,7 +23,7 @@ export default function HomePageMarketEntities({ dict }: { dict: Dictionary }) {
 
                 <div className="mt-6 px-6 xl:mt-0">
                     <label htmlFor="currencySelect" className="mr-1">
-                        {dict.homepage.changeCurrency}
+                        {dict.home.changeCurrency}
                     </label>
 
                     <select

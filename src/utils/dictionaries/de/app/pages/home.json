@@ -1,6 +1,17 @@
 {
     "changeCurrency": "Währung ändern",
+    "connectWallet": "Melden Sie sich mit einer Krypto-Wallet an",
+    "contact": "kontaktiere",
+    "disconnectWallet": "Ausloggen",
+    "marketEntity": {
+        "lastUpdated": "Letzte Aktualisierung",
+        "marketCap": "Marktkapitalisierung",
+        "source": "Quelle",
+        "volume": "Volumen"
+    },
     "ourStack": "Unsere Werkzeuge",
+    "ssoSignOut": "Ausloggen",
+    "ssoSignIn": "Melden Sie sich bei Microsoft an",
     "title": "Maßgeschneiderte Apps, Websites & Software",
     "weHaveWorkedWith": "Wir haben gearbeitet mit"
 }

@@ -4,7 +4,7 @@ import Button from '@/components/App/Button'
 import Input from '@/components/App/Input/Input'
 import File from '@/components/App/Input/File'
 import Textarea from '@/components/App/Textarea'
-import styles from '@/styles/contactForm.module.css'
+import styles from '@/styles/contact.form.module.css'
 import useDictionary from '@/utils/hooks/useDictionary'
 
 export default function ContactPageForm() {
@@ -17,39 +17,39 @@ export default function ContactPageForm() {
     return (
         <form className={styles.contactForm} onSubmit={onSubmit}>
             <Input
-                label={dict.contactForm.name.label}
+                label={dict.contact.form.name.label}
                 name="name"
-                placeholder={dict.contactForm.name.placeholder}
+                placeholder={dict.contact.form.name.placeholder}
                 required
             />
 
             <Input
-                label={dict.contactForm.email.label}
+                label={dict.contact.form.email.label}
                 name="email"
-                placeholder={dict.contactForm.email.placeholder}
+                placeholder={dict.contact.form.email.placeholder}
                 required
                 type="email"
             />
 
             <Input
-                label={dict.contactForm.website.label}
+                label={dict.contact.form.website.label}
                 name="website"
-                placeholder={dict.contactForm.website.placeholder}
+                placeholder={dict.contact.form.website.placeholder}
                 required
                 type="url"
             />
 
             <Textarea
-                label={dict.contactForm.message.label}
+                label={dict.contact.form.message.label}
                 name="message"
-                placeholder={dict.contactForm.message.placeholder}
+                placeholder={dict.contact.form.message.placeholder}
                 required
             />
 
             <File
-                label={dict.contactForm.attachments.label}
+                label={dict.contact.form.attachments.label}
                 name="attachments"
-                placeholder={dict.contactForm.attachments.placeholder}
+                placeholder={dict.contact.form.attachments.placeholder}
                 multiple
             />
 
@@ -58,7 +58,7 @@ export default function ContactPageForm() {
                 title={`TODO (translate): Submit contact form`}
                 size="xl"
             >
-                {dict.contactForm.buttonText}
+                {dict.contact.form.buttonText}
             </Button>
         </form>
     )

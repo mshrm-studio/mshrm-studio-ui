@@ -1,0 +1,25 @@
+{
+    "form": {
+        "attachments": {
+            "label": "Archivos adjuntos",
+            "placeholder": "Agregar archivo(s)"
+        },
+        "buttonText": "Contacta con nosotros",
+        "email": {
+            "label": "Correo electrónico",
+            "placeholder": "Correo electrónico"
+        },
+        "message": {
+            "label": "Escribe tu mensaje aquí...",
+            "placeholder": "Escribe tu mensaje aquí..."
+        },
+        "name": {
+            "label": "Nombre",
+            "placeholder": "Nombre"
+        },
+        "website": {
+            "label": "Sitio web",
+            "placeholder": "Sitio web"
+        }
+    }
+}

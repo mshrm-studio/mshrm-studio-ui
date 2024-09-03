@@ -21,13 +21,10 @@ export default function AdminUsersForm() {
             firstName: z
                 .string()
                 .min(2, {
-                    message: dict.admin.form.rule.min.length.replace(
-                        ':minimum',
-                        '2'
-                    ),
+                    message: dict.form.rule.min.length.replace(':minimum', '2'),
                 })
                 .max(50, {
-                    message: dict.admin.form.rule.max.length.replace(
+                    message: dict.form.rule.max.length.replace(
                         ':maximum',
                         '50'
                     ),
@@ -35,13 +32,10 @@ export default function AdminUsersForm() {
             lastName: z
                 .string()
                 .min(2, {
-                    message: dict.admin.form.rule.min.length.replace(
-                        ':minimum',
-                        '2'
-                    ),
+                    message: dict.form.rule.min.length.replace(':minimum', '2'),
                 })
                 .max(50, {
-                    message: dict.admin.form.rule.max.length.replace(
+                    message: dict.form.rule.max.length.replace(
                         ':maximum',
                         '50'
                     ),
@@ -155,7 +149,7 @@ export default function AdminUsersForm() {
                 />
 
                 <div className="lg:col-span-2">
-                    <Button type="submit">{dict.admin.form.submit}</Button>
+                    <Button type="submit">{dict.form.submit}</Button>
                 </div>
             </form>
         </Form>

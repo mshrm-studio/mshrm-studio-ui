@@ -15,7 +15,7 @@ export default function HomePageHero({ dict }: { dict: Dictionary }) {
 
             <div className={styles.headingAuthOptionsAndContactBtn}>
                 <div className={styles.heading1Container}>
-                    <h1 className={styles.heading1}>{dict.homepage.title}</h1>
+                    <h1 className={styles.heading1}>{dict.home.title}</h1>
                 </div>
 
                 <div className={styles.authOptionsAndContactBtn}>

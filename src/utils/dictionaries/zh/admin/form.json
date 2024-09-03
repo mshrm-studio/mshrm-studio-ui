@@ -1,0 +1,15 @@
+{
+    "rule": {
+        "image": "文件必须是图片 (jpg, png, gif)",
+        "max": {
+            "length": "最大长度为 :maximum",
+            "size": "最大大小为 :size"
+        },
+        "min": {
+            "length": "最小长度为 :minimum"
+        },
+        "required": "必填",
+        "url": "必须是有效的 URL"
+    },
+    "submit": "提交"
+}

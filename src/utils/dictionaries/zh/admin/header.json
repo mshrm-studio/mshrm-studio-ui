@@ -1,0 +1,25 @@
+{
+    "mainNavigation": {
+        "conversations": "对话",
+        "dashboard": "仪表板",
+        "home": "首页",
+        "marketEntities": "市场实体",
+        "tools": "工具",
+        "users": "用户"
+    },
+    "pageTitle": {
+        "conversations": "对话",
+        "dashboard": "仪表板",
+        "home": "首页",
+        "marketEntities": "市场实体",
+        "tools": "工具",
+        "users": "用户"
+    },
+    "ssoSignOut": "登出",
+    "ssoSignIn": "使用微軟登入",
+    "theme": {
+        "dark": "深色",
+        "light": "浅色",
+        "system": "系统"
+    }
+}

@@ -7,7 +7,7 @@ import { loadDictionaries } from '@/app/[lang]/dictionaries'
 import AllRightsReserved from '@/components/App/Footer/AllRightsReserved'
 
 export default async function Footer({ locale }: { locale: Locale }) {
-    const dictionary = await loadDictionaries(locale, ['footer'])
+    const dictionary = await loadDictionaries(locale, ['app/footer'])
 
     return (
         <DictionaryContextProvider dictionary={dictionary}>

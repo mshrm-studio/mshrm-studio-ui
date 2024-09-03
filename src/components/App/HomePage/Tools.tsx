@@ -8,7 +8,7 @@ export default function HomePageTools({ dict }: { dict: Dictionary }) {
         <section className="px-6 xl:max-w-site xl:mx-auto">
             <div className="mb-12">
                 <h2 className="font-extrabold text-[2.0625rem] xl:text-[3.4375rem]">
-                    {dict.homepage.ourStack}
+                    {dict.home.ourStack}
                 </h2>
             </div>
 

@@ -1,6 +1,17 @@
 {
     "changeCurrency": "Change currency",
+    "connectWallet": "Connect wallet",
+    "contact": "Contact",
+    "disconnectWallet": "Disconnect wallet",
+    "marketEntity": {
+        "lastUpdated": "Last updated",
+        "marketCap": "Market cap",
+        "source": "Source",
+        "volume": "Volume"
+    },
     "ourStack": "Our tools",
+    "ssoSignOut": "Logout",
+    "ssoSignIn": "Login with Microsoft",
     "title": "MSHRM.studio deliver apps, sites & software.",
     "weHaveWorkedWith": "We have worked with"
 }

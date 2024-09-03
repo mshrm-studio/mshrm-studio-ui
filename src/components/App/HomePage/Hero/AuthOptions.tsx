@@ -31,12 +31,12 @@ export default function HomePageHeroAuthOptions() {
                         )}
 
                         <a href="#TODO" className={styles.ssoLogoutLink}>
-                            {dict.action.signOut}
+                            {dict.home.ssoSignOut}
                         </a>
                     </>
                 ) : (
                     <a href="/auth/sso" className={styles.ssoLink}>
-                        {dict.action.signInWithMicrosoft}
+                        {dict.home.ssoSignIn}
                     </a>
                 )}
             </div>
@@ -52,16 +52,16 @@ export default function HomePageHeroAuthOptions() {
 
                         <button
                             className={styles.cryptoLogoutBtn}
-                            aria-label={`TODO (translate): Disconnect wallet`}
-                            title={`TODO (translate): Disconnect wallet`}
+                            aria-label={dict.home.disconnectWallet}
+                            title={dict.home.disconnectWallet}
                             onClick={() => disconnect()}
                         >
-                            {dict.action.signOut}
+                            {dict.home.disconnectWallet}
                         </button>
                     </>
                 ) : (
                     <CryptoWalletConnect className={styles.cryptoLoginBtn}>
-                        {dict.action.loginWithCryptoWallet}
+                        {dict.home.connectWallet}
                     </CryptoWalletConnect>
                 )}
             </div>

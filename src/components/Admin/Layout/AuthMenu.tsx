@@ -58,12 +58,12 @@ export default function AdminLayoutProfileMenu() {
                         )}
 
                         <DropdownMenuItem onSelect={logout}>
-                            {dict.action.signOut}
+                            {dict.header.ssoSignOut}
                         </DropdownMenuItem>
                     </>
                 ) : (
                     <DropdownMenuItem onSelect={() => router.push('/auth/sso')}>
-                        {dict.action.signIn}
+                        {dict.header.ssoSignIn}
                     </DropdownMenuItem>
                 )}
             </DropdownMenuContent>

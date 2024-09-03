@@ -12,7 +12,7 @@ export default async function AdminLayoutHeader({
 }: {
     locale: Locale
 }) {
-    const dict = await loadDictionaries(locale, ['action', 'admin', 'theme'])
+    const dict = await loadDictionaries(locale, ['admin/header'])
 
     return (
         <DictionaryContextProvider dictionary={dict}>

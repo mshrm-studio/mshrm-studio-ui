@@ -29,37 +29,6 @@
             "user": "Ver usuario"
         }
     },
-    "form": {
-        "rule": {
-            "image": "El archivo debe ser una imagen (jpg, png, gif)",
-            "max": {
-                "length": "La longitud máxima es :maximum",
-                "size": "El tamaño máximo es :size"
-            },
-            "min": {
-                "length": "La longitud mínima es :minimum"
-            },
-            "required": "Requerido",
-            "url": "Debe ser una URL válida"
-        },
-        "submit": "Enviar"
-    },
-    "mainNavigation": {
-        "conversations": "Conversaciones",
-        "dashboard": "Tablero",
-        "home": "Inicio",
-        "marketEntities": "Entidades de mercado",
-        "tools": "Herramientas",
-        "users": "Usuarios"
-    },
-    "pageTitle": {
-        "conversations": "Conversaciones",
-        "dashboard": "Tablero",
-        "home": "Inicio",
-        "marketEntities": "Entidades de mercado",
-        "tools": "Herramientas",
-        "users": "Usuarios"
-    },
     "tool": {
         "action": {
             "create": "Crear herramienta",

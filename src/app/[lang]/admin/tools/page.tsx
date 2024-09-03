@@ -14,6 +14,7 @@ export default async function Page({
         'action',
         'admin',
         'attribute',
+        'common',
         'event',
     ])
 

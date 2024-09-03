@@ -8,7 +8,11 @@ export default async function Page({
 }: Readonly<{
     params: { lang: Locale }
 }>) {
-    const dict = await loadDictionaries(lang, ['action', 'contactForm'])
+    const dict = await loadDictionaries(lang, [
+        'action',
+        'common',
+        'app/pages/contact',
+    ])
 
     return (
         <DictionaryContextProvider dictionary={dict}>
