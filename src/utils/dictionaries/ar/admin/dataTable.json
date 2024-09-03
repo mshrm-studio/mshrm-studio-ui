@@ -1,0 +1,24 @@
+{
+    "actions": "الإجراءات",
+    "columns": "الأعمدة",
+    "copy": {
+        "email": "نسخ البريد الإلكتروني",
+        "logoUrl": "نسخ رابط الشعار",
+        "link": "نسخ الرابط"
+    },
+    "edit": {
+        "marketEntity": "تحرير الكيان السوقي",
+        "tool": "تحرير الأداة",
+        "user": "تحرير المستخدم"
+    },
+    "next": "التالي",
+    "noResults": "لا توجد نتائج",
+    "previous": "السابق",
+    "resultsMeta": "إظهار :numberOfResultsShown من :totalResults",
+    "search": "بحث",
+    "view": {
+        "marketEntity": "عرض الكيان السوقي",
+        "tool": "عرض الأداة",
+        "user": "عرض المستخدم"
+    }
+}

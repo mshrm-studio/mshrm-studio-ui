@@ -1,0 +1,47 @@
+{
+    "action": {
+        "create": "Werkzeug erstellen",
+        "edit": "Werkzeug bearbeiten",
+        "update": "Werkzeug aktualisieren"
+    },
+    "event": {
+        "created": "Werkzeug erstellt",
+        "deleted": "Werkzeug gelöscht",
+        "updated": "Werkzeug aktualisiert"
+    },
+    "form": {
+        "description": "Ein neues Werkzeug zur Website hinzufügen",
+        "item": {
+            "description": {
+                "label": "Beschreibung",
+                "description": "Die Beschreibung des Werkzeugs",
+                "placeholder": "Eine JavaScript-Bibliothek zum Erstellen von Benutzeroberflächen"
+            },
+            "link": {
+                "label": "Link",
+                "description": "Der Website-Link für dieses Werkzeug",
+                "placeholder": "https://react.dev"
+            },
+            "logo": {
+                "label": "Logo",
+                "description": "Das Logo des Werkzeugs"
+            },
+            "name": {
+                "label": "Name",
+                "description": "Der Anzeigename des Werkzeugs",
+                "placeholder": "React.js"
+            },
+            "rank": {
+                "label": "Rang",
+                "description": "Der Rang des Werkzeugs. Niedrigere Ränge erscheinen zuerst.",
+                "placeholder": "1"
+            },
+            "type": {
+                "label": "Typ",
+                "description": "Der Typ des Werkzeugs",
+                "placeholder": "Wählen Sie einen Typ aus"
+            }
+        },
+        "title": "Neues Werkzeug erstellen"
+    }
+}

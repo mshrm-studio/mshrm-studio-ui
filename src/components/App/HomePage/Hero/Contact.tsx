@@ -1,6 +1,6 @@
 import { Dictionary } from '@/app/[lang]/dictionaries'
 import Button from '@/components/App/Button'
-import styles from '@/styles/homepage/hero.module.css'
+import styles from '@/styles/pages/home/hero.module.css'
 
 export default function HomePageHeroContact({ dict }: { dict: Dictionary }) {
     return (

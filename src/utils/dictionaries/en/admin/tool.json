@@ -1,0 +1,47 @@
+{
+    "action": {
+        "create": "Create tool",
+        "edit": "Edit tool",
+        "update": "Update tool"
+    },
+    "event": {
+        "created": "Tool created",
+        "deleted": "Tool deleted",
+        "updated": "Tool updated"
+    },
+    "form": {
+        "description": "Add a new tool to the website",
+        "item": {
+            "description": {
+                "label": "Description",
+                "description": "The description of the tool",
+                "placeholder": "A JavaScript library for building user interfaces"
+            },
+            "link": {
+                "label": "Link",
+                "description": "The website link for this tool",
+                "placeholder": "https://react.dev"
+            },
+            "logo": {
+                "label": "Logo",
+                "description": "The logo of the tool"
+            },
+            "name": {
+                "label": "Name",
+                "description": "The display name of the tool",
+                "placeholder": "React.js"
+            },
+            "rank": {
+                "label": "Rank",
+                "description": "The rank of the tool. Lower ranks appear first.",
+                "placeholder": "1"
+            },
+            "type": {
+                "label": "Type",
+                "description": "The type of tool",
+                "placeholder": "Select a type"
+            }
+        },
+        "title": "Create new tool"
+    }
+}

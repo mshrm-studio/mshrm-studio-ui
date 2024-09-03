@@ -26,7 +26,7 @@ export default function AdminUsersDataTable({ users }: { users: User[] }) {
             },
             {
                 id: 'actions',
-                header: dict.admin.dataTable.actions,
+                header: dict.dataTable.actions,
                 cell: ({ row }) => {
                     return <DataTableRowActions user={row.original} />
                 },

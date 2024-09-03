@@ -1,0 +1,47 @@
+{
+    "action": {
+        "create": "إنشاء أداة",
+        "edit": "تعديل أداة",
+        "update": "تحديث أداة"
+    },
+    "event": {
+        "created": "تم إنشاء الأداة",
+        "deleted": "تم حذف الأداة",
+        "updated": "تم تحديث الأداة"
+    },
+    "form": {
+        "description": "إضافة أداة جديدة إلى الموقع",
+        "item": {
+            "description": {
+                "label": "الوصف",
+                "description": "وصف الأداة",
+                "placeholder": "مكتبة JavaScript لبناء واجهات المستخدم"
+            },
+            "link": {
+                "label": "الرابط",
+                "description": "رابط موقع الويب لهذه الأداة",
+                "placeholder": "https://react.dev"
+            },
+            "logo": {
+                "label": "الشعار",
+                "description": "شعار الأداة"
+            },
+            "name": {
+                "label": "الاسم",
+                "description": "اسم العرض للأداة",
+                "placeholder": "React.js"
+            },
+            "rank": {
+                "label": "الترتيب",
+                "description": "ترتيب الأداة. الترتيبات الأقل تظهر أولاً.",
+                "placeholder": "1"
+            },
+            "type": {
+                "label": "النوع",
+                "description": "نوع الأداة",
+                "placeholder": "اختر نوعًا"
+            }
+        },
+        "title": "إنشاء أداة جديدة"
+    }
+}

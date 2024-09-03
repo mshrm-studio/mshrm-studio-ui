@@ -1,0 +1,38 @@
+{
+    "action": {
+        "create": "创建用户",
+        "edit": "编辑用户",
+        "update": "更新用户"
+    },
+    "event": {
+        "created": "用户已创建",
+        "deleted": "用户已删除",
+        "updated": "用户已更新"
+    },
+    "form": {
+        "description": "添加新用户",
+        "item": {
+            "email": {
+                "label": "电子邮件",
+                "description": "用户的电子邮件",
+                "placeholder": "tom@mshrm.studio"
+            },
+            "firstName": {
+                "label": "名字",
+                "description": "用户的名字",
+                "placeholder": "Thomas"
+            },
+            "lastName": {
+                "label": "姓氏",
+                "description": "用户的姓氏",
+                "placeholder": "Maltby"
+            },
+            "role": {
+                "label": "角色",
+                "description": "用户的角色",
+                "placeholder": "选择一个角色"
+            }
+        },
+        "title": "创建新用户"
+    }
+}

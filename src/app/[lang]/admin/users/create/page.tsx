@@ -9,8 +9,8 @@ export default async function Page({
     params: { lang: Locale }
 }>) {
     const dict = await loadDictionaries(lang, [
-        'admin',
         'admin/form',
+        'admin/user',
         'common',
         'enum',
     ])

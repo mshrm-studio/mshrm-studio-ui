@@ -1,0 +1,24 @@
+{
+    "actions": "សកម្មភាព",
+    "columns": "ជួរ",
+    "copy": {
+        "email": "ចម្លងអ៊ីមែល",
+        "logoUrl": "ចម្លង URL នៃរូបសញ្ញា",
+        "link": "ចម្លងតំណភ្ជាប់"
+    },
+    "edit": {
+        "marketEntity": "កែសម្រួលអង្គភាពទីផ្សារ",
+        "tool": "កែសម្រួលឧបករណ៍",
+        "user": "កែសម្រួលអ្នកប្រើប្រាស់"
+    },
+    "next": "បន្ទាប់",
+    "noResults": "គ្មានលទ្ធផល",
+    "previous": "មុន",
+    "resultsMeta": "បង្ហាញ :numberOfResultsShown នៃ :totalResults",
+    "search": "ស្វែងរក",
+    "view": {
+        "marketEntity": "មើលអង្គភាពទីផ្សារ",
+        "tool": "មើលឧបករណ៍",
+        "user": "មើលអ្នកប្រើប្រាស់"
+    }
+}

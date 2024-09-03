@@ -1,0 +1,24 @@
+{
+    "actions": "操作",
+    "columns": "列",
+    "copy": {
+        "email": "复制电子邮件",
+        "logoUrl": "复制标志URL",
+        "link": "复制链接"
+    },
+    "edit": {
+        "marketEntity": "编辑市场实体",
+        "tool": "编辑工具",
+        "user": "编辑用户"
+    },
+    "next": "下一页",
+    "noResults": "没有结果",
+    "previous": "上一页",
+    "resultsMeta": "显示 :numberOfResultsShown 条，共 :totalResults 条",
+    "search": "搜索",
+    "view": {
+        "marketEntity": "查看市场实体",
+        "tool": "查看工具",
+        "user": "查看用户"
+    }
+}

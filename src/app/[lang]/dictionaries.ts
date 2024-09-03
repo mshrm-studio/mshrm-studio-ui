@@ -20,7 +20,7 @@ export const loadDictionaries = async (l: Locale, nsList: string[]) => {
 
             const formattedNs = normalisedNs.startsWith('pages/')
                 ? normalisedNs.split('/')[1]
-                : ns
+                : normalisedNs
 
             return { [formattedNs]: dict }
         })

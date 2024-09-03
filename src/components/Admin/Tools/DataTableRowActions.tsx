@@ -49,21 +49,19 @@ export default function AdminToolsDataTableRowActions({
             </DropdownMenuTrigger>
 
             <DropdownMenuContent align="end">
-                <DropdownMenuLabel>
-                    {dict.admin.dataTable.actions}
-                </DropdownMenuLabel>
+                <DropdownMenuLabel>{dict.dataTable.actions}</DropdownMenuLabel>
 
                 <DropdownMenuItem onClick={() => copy(tool.lightLogoUrl)}>
-                    {dict.admin.dataTable.copy.logoUrl}
+                    {dict.dataTable.copy.logoUrl}
                 </DropdownMenuItem>
 
                 <DropdownMenuItem onClick={() => copy(tool.darkLogoUrl)}>
-                    {dict.admin.dataTable.copy.logoUrl}
+                    {dict.dataTable.copy.logoUrl}
                 </DropdownMenuItem>
 
                 {tool.link && (
                     <DropdownMenuItem onClick={() => copy(tool.link as string)}>
-                        {dict.admin.dataTable.copy.link}
+                        {dict.dataTable.copy.link}
                     </DropdownMenuItem>
                 )}
 
@@ -71,13 +69,13 @@ export default function AdminToolsDataTableRowActions({
 
                 <DropdownMenuItem>
                     <Link href={`/admin/tools/${tool.guidId}`}>
-                        {dict.admin.dataTable.view.tool}
+                        {dict.dataTable.view.tool}
                     </Link>
                 </DropdownMenuItem>
 
                 <DropdownMenuItem>
                     <Link href={`/admin/tools/${tool.guidId}/edit`}>
-                        {dict.admin.dataTable.edit.tool}
+                        {dict.dataTable.edit.tool}
                     </Link>
                 </DropdownMenuItem>
             </DropdownMenuContent>

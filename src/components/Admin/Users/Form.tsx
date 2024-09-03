@@ -69,15 +69,14 @@ export default function AdminUsersForm() {
                     name="firstName"
                     render={({ field }) => (
                         <FormItem
-                            label={dict.admin.user.form.item.firstName.label}
+                            label={dict.user.form.item.firstName.label}
                             description={
-                                dict.admin.user.form.item.firstName.description
+                                dict.user.form.item.firstName.description
                             }
                         >
                             <Input
                                 placeholder={
-                                    dict.admin.user.form.item.firstName
-                                        .placeholder
+                                    dict.user.form.item.firstName.placeholder
                                 }
                                 {...field}
                             />
@@ -90,15 +89,14 @@ export default function AdminUsersForm() {
                     name="lastName"
                     render={({ field }) => (
                         <FormItem
-                            label={dict.admin.user.form.item.lastName.label}
+                            label={dict.user.form.item.lastName.label}
                             description={
-                                dict.admin.user.form.item.lastName.description
+                                dict.user.form.item.lastName.description
                             }
                         >
                             <Input
                                 placeholder={
-                                    dict.admin.user.form.item.lastName
-                                        .placeholder
+                                    dict.user.form.item.lastName.placeholder
                                 }
                                 {...field}
                             />
@@ -111,14 +109,12 @@ export default function AdminUsersForm() {
                     name="email"
                     render={({ field }) => (
                         <FormItem
-                            label={dict.admin.user.form.item.email.label}
-                            description={
-                                dict.admin.user.form.item.email.description
-                            }
+                            label={dict.user.form.item.email.label}
+                            description={dict.user.form.item.email.description}
                         >
                             <Input
                                 placeholder={
-                                    dict.admin.user.form.item.email.placeholder
+                                    dict.user.form.item.email.placeholder
                                 }
                                 type="email"
                                 {...field}
@@ -133,13 +129,9 @@ export default function AdminUsersForm() {
                     render={({ field }) => (
                         <SelectFormItem
                             field={field}
-                            label={dict.admin.user.form.item.role.label}
-                            placeholder={
-                                dict.admin.user.form.item.role.placeholder
-                            }
-                            description={
-                                dict.admin.user.form.item.role.description
-                            }
+                            label={dict.user.form.item.role.label}
+                            placeholder={dict.user.form.item.role.placeholder}
+                            description={dict.user.form.item.role.description}
                             options={roleTypes.map((type) => ({
                                 value: type,
                                 label: dict.enum['RoleType'][type],

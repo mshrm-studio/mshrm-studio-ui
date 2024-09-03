@@ -43,7 +43,7 @@ export default function AdminToolsDataTable() {
             },
             {
                 id: 'actions',
-                header: dict.admin.dataTable.actions,
+                header: dict.dataTable.actions,
                 cell: ({ row }) => {
                     return <DataTableRowActions tool={row.original} />
                 },

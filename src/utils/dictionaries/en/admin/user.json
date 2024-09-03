@@ -1,0 +1,38 @@
+{
+    "action": {
+        "create": "Create user",
+        "edit": "Edit user",
+        "update": "Update user"
+    },
+    "event": {
+        "created": "User created",
+        "deleted": "User deleted",
+        "updated": "User updated"
+    },
+    "form": {
+        "description": "Add a new user",
+        "item": {
+            "email": {
+                "label": "Email",
+                "description": "The user's email",
+                "placeholder": "tom@mshrm.studio"
+            },
+            "firstName": {
+                "label": "First Name",
+                "description": "The user's first name",
+                "placeholder": "Thomas"
+            },
+            "lastName": {
+                "label": "Last Name",
+                "description": "The user's last/family name",
+                "placeholder": "Maltby"
+            },
+            "role": {
+                "label": "Role",
+                "description": "The user's role",
+                "placeholder": "Select a role"
+            }
+        },
+        "title": "Create new user"
+    }
+}

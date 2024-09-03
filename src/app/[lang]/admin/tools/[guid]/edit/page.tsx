@@ -9,8 +9,8 @@ type PageProps = {
 
 export default async function Page({ params }: Readonly<PageProps>) {
     const dict = await loadDictionaries(params.lang, [
-        'admin',
         'admin/form',
+        'admin/tool',
         'common',
         'enum',
     ])

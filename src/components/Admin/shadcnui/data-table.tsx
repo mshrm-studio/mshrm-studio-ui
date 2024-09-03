@@ -81,7 +81,7 @@ export function DataTable<TData, TValue>({
             <div className="flex space-x-3 justify-between items-center mb-4">
                 {table.getColumn(columnToSearch) && (
                     <Input
-                        placeholder={`${dict.admin.dataTable.search}...`}
+                        placeholder={`${dict.dataTable.search}...`}
                         value={
                             (table
                                 .getColumn(columnToSearch)
@@ -104,7 +104,7 @@ export function DataTable<TData, TValue>({
                             variant="outline"
                             className="ml-auto"
                         >
-                            {dict.admin.dataTable.columns}{' '}
+                            {dict.dataTable.columns}{' '}
                             <ChevronDown className="ml-2 h-4 w-4" />
                         </Button>
                     </DropdownMenuTrigger>
@@ -181,7 +181,7 @@ export function DataTable<TData, TValue>({
                                     colSpan={columns.length}
                                     className="h-24 text-center"
                                 >
-                                    {dict.admin.dataTable.noResults}
+                                    {dict.dataTable.noResults}
                                 </TableCell>
                             </TableRow>
                         )}
@@ -191,7 +191,7 @@ export function DataTable<TData, TValue>({
 
             <div className="flex items-center justify-end space-x-2 mt-4">
                 <div className="flex-1 text-sm text-muted-foreground">
-                    {dict.admin.dataTable.resultsMeta
+                    {dict.dataTable.resultsMeta
                         .replace(
                             ':numberOfResultsShown',
                             table.getFilteredRowModel().rows.length
@@ -211,7 +211,7 @@ export function DataTable<TData, TValue>({
                         onClick={() => table.previousPage()}
                         disabled={!table.getCanPreviousPage()}
                     >
-                        {dict.admin.dataTable.previous}
+                        {dict.dataTable.previous}
                     </Button>
 
                     <Button
@@ -222,7 +222,7 @@ export function DataTable<TData, TValue>({
                         onClick={() => table.nextPage()}
                         disabled={!table.getCanNextPage()}
                     >
-                        {dict.admin.dataTable.next}
+                        {dict.dataTable.next}
                     </Button>
                 </div>
             </div>

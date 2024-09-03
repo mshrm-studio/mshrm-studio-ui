@@ -1,0 +1,38 @@
+{
+    "action": {
+        "create": "បង្កើតអ្នកប្រើប្រាស់",
+        "edit": "កែអ្នកប្រើប្រាស់",
+        "update": "ធ្វើបច្ចុប្បន្នភាពអ្នកប្រើប្រាស់"
+    },
+    "event": {
+        "created": "បានបង្កើតអ្នកប្រើ",
+        "deleted": "បានលុបអ្នកប្រើ",
+        "updated": "បានធ្វើបច្ចុប្បន្នភាពអ្នកប្រើ"
+    },
+    "form": {
+        "description": "បន្ថែមអ្នកប្រើប្រាស់ថ្មី",
+        "item": {
+            "email": {
+                "label": "អ៊ីមែល",
+                "description": "អ៊ីមែលរបស់អ្នកប្រើប្រាស់",
+                "placeholder": "tom@mshrm.studio"
+            },
+            "firstName": {
+                "label": "នាមខ្លួន",
+                "description": "នាមខ្លួនរបស់អ្នកប្រើប្រាស់",
+                "placeholder": "Thomas"
+            },
+            "lastName": {
+                "label": "នាមត្រកូល",
+                "description": "នាមត្រកូលរបស់អ្នកប្រើប្រាស់",
+                "placeholder": "Maltby"
+            },
+            "role": {
+                "label": "តួនាទី",
+                "description": "តួនាទីរបស់អ្នកប្រើប្រាស់",
+                "placeholder": "ជ្រើសរើសតួនាទី"
+            }
+        },
+        "title": "បង្កើតអ្នកប្រើប្រាស់ថ្មី"
+    }
+}

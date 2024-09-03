@@ -8,8 +8,7 @@ export default async function Page({
     params: { lang: Locale }
 }>) {
     const dict = await loadDictionaries(lang, [
-        'action',
-        'admin',
+        'admin/dataTable',
         'attribute',
         'common',
         'event',

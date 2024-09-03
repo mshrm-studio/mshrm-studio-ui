@@ -5,7 +5,7 @@ import { useDisconnect, useWeb3ModalAccount } from '@web3modal/ethers/react'
 import EthAddress from '@/components/EthAddress'
 import { useIsAuthenticated } from '@azure/msal-react'
 import UserContext from '@/utils/context/User'
-import styles from '@/styles/homepage/hero.module.css'
+import styles from '@/styles/pages/home/hero.module.css'
 import { useContext } from 'react'
 import useDictionary from '@/utils/hooks/useDictionary'
 

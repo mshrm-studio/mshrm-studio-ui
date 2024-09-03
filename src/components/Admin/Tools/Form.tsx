@@ -91,7 +91,7 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
     function handleSuccess(response: any) {
         if (isTool(response.data)) {
             toast({
-                title: dict.admin.tool.event.created,
+                title: dict.tool.event.created,
             })
 
             router.push(`/admin/tools/${response.data.guidId}`)
@@ -166,14 +166,12 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
                     name="name"
                     render={({ field }) => (
                         <FormItem
-                            label={dict.admin.tool.form.item.name.label}
-                            description={
-                                dict.admin.tool.form.item.name.description
-                            }
+                            label={dict.tool.form.item.name.label}
+                            description={dict.tool.form.item.name.description}
                         >
                             <Input
                                 placeholder={
-                                    dict.admin.tool.form.item.name.placeholder
+                                    dict.tool.form.item.name.placeholder
                                 }
                                 {...field}
                             />
@@ -186,14 +184,12 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
                     name="link"
                     render={({ field }) => (
                         <FormItem
-                            label={dict.admin.tool.form.item.link.label}
-                            description={
-                                dict.admin.tool.form.item.link.description
-                            }
+                            label={dict.tool.form.item.link.label}
+                            description={dict.tool.form.item.link.description}
                         >
                             <Input
                                 placeholder={
-                                    dict.admin.tool.form.item.link.placeholder
+                                    dict.tool.form.item.link.placeholder
                                 }
                                 type="url"
                                 {...field}
@@ -207,10 +203,8 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
                     name="logo"
                     render={({ field }) => (
                         <FormItem
-                            label={dict.admin.tool.form.item.logo.label}
-                            description={
-                                dict.admin.tool.form.item.logo.description
-                            }
+                            label={dict.tool.form.item.logo.label}
+                            description={dict.tool.form.item.logo.description}
                         >
                             <Input
                                 type="file"
@@ -228,13 +222,9 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
                     render={({ field }) => (
                         <SelectFormItem
                             field={field}
-                            label={dict.admin.tool.form.item.type.label}
-                            placeholder={
-                                dict.admin.tool.form.item.type.placeholder
-                            }
-                            description={
-                                dict.admin.tool.form.item.type.description
-                            }
+                            label={dict.tool.form.item.type.label}
+                            placeholder={dict.tool.form.item.type.placeholder}
+                            description={dict.tool.form.item.type.description}
                             options={toolTypes.map((type) => ({
                                 value: type,
                                 label: dict.enum['ToolType'][type],
@@ -248,16 +238,14 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
                     name="description"
                     render={({ field }) => (
                         <FormItem
-                            label={dict.admin.tool.form.item.description.label}
+                            label={dict.tool.form.item.description.label}
                             description={
-                                dict.admin.tool.form.item.description
-                                    .description
+                                dict.tool.form.item.description.description
                             }
                         >
                             <Textarea
                                 placeholder={
-                                    dict.admin.tool.form.item.description
-                                        .description
+                                    dict.tool.form.item.description.description
                                 }
                                 {...field}
                             />

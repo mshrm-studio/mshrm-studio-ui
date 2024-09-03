@@ -1,0 +1,24 @@
+{
+    "actions": "Actions",
+    "columns": "Columns",
+    "copy": {
+        "email": "Copy email",
+        "logoUrl": "Copy logo URL",
+        "link": "Copy link"
+    },
+    "edit": {
+        "marketEntity": "Edit market entity",
+        "tool": "Edit tool",
+        "user": "Edit user"
+    },
+    "next": "Next",
+    "noResults": "No results",
+    "previous": "Previous",
+    "resultsMeta": "Showing :numberOfResultsShown of :totalResults",
+    "search": "Search",
+    "view": {
+        "marketEntity": "View market entity",
+        "tool": "View tool",
+        "user": "View user"
+    }
+}

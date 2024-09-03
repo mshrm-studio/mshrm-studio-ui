@@ -1,4 +1,4 @@
-import styles from '@/styles/homepage/hero.module.css'
+import styles from '@/styles/pages/home/hero.module.css'
 import Map from '@/components/App/HomePage/Hero/Map'
 import AuthOptions from '@/components/App/HomePage/Hero/AuthOptions'
 import { Dictionary } from '@/app/[lang]/dictionaries'

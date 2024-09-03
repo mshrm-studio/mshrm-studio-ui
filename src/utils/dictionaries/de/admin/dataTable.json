@@ -1,0 +1,24 @@
+{
+    "actions": "Aktionen",
+    "columns": "Spalten",
+    "copy": {
+        "email": "E-Mail kopieren",
+        "logoUrl": "Logo-URL kopieren",
+        "link": "Link kopieren"
+    },
+    "edit": {
+        "marketEntity": "Markteinheit bearbeiten",
+        "tool": "Werkzeug bearbeiten",
+        "user": "Benutzer bearbeiten"
+    },
+    "next": "Nächste",
+    "noResults": "Keine Ergebnisse",
+    "previous": "Vorherige",
+    "resultsMeta": "Zeige :numberOfResultsShown von :totalResults",
+    "search": "Suche",
+    "view": {
+        "marketEntity": "Markteinheit anzeigen",
+        "tool": "Werkzeug anzeigen",
+        "user": "Benutzer anzeigen"
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "action": {
+        "create": "Crear herramienta",
+        "edit": "Editar herramienta",
+        "update": "Actualizar herramienta"
+    },
+    "event": {
+        "created": "Herramienta creada",
+        "deleted": "Herramienta eliminada",
+        "updated": "Herramienta actualizada"
+    },
+    "form": {
+        "description": "Agregar una nueva herramienta al sitio web",
+        "item": {
+            "description": {
+                "label": "Descripción",
+                "description": "La descripción de la herramienta",
+                "placeholder": "Una biblioteca de JavaScript para construir interfaces de usuario"
+            },
+            "link": {
+                "label": "Enlace",
+                "description": "El enlace del sitio web para esta herramienta",
+                "placeholder": "https://react.dev"
+            },
+            "logo": {
+                "label": "Logo",
+                "description": "El logo de la herramienta"
+            },
+            "name": {
+                "label": "Nombre",
+                "description": "El nombre de la herramienta",
+                "placeholder": "React.js"
+            },
+            "rank": {
+                "label": "Rango",
+                "description": "El rango de la herramienta. Los rangos más bajos aparecen primero.",
+                "placeholder": "1"
+            },
+            "type": {
+                "label": "Tipo",
+                "description": "El tipo de herramienta",
+                "placeholder": "Seleccione un tipo"
+            }
+        },
+        "title": "Crear nueva herramienta"
+    }
+}

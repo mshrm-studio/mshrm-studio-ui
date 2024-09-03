@@ -1,0 +1,47 @@
+{
+    "action": {
+        "create": "បង្កើតឧបករណ៍",
+        "edit": "កែប្រែឧបករណ៍",
+        "update": "អាប់ដេតឧបករណ៍"
+    },
+    "event": {
+        "created": "បានបង្កើតឧបករណ៍",
+        "deleted": "បានលុបឧបករណ៍",
+        "updated": "បានធ្វើបច្ចុប្បន្នភាពឧបករណ៍"
+    },
+    "form": {
+        "description": "បន្ថែមឧបករណ៍ថ្មីទៅគេហទំព័រ",
+        "item": {
+            "description": {
+                "label": "ការពិពណ៌នា",
+                "description": "ការពិពណ៌នាអំពីឧបករណ៍",
+                "placeholder": "បណ្ណាល័យ JavaScript សម្រាប់ការបង្កើតផ្ទាំងប្រើប្រាស់"
+            },
+            "link": {
+                "label": "តំណភ្ជាប់",
+                "description": "តំណភ្ជាប់គេហទំព័រសម្រាប់ឧបករណ៍នេះ",
+                "placeholder": "https://react.dev"
+            },
+            "logo": {
+                "label": "ឡូហ្គោ",
+                "description": "ឡូហ្គោរបស់ឧបករណ៍"
+            },
+            "name": {
+                "label": "ឈ្មោះ",
+                "description": "ឈ្មោះបង្ហាញនៃឧបករណ៍",
+                "placeholder": "React.js"
+            },
+            "rank": {
+                "label": "ចំណាត់ថ្នាក់",
+                "description": "ចំណាត់ថ្នាក់នៃឧបករណ៍។ ចំណាត់ថ្នាក់ទាបបង្អស់បង្ហាញមុនគេ។",
+                "placeholder": "1"
+            },
+            "type": {
+                "label": "ប្រភេទ",
+                "description": "ប្រភេទនៃឧបករណ៍",
+                "placeholder": "ជ្រើសរើសប្រភេទ"
+            }
+        },
+        "title": "បង្កើតឧបករណ៍ថ្មី"
+    }
+}

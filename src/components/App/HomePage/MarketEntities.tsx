@@ -1,5 +1,5 @@
 import MarketEntityList from '@/components/App/MarketEntity/List'
-import styles from '@/styles/homepage/homepage.module.css'
+import styles from '@/styles/pages/home/home.module.css'
 import marketEntities from '@/utils/content/marketEntities'
 import { Dictionary } from '@/app/[lang]/dictionaries'
 

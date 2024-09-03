@@ -1,0 +1,38 @@
+{
+    "action": {
+        "create": "Benutzer erstellen",
+        "edit": "Benutzer bearbeiten",
+        "update": "Benutzer aktualisieren"
+    },
+    "event": {
+        "created": "Benutzer erstellt",
+        "deleted": "Benutzer gelöscht",
+        "updated": "Benutzer aktualisiert"
+    },
+    "form": {
+        "description": "Einen neuen Benutzer hinzufügen",
+        "item": {
+            "email": {
+                "label": "E-Mail",
+                "description": "Die E-Mail des Benutzers",
+                "placeholder": "tom@mshrm.studio"
+            },
+            "firstName": {
+                "label": "Vorname",
+                "description": "Der Vorname des Benutzers",
+                "placeholder": "Thomas"
+            },
+            "lastName": {
+                "label": "Nachname",
+                "description": "Der Nachname des Benutzers",
+                "placeholder": "Maltby"
+            },
+            "role": {
+                "label": "Rolle",
+                "description": "Die Rolle des Benutzers",
+                "placeholder": "Eine Rolle auswählen"
+            }
+        },
+        "title": "Neuen Benutzer erstellen"
+    }
+}

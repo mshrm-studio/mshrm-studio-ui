@@ -19,8 +19,8 @@ export default async function Page({
     params: { lang: Locale }
 }>) {
     const dict = await loadDictionaries(lang, [
-        'action',
-        'admin',
+        'admin/dataTable',
+        'admin/user',
         'attribute',
         'common',
         'event',
@@ -34,7 +34,7 @@ export default async function Page({
                 <div className="mb-4">
                     <Button asChild>
                         <Link href="/admin/users/create">
-                            {dict.admin.user.action.create}
+                            {dict.user.action.create}
                         </Link>
                     </Button>
                 </div>

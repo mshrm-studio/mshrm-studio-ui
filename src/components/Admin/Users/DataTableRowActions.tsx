@@ -48,23 +48,19 @@ export default function AdminUsersDataTableRowActions({
             </DropdownMenuTrigger>
 
             <DropdownMenuContent align="end">
-                <DropdownMenuLabel>
-                    {dict.admin.dataTable.actions}
-                </DropdownMenuLabel>
+                <DropdownMenuLabel>{dict.dataTable.actions}</DropdownMenuLabel>
 
                 {user.email && (
                     <DropdownMenuItem
                         onClick={() => copy(user.email as string)}
                     >
-                        {dict.admin.dataTable.copy.email}
+                        {dict.dataTable.copy.email}
                     </DropdownMenuItem>
                 )}
 
                 <DropdownMenuSeparator />
 
-                <DropdownMenuItem>
-                    {dict.admin.dataTable.view.user}
-                </DropdownMenuItem>
+                <DropdownMenuItem>{dict.dataTable.view.user}</DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
     )

@@ -1,0 +1,38 @@
+{
+    "action": {
+        "create": "إنشاء مستخدم",
+        "edit": "تحرير المستخدم",
+        "update": "تحديث المستخدم"
+    },
+    "event": {
+        "created": "تم إنشاء المستخدم",
+        "deleted": "تم حذف المستخدم",
+        "updated": "تم تحديث المستخدم"
+    },
+    "form": {
+        "description": "إضافة مستخدم جديد",
+        "item": {
+            "email": {
+                "label": "البريد الإلكتروني",
+                "description": "بريد المستخدم الإلكتروني",
+                "placeholder": "tom@mshrm.studio"
+            },
+            "firstName": {
+                "label": "الاسم الأول",
+                "description": "الاسم الأول للمستخدم",
+                "placeholder": "Thomas"
+            },
+            "lastName": {
+                "label": "الاسم الأخير",
+                "description": "اسم العائلة للمستخدم",
+                "placeholder": "Maltby"
+            },
+            "role": {
+                "label": "الدور",
+                "description": "دور المستخدم",
+                "placeholder": "اختر دورا"
+            }
+        },
+        "title": "إنشاء مستخدم جديد"
+    }
+}

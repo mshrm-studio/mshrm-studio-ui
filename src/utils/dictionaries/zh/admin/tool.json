@@ -1,0 +1,47 @@
+{
+    "action": {
+        "create": "创建工具",
+        "edit": "编辑工具",
+        "update": "更新工具"
+    },
+    "event": {
+        "created": "工具已创建",
+        "deleted": "工具已删除",
+        "updated": "工具已更新"
+    },
+    "form": {
+        "description": "将新工具添加到网站",
+        "item": {
+            "description": {
+                "label": "描述",
+                "description": "工具的描述",
+                "placeholder": "用于构建用户界面的 JavaScript 库"
+            },
+            "link": {
+                "label": "链接",
+                "description": "该工具的网站链接",
+                "placeholder": "https://react.dev"
+            },
+            "logo": {
+                "label": "标志",
+                "description": "工具的标志"
+            },
+            "name": {
+                "label": "名称",
+                "description": "工具的显示名称",
+                "placeholder": "React.js"
+            },
+            "rank": {
+                "label": "排名",
+                "description": "工具的排名。较低的排名会优先显示。",
+                "placeholder": "1"
+            },
+            "type": {
+                "label": "类型",
+                "description": "工具的类型",
+                "placeholder": "选择类型"
+            }
+        },
+        "title": "创建新工具"
+    }
+}

@@ -4,7 +4,7 @@ import Button from '@/components/App/Button'
 import Input from '@/components/App/Input/Input'
 import File from '@/components/App/Input/File'
 import Textarea from '@/components/App/Textarea'
-import styles from '@/styles/contact.form.module.css'
+import styles from '@/styles/pages/contact/form.module.css'
 import useDictionary from '@/utils/hooks/useDictionary'
 
 export default function ContactPageForm() {
@@ -15,7 +15,7 @@ export default function ContactPageForm() {
     }
 
     return (
-        <form className={styles.contactForm} onSubmit={onSubmit}>
+        <form className={styles.form} onSubmit={onSubmit}>
             <Input
                 label={dict.contact.form.name.label}
                 name="name"
