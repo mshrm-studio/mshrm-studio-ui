@@ -1,3 +1,9 @@
 {
-    "loading": "ការផ្ទុក"
+    "blackEntityLogo": "ឡូហ្គោ :entity ខ្មៅ",
+    "copyToClipboard": "ចម្លងទៅក្រឡា",
+    "darkEntityLogo": "ឡូហ្គោ :entity ងងឹត",
+    "entityLogo": "និមិត្តសញ្ញា :entity",
+    "lightEntityLogo": "ឡូហ្គោ :entity ស្រាល",
+    "loading": "ការផ្ទុក",
+    "whiteEntityLogo": "ឡូហ្គោ :entity ស"
 }

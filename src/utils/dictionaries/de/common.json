@@ -1,3 +1,9 @@
 {
-    "loading": "Laden"
+    "blackEntityLogo": "Schwarzes :entity-Logo",
+    "copyToClipboard": "In die Zwischenablage kopieren",
+    "darkEntityLogo": "Dunkles :entity-Logo",
+    "entityLogo": ":entity-Logo",
+    "lightEntityLogo": "Helles :entity-Logo",
+    "loading": "Laden",
+    "whiteEntityLogo": "Weißes :entity-Logo"
 }

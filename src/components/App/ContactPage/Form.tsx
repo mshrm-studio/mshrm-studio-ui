@@ -54,8 +54,8 @@ export default function ContactPageForm() {
             />
 
             <Button
-                aria-label={`TODO (translate): Submit contact form`}
-                title={`TODO (translate): Submit contact form`}
+                aria-label={dict.contact.form.submit}
+                title={dict.contact.form.submit}
                 size="xl"
             >
                 {dict.contact.form.buttonText}

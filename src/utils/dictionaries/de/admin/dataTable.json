@@ -11,11 +11,15 @@
         "tool": "Werkzeug bearbeiten",
         "user": "Benutzer bearbeiten"
     },
+    "goToNextPage": "Zur nächsten Seite gehen",
+    "goToPreviousPage": "Zur vorherigen Seite gehen",
     "next": "Nächste",
     "noResults": "Keine Ergebnisse",
     "previous": "Vorherige",
     "resultsMeta": "Zeige :numberOfResultsShown von :totalResults",
     "search": "Suche",
+    "toggleTableColumnOptions": "Tabellenspaltenoptionen umschalten",
+    "toggleTableRowMenu": "Tabellenzeilenmenü umschalten",
     "view": {
         "marketEntity": "Markteinheit anzeigen",
         "tool": "Werkzeug anzeigen",

@@ -36,8 +36,8 @@ export default function AdminUsersDataTableRowActions({
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button
-                    aria-label={`TODO (translate): Toggle table row options`}
-                    title={`TODO (translate): Toggle table row options`}
+                    aria-label={dict.dataTable.toggleTableRowMenu}
+                    title={dict.dataTable.toggleTableRowMenu}
                     variant="ghost"
                     className="h-8 w-8 p-0"
                 >

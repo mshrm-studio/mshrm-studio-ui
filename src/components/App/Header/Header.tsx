@@ -7,14 +7,14 @@ import Logo from '@/components/App/Header/Logo'
 import Menu from '@/components/App/Header/Menu'
 
 export default async function Header({ locale }: { locale: Locale }) {
-    const dictionary = await loadDictionaries(locale, ['app/header'])
+    const dictionary = await loadDictionaries(locale, ['app/header', 'common'])
 
     return (
         <DictionaryContextProvider dictionary={dictionary}>
             <header className={styles.header}>
                 <div className={styles.logoAndThemeSwitcher}>
                     <div className={styles.logoContainer}>
-                        <Logo />
+                        <Logo dict={dictionary} />
                     </div>
 
                     <div className={styles.themeSwitcherContainer}>

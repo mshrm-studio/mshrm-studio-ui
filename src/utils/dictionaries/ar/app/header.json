@@ -1,4 +1,5 @@
 {
+    "closeMenu": "إغلاق القائمة",
     "menuItem": {
         "cms": "نظام إدارة الموافقة",
         "connectWallet": "اتصال المحفظة",
@@ -8,5 +9,10 @@
         "logOut": "تسجيل الخروج",
         "microsoftLogin": "تسجيل الدخول إلى مايكروسوفت",
         "ourBrand": "علامتنا التجارية"
-    }
+    },
+    "openMenu": "فتح القائمة",
+    "ssoSignIn": "تسجيل الدخول مع مايكروسوفت",
+    "ssoSignOut": "تسجيل خروج",
+    "switchToDarkTheme": "التبديل إلى السمة الداكنة",
+    "switchToLightTheme": "التبديل إلى السمة الفاتحة"
 }

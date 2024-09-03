@@ -15,11 +15,15 @@
         "tools": "工具",
         "users": "用户"
     },
-    "ssoSignOut": "登出",
     "ssoSignIn": "使用微軟登入",
+    "ssoSignOut": "登出",
     "theme": {
         "dark": "深色",
         "light": "浅色",
         "system": "系统"
-    }
+    },
+    "toggleLanguage": "切换语言",
+    "toggleNavigationMenu": "切换导航菜单",
+    "toggleTheme": "切换主题",
+    "toggleUserMenu": "切换用户菜单"
 }

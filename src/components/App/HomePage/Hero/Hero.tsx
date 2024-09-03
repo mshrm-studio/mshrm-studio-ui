@@ -9,7 +9,7 @@ export default function HomePageHero({ dict }: { dict: Dictionary }) {
         <section className={styles.heroSection}>
             <div className={styles.mapWrapper}>
                 <div className={styles.mapContainer}>
-                    <Map />
+                    <Map dict={dict} />
                 </div>
             </div>
 

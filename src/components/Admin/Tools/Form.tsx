@@ -255,8 +255,8 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
 
                 <div className="lg:col-span-2">
                     <Button
-                        aria-label={`TODO (translate): Save tool`}
-                        title={`TODO (translate): Save tool`}
+                        aria-label={dict.tool.form.save}
+                        title={dict.tool.form.save}
                         type="submit"
                     >
                         {dict.form.submit}

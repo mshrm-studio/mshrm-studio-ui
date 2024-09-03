@@ -1,4 +1,5 @@
 {
+    "closeMenu": "关闭菜单",
     "menuItem": {
         "cms": "同意管理系统",
         "connectWallet": "连接钱包",
@@ -8,5 +9,10 @@
         "logOut": "退出登录",
         "microsoftLogin": "微软登录",
         "ourBrand": "我们的品牌"
-    }
+    },
+    "openMenu": "打开菜单",
+    "ssoSignIn": "使用微軟登入",
+    "ssoSignOut": "登出",
+    "switchToDarkTheme": "切换到深色主题",
+    "switchToLightTheme": "切换到浅色主题"
 }

@@ -99,8 +99,8 @@ export function DataTable<TData, TValue>({
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                         <Button
-                            aria-label={`TODO (translate): Toggle table column options`}
-                            title={`TODO (translate): Toggle table column options`}
+                            aria-label={dict.dataTable.toggleTableColumnOptions}
+                            title={dict.dataTable.toggleTableColumnOptions}
                             variant="outline"
                             className="ml-auto"
                         >
@@ -204,8 +204,8 @@ export function DataTable<TData, TValue>({
 
                 <div className="space-x-2">
                     <Button
-                        aria-label={`TODO (translate): Go to previous page`}
-                        title={`TODO (translate): Go to previous page`}
+                        aria-label={dict.dataTable.goToPreviousPage}
+                        title={dict.dataTable.goToPreviousPage}
                         variant="outline"
                         size="sm"
                         onClick={() => table.previousPage()}
@@ -215,8 +215,8 @@ export function DataTable<TData, TValue>({
                     </Button>
 
                     <Button
-                        aria-label={`TODO (translate): Go to next page`}
-                        title={`TODO (translate): Go to next page`}
+                        aria-label={dict.dataTable.goToNextPage}
+                        title={dict.dataTable.goToNextPage}
                         variant="outline"
                         size="sm"
                         onClick={() => table.nextPage()}

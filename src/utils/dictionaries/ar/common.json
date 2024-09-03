@@ -1,3 +1,9 @@
 {
-    "loading": "تحميل"
+    "blackEntityLogo": "شعار :entity الأسود",
+    "copyToClipboard": "نسخ إلى الحافظة",
+    "darkEntityLogo": "شعار :entity الداكن",
+    "entityLogo": "شعار :entity",
+    "lightEntityLogo": "شعار :entity الفاتح",
+    "loading": "جارٍ التحميل",
+    "whiteEntityLogo": "شعار :entity الأبيض"
 }

@@ -33,6 +33,7 @@
                 "placeholder": "Selecciona un rol"
             }
         },
+        "save": "Guardar usuario",
         "title": "Crear nuevo usuario"
     }
 }

@@ -11,11 +11,15 @@
         "tool": "Editar herramienta",
         "user": "Editar usuario"
     },
+    "goToNextPage": "Ir a la página siguiente",
+    "goToPreviousPage": "Ir a la página anterior",
     "next": "Siguiente",
     "noResults": "Sin resultados",
     "previous": "Anterior",
     "resultsMeta": "Mostrando :numberOfResultsShown de :totalResults",
     "search": "Buscar",
+    "toggleTableColumnOptions": "Alternar opciones de columna de la tabla",
+    "toggleTableRowMenu": "Alternar menú de fila de la tabla",
     "view": {
         "marketEntity": "Ver entidad del mercado",
         "tool": "Ver herramienta",

@@ -1,3 +1,9 @@
 {
-    "loading": "Cargando"
+    "blackEntityLogo": "Logotipo negro de :entity",
+    "copyToClipboard": "Copiar al portapapeles",
+    "darkEntityLogo": "Logotipo oscuro de :entity",
+    "entityLogo": "Logotipo de :entity",
+    "lightEntityLogo": "Logotipo claro de :entity",
+    "loading": "Cargando",
+    "whiteEntityLogo": "Logotipo blanco de :entity"
 }

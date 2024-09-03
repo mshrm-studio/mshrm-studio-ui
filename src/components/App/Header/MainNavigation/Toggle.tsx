@@ -1,13 +1,14 @@
-'use client'
-
+import { Dictionary } from '@/app/[lang]/dictionaries'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 type Props = {
+    dict: Dictionary
     menuVisible: boolean
     onClick: (e: React.MouseEvent) => void
 }
 
 export default function HeaderMainNavigationToggle({
+    dict,
     menuVisible,
     onClick,
 }: Props) {
@@ -15,12 +16,10 @@ export default function HeaderMainNavigationToggle({
         <button
             className="dark:text-white"
             type="button"
-            aria-label={`TODO (translate): ${
-                menuVisible ? 'Close menu' : 'Open menu'
-            }`}
-            title={`TODO (translate): ${
-                menuVisible ? 'Close menu' : 'Open menu'
-            }`}
+            aria-label={
+                menuVisible ? dict.header.closeMenu : dict.header.openMenu
+            }
+            title={menuVisible ? dict.header.closeMenu : dict.header.openMenu}
             onClick={onClick}
         >
             {menuVisible ? (

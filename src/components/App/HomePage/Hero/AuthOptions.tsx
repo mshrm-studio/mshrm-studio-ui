@@ -1,7 +1,10 @@
 'use client'
 
-import CryptoWalletConnect from '@/components/CryptoWallet/Connect'
-import { useDisconnect, useWeb3ModalAccount } from '@web3modal/ethers/react'
+import {
+    useDisconnect,
+    useWeb3Modal,
+    useWeb3ModalAccount,
+} from '@web3modal/ethers/react'
 import EthAddress from '@/components/EthAddress'
 import { useIsAuthenticated } from '@azure/msal-react'
 import UserContext from '@/utils/context/User'
@@ -10,6 +13,7 @@ import { useContext } from 'react'
 import useDictionary from '@/utils/hooks/useDictionary'
 
 export default function HomePageHeroAuthOptions() {
+    const { open } = useWeb3Modal()
     const dict = useDictionary()
     const { address, isConnected: isCryptoAuthenticated } =
         useWeb3ModalAccount()
@@ -60,9 +64,14 @@ export default function HomePageHeroAuthOptions() {
                         </button>
                     </>
                 ) : (
-                    <CryptoWalletConnect className={styles.cryptoLoginBtn}>
+                    <button
+                        className={styles.cryptoLoginBtn}
+                        aria-label={dict.home.connectWallet}
+                        title={dict.home.connectWallet}
+                        onClick={() => open()}
+                    >
                         {dict.home.connectWallet}
-                    </CryptoWalletConnect>
+                    </button>
                 )}
             </div>
         </div>

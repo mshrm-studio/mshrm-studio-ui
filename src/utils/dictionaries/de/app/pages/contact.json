@@ -17,6 +17,7 @@
             "label": "Name",
             "placeholder": "Name"
         },
+        "submit": "Kontaktformular absenden",
         "website": {
             "label": "Webseite",
             "placeholder": "Webseite"

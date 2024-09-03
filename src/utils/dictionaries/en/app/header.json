@@ -1,4 +1,5 @@
 {
+    "closeMenu": "Close menu",
     "menuItem": {
         "cms": "Content Management System",
         "connectWallet": "Connect Wallet",
@@ -8,5 +9,10 @@
         "logOut": "Log out",
         "microsoftLogin": "Microsoft Login",
         "ourBrand": "Our Brand"
-    }
+    },
+    "openMenu": "Open menu",
+    "ssoSignIn": "Login with Microsoft",
+    "ssoSignOut": "Logout",
+    "switchToDarkTheme": "Switch to dark theme",
+    "switchToLightTheme": "Switch to light theme"
 }

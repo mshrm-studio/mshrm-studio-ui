@@ -15,11 +15,15 @@
         "tools": "ឧបករណ៍",
         "users": "អ្នកប្រើប្រាស់"
     },
-    "ssoSignOut": "ចាកចេញ",
     "ssoSignIn": "ចូលជាមួយ Microsoft",
+    "ssoSignOut": "ចាកចេញ",
     "theme": {
         "dark": "ងងឹត",
         "light": "ស",
         "system": "ប្រព័ន្ធ"
-    }
+    },
+    "toggleLanguage": "បើក/បិទភាសា",
+    "toggleNavigationMenu": "បើក/បិទម៉ឺនុយរបស់អ្នក",
+    "toggleTheme": "បើក/បិទស្បែក",
+    "toggleUserMenu": "បើក/បិទម៉ឺនុយអ្នកប្រើ"
 }

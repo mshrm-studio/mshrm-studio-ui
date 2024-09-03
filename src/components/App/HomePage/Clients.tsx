@@ -17,6 +17,7 @@ export default function HomePageClients({ dict }: { dict: Dictionary }) {
                     lightLogoGuidId: 'TODO',
                     link: null,
                 }))}
+                dict={dict}
             />
         </section>
     )

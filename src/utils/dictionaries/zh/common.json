@@ -1,3 +1,9 @@
 {
-    "loading": "加载中"
+    "blackEntityLogo": "黑色 :entity 标志",
+    "copyToClipboard": "复制到剪贴板",
+    "darkEntityLogo": "暗色 :entity 标志",
+    "entityLogo": ":entity 标志",
+    "lightEntityLogo": "亮色 :entity 标志",
+    "loading": "加载中",
+    "whiteEntityLogo": "白色 :entity 标志"
 }

@@ -42,6 +42,7 @@
                 "placeholder": "Select a type"
             }
         },
+        "save": "Save tool",
         "title": "Create new tool"
     }
 }

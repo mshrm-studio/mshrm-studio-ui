@@ -15,11 +15,15 @@
         "tools": "Herramientas",
         "users": "Usuarios"
     },
-    "ssoSignOut": "Cerrar sesión",
     "ssoSignIn": "Iniciar sesión con Microsoft",
+    "ssoSignOut": "Cerrar sesión",
     "theme": {
         "dark": "Oscuro",
         "light": "Claro",
         "system": "Sistema"
-    }
+    },
+    "toggleLanguage": "Alternar idioma",
+    "toggleNavigationMenu": "Alternar menú de navegación",
+    "toggleTheme": "Alternar tema",
+    "toggleUserMenu": "Alternar menú de usuario"
 }

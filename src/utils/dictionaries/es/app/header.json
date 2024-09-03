@@ -1,12 +1,18 @@
 {
+    "closeMenu": "Cerrar menú",
     "menuItem": {
         "cms": "Sistema de gestión de consentimientos",
-        "connectWallet": "Conectar Billetera",
+        "connectWallet": "Conectar billetera",
         "contactUs": "Contacta con nosotros",
         "loggedInWithEmail": "Iniciado sesión con :email",
         "loggedInWithEthAddress": "Iniciado sesión con :ethAddress",
         "logOut": "Cerrar sesión",
         "microsoftLogin": "Inicio de sesión de Microsoft",
         "ourBrand": "Nuestra Marca"
-    }
+    },
+    "openMenu": "Abrir menú",
+    "ssoSignIn": "Iniciar sesión con Microsoft",
+    "ssoSignOut": "Cerrar sesión",
+    "switchToDarkTheme": "Cambiar a tema oscuro",
+    "switchToLightTheme": "Cambiar a tema claro"
 }

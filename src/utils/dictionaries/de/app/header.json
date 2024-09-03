@@ -1,4 +1,5 @@
 {
+    "closeMenu": "Menü schließen",
     "menuItem": {
         "cms": "Einwilligungsverwaltungssystem",
         "connectWallet": "Wallet verbinden",
@@ -8,5 +9,10 @@
         "logOut": "Abmelden",
         "microsoftLogin": "Microsoft-Anmeldung",
         "ourBrand": "Unsere Marke"
-    }
+    },
+    "openMenu": "Menü öffnen",
+    "ssoSignIn": "Melden Sie sich bei Microsoft an",
+    "ssoSignOut": "Ausloggen",
+    "switchToDarkTheme": "Wechseln Sie zum dunklen Thema",
+    "switchToLightTheme": "Wechseln Sie zum hellen Thema"
 }

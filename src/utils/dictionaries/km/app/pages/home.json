@@ -1,17 +1,18 @@
 {
     "changeCurrency": "ប្តូរតម្លៃរូបិយប័ណ្ណ",
-    "connectWallet": "ចូលដោយប្រើកាបូបលុយគ្រីប",
+    "connectWallet": "ភ្ជាប់កាបូប",
     "contact": "ទាក់ទង​មក​ពួក​យើង",
-    "disconnectWallet": "ចាកចេញ",
+    "disconnectWallet": "ផ្តាច់កាបូប",
     "marketEntity": {
         "lastUpdated": "ធ្វើ​ឱ្យ​ទាន់សម័យ​ចុងក្រោយ",
         "marketCap": "មូលធនប័ត្រទីផ្សារ",
         "source": "ប្រភព",
         "volume": "កម្រិតសំឡេង"
     },
-    "ourStack": "ឧបករណ៍របស់យើង។",
-    "ssoSignOut": "ចាកចេញ",
+    "ourTools": "ឧបករណ៍របស់យើង។",
     "ssoSignIn": "ចូលជាមួយ Microsoft",
+    "ssoSignOut": "ចាកចេញ",
     "title": "កម្មវិធី អេបសាយ និង បច្ចេកវិទ្យាដែលបានប្ដូរតាមតម្រូវការ",
-    "weHaveWorkedWith": "យើងបានធ្វើការជាមួយ"
+    "weHaveWorkedWith": "យើងបានធ្វើការជាមួយ",
+    "worldMap": "ផែនទីពិភពលោក"
 }

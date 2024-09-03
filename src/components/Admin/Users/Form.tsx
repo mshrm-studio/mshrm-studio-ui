@@ -141,7 +141,13 @@ export default function AdminUsersForm() {
                 />
 
                 <div className="lg:col-span-2">
-                    <Button type="submit">{dict.form.submit}</Button>
+                    <Button
+                        aria-label={dict.user.form.save}
+                        title={dict.user.form.save}
+                        type="submit"
+                    >
+                        {dict.form.submit}
+                    </Button>
                 </div>
             </form>
         </Form>

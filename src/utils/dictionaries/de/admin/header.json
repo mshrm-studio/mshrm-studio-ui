@@ -15,11 +15,15 @@
         "tools": "Werkzeuge",
         "users": "Benutzer"
     },
-    "ssoSignOut": "Ausloggen",
     "ssoSignIn": "Melden Sie sich bei Microsoft an",
+    "ssoSignOut": "Ausloggen",
     "theme": {
         "dark": "Dunkel",
         "light": "Hell",
         "system": "System"
-    }
+    },
+    "toggleLanguage": "Sprache umschalten",
+    "toggleNavigationMenu": "Navigationsmenü umschalten",
+    "toggleTheme": "Thema umschalten",
+    "toggleUserMenu": "Benutzermenü umschalten"
 }

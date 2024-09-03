@@ -6,9 +6,9 @@ import { useIsAuthenticated } from '@azure/msal-react'
 import useLogout from '@/utils/hooks/useMsalLogout'
 
 export default function HeaderLoginLogoutOption({
-    dictionary,
+    dict,
 }: {
-    dictionary: Dictionary
+    dict: Dictionary
 }) {
     const isAuthenticated = useIsAuthenticated()
     const logout = useLogout()
@@ -17,14 +17,14 @@ export default function HeaderLoginLogoutOption({
         <>
             {isAuthenticated ? (
                 <button
-                    aria-label={`TODO (translate): Logout`}
-                    title={`TODO (translate): Logout`}
+                    aria-label={dict.header.ssoSignOut}
+                    title={dict.header.ssoSignOut}
                     onClick={logout}
                 >
-                    {dictionary.signOut}
+                    {dict.header.ssoSignOut}
                 </button>
             ) : (
-                <Link href="/auth/sso">{dictionary.signInWithMicrosoft}</Link>
+                <Link href="/auth/sso">{dict.header.ssoSignIn}</Link>
             )}
         </>
     )

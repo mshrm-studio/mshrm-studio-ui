@@ -1,4 +1,5 @@
 {
+    "closeMenu": "បិទម៉ឺនុយ",
     "menuItem": {
         "cms": "ប្រព័ន្ធគ្រប់គ្រងការយល់ព្រម",
         "connectWallet": "ភ្ជាប់កាបូប",
@@ -8,5 +9,10 @@
         "logOut": "ចេញពីប្រព័ន្ធ",
         "microsoftLogin": "ការចូលទៅម៉ាយក្រូសូហ្វ",
         "ourBrand": "ម៉ាករបស់យើង"
-    }
+    },
+    "openMenu": "បើកម៉ឺនុយ",
+    "ssoSignIn": "ចូលជាមួយ Microsoft",
+    "ssoSignOut": "ចាកចេញ",
+    "switchToDarkTheme": "ប្ដូរទៅស្តាំងងឹក",
+    "switchToLightTheme": "ប្ដូរទៅស្តាំងសំរាប់"
 }

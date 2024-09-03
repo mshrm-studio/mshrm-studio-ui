@@ -28,8 +28,8 @@ export default function AdminLayoutProfileMenu() {
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button
-                    aria-label={`TODO (translate): Toggle user menu`}
-                    title={`TODO (translate): Toggle user menu`}
+                    aria-label={dict.header.toggleUserMenu}
+                    title={dict.header.toggleUserMenu}
                     variant="ghost"
                     size="icon"
                     className="rounded-full"

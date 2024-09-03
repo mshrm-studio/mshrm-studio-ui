@@ -9,16 +9,18 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from '@/components/Admin/shadcnui/dropdown-menu'
+import useDictionary from '@/utils/hooks/useDictionary'
 
 export default function LanguageSwitcher() {
+    const dict = useDictionary()
     const { changeLanguage, options } = useLanguage()
 
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button
-                    aria-label={`TODO (translate): Toggle language menu`}
-                    title={`TODO (translate): Toggle language menu`}
+                    aria-label={dict.header.toggleLanguage}
+                    title={dict.header.toggleLanguage}
                     variant="ghost"
                     size="icon"
                     className="rounded-full"

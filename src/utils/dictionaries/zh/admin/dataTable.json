@@ -11,11 +11,15 @@
         "tool": "编辑工具",
         "user": "编辑用户"
     },
+    "goToNextPage": "转到下一页",
+    "goToPreviousPage": "转到上一页",
     "next": "下一页",
     "noResults": "没有结果",
     "previous": "上一页",
     "resultsMeta": "显示 :numberOfResultsShown 条，共 :totalResults 条",
     "search": "搜索",
+    "toggleTableColumnOptions": "切换表列选项",
+    "toggleTableRowMenu": "切换表行菜单",
     "view": {
         "marketEntity": "查看市场实体",
         "tool": "查看工具",

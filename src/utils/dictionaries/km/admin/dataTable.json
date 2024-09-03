@@ -11,11 +11,15 @@
         "tool": "កែសម្រួលឧបករណ៍",
         "user": "កែសម្រួលអ្នកប្រើប្រាស់"
     },
+    "goToNextPage": "ទៅទំព័របន្ទាប់",
+    "goToPreviousPage": "ទៅទំព័រមុន",
     "next": "បន្ទាប់",
     "noResults": "គ្មានលទ្ធផល",
     "previous": "មុន",
     "resultsMeta": "បង្ហាញ :numberOfResultsShown នៃ :totalResults",
     "search": "ស្វែងរក",
+    "toggleTableColumnOptions": "បិទ/បើកជម្រើសជួរឈរតារាង",
+    "toggleTableRowMenu": "បិទ/បើកម៉ឺនុយជួរដេកតារាង",
     "view": {
         "marketEntity": "មើលអង្គភាពទីផ្សារ",
         "tool": "មើលឧបករណ៍",

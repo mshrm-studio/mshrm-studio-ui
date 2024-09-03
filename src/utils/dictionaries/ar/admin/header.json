@@ -15,11 +15,15 @@
         "tools": "أدوات",
         "users": "المستخدمون"
     },
-    "ssoSignOut": "تسجيل خروج",
     "ssoSignIn": "تسجيل الدخول مع مايكروسوفت",
+    "ssoSignOut": "تسجيل خروج",
     "theme": {
         "dark": "داكن",
         "light": "فاتح",
         "system": "النظام"
-    }
+    },
+    "toggleLanguage": "تبديل اللغة",
+    "toggleNavigationMenu": "تبديل قائمة التنقل",
+    "toggleTheme": "تبديل الموضوع",
+    "toggleUserMenu": "تبديل قائمة المستخدم"
 }

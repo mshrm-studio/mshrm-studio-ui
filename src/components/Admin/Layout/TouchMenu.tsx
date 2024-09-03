@@ -9,14 +9,17 @@ import { Menu, Package2 } from 'lucide-react'
 import AdminLayoutNavigation from '@/components/Admin/Layout/Navigation'
 import Link from 'next/link'
 import { Button } from '@/components/Admin/shadcnui/button'
+import useDictionary from '@/utils/hooks/useDictionary'
 
 export default function AdminLayoutTouchMenu() {
+    const dict = useDictionary()
+
     return (
         <Sheet>
             <SheetTrigger asChild>
                 <Button
-                    aria-label={`TODO (translate): Toggle navigation menu`}
-                    title={`TODO (translate): Toggle navigation menu`}
+                    aria-label={dict.header.toggleNavigationMenu}
+                    title={dict.header.toggleNavigationMenu}
                     variant="outline"
                     size="icon"
                     className="lg:hidden"

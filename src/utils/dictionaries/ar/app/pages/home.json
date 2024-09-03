@@ -1,17 +1,18 @@
 {
     "changeCurrency": "تغيير العملة",
-    "connectWallet": "تسجيل الدخول باستخدام محفظة التشفير",
+    "connectWallet": "اتصال المحفظة",
     "contact": "اتصل بنا",
-    "disconnectWallet": "تسجيل خروج",
+    "disconnectWallet": "افصل المحفظة",
     "marketEntity": {
         "lastUpdated": "آخر تحديث",
         "marketCap": "القيمة السوقية",
         "source": "مصدر",
         "volume": "مقدار"
     },
-    "ourStack": "أدواتنا",
-    "ssoSignOut": "تسجيل خروج",
+    "ourTools": "أدواتنا",
     "ssoSignIn": "تسجيل الدخول مع مايكروسوفت",
+    "ssoSignOut": "تسجيل خروج",
     "title": "تطبيقات، مواقع وبرمجيات مخصصة",
-    "weHaveWorkedWith": "لقد عملنا مع"
+    "weHaveWorkedWith": "لقد عملنا مع",
+    "worldMap": "خريطة العالم"
 }

@@ -11,11 +11,15 @@
         "tool": "تحرير الأداة",
         "user": "تحرير المستخدم"
     },
+    "goToNextPage": "الذهاب إلى الصفحة التالية",
+    "goToPreviousPage": "الذهاب إلى الصفحة السابقة",
     "next": "التالي",
     "noResults": "لا توجد نتائج",
     "previous": "السابق",
     "resultsMeta": "إظهار :numberOfResultsShown من :totalResults",
     "search": "بحث",
+    "toggleTableColumnOptions": "تبديل خيارات أعمدة الجدول",
+    "toggleTableRowMenu": "تبديل قائمة صف الجدول",
     "view": {
         "marketEntity": "عرض الكيان السوقي",
         "tool": "عرض الأداة",

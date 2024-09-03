@@ -1,3 +1,9 @@
 {
-    "loading": "Loading"
+    "blackEntityLogo": "Black :entity logo",
+    "copyToClipboard": "Copy to clipboard",
+    "darkEntityLogo": "Dark :entity logo",
+    "entityLogo": ":entity logo",
+    "lightEntityLogo": "Light :entity logo",
+    "loading": "Loading",
+    "whiteEntityLogo": "White :entity logo"
 }

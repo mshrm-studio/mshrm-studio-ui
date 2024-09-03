@@ -42,6 +42,7 @@
                 "placeholder": "Wählen Sie einen Typ aus"
             }
         },
+        "save": "Werkzeug speichern",
         "title": "Neues Werkzeug erstellen"
     }
 }

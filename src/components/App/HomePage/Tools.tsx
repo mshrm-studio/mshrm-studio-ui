@@ -8,11 +8,12 @@ export default function HomePageTools({ dict }: { dict: Dictionary }) {
         <section className="px-6 xl:max-w-site xl:mx-auto">
             <div className="mb-12">
                 <h2 className="font-extrabold text-[2.0625rem] xl:text-[3.4375rem]">
-                    {dict.home.ourStack}
+                    {dict.home.ourTools}
                 </h2>
             </div>
 
             <ToolList
+                dict={dict}
                 tools={tools.map((tool) => ({
                     ...tool,
                     guidId: 'TODO',

@@ -33,6 +33,7 @@
                 "placeholder": "Select a role"
             }
         },
+        "save": "Save user",
         "title": "Create new user"
     }
 }

@@ -1,17 +1,18 @@
 {
     "changeCurrency": "Währung ändern",
-    "connectWallet": "Melden Sie sich mit einer Krypto-Wallet an",
+    "connectWallet": "Wallet verbinden",
     "contact": "kontaktiere",
-    "disconnectWallet": "Ausloggen",
+    "disconnectWallet": "Trennen Sie die Brieftasche",
     "marketEntity": {
         "lastUpdated": "Letzte Aktualisierung",
         "marketCap": "Marktkapitalisierung",
         "source": "Quelle",
         "volume": "Volumen"
     },
-    "ourStack": "Unsere Werkzeuge",
-    "ssoSignOut": "Ausloggen",
+    "ourTools": "Unsere Werkzeuge",
     "ssoSignIn": "Melden Sie sich bei Microsoft an",
+    "ssoSignOut": "Ausloggen",
     "title": "Maßgeschneiderte Apps, Websites & Software",
-    "weHaveWorkedWith": "Wir haben gearbeitet mit"
+    "weHaveWorkedWith": "Wir haben gearbeitet mit",
+    "worldMap": "Weltkarte"
 }

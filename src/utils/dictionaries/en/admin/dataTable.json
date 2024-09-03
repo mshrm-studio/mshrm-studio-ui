@@ -11,11 +11,15 @@
         "tool": "Edit tool",
         "user": "Edit user"
     },
+    "goToNextPage": "Go to next page",
+    "goToPreviousPage": "Go to previous page",
     "next": "Next",
     "noResults": "No results",
     "previous": "Previous",
     "resultsMeta": "Showing :numberOfResultsShown of :totalResults",
     "search": "Search",
+    "toggleTableColumnOptions": "Toggle table column options",
+    "toggleTableRowMenu": "Toggle table row menu",
     "view": {
         "marketEntity": "View market entity",
         "tool": "View tool",

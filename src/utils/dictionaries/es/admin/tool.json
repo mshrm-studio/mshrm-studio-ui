@@ -42,6 +42,7 @@
                 "placeholder": "Seleccione un tipo"
             }
         },
+        "save": "Guardar herramienta",
         "title": "Crear nueva herramienta"
     }
 }

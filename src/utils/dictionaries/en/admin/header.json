@@ -15,11 +15,15 @@
         "tools": "Tools",
         "users": "Users"
     },
-    "ssoSignOut": "Logout",
     "ssoSignIn": "Login with Microsoft",
+    "ssoSignOut": "Logout",
     "theme": {
         "dark": "Dark",
         "light": "Light",
         "system": "System"
-    }
+    },
+    "toggleLanguage": "Toggle language",
+    "toggleNavigationMenu": "Toggle navigation menu",
+    "toggleTheme": "Toggle theme",
+    "toggleUserMenu": "Toggle user menu"
 }

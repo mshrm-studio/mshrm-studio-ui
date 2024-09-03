@@ -5,10 +5,13 @@ import { useEffect, useState } from 'react'
 import MainNavigationToggle from '@/components/App/Header/MainNavigation/Toggle'
 import MainNavigation from '@/components/App/Header/MainNavigation/MainNavigation'
 import { usePathname } from 'next/navigation'
+import useDictionary from '@/utils/hooks/useDictionary'
 
 type Props = {}
 
 const HeaderMenu: React.FC<Props> = ({}) => {
+    const dict = useDictionary()
+
     const [showTouchMenu, setShowTouchMenu] = useState(false)
 
     function handleMainNavToggleClick(_e: React.MouseEvent) {
@@ -26,6 +29,7 @@ const HeaderMenu: React.FC<Props> = ({}) => {
         <>
             <div>
                 <MainNavigationToggle
+                    dict={dict}
                     menuVisible={showTouchMenu}
                     onClick={handleMainNavToggleClick}
                 />

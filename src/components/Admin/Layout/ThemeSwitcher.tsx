@@ -21,8 +21,8 @@ export default function ThemeSwitcher() {
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button
-                    aria-label={`TODO (translate): Toggle theme`}
-                    title={`TODO (translate): Toggle theme`}
+                    aria-label={dict.header.toggleTheme}
+                    title={dict.header.toggleTheme}
                     variant="ghost"
                     size="icon"
                     className="rounded-full"
