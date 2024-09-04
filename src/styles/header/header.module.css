@@ -9,14 +9,29 @@
     padding-right: theme('spacing.6');
 }
 
-.header > .logoAndThemeSwitcher {
+.logoAndThemeSwitcher {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.header > .logoAndThemeSwitcher > .logoContainer {
-    margin-right: theme('spacing.4');
+.logoAndThemeSwitcher > .logoContainer {
+    margin-right: theme('spacing.6');
+}
+
+.authAndMainNavigation > .authNavigationContainer {
+    display: none;
+}
+
+@media screen and (min-width: theme('screens.md')) {
+    .authAndMainNavigation {
+        display: flex;
+        align-items: center;
+    }
+
+    .authAndMainNavigation > .authNavigationContainer {
+        display: block;
+        margin-right: theme('spacing.6');
+    }
 }
 
 @media screen and (min-width: theme('screens.xl')) {

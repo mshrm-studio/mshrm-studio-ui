@@ -4,7 +4,7 @@ import { loadDictionaries } from '@/app/[lang]/dictionaries'
 import { Locale } from '@/utils/enums/Locale'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
 import Logo from '@/components/App/Header/Logo'
-import Menu from '@/components/App/Header/Menu'
+import AuthAndMainNavigation from '@/components/App/Header/AuthAndMainNavigation'
 
 export default async function Header({ locale }: { locale: Locale }) {
     const dictionary = await loadDictionaries(locale, ['app/header', 'common'])
@@ -22,11 +22,7 @@ export default async function Header({ locale }: { locale: Locale }) {
                     </div>
                 </div>
 
-                {/* <div className={`text-right`}>
-                <LoginLogoutOption dictionary={dictionary} />
-            </div> */}
-
-                <Menu />
+                <AuthAndMainNavigation />
             </header>
         </DictionaryContextProvider>
     )

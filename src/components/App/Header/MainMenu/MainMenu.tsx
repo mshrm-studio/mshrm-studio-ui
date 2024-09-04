@@ -1,19 +1,19 @@
 'use client'
 
 import useDictionary from '@/utils/hooks/useDictionary'
-import styles from '@/styles/header/main-navigation/mainNavigation.module.css'
+import styles from '@/styles/header/mainNavigation.module.css'
 import { useContext, useMemo } from 'react'
 import { useIsAuthenticated } from '@azure/msal-react'
 import { useWeb3ModalAccount } from '@web3modal/ethers/react'
 import UserContext from '@/utils/context/User'
-import MainNavigationItem from '@/utils/dto/MainNavigationItem'
-import MainNavigationAction from '@/components/App/Header/MainNavigation/Action'
+import MainMenuItem from '@/utils/dto/MainMenuItem'
+import MainMenuAction from '@/components/App/Header/MainMenu/Action'
 import { FolderArrowDownIcon } from '@heroicons/react/24/outline'
 import DimensionsContext from '@/utils/context/Dimensions'
 
 type Props = {}
 
-const HeaderMainNavigation: React.FC<Props> = ({}) => {
+const HeaderMainMenu: React.FC<Props> = ({}) => {
     const dict = useDictionary()
     const { address, isConnected: isCryptoAuthenticated } =
         useWeb3ModalAccount()
@@ -26,10 +26,10 @@ const HeaderMainNavigation: React.FC<Props> = ({}) => {
 
         return isCryptoAuthenticated
             ? {
-                  id: 'cryptoLogout',
-                  actionText: dict.header.menuItem.logOut,
+                  id: 'disconnectWallet',
+                  actionText: dict.header.mainMenu.logOut,
                   prependedLabel:
-                      dict.header.menuItem.loggedInWithEthAddress.replace(
+                      dict.header.mainMenu.loggedInWithEthAddress.replace(
                           ':ethAddress',
                           dimensions.viewportWidth < 1024
                               ? `${identifier.slice(0, 6)}...`
@@ -37,8 +37,8 @@ const HeaderMainNavigation: React.FC<Props> = ({}) => {
                       ),
               }
             : {
-                  id: 'cryptoLogin',
-                  actionText: dict.header.menuItem.connectWallet,
+                  id: 'connectWallet',
+                  actionText: dict.header.mainMenu.connectWallet,
               }
     }, [address, dict, dimensions.viewportWidth, isCryptoAuthenticated])
 
@@ -48,10 +48,10 @@ const HeaderMainNavigation: React.FC<Props> = ({}) => {
         return isAuthenticated
             ? {
                   id: 'microsoftLogout',
-                  actionText: dict.header.menuItem.logOut,
+                  actionText: dict.header.mainMenu.logOut,
                   href: '/auth/sso/logout',
                   prependedLabel:
-                      dict.header.menuItem.loggedInWithEmail.replace(
+                      dict.header.mainMenu.loggedInWithEmail.replace(
                           ':email',
                           dimensions.viewportWidth < 640
                               ? `${identifier.slice(0, 4)}...`
@@ -60,25 +60,25 @@ const HeaderMainNavigation: React.FC<Props> = ({}) => {
               }
             : {
                   id: 'microsoftLogin',
-                  actionText: dict.header.menuItem.microsoftLogin,
+                  actionText: dict.header.mainMenu.microsoftLogin,
                   href: '/auth/sso',
               }
     }, [dict, dimensions.viewportWidth, isAuthenticated, user])
 
-    const menu = useMemo<MainNavigationItem[]>(() => {
+    const menu = useMemo<MainMenuItem[]>(() => {
         return [
             ssoMenuItem,
             cryptoWalletMenuItem,
             {
                 id: 'ourBrand',
-                actionText: dict.header.menuItem.ourBrand,
+                actionText: dict.header.mainMenu.ourBrand,
                 href: 'https://www.figma.com/design/qlL67hLsYStO1HlJbEcNtB/MSHRM.studio',
                 appendedIcon: FolderArrowDownIcon,
             },
-            { id: 'cms', actionText: dict.header.menuItem.cms, href: '/admin' },
+            { id: 'cms', actionText: dict.header.mainMenu.cms, href: '/admin' },
             {
                 id: 'contactUs',
-                actionText: dict.header.menuItem.contactUs,
+                actionText: dict.header.mainMenu.contactUs,
                 href: '/contact',
             },
             {
@@ -94,7 +94,7 @@ const HeaderMainNavigation: React.FC<Props> = ({}) => {
             <ul className={styles.ul}>
                 {menu.map((item, i) => (
                     <li key={i} className={styles.li}>
-                        <MainNavigationAction item={item} />
+                        <MainMenuAction item={item} />
                     </li>
                 ))}
             </ul>
@@ -102,4 +102,4 @@ const HeaderMainNavigation: React.FC<Props> = ({}) => {
     )
 }
 
-export default HeaderMainNavigation
+export default HeaderMainMenu

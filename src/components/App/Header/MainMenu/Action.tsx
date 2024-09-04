@@ -1,22 +1,21 @@
 'use client'
 
-import MainNavigationItem from '@/utils/dto/MainNavigationItem'
-import MainNavigationLink from '@/components/App/Header/MainNavigation/Link'
+import MainMenuItem from '@/utils/dto/MainMenuItem'
+import MainMenuLink from '@/components/App/Header/MainMenu/Link'
 import { useDisconnect, useWeb3Modal } from '@web3modal/ethers/react'
 
 type Props = {
-    item: MainNavigationItem
+    item: MainMenuItem
 }
 
-export default function HeaderMainNavigationAction({ item }: Props) {
+export default function HeaderMainMenuAction({ item }: Props) {
     const { open } = useWeb3Modal()
     const { disconnect } = useDisconnect()
 
     function onClick(_e: React.MouseEvent<HTMLButtonElement>) {
-        console.log('mainnavigation/action onClick() item.id', item.id)
-        if (item.id === 'cryptoLogin') {
+        if (item.id === 'connectWallet') {
             open()
-        } else if (item.id === 'cryptoLogout') {
+        } else if (item.id === 'disconnectWallet') {
             disconnect()
         } else {
             // TODO
@@ -24,11 +23,7 @@ export default function HeaderMainNavigationAction({ item }: Props) {
     }
 
     if (typeof item.href === 'string')
-        return (
-            <MainNavigationLink
-                item={item as MainNavigationItem & { href: string }}
-            />
-        )
+        return <MainMenuLink item={item as MainMenuItem & { href: string }} />
 
     return (
         <div className={item.prependedLabel ? 'flex items-center' : ''}>

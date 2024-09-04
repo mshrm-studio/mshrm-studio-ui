@@ -7,7 +7,7 @@ type Props = {
     children: React.ReactNode
 }
 
-const HeaderTouchMenu: React.FC<Props> = ({ children }) => {
+const HeaderMainMenuContainer: React.FC<Props> = ({ children }) => {
     const { dimensions } = useContext(DimensionsContext)
 
     const navHeight = useMemo(() => {
@@ -38,4 +38,4 @@ const HeaderTouchMenu: React.FC<Props> = ({ children }) => {
     )
 }
 
-export default HeaderTouchMenu
+export default HeaderMainMenuContainer

@@ -7,8 +7,8 @@ export default function HomePageHeroContact({ dict }: { dict: Dictionary }) {
         <div className={styles.contactBtnContainer}>
             <a href="/contact">
                 <Button
-                    aria-label={`TODO (translate): Go to contact page`}
-                    title={`TODO (translate): Go to contact page`}
+                    aria-label={dict.home.goToContactPage}
+                    title={dict.home.goToContactPage}
                     size="xl"
                 >
                     {dict.home.contact}

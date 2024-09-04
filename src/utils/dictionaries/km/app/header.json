@@ -1,6 +1,12 @@
 {
+    "authMenu": {
+        "connectWallet": "ភ្ជាប់កាបូប",
+        "disconnectWallet": "ផ្តាច់កាបូប",
+        "ssoSignIn": "ចូលដោយប្រើ Microsoft",
+        "ssoSignOut": "ចេញពី Microsoft"
+    },
     "closeMenu": "បិទម៉ឺនុយ",
-    "menuItem": {
+    "mainMenu": {
         "cms": "ប្រព័ន្ធគ្រប់គ្រងការយល់ព្រម",
         "connectWallet": "ភ្ជាប់កាបូប",
         "contactUs": "ទាក់ទង​មក​ពួក​យើង",
@@ -11,8 +17,6 @@
         "ourBrand": "ម៉ាករបស់យើង"
     },
     "openMenu": "បើកម៉ឺនុយ",
-    "ssoSignIn": "ចូលជាមួយ Microsoft",
-    "ssoSignOut": "ចាកចេញ",
     "switchToDarkTheme": "ប្ដូរទៅស្តាំងងឹក",
     "switchToLightTheme": "ប្ដូរទៅស្តាំងសំរាប់"
 }

@@ -1,6 +1,6 @@
 import { ComponentType, SVGProps } from 'react'
 
-export default interface MainNavigationItem {
+export default interface MainMenuItem {
     id: string
     actionText: string
     href?: string

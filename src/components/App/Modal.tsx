@@ -3,6 +3,7 @@
 import styles from '@/styles/modal.module.css'
 import React, { useEffect } from 'react'
 import { XMarkIcon } from '@heroicons/react/24/solid'
+import useDictionary from '@/utils/hooks/useDictionary'
 
 export default function Modal({
     children,
@@ -13,6 +14,8 @@ export default function Modal({
     show: boolean
     close: () => void
 }) {
+    const dict = useDictionary()
+
     useEffect(() => {
         if (show) {
             document.body.style.overflow = 'hidden'
@@ -32,8 +35,8 @@ export default function Modal({
             <button
                 className={styles.closeButton}
                 type="button"
-                aria-label={`TODO (translate): Close Modal`}
-                title={`TODO (translate): Close Modal`}
+                aria-label={dict.common.closeModal}
+                title={dict.common.closeModal}
                 onClick={(_e: React.MouseEvent<HTMLButtonElement>) => close()}
             >
                 <XMarkIcon className={styles.closeButtonIcon} />

@@ -1,5 +1,5 @@
 import { Dictionary } from '@/app/[lang]/dictionaries'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { UsersIcon } from '@heroicons/react/24/outline'
 
 type Props = {
     dict: Dictionary
@@ -7,7 +7,7 @@ type Props = {
     onClick: (e: React.MouseEvent) => void
 }
 
-export default function HeaderMainNavigationToggle({
+export default function HeaderAuthMenuToggle({
     dict,
     menuVisible,
     onClick,
@@ -22,11 +22,7 @@ export default function HeaderMainNavigationToggle({
             title={menuVisible ? dict.header.closeMenu : dict.header.openMenu}
             onClick={onClick}
         >
-            {menuVisible ? (
-                <XMarkIcon className="h-6 w-6" />
-            ) : (
-                <Bars3Icon className="h-6 w-6" />
-            )}
+            <UsersIcon className="h-6 w-6" />
         </button>
     )
 }

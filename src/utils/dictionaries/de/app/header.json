@@ -1,6 +1,12 @@
 {
+    "authMenu": {
+        "connectWallet": "Wallet verbinden",
+        "disconnectWallet": "Wallet trennen",
+        "ssoSignIn": "Mit Microsoft anmelden",
+        "ssoSignOut": "Von Microsoft abmelden"
+    },
     "closeMenu": "Menü schließen",
-    "menuItem": {
+    "mainMenu": {
         "cms": "Einwilligungsverwaltungssystem",
         "connectWallet": "Wallet verbinden",
         "contactUs": "kontaktiere uns",
@@ -11,8 +17,6 @@
         "ourBrand": "Unsere Marke"
     },
     "openMenu": "Menü öffnen",
-    "ssoSignIn": "Melden Sie sich bei Microsoft an",
-    "ssoSignOut": "Ausloggen",
     "switchToDarkTheme": "Wechseln Sie zum dunklen Thema",
     "switchToLightTheme": "Wechseln Sie zum hellen Thema"
 }

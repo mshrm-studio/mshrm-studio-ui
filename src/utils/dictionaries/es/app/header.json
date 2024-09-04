@@ -1,6 +1,12 @@
 {
+    "authMenu": {
+        "connectWallet": "Conectar cartera",
+        "disconnectWallet": "Desconectar cartera",
+        "ssoSignIn": "Iniciar sesión con Microsoft",
+        "ssoSignOut": "Cerrar sesión de Microsoft"
+    },
     "closeMenu": "Cerrar menú",
-    "menuItem": {
+    "mainMenu": {
         "cms": "Sistema de gestión de consentimientos",
         "connectWallet": "Conectar billetera",
         "contactUs": "Contacta con nosotros",
@@ -11,8 +17,6 @@
         "ourBrand": "Nuestra Marca"
     },
     "openMenu": "Abrir menú",
-    "ssoSignIn": "Iniciar sesión con Microsoft",
-    "ssoSignOut": "Cerrar sesión",
     "switchToDarkTheme": "Cambiar a tema oscuro",
     "switchToLightTheme": "Cambiar a tema claro"
 }

@@ -3,6 +3,7 @@
     "connectWallet": "Connect wallet",
     "contact": "Contact",
     "disconnectWallet": "Disconnect wallet",
+    "goToContactPage": "Go to contact page",
     "marketEntity": {
         "lastUpdated": "Last updated",
         "marketCap": "Market cap",

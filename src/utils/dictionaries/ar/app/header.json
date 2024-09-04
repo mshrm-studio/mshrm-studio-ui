@@ -1,6 +1,12 @@
 {
+    "authMenu": {
+        "connectWallet": "ربط المحفظة",
+        "disconnectWallet": "قطع الاتصال بالمحفظة",
+        "ssoSignIn": "تسجيل الدخول باستخدام Microsoft",
+        "ssoSignOut": "تسجيل الخروج من Microsoft"
+    },
     "closeMenu": "إغلاق القائمة",
-    "menuItem": {
+    "mainMenu": {
         "cms": "نظام إدارة الموافقة",
         "connectWallet": "اتصال المحفظة",
         "contactUs": "اتصل بنا",
@@ -11,8 +17,6 @@
         "ourBrand": "علامتنا التجارية"
     },
     "openMenu": "فتح القائمة",
-    "ssoSignIn": "تسجيل الدخول مع مايكروسوفت",
-    "ssoSignOut": "تسجيل خروج",
     "switchToDarkTheme": "التبديل إلى السمة الداكنة",
     "switchToLightTheme": "التبديل إلى السمة الفاتحة"
 }

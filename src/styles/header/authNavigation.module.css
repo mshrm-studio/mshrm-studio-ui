@@ -1,0 +1,29 @@
+.ul {
+    padding-top: theme('spacing.3');
+    padding-bottom: theme('spacing.3');
+}
+
+.button,
+.link {
+    padding-left: theme('spacing.6');
+    padding-right: theme('spacing.6');
+    padding-top: theme('spacing.3');
+    padding-bottom: theme('spacing.3');
+    display: block;
+    text-align: left;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.button:hover,
+.link:hover {
+    background-color: #e9e3e6;
+}
+
+:global(html.dark) .button:hover,
+:global(html.dark) .link:hover {
+    color: #000000;
+}

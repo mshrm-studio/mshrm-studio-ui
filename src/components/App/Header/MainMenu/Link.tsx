@@ -1,13 +1,13 @@
 'use client'
 
-import MainNavigationItem from '@/utils/dto/MainNavigationItem'
+import MainMenuItem from '@/utils/dto/MainMenuItem'
 import Link from 'next/link'
 
 type Props = {
-    item: MainNavigationItem & { href: string }
+    item: MainMenuItem & { href: string }
 }
 
-export default function HeaderMainNavigationLink({ item }: Props) {
+export default function HeaderMainMenuLink({ item }: Props) {
     return (
         <div
             className={

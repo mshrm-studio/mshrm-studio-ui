@@ -1,6 +1,12 @@
 {
+    "authMenu": {
+        "connectWallet": "Connect wallet",
+        "disconnectWallet": "Disconnect wallet",
+        "ssoSignIn": "Login with Microsoft",
+        "ssoSignOut": "Logout of Microsoft"
+    },
     "closeMenu": "Close menu",
-    "menuItem": {
+    "mainMenu": {
         "cms": "Content Management System",
         "connectWallet": "Connect Wallet",
         "contactUs": "Contact us",
@@ -11,8 +17,6 @@
         "ourBrand": "Our Brand"
     },
     "openMenu": "Open menu",
-    "ssoSignIn": "Login with Microsoft",
-    "ssoSignOut": "Logout",
     "switchToDarkTheme": "Switch to dark theme",
     "switchToLightTheme": "Switch to light theme"
 }

@@ -3,6 +3,7 @@
     "connectWallet": "连接钱包",
     "contact": "联系我们",
     "disconnectWallet": "断开钱包",
+    "goToContactPage": "转到联系页面",
     "marketEntity": {
         "lastUpdated": "最近更新时间",
         "marketCap": "市值",
