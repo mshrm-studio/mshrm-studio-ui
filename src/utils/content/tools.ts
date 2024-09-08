@@ -185,4 +185,10 @@ export default [
         darkLogoUrl: 'sentry-dark.png',
         lightLogoUrl: 'sentry-light.png',
     },
+    {
+        name: 'Remix',
+        link: 'https://remix.run',
+        darkLogoUrl: 'remix-dark.png',
+        lightLogoUrl: 'remix-light.png',
+    },
 ]

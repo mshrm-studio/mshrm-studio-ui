@@ -1,13 +1,44 @@
 .button {
     border-radius: 999px;
-    border: 1px solid #1d7b2f;
     background-color: #1d7b2f;
     color: #ffffff;
     font-weight: 700;
     text-transform: uppercase;
+    position: relative; /* Needed for positioning the pseudo-element */
+    overflow: hidden; /* Hide the expanding gradient effect outside the button */
+    cursor: pointer;
+}
+
+/* Different sizes for button */
+.button:global(.base) {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+}
+
+.button:global(.lg) {
+    font-size: 1.5rem;
+    padding: 0.5rem 2.5rem;
 }
 
 .button:global(.xl) {
     font-size: 2.0625rem;
     padding: 0.5rem 3rem;
+}
+
+/* Hover effect using the ::before pseudo-element */
+.hoverEffect {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background-color: #7b1d63; /* A lighter shade of green for hover effect */
+    border-radius: 50%;
+    pointer-events: none; /* Allow clicking on button content */
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s cubic-bezier(0.5, 0.5, 1, 1);
+    z-index: 0; /* Ensure it is behind the button text */
+}
+
+.content {
+    position: relative; /* Keep text above the pseudo-element */
+    z-index: 1;
 }

@@ -29,17 +29,28 @@ export default function HomePageHeroAuthOptions() {
                 {isAuthenticated ? (
                     <>
                         {user && (
-                            <span className={styles.ssoUserEmail}>
+                            <span
+                                key="ssoUserEmail"
+                                className={styles.ssoUserEmail}
+                            >
                                 {user.email}
                             </span>
                         )}
 
-                        <a href="#TODO" className={styles.ssoLogoutLink}>
+                        <a
+                            key="ssoLogoutLink"
+                            href="#TODO"
+                            className={styles.ssoLogoutLink}
+                        >
                             {dict.home.ssoSignOut}
                         </a>
                     </>
                 ) : (
-                    <a href="/auth/sso" className={styles.ssoLink}>
+                    <a
+                        key="ssoLoginLink"
+                        href="/auth/sso"
+                        className={styles.ssoLink}
+                    >
                         {dict.home.ssoSignIn}
                     </a>
                 )}
@@ -49,12 +60,16 @@ export default function HomePageHeroAuthOptions() {
                 {isCryptoAuthenticated ? (
                     <>
                         {address && (
-                            <span className={styles.cryptoAddress}>
+                            <span
+                                ref="walletAddress"
+                                className={styles.cryptoAddress}
+                            >
                                 <EthAddress address={address} shortened />
                             </span>
                         )}
 
                         <button
+                            key="walletDisconnect"
                             className={styles.cryptoLogoutBtn}
                             aria-label={dict.home.disconnectWallet}
                             title={dict.home.disconnectWallet}
@@ -65,6 +80,7 @@ export default function HomePageHeroAuthOptions() {
                     </>
                 ) : (
                     <button
+                        key="walletConnect"
                         className={styles.cryptoLoginBtn}
                         aria-label={dict.home.connectWallet}
                         title={dict.home.connectWallet}

@@ -14,15 +14,17 @@ export default function HomePageTools({ dict }: { dict: Dictionary }) {
 
             <ToolList
                 dict={dict}
-                tools={tools.map((tool) => ({
-                    ...tool,
-                    guidId: 'TODO',
-                    rank: 0,
-                    toolType: ToolType.Technology,
-                    description: null,
-                    darkLogoGuidId: 'TODO',
-                    lightLogoGuidId: 'TODO',
-                }))}
+                tools={tools
+                    .sort((a, b) => a.name.localeCompare(b.name))
+                    .map((tool) => ({
+                        ...tool,
+                        guidId: 'TODO',
+                        rank: 0,
+                        toolType: ToolType.Technology,
+                        description: null,
+                        darkLogoGuidId: 'TODO',
+                        lightLogoGuidId: 'TODO',
+                    }))}
             />
         </section>
     )
