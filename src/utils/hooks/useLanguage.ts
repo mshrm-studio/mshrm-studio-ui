@@ -27,28 +27,36 @@ const useLanguage = () => {
     const options = useMemo(() => {
         return [
             {
-                label: 'English',
-                value: Locale.English,
-            },
-            {
                 label: 'عربي',
                 value: Locale.Arabic,
-            },
-            {
-                label: 'Español',
-                value: Locale.Spanish,
-            },
-            {
-                label: 'Deutsch',
-                value: Locale.German,
             },
             {
                 label: '中文',
                 value: Locale.Chinese,
             },
             {
+                label: 'English',
+                value: Locale.English,
+            },
+            {
+                label: 'Deutsch',
+                value: Locale.German,
+            },
+            {
+                label: '日本語',
+                value: Locale.Japanese,
+            },
+            {
                 label: 'ខ្មែរ',
                 value: Locale.Khmer,
+            },
+            {
+                label: 'Español',
+                value: Locale.Spanish,
+            },
+            {
+                label: 'Swahili',
+                value: Locale.Swahili,
             },
         ].map((option) => ({
             ...option,

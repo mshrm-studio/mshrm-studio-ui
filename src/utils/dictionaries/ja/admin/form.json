@@ -1,0 +1,15 @@
+{
+    "rule": {
+        "image": "ファイルは画像でなければなりません（jpg、png、gif）",
+        "max": {
+            "length": "最大長は :maximum です",
+            "size": "最大サイズは :size です"
+        },
+        "min": {
+            "length": "最小長は :minimum です"
+        },
+        "required": "必須",
+        "url": "有効なURLでなければなりません"
+    },
+    "submit": "送信"
+}

@@ -1,0 +1,48 @@
+{
+    "action": {
+        "create": "Unda zana",
+        "edit": "Hariri zana",
+        "update": "Sasisha zana"
+    },
+    "event": {
+        "created": "Zana imeundwa",
+        "deleted": "Zana imefutwa",
+        "updated": "Zana imesasishwa"
+    },
+    "form": {
+        "description": "Ongeza zana mpya kwenye tovuti",
+        "item": {
+            "description": {
+                "label": "Maelezo",
+                "description": "Maelezo ya zana",
+                "placeholder": "Maktaba ya JavaScript ya kujenga miundo ya mtumiaji"
+            },
+            "link": {
+                "label": "Kiungo",
+                "description": "Kiungo cha tovuti kwa zana hii",
+                "placeholder": "https://react.dev"
+            },
+            "logo": {
+                "label": "Nembo",
+                "description": "Nembo ya zana"
+            },
+            "name": {
+                "label": "Jina",
+                "description": "Jina la kuonyesha la zana",
+                "placeholder": "React.js"
+            },
+            "rank": {
+                "label": "Cheo",
+                "description": "Cheo cha zana. Cheo cha chini huonekana kwanza.",
+                "placeholder": "1"
+            },
+            "type": {
+                "label": "Aina",
+                "description": "Aina ya zana",
+                "placeholder": "Chagua aina"
+            }
+        },
+        "save": "Hifadhi zana",
+        "title": "Unda zana mpya"
+    }
+}

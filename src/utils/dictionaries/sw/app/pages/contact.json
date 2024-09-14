@@ -1,0 +1,26 @@
+{
+    "form": {
+        "attachments": {
+            "label": "Viambatisho",
+            "placeholder": "Ongeza faili"
+        },
+        "buttonText": "Wasiliana nasi",
+        "email": {
+            "label": "Barua pepe",
+            "placeholder": "Barua pepe"
+        },
+        "message": {
+            "label": "Andika ujumbe wako hapa...",
+            "placeholder": "Andika ujumbe wako hapa..."
+        },
+        "name": {
+            "label": "Jina",
+            "placeholder": "Jina"
+        },
+        "submit": "Tuma fomu ya mawasiliano",
+        "website": {
+            "label": "Tovuti",
+            "placeholder": "Tovuti"
+        }
+    }
+}

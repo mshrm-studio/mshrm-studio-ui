@@ -1,0 +1,28 @@
+{
+    "actions": "アクション",
+    "columns": "列",
+    "copy": {
+        "email": "メールをコピー",
+        "logoUrl": "ロゴURLをコピー",
+        "link": "リンクをコピー"
+    },
+    "edit": {
+        "marketEntity": "市場エンティティを編集",
+        "tool": "ツールを編集",
+        "user": "ユーザーを編集"
+    },
+    "goToNextPage": "次のページへ進む",
+    "goToPreviousPage": "前のページに戻る",
+    "next": "次へ",
+    "noResults": "結果なし",
+    "previous": "前へ",
+    "resultsMeta": "全 :totalResults 件中 :numberOfResultsShown 件を表示",
+    "search": "検索",
+    "toggleTableColumnOptions": "テーブル列オプションを切り替え",
+    "toggleTableRowMenu": "テーブル行メニューを切り替え",
+    "view": {
+        "marketEntity": "市場エンティティを見る",
+        "tool": "ツールを見る",
+        "user": "ユーザーを見る"
+    }
+}

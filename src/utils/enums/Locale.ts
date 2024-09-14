@@ -3,8 +3,10 @@ export enum Locale {
     Chinese = 'zh',
     English = 'en',
     German = 'de',
+    Japanese = 'ja',
     Khmer = 'km',
     Spanish = 'es',
+    Swahili = 'sw',
 }
 
 export const locales = Object.values(Locale)

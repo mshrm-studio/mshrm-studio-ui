@@ -1,0 +1,29 @@
+{
+    "mainNavigation": {
+        "conversations": "会話",
+        "dashboard": "ダッシュボード",
+        "home": "ホーム",
+        "marketEntities": "市場エンティティ",
+        "tools": "ツール",
+        "users": "ユーザー"
+    },
+    "pageTitle": {
+        "conversations": "会話",
+        "dashboard": "ダッシュボード",
+        "home": "ホーム",
+        "marketEntities": "市場エンティティ",
+        "tools": "ツール",
+        "users": "ユーザー"
+    },
+    "ssoSignIn": "Microsoftでログイン",
+    "ssoSignOut": "ログアウト",
+    "theme": {
+        "dark": "ダーク",
+        "light": "ライト",
+        "system": "システム"
+    },
+    "toggleLanguage": "言語を切り替える",
+    "toggleNavigationMenu": "ナビゲーションメニューを切り替える",
+    "toggleTheme": "テーマを切り替える",
+    "toggleUserMenu": "ユーザーメニューを切り替える"
+}

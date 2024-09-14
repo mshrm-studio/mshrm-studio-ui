@@ -1,0 +1,39 @@
+{
+    "action": {
+        "create": "ユーザーを作成",
+        "edit": "ユーザーを編集",
+        "update": "ユーザーを更新"
+    },
+    "event": {
+        "created": "ユーザーが作成されました",
+        "deleted": "ユーザーが削除されました",
+        "updated": "ユーザーが更新されました"
+    },
+    "form": {
+        "description": "新しいユーザーを追加する",
+        "item": {
+            "email": {
+                "label": "メール",
+                "description": "ユーザーのメールアドレス",
+                "placeholder": "tom@mshrm.studio"
+            },
+            "firstName": {
+                "label": "名",
+                "description": "ユーザーの名",
+                "placeholder": "Thomas"
+            },
+            "lastName": {
+                "label": "姓",
+                "description": "ユーザーの姓/ファミリーネーム",
+                "placeholder": "Maltby"
+            },
+            "role": {
+                "label": "役割",
+                "description": "ユーザーの役割",
+                "placeholder": "役割を選択"
+            }
+        },
+        "save": "ユーザーを保存",
+        "title": "新しいユーザーを作成"
+    }
+}

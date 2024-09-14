@@ -1,0 +1,29 @@
+{
+    "mainNavigation": {
+        "conversations": "Mazungumzo",
+        "dashboard": "Dashibodi",
+        "home": "Nyumbani",
+        "marketEntities": "Vyombo vya Soko",
+        "tools": "Zana",
+        "users": "Watumiaji"
+    },
+    "pageTitle": {
+        "conversations": "Mazungumzo",
+        "dashboard": "Dashibodi",
+        "home": "Nyumbani",
+        "marketEntities": "Vyombo vya Soko",
+        "tools": "Zana",
+        "users": "Watumiaji"
+    },
+    "ssoSignIn": "Ingia na Microsoft",
+    "ssoSignOut": "Toka",
+    "theme": {
+        "dark": "Giza",
+        "light": "Mwanga",
+        "system": "Mfumo"
+    },
+    "toggleLanguage": "Badilisha lugha",
+    "toggleNavigationMenu": "Badilisha menyu ya urambazaji",
+    "toggleTheme": "Badilisha mandhari",
+    "toggleUserMenu": "Badilisha menyu ya mtumiaji"
+}

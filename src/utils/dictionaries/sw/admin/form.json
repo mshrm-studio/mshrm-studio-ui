@@ -1,0 +1,15 @@
+{
+    "rule": {
+        "image": "Faili lazima iwe picha (jpg, png, gif)",
+        "max": {
+            "length": "Urefu wa juu zaidi ni :maximum",
+            "size": "Ukubwa wa juu zaidi ni :size"
+        },
+        "min": {
+            "length": "Urefu wa chini zaidi ni :minimum"
+        },
+        "required": "Inahitajika",
+        "url": "Lazima iwe URL halali"
+    },
+    "submit": "Wasilisha"
+}

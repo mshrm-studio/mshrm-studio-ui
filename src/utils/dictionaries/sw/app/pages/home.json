@@ -1,0 +1,19 @@
+{
+    "changeCurrency": "Badilisha sarafu",
+    "connectWallet": "Unganisha pochi",
+    "contact": "Mawasiliano",
+    "disconnectWallet": "Ondoa pochi",
+    "goToContactPage": "Nenda kwenye ukurasa wa mawasiliano",
+    "marketEntity": {
+        "lastUpdated": "Ilisasishwa mwisho",
+        "marketCap": "Thamani ya soko",
+        "source": "Chanzo",
+        "volume": "Kiasi"
+    },
+    "ourTools": "Zana zetu",
+    "ssoSignIn": "Ingia na Microsoft",
+    "ssoSignOut": "Toka",
+    "title": "mshrm.studio hutoa programu, tovuti, na programu tumizi.",
+    "weHaveWorkedWith": "Tumefanya kazi na",
+    "worldMap": "Ramani ya dunia"
+}

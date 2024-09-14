@@ -1,0 +1,10 @@
+{
+    "RoleType": {
+        "Admin": "Msimamizi",
+        "User": "Mtumiaji"
+    },
+    "ToolType": {
+        "Application": "Programu",
+        "Technology": "Teknolojia"
+    }
+}

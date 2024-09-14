@@ -27,7 +27,7 @@ export default function HomePageHeroAuthOptions() {
                 className={`${styles.authOption} ${styles.microsoftAuthOption}`}
             >
                 {isAuthenticated ? (
-                    <>
+                    <div>
                         {user && (
                             <span
                                 key="ssoUserEmail"
@@ -44,7 +44,7 @@ export default function HomePageHeroAuthOptions() {
                         >
                             {dict.home.ssoSignOut}
                         </a>
-                    </>
+                    </div>
                 ) : (
                     <a
                         key="ssoLoginLink"
@@ -58,7 +58,7 @@ export default function HomePageHeroAuthOptions() {
 
             <div className={`${styles.authOption} ${styles.cryptoAuthOption}`}>
                 {isCryptoAuthenticated ? (
-                    <>
+                    <div>
                         {address && (
                             <span
                                 ref="walletAddress"
@@ -77,7 +77,7 @@ export default function HomePageHeroAuthOptions() {
                         >
                             {dict.home.disconnectWallet}
                         </button>
-                    </>
+                    </div>
                 ) : (
                     <button
                         key="walletConnect"

@@ -1,0 +1,22 @@
+{
+    "authMenu": {
+        "connectWallet": "ウォレットを接続",
+        "disconnectWallet": "ウォレットを切断",
+        "ssoSignIn": "Microsoftでログイン",
+        "ssoSignOut": "Microsoftからログアウト"
+    },
+    "closeMenu": "メニューを閉じる",
+    "mainMenu": {
+        "cms": "コンテンツ管理システム",
+        "connectWallet": "ウォレットを接続",
+        "contactUs": "お問い合わせ",
+        "loggedInWithEmail": ":email でログインしています",
+        "loggedInWithEthAddress": ":ethAddress でログインしています",
+        "logOut": "ログアウト",
+        "microsoftLogin": "Microsoftログイン",
+        "ourBrand": "私たちのブランド"
+    },
+    "openMenu": "メニューを開く",
+    "switchToDarkTheme": "ダークテーマに切り替える",
+    "switchToLightTheme": "ライトテーマに切り替える"
+}

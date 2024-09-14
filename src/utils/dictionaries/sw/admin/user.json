@@ -1,0 +1,39 @@
+{
+    "action": {
+        "create": "Unda mtumiaji",
+        "edit": "Hariri mtumiaji",
+        "update": "Sasisha mtumiaji"
+    },
+    "event": {
+        "created": "Mtumiaji ameundwa",
+        "deleted": "Mtumiaji amefutwa",
+        "updated": "Mtumiaji amesasishwa"
+    },
+    "form": {
+        "description": "Ongeza mtumiaji mpya",
+        "item": {
+            "email": {
+                "label": "Barua pepe",
+                "description": "Barua pepe ya mtumiaji",
+                "placeholder": "tom@mshrm.studio"
+            },
+            "firstName": {
+                "label": "Jina la Kwanza",
+                "description": "Jina la kwanza la mtumiaji",
+                "placeholder": "Thomas"
+            },
+            "lastName": {
+                "label": "Jina la Mwisho",
+                "description": "Jina la mwisho/familia la mtumiaji",
+                "placeholder": "Maltby"
+            },
+            "role": {
+                "label": "Jukumu",
+                "description": "Jukumu la mtumiaji",
+                "placeholder": "Chagua jukumu"
+            }
+        },
+        "save": "Hifadhi mtumiaji",
+        "title": "Unda mtumiaji mpya"
+    }
+}

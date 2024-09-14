@@ -1,0 +1,28 @@
+{
+    "actions": "Hatua",
+    "columns": "Safu",
+    "copy": {
+        "email": "Nakili barua pepe",
+        "logoUrl": "Nakili URL ya nembo",
+        "link": "Nakili kiungo"
+    },
+    "edit": {
+        "marketEntity": "Hariri chombo cha soko",
+        "tool": "Hariri chombo",
+        "user": "Hariri mtumiaji"
+    },
+    "goToNextPage": "Nenda ukurasa unaofuata",
+    "goToPreviousPage": "Nenda ukurasa uliopita",
+    "next": "Ifuatayo",
+    "noResults": "Hakuna matokeo",
+    "previous": "Iliyotangulia",
+    "resultsMeta": "Inaonyesha :numberOfResultsShown ya :totalResults",
+    "search": "Tafuta",
+    "toggleTableColumnOptions": "Badilisha chaguo za safu za jedwali",
+    "toggleTableRowMenu": "Badilisha menyu ya safu ya jedwali",
+    "view": {
+        "marketEntity": "Tazama chombo cha soko",
+        "tool": "Tazama chombo",
+        "user": "Tazama mtumiaji"
+    }
+}

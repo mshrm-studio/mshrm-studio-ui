@@ -1,0 +1,48 @@
+{
+    "action": {
+        "create": "ツールを作成",
+        "edit": "ツールを編集",
+        "update": "ツールを更新"
+    },
+    "event": {
+        "created": "ツールが作成されました",
+        "deleted": "ツールが削除されました",
+        "updated": "ツールが更新されました"
+    },
+    "form": {
+        "description": "ウェブサイトに新しいツールを追加する",
+        "item": {
+            "description": {
+                "label": "説明",
+                "description": "ツールの説明",
+                "placeholder": "ユーザーインターフェースを構築するためのJavaScriptライブラリ"
+            },
+            "link": {
+                "label": "リンク",
+                "description": "このツールのウェブサイトリンク",
+                "placeholder": "https://react.dev"
+            },
+            "logo": {
+                "label": "ロゴ",
+                "description": "ツールのロゴ"
+            },
+            "name": {
+                "label": "名前",
+                "description": "ツールの表示名",
+                "placeholder": "React.js"
+            },
+            "rank": {
+                "label": "ランク",
+                "description": "ツールのランク。ランクが低いほど先に表示されます。",
+                "placeholder": "1"
+            },
+            "type": {
+                "label": "タイプ",
+                "description": "ツールのタイプ",
+                "placeholder": "タイプを選択"
+            }
+        },
+        "save": "ツールを保存",
+        "title": "新しいツールを作成"
+    }
+}

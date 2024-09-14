@@ -48,7 +48,7 @@ export default [
         lightLogoUrl: 'tableplus-light.png',
     },
     {
-        name: 'Visual Studio',
+        name: 'VS Code',
         link: 'https://visualstudio.microsoft.com',
         darkLogoUrl: 'visualstudio-dark.png',
         lightLogoUrl: 'visualstudio-light.png',

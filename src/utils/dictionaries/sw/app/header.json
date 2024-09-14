@@ -1,0 +1,22 @@
+{
+    "authMenu": {
+        "connectWallet": "Unganisha pochi",
+        "disconnectWallet": "Ondoa pochi",
+        "ssoSignIn": "Ingia na Microsoft",
+        "ssoSignOut": "Toka kwa Microsoft"
+    },
+    "closeMenu": "Funga menyu",
+    "mainMenu": {
+        "cms": "Mfumo wa Usimamizi wa Maudhui",
+        "connectWallet": "Unganisha pochi",
+        "contactUs": "Wasiliana nasi",
+        "loggedInWithEmail": "Umeingia na :email",
+        "loggedInWithEthAddress": "Umeingia na :ethAddress",
+        "logOut": "Toka",
+        "microsoftLogin": "Microsoft Ingia",
+        "ourBrand": "Chapa Yetu"
+    },
+    "openMenu": "Fungua menyu",
+    "switchToDarkTheme": "Badilisha kuwa mandhari ya giza",
+    "switchToLightTheme": "Badilisha kuwa mandhari ya mwanga"
+}

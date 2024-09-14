@@ -1,0 +1,22 @@
+{
+    "createdDate": "作成日",
+    "currency": "通貨",
+    "description": "説明",
+    "email": "メール",
+    "firstName": "名",
+    "label": "ラベル",
+    "lastName": "姓",
+    "lastUpdated": "最終更新",
+    "link": "リンク",
+    "logo": "ロゴ",
+    "marketCap": "時価総額",
+    "name": "名前",
+    "percentageChange": "変化率",
+    "price": "価格",
+    "rank": "ランク",
+    "source": "ソース",
+    "title": "タイトル",
+    "type": "タイプ",
+    "value": "値",
+    "volume": "取引量"
+}

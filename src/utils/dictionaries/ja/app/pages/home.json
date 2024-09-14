@@ -1,0 +1,19 @@
+{
+    "changeCurrency": "通貨を変更",
+    "connectWallet": "ウォレットを接続",
+    "contact": "お問い合わせ",
+    "disconnectWallet": "ウォレットを切断",
+    "goToContactPage": "お問い合わせページへ",
+    "marketEntity": {
+        "lastUpdated": "最終更新",
+        "marketCap": "時価総額",
+        "source": "ソース",
+        "volume": "取引量"
+    },
+    "ourTools": "私たちのツール",
+    "ssoSignIn": "Microsoftでログイン",
+    "ssoSignOut": "ログアウト",
+    "title": "mshrm.studioはアプリ、サイト、ソフトウェアを提供します。",
+    "weHaveWorkedWith": "私たちが協力した企業",
+    "worldMap": "世界地図"
+}
