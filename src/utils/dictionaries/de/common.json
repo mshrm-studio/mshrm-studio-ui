@@ -1,9 +1,11 @@
 {
     "blackEntityLogo": "Schwarzes :entity-Logo",
     "closeModal": "Modal schließen",
+    "copied": "Kopiert",
     "copyToClipboard": "In die Zwischenablage kopieren",
     "darkEntityLogo": "Dunkles :entity-Logo",
     "entityLogo": ":entity-Logo",
+    "error": "Fehler",
     "lightEntityLogo": "Helles :entity-Logo",
     "loading": "Laden",
     "whiteEntityLogo": "Weißes :entity-Logo"

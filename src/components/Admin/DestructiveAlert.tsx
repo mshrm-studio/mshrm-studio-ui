@@ -19,7 +19,7 @@ export default function DestructiveAlert({
         <Alert variant="destructive">
             <AlertCircle className="h-4 w-4" />
 
-            <AlertTitle>{dict.event.error}</AlertTitle>
+            <AlertTitle>{dict.common.error}</AlertTitle>
 
             <AlertDescription className="break-all">
                 {children}

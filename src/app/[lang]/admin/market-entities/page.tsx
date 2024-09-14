@@ -11,7 +11,6 @@ export default async function Page({
         'admin/dataTable',
         'attribute',
         'common',
-        'event',
     ])
 
     return (

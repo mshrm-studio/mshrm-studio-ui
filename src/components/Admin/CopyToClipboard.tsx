@@ -20,7 +20,7 @@ export default function CopyToClipboard({
         navigator.clipboard.writeText(content)
 
         toast({
-            title: dict.event.copied,
+            title: dict.common.copied,
             description: content,
         })
     }

@@ -23,7 +23,6 @@ export default async function Page({
         'admin/user',
         'attribute',
         'common',
-        'event',
     ])
 
     const data = await getData()

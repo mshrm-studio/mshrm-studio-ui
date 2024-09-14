@@ -26,7 +26,7 @@ export default function HeaderThemeSwitcher() {
                 setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
             }
         >
-            {resolvedTheme === 'dark' ? (
+            {resolvedTheme === 'light' ? (
                 <SunIcon className={styles.icon} />
             ) : (
                 <MoonIcon className={styles.icon} />

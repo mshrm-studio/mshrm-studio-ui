@@ -1,9 +1,11 @@
 {
     "blackEntityLogo": "شعار :entity الأسود",
     "closeModal": "إغلاق النافذة المنبثقة",
+    "copied": "تم النسخ",
     "copyToClipboard": "نسخ إلى الحافظة",
     "darkEntityLogo": "شعار :entity الداكن",
     "entityLogo": "شعار :entity",
+    "error": "خطأ",
     "lightEntityLogo": "شعار :entity الفاتح",
     "loading": "جارٍ التحميل",
     "whiteEntityLogo": "شعار :entity الأبيض"

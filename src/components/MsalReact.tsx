@@ -8,20 +8,19 @@ import {
 } from '@azure/msal-browser'
 import { useMsal, useMsalAuthentication } from '@azure/msal-react'
 import { loginRequest } from '@/utils/msal/Auth'
-import CopyToClipboard from '@/components/Admin/CopyToClipboard'
 import useAxios from '@/utils/hooks/useAxios'
 import { AxiosError } from 'axios'
 import { isUser } from '@/utils/dto/User'
 import ApiError, { isApiError } from '@/utils/dto/ApiError'
 import UserContext from '@/utils/context/User'
 import DestructiveAlert from '@/components/Admin/DestructiveAlert'
-import Link from 'next/link'
-import { HomeIcon } from 'lucide-react'
+import LoadingScreen from '@/components/LoadingScreen'
 
 export default function Msal() {
     const { instance, accounts, inProgress } = useMsal()
     const { user, setUser } = useContext(UserContext)
     const [apiError, setApiError] = useState<ApiError>()
+    const [unknownError, setUnknownError] = useState<any>()
     const { login, result, error } = useMsalAuthentication(
         InteractionType.Silent,
         loginRequest
@@ -32,19 +31,23 @@ export default function Msal() {
         axios
             .post(`/api/v1/user/sso`)
             .then((response) => {
+                console.log('/api/v1/user/sso response:', response)
                 if (isUser(response.data)) {
                     setUser(response.data)
 
                     // TODO: navigate
                 } else {
-                    // TODO: handle error
+                    setUnknownError(
+                        `TODO (translate): System Error. Please try again or contact administrators on ${process.env.NEXT_PUBLIC_CONTACT_EMAIL}if problem persists. We apologise for the inconvenience.`
+                    )
                 }
             })
             .catch((error: AxiosError) => {
+                console.log('/api/v1/user/sso error:', error)
                 if (isApiError(error.response?.data)) {
                     setApiError(error.response?.data)
                 } else {
-                    // TODO: handle other errors
+                    setUnknownError(error)
                 }
             })
     }
@@ -54,15 +57,19 @@ export default function Msal() {
             axios
                 .get(`/api/v1/users`)
                 .then((response) => {
+                    console.log('/api/v1/users response:', response)
                     if (isUser(response.data)) {
                         setUser(response.data)
 
                         // TODO: navigate, add user to context.
                     } else {
-                        // TODO: handle unexpected response
+                        setUnknownError(
+                            `TODO (translate): System Error. Please try again or contact administrators on ${process.env.NEXT_PUBLIC_CONTACT_EMAIL}if problem persists. We apologise for the inconvenience.`
+                        )
                     }
                 })
                 .catch((error: AxiosError) => {
+                    console.log('/api/v1/users error:', error)
                     if (error.response?.status === 401) {
                         instance.acquireTokenRedirect({
                             ...loginRequest,
@@ -73,7 +80,7 @@ export default function Msal() {
                     } else if (isApiError(error.response?.data)) {
                         setApiError(error.response?.data)
                     } else {
-                        // TODO: handle other errors
+                        setUnknownError(error)
                     }
                 })
         }
@@ -85,39 +92,25 @@ export default function Msal() {
         }
     }, [error])
 
-    if (inProgress !== InteractionStatus.None) {
-        return <div className="h-full w-full"></div>
+    if (apiError) {
+        return (
+            <DestructiveAlert>
+                {Object.entries(apiError).map(([key, value]) => (
+                    <p key={key}>
+                        {key}: {value}
+                    </p>
+                ))}
+            </DestructiveAlert>
+        )
     }
 
-    return (
-        <div className="space-y-8">
-            {result && result.accessToken && (
-                <CopyToClipboard content={result.accessToken}>
-                    Copy Access Token
-                </CopyToClipboard>
-            )}
+    if (unknownError) {
+        return (
+            <DestructiveAlert>
+                <div>{JSON.stringify(unknownError)}</div>
+            </DestructiveAlert>
+        )
+    }
 
-            {apiError && (
-                <DestructiveAlert>
-                    {Object.entries(apiError).map(([key, value]) => (
-                        <p key={key}>
-                            {key}: {value}
-                        </p>
-                    ))}
-                </DestructiveAlert>
-            )}
-
-            {user && (
-                <div className="space-y-4">
-                    <h1 className="text-lg">User</h1>
-
-                    <pre>{JSON.stringify(user, null, 4)}</pre>
-
-                    <Link href="/">
-                        <HomeIcon /> go home
-                    </Link>
-                </div>
-            )}
-        </div>
-    )
+    return <LoadingScreen />
 }

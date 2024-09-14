@@ -1,9 +1,11 @@
 {
     "blackEntityLogo": "Black :entity logo",
     "closeModal": "Close modal",
+    "copied": "Copied",
     "copyToClipboard": "Copy to clipboard",
     "darkEntityLogo": "Dark :entity logo",
     "entityLogo": ":entity logo",
+    "error": "Error",
     "lightEntityLogo": "Light :entity logo",
     "loading": "Loading",
     "whiteEntityLogo": "White :entity logo"

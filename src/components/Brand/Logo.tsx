@@ -21,11 +21,11 @@ const BrandLogo: React.FC<Props> = ({ className, color, dict, priority }) => {
                 color === 'black'
                     ? dict.common.blackEntityLogo.replace(
                           ':entity',
-                          'MSHRM.studio'
+                          'mshrm.studio'
                       )
                     : dict.common.whiteEntityLogo.replace(
                           ':entity',
-                          'MSHRM.studio'
+                          'mshrm.studio'
                       )
             }
             priority={priority}

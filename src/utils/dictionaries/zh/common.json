@@ -1,9 +1,11 @@
 {
     "blackEntityLogo": "黑色 :entity 标志",
     "closeModal": "关闭模态框",
+    "copied": "已复制",
     "copyToClipboard": "复制到剪贴板",
     "darkEntityLogo": "暗色 :entity 标志",
     "entityLogo": ":entity 标志",
+    "error": "错误",
     "lightEntityLogo": "亮色 :entity 标志",
     "loading": "加载中",
     "whiteEntityLogo": "白色 :entity 标志"
