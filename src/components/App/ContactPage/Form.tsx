@@ -84,7 +84,11 @@ export default function ContactPageForm() {
 
         axios
             .post(`/api/v1/contact-forms`, form)
-            .then(console.log)
+            .then((res) => {
+                console.log(res)
+
+                alert('Check console for response')
+            })
             .catch(console.log)
 
         // TODO
