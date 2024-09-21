@@ -1,4 +1,5 @@
 {
+    "deleteFile": "ファイルを削除",
     "rule": {
         "image": "ファイルは画像でなければなりません（jpg、png、gif）",
         "max": {

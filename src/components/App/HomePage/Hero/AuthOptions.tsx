@@ -11,6 +11,7 @@ import UserContext from '@/utils/context/User'
 import styles from '@/styles/pages/home/hero.module.css'
 import { useContext } from 'react'
 import useDictionary from '@/utils/hooks/useDictionary'
+import useMsalLogout from '@/utils/hooks/useMsalLogout'
 
 export default function HomePageHeroAuthOptions() {
     const { open } = useWeb3Modal()
@@ -20,6 +21,7 @@ export default function HomePageHeroAuthOptions() {
     const isAuthenticated = useIsAuthenticated()
     const { user } = useContext(UserContext)
     const { disconnect } = useDisconnect()
+    const logout = useMsalLogout()
 
     return (
         <div className={styles.authOptions}>
@@ -27,7 +29,7 @@ export default function HomePageHeroAuthOptions() {
                 className={`${styles.authOption} ${styles.microsoftAuthOption}`}
             >
                 {isAuthenticated ? (
-                    <div>
+                    <div key="ssoUserEmailAndLogoutLink">
                         {user && (
                             <span
                                 key="ssoUserEmail"
@@ -37,13 +39,15 @@ export default function HomePageHeroAuthOptions() {
                             </span>
                         )}
 
-                        <a
+                        <button
                             key="ssoLogoutLink"
-                            href="#TODO"
                             className={styles.ssoLogoutLink}
+                            aria-label={dict.home.ssoSignOut}
+                            title={dict.home.ssoSignOut}
+                            onClick={() => logout()}
                         >
                             {dict.home.ssoSignOut}
-                        </a>
+                        </button>
                     </div>
                 ) : (
                     <a
@@ -58,7 +62,7 @@ export default function HomePageHeroAuthOptions() {
 
             <div className={`${styles.authOption} ${styles.cryptoAuthOption}`}>
                 {isCryptoAuthenticated ? (
-                    <div>
+                    <div key="walletAddressAndDisconnect">
                         {address && (
                             <span
                                 ref="walletAddress"

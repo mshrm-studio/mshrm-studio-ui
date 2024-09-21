@@ -12,6 +12,10 @@ const useAxios = () => {
 
         const instance = axios.create({
             baseURL: apiUrl,
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+            },
         })
 
         // Add a request interceptor to include the bearer token in headers

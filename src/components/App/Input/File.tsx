@@ -4,7 +4,9 @@ import styles from '@/styles/input/file.module.css'
 import { useMemo, useState } from 'react'
 import FormField from '@/components/App/FormField'
 import { ArrowUpTrayIcon } from '@heroicons/react/24/solid'
-import InputAddedFile from '@/components/App/Input/AddedFile'
+import InputUploadedFile from '@/components/App/Input/UploadedFile'
+import TemporaryFile from '@/utils/dto/TemporaryFile'
+import InputTemporaryFile from '@/components/App/Input/TemporaryFile'
 
 type Props = {
     accept?: string
@@ -14,6 +16,8 @@ type Props = {
     name: string
     placeholder?: string
     required?: boolean
+    temporaryFiles: TemporaryFile[]
+    setTemporaryFiles: React.Dispatch<React.SetStateAction<TemporaryFile[]>>
 }
 
 export default function Input({
@@ -24,6 +28,8 @@ export default function Input({
     name,
     placeholder,
     required,
+    temporaryFiles,
+    setTemporaryFiles,
 }: Props) {
     const labelWithAsterisk = useMemo(() => {
         if (!label) return undefined
@@ -37,20 +43,14 @@ export default function Input({
         return required ? `${placeholder}*` : placeholder
     }, [placeholder, required])
 
-    const [addedFiles, setAddedFiles] = useState<File[] | null>(null)
+    const [uploadedFiles, setUploadedFiles] = useState<File[]>()
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const files = e.target.files
 
         if (files) {
-            setAddedFiles((prev) => [...(prev || []), ...Array.from(files)])
+            setUploadedFiles((prev) => [...(prev || []), ...Array.from(files)])
         }
-    }
-
-    const handleFileRemove = (fileIndex: number) => {
-        setAddedFiles(
-            (prev) => prev?.filter((_, index) => index !== fileIndex) || null
-        )
     }
 
     return (
@@ -76,17 +76,32 @@ export default function Input({
                 />
             </label>
 
-            {addedFiles && (
-                <ul className="mt-3 space-y-3">
-                    {addedFiles.map((addedFile, i) => (
-                        <li key={`${addedFile.name}-${i}`}>
-                            <InputAddedFile
-                                addedFile={addedFile}
-                                onRemoveClick={() => handleFileRemove(i)}
-                            />
-                        </li>
-                    ))}
-                </ul>
+            {uploadedFiles && (
+                <div className="mt-3 space-y-3">
+                    <ul className="mt-3 space-y-3">
+                        {uploadedFiles.map((uploadedFile, i) => (
+                            <li key={`${uploadedFile.name}-${i}`}>
+                                <InputUploadedFile
+                                    file={uploadedFile}
+                                    setTemporaryFiles={setTemporaryFiles}
+                                />
+                            </li>
+                        ))}
+                    </ul>
+
+                    {temporaryFiles && (
+                        <ul className="mt-3 space-y-3">
+                            {temporaryFiles.map((temporaryFile, i) => (
+                                <li key={temporaryFile.key}>
+                                    <InputTemporaryFile
+                                        file={temporaryFile}
+                                        setTemporaryFiles={setTemporaryFiles}
+                                    />
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+                </div>
             )}
         </FormField>
     )

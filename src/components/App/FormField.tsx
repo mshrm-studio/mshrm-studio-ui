@@ -1,13 +1,16 @@
-import styles from '@/styles/input.module.css'
-import React, { useMemo } from 'react'
-
 type Props = {
     children: React.ReactNode
+    errorMessage?: string
     fieldId?: string
     label?: string
 }
 
-export default function FormField({ children, fieldId, label }: Props) {
+export default function FormField({
+    children,
+    errorMessage,
+    fieldId,
+    label,
+}: Props) {
     return (
         <div>
             {label && (
@@ -22,6 +25,10 @@ export default function FormField({ children, fieldId, label }: Props) {
             )}
 
             {children}
+
+            {errorMessage && (
+                <p className="mt-1 text-red-600">{errorMessage}</p>
+            )}
         </div>
     )
 }

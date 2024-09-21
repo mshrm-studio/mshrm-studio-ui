@@ -1,11 +1,11 @@
 'use client'
 
-import { set, useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Input } from '@/components/Admin/shadcnui/input'
 import { Button } from '@/components/Admin/shadcnui/button'
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import useDictionary from '@/utils/hooks/useDictionary'
 import { Textarea } from '@/components/Admin/shadcnui/textarea'
 import { toolTypes } from '@/utils/enums/ToolType'
@@ -14,7 +14,7 @@ import SelectFormItem from '@/components/Admin/FormItem/Select'
 import { Form, FormField } from '@/components/Admin/shadcnui/form'
 import useAxios from '@/utils/hooks/useAxios'
 import TemporaryFile, { isTemporaryFile } from '@/utils/dto/TemporaryFile'
-import Tool, { isTool } from '@/utils/dto/Tool'
+import Tool, { isToolResponse } from '@/utils/dto/Tool'
 import { useRouter } from 'next/navigation'
 import { useToast } from '@/components/Admin/shadcnui/use-toast'
 import { AxiosError } from 'axios'
@@ -89,7 +89,7 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
     })
 
     function handleSuccess(response: any) {
-        if (isTool(response.data)) {
+        if (isToolResponse(response)) {
             toast({
                 title: dict.tool.event.created,
             })
@@ -100,7 +100,7 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
         }
     }
 
-    function handleFailure(error: AxiosError) {
+    function handleFailure(_error: AxiosError) {
         // TODO: handle failure
     }
 

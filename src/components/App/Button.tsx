@@ -5,6 +5,8 @@ import { useRef } from 'react'
 
 type Props = {
     children: React.ReactNode
+    disabled?: boolean
+    processing?: boolean
     size?: 'base' | 'lg' | 'xl'
     title: string
     type?: 'button' | 'submit' | 'reset'
@@ -13,6 +15,8 @@ type Props = {
 
 export default function Button({
     children,
+    disabled,
+    processing,
     size = 'base',
     title,
     type = 'button',
@@ -29,7 +33,6 @@ export default function Button({
         if (hoverEffect && rect) {
             const x = e.clientX - rect.left
             const y = e.clientY - rect.top
-            console.log('handleMouseEnter', x, y)
 
             hoverEffect.style.left = `${x}px`
             hoverEffect.style.top = `${y}px`
@@ -44,7 +47,6 @@ export default function Button({
         if (hoverEffect && rect) {
             const x = e.clientX - rect.left
             const y = e.clientY - rect.top
-            console.log('handleMouseLeave', x, y)
 
             hoverEffect.style.left = `${x}px`
             hoverEffect.style.top = `${y}px`
@@ -56,6 +58,7 @@ export default function Button({
         <button
             ref={buttonRef}
             className={`${styles.button} ${size}`}
+            disabled={processing || disabled}
             aria-label={title}
             title={title}
             type={type}

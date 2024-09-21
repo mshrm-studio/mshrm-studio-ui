@@ -15,8 +15,11 @@ import ApiError, { isApiError } from '@/utils/dto/ApiError'
 import UserContext from '@/utils/context/User'
 import DestructiveAlert from '@/components/Admin/DestructiveAlert'
 import LoadingScreen from '@/components/LoadingScreen'
+import useProcessingStatus from '@/utils/hooks/useProcessingStatus'
+import { ProcessingStatus } from '@/utils/enums/ProcessingStatus'
+import { useRouter } from 'next/navigation'
 
-export default function Msal() {
+export default function MsalLogin() {
     const { instance, accounts, inProgress } = useMsal()
     const { user, setUser } = useContext(UserContext)
     const [apiError, setApiError] = useState<ApiError>()
@@ -26,50 +29,67 @@ export default function Msal() {
         loginRequest
     )
     const axios = useAxios()
+    const { startProcessing, status, stopProcessing } = useProcessingStatus()
+    const router = useRouter()
 
     function createUser() {
         axios
-            .post(`/api/v1/user/sso`)
+            .post(`/api/v1/users`)
             .then((response) => {
-                console.log('/api/v1/user/sso response:', response)
+                console.log('/api/v1/users response:', response)
                 if (isUser(response.data)) {
                     setUser(response.data)
 
-                    // TODO: navigate
+                    router.push('/')
                 } else {
                     setUnknownError(
                         `TODO (translate): System Error. Please try again or contact administrators on ${process.env.NEXT_PUBLIC_CONTACT_EMAIL}if problem persists. We apologise for the inconvenience.`
                     )
+
+                    stopProcessing()
                 }
             })
             .catch((error: AxiosError) => {
-                console.log('/api/v1/user/sso error:', error)
+                console.log('/api/v1/users error:', error)
                 if (isApiError(error.response?.data)) {
                     setApiError(error.response?.data)
                 } else {
                     setUnknownError(error)
                 }
+
+                stopProcessing()
             })
     }
 
     useEffect(() => {
+        if (status === ProcessingStatus.Pending) return
+
         if (inProgress === InteractionStatus.None && accounts.length > 0) {
+            console.log('accounts', accounts)
+            console.log(
+                'instance.getActiveAccount()',
+                instance.getActiveAccount()
+            )
+            startProcessing()
+
             axios
-                .get(`/api/v1/users`)
+                .get(`/api/v1/users/profile`)
                 .then((response) => {
-                    console.log('/api/v1/users response:', response)
+                    console.log('/api/v1/users/profile response:', response)
                     if (isUser(response.data)) {
                         setUser(response.data)
 
                         // TODO: navigate, add user to context.
                     } else {
                         setUnknownError(
-                            `TODO (translate): System Error. Please try again or contact administrators on ${process.env.NEXT_PUBLIC_CONTACT_EMAIL}if problem persists. We apologise for the inconvenience.`
+                            `TODO (translate): System Error. Please try again or contact administrators on ${process.env.NEXT_PUBLIC_CONTACT_EMAIL} if problem persists. We apologise for the inconvenience.`
                         )
+
+                        stopProcessing()
                     }
                 })
                 .catch((error: AxiosError) => {
-                    console.log('/api/v1/users error:', error)
+                    console.log('/api/v1/users/profile error:', error)
                     if (error.response?.status === 401) {
                         instance.acquireTokenRedirect({
                             ...loginRequest,
@@ -77,10 +97,14 @@ export default function Msal() {
                         })
                     } else if (error.response?.status === 404) {
                         createUser()
-                    } else if (isApiError(error.response?.data)) {
-                        setApiError(error.response?.data)
                     } else {
-                        setUnknownError(error)
+                        if (isApiError(error.response?.data)) {
+                            setApiError(error.response?.data)
+                        } else {
+                            setUnknownError(error)
+                        }
+
+                        stopProcessing()
                     }
                 })
         }

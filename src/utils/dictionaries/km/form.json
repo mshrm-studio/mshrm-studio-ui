@@ -1,4 +1,5 @@
 {
+    "deleteFile": "លុបឯកសារ",
     "rule": {
         "image": "ឯកសារត្រូវតែជារូបភាព (jpg, png, gif)",
         "max": {

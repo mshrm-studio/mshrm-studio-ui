@@ -11,7 +11,7 @@ export default async function Page({
     const dict = await loadDictionaries(lang, [
         'app/pages/contact',
         'common',
-        'app/form',
+        'form',
     ])
 
     return (

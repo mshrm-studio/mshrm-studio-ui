@@ -35,7 +35,6 @@ const HeaderAuthMenu: React.FC<Props> = ({}) => {
             ? {
                   id: 'microsoftLogout',
                   actionText: dict.header.authMenu.ssoSignOut,
-                  href: '/auth/sso/logout',
               }
             : {
                   id: 'microsoftLogin',

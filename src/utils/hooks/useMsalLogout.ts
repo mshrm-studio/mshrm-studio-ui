@@ -1,9 +1,9 @@
-// useLogout.js
+// useMsalLogout.js
 import { useCallback, useContext } from 'react'
 import { useMsal, useIsAuthenticated } from '@azure/msal-react'
 import UserContext from '@/utils/context/User'
 
-const useLogout = () => {
+const useMsalLogout = () => {
     const { instance } = useMsal()
     const authenticated = useIsAuthenticated()
     const { setUser } = useContext(UserContext)
@@ -13,7 +13,7 @@ const useLogout = () => {
 
         instance
             .logoutRedirect({
-                onRedirectNavigate: (url) => {
+                onRedirectNavigate: (_url) => {
                     // Return false if you would like to stop navigation after local logout
                     return false
                 },
@@ -27,4 +27,4 @@ const useLogout = () => {
     return logout
 }
 
-export default useLogout
+export default useMsalLogout

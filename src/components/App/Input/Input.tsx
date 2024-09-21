@@ -1,24 +1,34 @@
 import styles from '@/styles/input/input.module.css'
-import { useMemo } from 'react'
+import { forwardRef, useMemo } from 'react'
 import FormField from '@/components/App/FormField'
+import { FieldError } from 'react-hook-form'
 
 type Props = {
+    error?: FieldError
     id?: string
     label?: string
     name: string
     placeholder?: string
     required?: boolean
     type?: 'text' | 'email' | 'url'
+    value: string
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-export default function Input({
-    id,
-    label,
-    name,
-    placeholder,
-    required,
-    type = 'text',
-}: Props) {
+const Input = forwardRef<HTMLInputElement, Props>(function Input(
+    {
+        error,
+        id,
+        label,
+        name,
+        placeholder,
+        required,
+        type = 'text',
+        value,
+        onChange,
+    }: Props,
+    ref
+) {
     const labelWithAsterisk = useMemo(() => {
         if (!label) return undefined
 
@@ -36,15 +46,24 @@ export default function Input({
     }, [])
 
     return (
-        <FormField fieldId={id || name} label={labelWithAsterisk}>
+        <FormField
+            errorMessage={error?.message}
+            fieldId={id || name}
+            label={labelWithAsterisk}
+        >
             <input
                 id={id || name}
                 className={`${styles.input} ${invalid ? styles.invalid : ''}`}
                 name={name}
                 placeholder={placeholderWithAsterisk}
+                ref={ref}
                 required={required}
                 type={type}
+                value={value}
+                onChange={onChange}
             />
         </FormField>
     )
-}
+})
+
+export default Input

@@ -1,6 +1,6 @@
 import { Locale } from '@/utils/enums/Locale'
 import { loadDictionaries } from '@/app/[lang]/dictionaries'
-import MsalReact from '@/components/MsalReact'
+import MsalLogin from '@/components/Msal/Login'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
 
 export default async function Page({
@@ -12,7 +12,7 @@ export default async function Page({
 
     return (
         <DictionaryContextProvider dictionary={dict}>
-            <MsalReact />
+            <MsalLogin />
         </DictionaryContextProvider>
     )
 }
