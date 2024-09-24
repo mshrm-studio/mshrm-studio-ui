@@ -8,7 +8,7 @@ import {
 import EthAddress from '@/components/EthAddress'
 import { useIsAuthenticated } from '@azure/msal-react'
 import UserContext from '@/utils/context/User'
-import styles from '@/styles/pages/home/hero.module.css'
+import styles from '@/styles/pages/home/hero/hero.module.css'
 import { useContext } from 'react'
 import useDictionary from '@/utils/hooks/useDictionary'
 import useMsalLogout from '@/utils/hooks/useMsalLogout'
@@ -53,7 +53,7 @@ export default function HomePageHeroAuthOptions() {
                     <a
                         key="ssoLoginLink"
                         href="/auth/sso"
-                        className={styles.ssoLink}
+                        className={styles.ssoLoginLink}
                     >
                         {dict.home.ssoSignIn}
                     </a>

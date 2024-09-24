@@ -15,7 +15,7 @@ import { useIsAuthenticated } from '@azure/msal-react'
 import { useContext } from 'react'
 import UserContext from '@/utils/context/User'
 import useLogout from '@/utils/hooks/useMsalLogout'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 export default function AdminLayoutProfileMenu() {
     const dict = useDictionary()
@@ -23,6 +23,15 @@ export default function AdminLayoutProfileMenu() {
     const authenticated = useIsAuthenticated()
     const logout = useLogout()
     const router = useRouter()
+    const pathname = usePathname()
+
+    const handleSsoLoginRequest = () => {
+        console.log('Intended:', pathname)
+
+        localStorage.setItem('intended', pathname)
+
+        router.push('/auth/sso')
+    }
 
     return (
         <DropdownMenu>
@@ -62,7 +71,7 @@ export default function AdminLayoutProfileMenu() {
                         </DropdownMenuItem>
                     </>
                 ) : (
-                    <DropdownMenuItem onSelect={() => router.push('/auth/sso')}>
+                    <DropdownMenuItem onSelect={handleSsoLoginRequest}>
                         {dict.header.ssoSignIn}
                     </DropdownMenuItem>
                 )}

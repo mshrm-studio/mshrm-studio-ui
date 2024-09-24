@@ -12,9 +12,11 @@ export default function HomePageClients({ dict }: { dict: Dictionary }) {
             <ClientList
                 clients={clients.map((client) => ({
                     ...client,
-                    guidId: 'TODO',
-                    darkLogoGuidId: 'TODO',
-                    lightLogoGuidId: 'TODO',
+                    guid: `static/clients/${client.logoPrefix}`,
+                    darkLogoGuid: `static/clients/${client.logoPrefix}-dark.png`,
+                    darkLogoUrl: `static/clients/${client.logoPrefix}-dark.png`,
+                    lightLogoGuid: `static/clients/${client.logoPrefix}-light.png`,
+                    lightLogoUrl: `static/clients/${client.logoPrefix}-light.png`,
                     link: null,
                 }))}
                 dict={dict}

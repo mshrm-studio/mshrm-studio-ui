@@ -1,6 +1,18 @@
 .heroSection {
     margin-bottom: theme('spacing.12');
     min-height: calc(theme('height.screen') - 56px);
+    background-color: lightgray;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+:global(html.dark) .heroSection {
+    background-image: url('https://mshrmstudiostorage.blob.core.windows.net/static/pages/home/map-dark-static.png');
+}
+
+:global(html:not(.dark)) .heroSection {
+    background-image: url('https://mshrmstudiostorage.blob.core.windows.net/static/pages/home/map-light-static.png');
 }
 
 .headingAuthOptionsAndContactBtn {
@@ -22,7 +34,12 @@
     margin-top: theme('spacing.6');
 }
 
-.authOptions > .microsoftAuthOption > .ssoLink {
+.authOptions > .microsoftAuthOption .ssoUserEmail {
+    margin-right: theme('spacing.2');
+}
+
+.authOptions > .microsoftAuthOption .ssoLoginLink,
+.authOptions > .microsoftAuthOption .ssoLogoutLink {
     text-decoration: underline;
     font-weight: 700;
 }
@@ -32,16 +49,16 @@
     align-items: center;
 }
 
-.authOptions > .cryptoAuthOption > .cryptoLoginBtn {
+.authOptions > .cryptoAuthOption .cryptoLoginBtn {
     text-decoration: underline;
     font-weight: 700;
 }
 
-.authOptions > .cryptoAuthOption > .cryptoAddress {
+.authOptions > .cryptoAuthOption .cryptoAddress {
     margin-right: theme('spacing.3');
 }
 
-.authOptions > .cryptoAuthOption > .cryptoLogoutBtn {
+.authOptions > .cryptoAuthOption .cryptoLogoutBtn {
     text-decoration: underline;
     font-weight: 700;
 }
@@ -57,10 +74,6 @@
         justify-content: start;
         padding-top: theme('spacing.36');
         margin-bottom: 0;
-    }
-
-    .mapContainer {
-        transform: translateY(-25px);
     }
 
     .headingAuthOptionsAndContactBtn {
@@ -88,17 +101,6 @@
         margin-left: auto;
         margin-right: auto;
         position: relative;
-    }
-
-    .mapWrapper {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 55%;
-    }
-
-    .mapContainer {
-        transform: translateY(0);
     }
 
     .heading1Container {

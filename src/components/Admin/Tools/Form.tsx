@@ -13,7 +13,10 @@ import FormItem from '@/components/Admin/FormItem/FormItem'
 import SelectFormItem from '@/components/Admin/FormItem/Select'
 import { Form, FormField } from '@/components/Admin/shadcnui/form'
 import useAxios from '@/utils/hooks/useAxios'
-import TemporaryFile, { isTemporaryFile } from '@/utils/dto/TemporaryFile'
+import TemporaryFile, {
+    isTemporaryFile,
+    isTemporaryFileResponse,
+} from '@/utils/dto/TemporaryFile'
 import Tool, { isToolResponse } from '@/utils/dto/Tool'
 import { useRouter } from 'next/navigation'
 import { useToast } from '@/components/Admin/shadcnui/use-toast'
@@ -118,12 +121,12 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
 
         if (tool) {
             axios
-                .patch(`/aggregator/api/v1/tools/${tool.guidId}`, data)
+                .patch(`/api/v1/tools/${tool.guidId}`, data)
                 .then(handleSuccess)
                 .catch(handleFailure)
         } else {
             axios
-                .post('/aggregator/api/v1/tools', data)
+                .post('/api/v1/tools', data)
                 .then(handleSuccess)
                 .catch(handleFailure)
         }
@@ -141,9 +144,9 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
         }
 
         axios
-            .post('/aggregator/api/v1/files/temporary', formData, options)
+            .post('/api/v1/files/temporary', formData, options)
             .then((response) => {
-                if (isTemporaryFile(response.data)) {
+                if (isTemporaryFileResponse(response)) {
                     saveTool(values, response.data)
                 } else {
                     // TODO: handle unexpected response

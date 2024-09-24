@@ -1,7 +1,7 @@
 import ClientDto from '@/utils/dto/Client'
-import SpacesImg from '@/components/SpacesImage'
 import styles from '@/styles/client.module.css'
 import { Dictionary } from '@/app/[lang]/dictionaries'
+import BlobImage from '@/components/BlobImage'
 
 export default function Client({
     client,
@@ -14,10 +14,10 @@ export default function Client({
 
     return (
         <>
-            <SpacesImg
+            <BlobImage
                 className={`${styles.clientImg} ${styles.lightClientImg}`}
                 imgClassName="object-contain"
-                src={`static/companies/${client.lightLogoUrl}`}
+                src={client.lightLogoUrl}
                 alt={dict.common.lightEntityLogo.replace(
                     ':entity',
                     client.name
@@ -25,10 +25,10 @@ export default function Client({
                 sizes={sizes}
             />
 
-            <SpacesImg
+            <BlobImage
                 className={`${styles.clientImg} ${styles.darkClientImg}`}
                 imgClassName="object-contain"
-                src={`static/companies/${client.darkLogoUrl}`}
+                src={client.darkLogoUrl}
                 alt={dict.common.darkEntityLogo.replace(':entity', client.name)}
                 sizes={sizes}
             />

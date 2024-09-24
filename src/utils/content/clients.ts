@@ -1,42 +1,38 @@
 export default [
     {
-        name: 'AMEX',
-        darkLogoUrl: 'amex-dark.png',
-        lightLogoUrl: 'amex-light.png',
+        name: 'EMIG',
+        logoPrefix: 'emig',
     },
     {
-        name: 'Apple',
-        darkLogoUrl: 'apple-dark.png',
-        lightLogoUrl: 'apple-light.png',
+        name: 'First Digital',
+        logoPrefix: 'firstdigital',
     },
     {
-        name: 'Dr B',
-        darkLogoUrl: 'drb-dark.png',
-        lightLogoUrl: 'drb-light.png',
+        name: 'Maltby Surveys',
+        logoPrefix: 'maltby',
     },
     {
-        name: 'KAI',
-        darkLogoUrl: 'kai-dark.png',
-        lightLogoUrl: 'kai-light.png',
+        name: 'NeoHealthHub',
+        logoPrefix: 'nhh',
     },
     {
-        name: 'KCL',
-        darkLogoUrl: 'kcl-dark.png',
-        lightLogoUrl: 'kcl-light.png',
+        name: 'Nouns',
+        logoPrefix: 'nouns',
     },
     {
-        name: 'Microsoft',
-        darkLogoUrl: 'msft-dark.png',
-        lightLogoUrl: 'msft-light.png',
+        name: 'Quantifeed',
+        logoPrefix: 'quantifeed',
     },
     {
-        name: 'Rayban',
-        darkLogoUrl: 'rayban-dark.png',
-        lightLogoUrl: 'rayban-light.png',
+        name: 'Sans Frontiere',
+        logoPrefix: 'sf',
     },
     {
-        name: 'Ted Baker',
-        darkLogoUrl: 'tedbaker-dark.png',
-        lightLogoUrl: 'tedbaker-light.png',
+        name: 'Simple KYC',
+        logoPrefix: 'skyc',
+    },
+    {
+        name: 'Spark Health',
+        logoPrefix: 'spark',
     },
 ]

@@ -1,9 +1,9 @@
 export default interface Client {
-    guidId: string
+    guid: string
     link: string | null
     name: string
-    darkLogoGuidId: string
+    darkLogoGuid: string
     darkLogoUrl: string
-    lightLogoGuidId: string
+    lightLogoGuid: string
     lightLogoUrl: string
 }

@@ -1,10 +1,12 @@
 'use client'
 
-import SpacesImage from '@/components/SpacesImage'
 import useDictionary from '@/utils/hooks/useDictionary'
+import { useTheme } from 'next-themes'
 import { useEffect } from 'react'
+import BlobImage from '@/components/BlobImage'
 
 export default function LoadingScreen() {
+    const { resolvedTheme } = useTheme()
     const dict = useDictionary()
 
     useEffect(() => {
@@ -19,11 +21,16 @@ export default function LoadingScreen() {
 
     return (
         <div className="fixed z-[999] inset-0 bg-black flex items-center justify-center">
-            <SpacesImage
+            <BlobImage
                 alt={dict.common.loading}
-                src="static/misc/loading.gif"
+                src={
+                    resolvedTheme === 'dark'
+                        ? 'static/misc/m-loader-64-darkmode.gif'
+                        : 'static/misc/m-loader-64-lightmode.gif'
+                }
                 height={50}
                 width={50}
+                priority
             />
         </div>
     )
