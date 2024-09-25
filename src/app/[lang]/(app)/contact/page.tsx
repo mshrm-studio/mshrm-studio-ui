@@ -1,11 +1,36 @@
-import { Locale } from '@/utils/enums/Locale'
+import { Locale, locales } from '@/utils/enums/Locale'
 import { loadDictionaries } from '@/app/[lang]/dictionaries'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
 import ContactForm from '@/components/App/ContactPage/Form'
+import type { Metadata } from 'next'
 
 type Props = Readonly<{
     params: { lang: Locale }
 }>
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const dict = await loadDictionaries(params.lang, ['app/pages/contact'])
+
+    return {
+        alternates: {
+            canonical: '/contact',
+            languages: locales.reduce((acc, locale) => {
+                acc[locale] = `/${locale}/contact`
+                return acc
+            }, {} as Record<string, string>),
+        },
+        description: dict.contact.metadata.description,
+        openGraph: {
+            description: dict.contact.metadata.description,
+            title: dict.contact.metadata.title,
+        },
+        title: dict.contact.metadata.title,
+        twitter: {
+            description: dict.contact.metadata.description,
+            title: dict.contact.metadata.title,
+        },
+    }
+}
 
 export default async function Page({ params }: Props) {
     const dict = await loadDictionaries(params.lang, [
