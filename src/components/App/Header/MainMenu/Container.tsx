@@ -1,6 +1,7 @@
 'use client'
 
 import DimensionsContext from '@/utils/context/Dimensions'
+import { useTheme } from 'next-themes'
 import { useContext, useEffect, useMemo } from 'react'
 
 type Props = {
@@ -9,6 +10,7 @@ type Props = {
 
 const HeaderMainMenuContainer: React.FC<Props> = ({ children }) => {
     const { dimensions } = useContext(DimensionsContext)
+    const { resolvedTheme } = useTheme()
 
     const navHeight = useMemo(() => {
         return dimensions.viewportHeight - dimensions.headerHeight
@@ -27,6 +29,15 @@ const HeaderMainMenuContainer: React.FC<Props> = ({ children }) => {
             document.body.style.overflow = 'auto'
         }
     }, [])
+
+    useEffect(() => {
+        const header = document.querySelector('header')
+
+        if (header) {
+            header.style.backgroundColor =
+                resolvedTheme === 'dark' ? 'black' : 'white'
+        }
+    }, [resolvedTheme])
 
     return (
         <div
