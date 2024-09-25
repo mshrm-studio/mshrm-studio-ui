@@ -10,6 +10,10 @@
         "source": "ソース",
         "volume": "取引量"
     },
+    "metadata": {
+        "description": "TODO",
+        "title": "mshrm.studioはアプリ、サイト、ソフトウェアを提供します。"
+    },
     "ourTools": "私たちのツール",
     "ssoSignIn": "Microsoftでログイン",
     "ssoSignOut": "ログアウト",

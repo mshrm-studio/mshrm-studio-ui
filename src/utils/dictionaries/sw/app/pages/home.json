@@ -10,6 +10,10 @@
         "source": "Chanzo",
         "volume": "Kiasi"
     },
+    "metadata": {
+        "description": "TODO",
+        "title": "mshrm.studio hutoa programu, tovuti, na programu tumizi."
+    },
     "ourTools": "Zana zetu",
     "ssoSignIn": "Ingia na Microsoft",
     "ssoSignOut": "Toka",

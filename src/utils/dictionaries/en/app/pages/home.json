@@ -10,6 +10,10 @@
         "source": "Source",
         "volume": "Volume"
     },
+    "metadata": {
+        "description": "Delivering cutting-edge solutions with AI, real-time data, RPA, and blockchain, while ensuring accessibility, internationalisation, and robust IT support through secure and agile development.",
+        "title": "mshrm.studio deliver apps, sites & software."
+    },
     "ourTools": "Our tools",
     "ssoSignIn": "Login with Microsoft",
     "ssoSignOut": "Logout",

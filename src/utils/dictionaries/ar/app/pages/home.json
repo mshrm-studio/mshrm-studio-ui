@@ -10,6 +10,10 @@
         "source": "مصدر",
         "volume": "مقدار"
     },
+    "metadata": {
+        "description": "TODO",
+        "title": "mshrm.studio تقدم تطبيقات ومواقع وبرمجيات"
+    },
     "ourTools": "أدواتنا",
     "ssoSignIn": "تسجيل الدخول مع مايكروسوفت",
     "ssoSignOut": "تسجيل خروج",

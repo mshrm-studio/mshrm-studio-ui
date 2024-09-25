@@ -10,6 +10,10 @@
         "source": "Quelle",
         "volume": "Volumen"
     },
+    "metadata": {
+        "description": "TODO",
+        "title": "mshrm.studio liefert Apps, Websites und Software"
+    },
     "ourTools": "Unsere Werkzeuge",
     "ssoSignIn": "Melden Sie sich bei Microsoft an",
     "ssoSignOut": "Ausloggen",

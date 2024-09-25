@@ -10,6 +10,10 @@
         "source": "来源",
         "volume": "体积"
     },
+    "metadata": {
+        "description": "TODO",
+        "title": "mshrm.studio 提供应用程序、网站和软件"
+    },
     "ourTools": "我们的工具",
     "ssoSignIn": "使用微軟登入",
     "ssoSignOut": "登出",
