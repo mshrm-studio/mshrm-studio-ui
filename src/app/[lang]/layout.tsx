@@ -11,8 +11,8 @@ import Head from 'next/head'
 
 export const metadata: Metadata = {
     creator: 'mshrm.studio team',
-    description: 'Bespoke apps, sites & software', // TODO
-    icons: `${process.env.NEXT_PUBLIC_DO_STORAGE_URL}/static/brand/m-favicon.png`,
+    description: 'Bespoke apps, sites & software', // Overwrite on page.tsx
+    icons: `${process.env.NEXT_PUBLIC_BLOB_STORAGE_URL}/static/brand/m-favicon.png`,
     keywords: [
         'android app design',
         'android app development',
@@ -27,35 +27,35 @@ export const metadata: Metadata = {
         'website development',
     ],
     openGraph: {
-        description: 'Bespoke apps, sites & software', // TODO
+        description: 'Bespoke apps, sites & software', // Overwrite on page.tsx
         emails: process.env.NEXT_PUBLIC_CONTACT_EMAIL,
         images: [
-            `${process.env.NEXT_PUBLIC_DO_STORAGE_URL}/static/brand/og-img.png`,
+            `${process.env.NEXT_PUBLIC_BLOB_STORAGE_URL}/static/brand/og-img.png`,
         ],
         siteName: process.env.NEXT_PUBLIC_SITE_NAME,
-        title: process.env.NEXT_PUBLIC_SITE_NAME,
+        title: process.env.NEXT_PUBLIC_SITE_NAME, // Overwrite on page.tsx
         type: 'website',
         url: process.env.NEXT_PUBLIC_URL,
     },
     other: {
         'fc:frame': 'vNext',
-        'fc:frame:image': `${process.env.NEXT_PUBLIC_DO_STORAGE_URL}/static/brand/og-img.png`,
+        'fc:frame:image': `${process.env.NEXT_PUBLIC_BLOB_STORAGE_URL}/static/brand/og-img.png`,
         'fc:frame:image:aspect_ratio': '1:1',
         'fc:frame:button:1':
             process.env.NEXT_PUBLIC_SITE_NAME || 'mshrm.studio',
         'fc:frame:button:1:action': 'link',
         'fc:frame:button:1:target':
-            process.env.NEXT_PUBLIC_URL || 'https://mshrm.studio',
+            process.env.NEXT_PUBLIC_URL || 'https://www.mshrm.studio',
     },
     publisher: process.env.NEXT_PUBLIC_SITE_NAME,
-    title: process.env.NEXT_PUBLIC_SITE_NAME,
+    title: process.env.NEXT_PUBLIC_SITE_NAME, // Overwrite on page.tsx
     twitter: {
         card: 'summary_large_image',
         creator: `@${process.env.NEXT_PUBLIC_X_HANDLE}`,
-        description: 'Bespoke apps, sites & software', // TODO
-        images: `${process.env.NEXT_PUBLIC_DO_STORAGE_URL}/static/brand/og-img.png`,
+        description: 'Bespoke apps, sites & software', // Overwrite on page.tsx
+        images: `${process.env.NEXT_PUBLIC_BLOB_STORAGE_URL}/static/brand/og-img.png`,
         site: `@${process.env.NEXT_PUBLIC_X_HANDLE}`,
-        title: process.env.NEXT_PUBLIC_SITE_NAME,
+        title: process.env.NEXT_PUBLIC_SITE_NAME, // Overwrite on page.tsx
     },
 }
 
@@ -65,7 +65,7 @@ const jsonLd = {
     '@type': 'Organization',
     name: process.env.NEXT_PUBLIC_SITE_NAME,
     url: process.env.NEXT_PUBLIC_URL,
-    logo: `${process.env.NEXT_PUBLIC_DO_STORAGE_URL}/static/brand/m-glyph-black.png`,
+    logo: `${process.env.NEXT_PUBLIC_BLOB_STORAGE_URL}/static/brand/m-glyph-black.png`,
     description: 'Bespoke apps, sites & software', // TODO
     sameAs: [
         `https://x.com/${process.env.NEXT_PUBLIC_X_HANDLE}`,

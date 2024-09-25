@@ -1,6 +1,8 @@
 .heroSection {
-    margin-bottom: theme('spacing.12');
-    min-height: calc(theme('height.screen') - 56px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: theme('height.screen');
     background-color: lightgray;
     background-position: 50% 50%;
     background-size: cover;
@@ -69,10 +71,7 @@
 
 @media screen and (min-width: theme('screens.sm')) {
     .heroSection {
-        display: flex;
         flex-direction: column-reverse;
-        justify-content: start;
-        padding-top: theme('spacing.36');
         margin-bottom: 0;
     }
 

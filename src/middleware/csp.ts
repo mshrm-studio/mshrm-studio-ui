@@ -21,7 +21,7 @@ export function cspMiddleware(request: NextRequest) {
             "'self'",
             'blob:',
             'data:',
-            'https://mshrm.fra1.cdn.digitaloceanspaces.com',
+            'https://mshrmstudiostorage.blob.core.windows.net',
         ],
         'font-src': ["'self'", 'https://fonts.gstatic.com'],
         'form-action': ["'self'"],

@@ -16,15 +16,15 @@ export default function Avatar({
     src: string
     fallback?: string
 }) {
-    const spacesStorageUrl = process.env.NEXT_PUBLIC_DO_STORAGE_URL
+    const blobStorageUrl = process.env.NEXT_PUBLIC_BLOB_STORAGE_URL
 
     const imgSrc = useMemo(() => {
         return src.startsWith('http')
             ? src
             : src.startsWith('/')
-            ? `${spacesStorageUrl}${src}`
-            : `${spacesStorageUrl}/${src}`
-    }, [src])
+            ? `${blobStorageUrl}${src}`
+            : `${blobStorageUrl}/${src}`
+    }, [blobStorageUrl, src])
 
     return (
         <ShadcnuiAvatar>

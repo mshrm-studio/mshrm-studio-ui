@@ -12,17 +12,19 @@ export default async function Header({ locale }: { locale: Locale }) {
     return (
         <DictionaryContextProvider dictionary={dictionary}>
             <header className={styles.header}>
-                <div className={styles.logoAndThemeSwitcher}>
-                    <div className={styles.logoContainer}>
-                        <Logo dict={dictionary} />
+                <div className={styles.headerContent}>
+                    <div className={styles.logoAndThemeSwitcher}>
+                        <div className={styles.logoContainer}>
+                            <Logo dict={dictionary} />
+                        </div>
+
+                        <div className={styles.themeSwitcherContainer}>
+                            <ThemeSwitcher />
+                        </div>
                     </div>
 
-                    <div className={styles.themeSwitcherContainer}>
-                        <ThemeSwitcher />
-                    </div>
+                    <AuthAndMainNavigation />
                 </div>
-
-                <AuthAndMainNavigation />
             </header>
         </DictionaryContextProvider>
     )

@@ -95,12 +95,12 @@ export default [
         darkLogoUrl: 'azure-dark.png',
         lightLogoUrl: 'azure-light.png',
     },
-    {
-        name: 'Digital Ocean',
-        link: 'https://digitalocean.com',
-        darkLogoUrl: 'digitalocean-dark.png',
-        lightLogoUrl: 'digitalocean-light.png',
-    },
+    // {
+    //     name: 'Digital Ocean',
+    //     link: 'https://digitalocean.com',
+    //     darkLogoUrl: 'digitalocean-dark.png',
+    //     lightLogoUrl: 'digitalocean-light.png',
+    // },
     {
         name: 'AWS',
         link: 'https://aws.amazon.com',

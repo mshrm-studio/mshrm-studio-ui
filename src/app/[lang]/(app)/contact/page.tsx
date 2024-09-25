@@ -3,12 +3,12 @@ import { loadDictionaries } from '@/app/[lang]/dictionaries'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
 import ContactForm from '@/components/App/ContactPage/Form'
 
-export default async function Page({
-    params: { lang },
-}: Readonly<{
+type Props = Readonly<{
     params: { lang: Locale }
-}>) {
-    const dict = await loadDictionaries(lang, [
+}>
+
+export default async function Page({ params }: Props) {
+    const dict = await loadDictionaries(params.lang, [
         'app/pages/contact',
         'common',
         'form',

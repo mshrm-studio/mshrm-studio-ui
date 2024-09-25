@@ -1,5 +1,5 @@
 import { Dictionary } from '@/app/[lang]/dictionaries'
-import SpacesImg from '@/components/SpacesImage'
+import BlobImage from '@/components/BlobImage'
 
 type Props = {
     className?: string
@@ -10,7 +10,7 @@ type Props = {
 
 const BrandLogo: React.FC<Props> = ({ className, color, dict, priority }) => {
     return (
-        <SpacesImg
+        <BlobImage
             className={className}
             src={
                 color === 'black'

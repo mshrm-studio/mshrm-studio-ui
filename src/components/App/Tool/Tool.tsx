@@ -1,7 +1,7 @@
 import ToolDto from '@/utils/dto/Tool'
-import SpacesImg from '@/components/SpacesImage'
 import styles from '@/styles/tool.module.css'
 import { Dictionary } from '@/app/[lang]/dictionaries'
+import BlobImage from '@/components/BlobImage'
 
 export default function Tool({
     dict,
@@ -13,7 +13,7 @@ export default function Tool({
     return (
         <div className="space-y-2 flex flex-col items-center justify-center">
             <div>
-                <SpacesImg
+                <BlobImage
                     className={`${styles.toolImg} ${styles.lightToolImg}`}
                     src={`static/tools/${tool.lightLogoUrl}`}
                     alt={dict.common.lightEntityLogo.replace(
@@ -24,7 +24,7 @@ export default function Tool({
                     width={63}
                 />
 
-                <SpacesImg
+                <BlobImage
                     className={`${styles.toolImg} ${styles.darkToolImg}`}
                     src={`static/tools/${tool.darkLogoUrl}`}
                     alt={dict.common.darkEntityLogo.replace(
