@@ -1,8 +1,6 @@
 .clientImg {
-    min-height: 65px;
-    min-width: 80px;
-    max-height: 80px;
-    max-width: 210px;
+    min-height: 75px;
+    min-width: 100px;
 }
 
 :global(html.dark) .darkClientImg {
