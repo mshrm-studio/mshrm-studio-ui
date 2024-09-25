@@ -36,6 +36,10 @@ const HeaderMainMenuContainer: React.FC<Props> = ({ children }) => {
         if (header) {
             header.style.backgroundColor =
                 resolvedTheme === 'dark' ? 'black' : 'white'
+
+            return () => {
+                header.style.backgroundColor = ''
+            }
         }
     }, [resolvedTheme])
 
