@@ -3,18 +3,17 @@
     justify-content: center;
     flex-direction: column;
     min-height: theme('height.screen');
-    background-color: lightgray;
     background-position: 50% 50%;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
 :global(html.dark) .heroSection {
-    background-image: url('https://mshrmstudiostorage.blob.core.windows.net/static/pages/home/map-dark-static.png');
+    background-image: url('https://mshrmstudiostorage.blob.core.windows.net/static/pages/home/map-dark.png');
 }
 
 :global(html:not(.dark)) .heroSection {
-    background-image: url('https://mshrmstudiostorage.blob.core.windows.net/static/pages/home/map-light-static.png');
+    background-image: url('https://mshrmstudiostorage.blob.core.windows.net/static/pages/home/map-light.png');
 }
 
 .headingAuthOptionsAndContactBtn {
