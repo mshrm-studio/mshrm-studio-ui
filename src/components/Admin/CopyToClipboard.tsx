@@ -33,7 +33,7 @@ export default function CopyToClipboard({
                 title={dict.common.copyToClipboard}
                 onClick={onClick}
             >
-                <ClipboardCopy />
+                <ClipboardCopy className="h-4 w-4" />
             </button>
 
             <div>{children}</div>

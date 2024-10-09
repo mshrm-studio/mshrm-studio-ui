@@ -7,7 +7,7 @@ const useTool = () => {
 
     const fetchTool = useCallback(
         (guid: string) => {
-            fetchData(`/aggregator/api/v1/tools/guid/${guid}`)
+            fetchData(`/api/v1/tools/${guid}`)
         },
         [fetchData]
     )

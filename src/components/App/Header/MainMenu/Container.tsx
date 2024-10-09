@@ -14,11 +14,7 @@ const HeaderMainMenuContainer: React.FC<Props> = ({ children }) => {
 
     const navHeight = useMemo(() => {
         return dimensions.viewportHeight - dimensions.headerHeight
-    }, [
-        dimensions.headerHeight,
-        dimensions.viewportHeight,
-        dimensions.viewportWidth,
-    ])
+    }, [dimensions.headerHeight, dimensions.viewportHeight])
 
     useEffect(() => {
         // Disable scrolling on mount
@@ -45,10 +41,12 @@ const HeaderMainMenuContainer: React.FC<Props> = ({ children }) => {
 
     return (
         <div
-            className="absolute z-[998] top-full left-0 w-full bg-white dark:bg-black"
-            style={{ height: navHeight }}
+            className="fixed z-[998] left-0 w-full bg-white dark:bg-black"
+            style={{ height: navHeight, top: dimensions.headerHeight }}
         >
-            <div className="h-full px-6 flex items-center">{children}</div>
+            <div className="h-full px-6 flex items-center xl:max-w-site xl:mx-auto">
+                {children}
+            </div>
         </div>
     )
 }

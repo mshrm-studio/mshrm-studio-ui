@@ -1,10 +1,6 @@
 .heroSection {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    min-height: theme('height.screen');
     background-position: 50% 50%;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -14,6 +10,13 @@
 
 :global(html:not(.dark)) .heroSection {
     background-image: url('https://mshrmstudiostorage.blob.core.windows.net/static/pages/home/map-light.png');
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: theme('height.screen');
 }
 
 .headingAuthOptionsAndContactBtn {
@@ -69,7 +72,7 @@
 }
 
 @media screen and (min-width: theme('screens.sm')) {
-    .heroSection {
+    .content {
         flex-direction: column-reverse;
         margin-bottom: 0;
     }
@@ -94,7 +97,7 @@
 }
 
 @media screen and (min-width: theme('screens.xl')) {
-    .heroSection {
+    .content {
         max-width: theme('maxWidth.site');
         margin-left: auto;
         margin-right: auto;

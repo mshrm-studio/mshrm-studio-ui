@@ -4,8 +4,8 @@ import clients from '@/utils/content/clients'
 
 export default function HomePageClients({ dict }: { dict: Dictionary }) {
     return (
-        <section className="mb-6 md:mb-12 xl:max-w-site xl:mx-auto">
-            <div className="px-6 mb-6 md:mb-12">
+        <section className="mb-6 md:mb-12">
+            <div className="px-6 mb-6 md:mb-12 xl:max-w-site xl:mx-auto">
                 <h2 className="font-bold">{dict.home.weHaveWorkedWith}</h2>
             </div>
 

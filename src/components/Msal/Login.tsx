@@ -35,27 +35,12 @@ export default function MsalLogin() {
     function redirectUser() {
         const intended = localStorage.getItem('intended')
 
-        if (intended) {
-            localStorage.removeItem('intended')
-            router.push(intended)
-        } else {
-            router.push('/')
-        }
+        router.push(intended || '/')
     }
 
     function createUser() {
-        const account = instance.getActiveAccount()
-
-        const data = {
-            firstName: account?.name?.split(' ')[0] || 'Undefined',
-            lastName: account?.name?.split(' ')[1] || 'Undefined',
-            active: true,
-        }
-
-        // TODO: Remove
-
         axios
-            .post(`/api/v1/users`, data)
+            .post(`/api/v1/users`)
             .then((response) => {
                 console.log('/api/v1/users response:', response)
                 if (isUserResponse(response)) {

@@ -6,8 +6,7 @@ export default interface User {
     firstName?: string | null
     fullName?: string | null
     lastName?: string | null
-    confirmed: boolean
-    roleType: RoleType
+    roles: RoleType[]
 }
 
 export interface UserResponse {
