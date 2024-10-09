@@ -7,6 +7,6 @@ export default [
         lastName: 'Maltby',
         email: 'tcm@mshrm.studio',
         confirmed: false,
-        roleType: RoleType.Admin,
+        roles: [RoleType.Admin],
     },
 ]
