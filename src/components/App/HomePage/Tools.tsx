@@ -22,8 +22,7 @@ export default function HomePageTools({ dict }: { dict: Dictionary }) {
                         rank: 0,
                         toolType: ToolType.Technology,
                         description: null,
-                        darkLogoGuidId: 'TODO',
-                        lightLogoGuidId: 'TODO',
+                        logoGuidId: 'TODO',
                     }))}
             />
         </section>

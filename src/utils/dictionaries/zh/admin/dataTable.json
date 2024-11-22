@@ -6,6 +6,11 @@
         "logoUrl": "复制标志URL",
         "link": "复制链接"
     },
+    "delete": {
+        "marketEntity": "删除市场实体",
+        "tool": "删除工具",
+        "user": "删除用户"
+    },
     "edit": {
         "marketEntity": "编辑市场实体",
         "tool": "编辑工具",

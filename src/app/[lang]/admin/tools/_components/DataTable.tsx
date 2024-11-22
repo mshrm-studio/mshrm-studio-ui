@@ -2,18 +2,18 @@
 
 import { DataTable } from '@/components/Admin/shadcnui/data-table'
 import { ColumnDef } from '@tanstack/react-table'
-import DataTableRowActions from '@/components/Admin/Tools/DataTableRowActions'
-import Tool from '@/utils/dto/Tool'
-import { useEffect, useMemo } from 'react'
+import DataTableRowActions from '@/app/[lang]/admin/tools/_components/DataTableRowActions'
+import Tool, { isToolListResponse } from '@/utils/dto/Tool'
+import { useMemo } from 'react'
 import useDictionary from '@/utils/hooks/useDictionary'
 import Avatar from '@/components/Admin/Avatar'
-import useTools from '@/utils/hooks/useTools'
 import ConditionalFeedback from '@/components/Admin/ConditionalFeedback'
-import { useTheme } from 'next-themes'
+import { useSearchParams } from 'next/navigation'
+import { toolListFetcher } from '@/utils/repo/toolListFetcher'
+import useSWR from 'swr'
 
 export default function AdminToolsDataTable() {
     const dict = useDictionary()
-    const { resolvedTheme } = useTheme()
 
     const columns = useMemo<ColumnDef<Tool>[]>(() => {
         return [
@@ -23,11 +23,7 @@ export default function AdminToolsDataTable() {
                 cell: ({ row }) => {
                     return (
                         <Avatar
-                            src={`static/stack/${
-                                resolvedTheme === 'dark'
-                                    ? row.original.darkLogoUrl
-                                    : row.original.lightLogoUrl
-                            }`}
+                            src={row.original.LogoUrl}
                             alt={row.original.name}
                         />
                     )
@@ -51,17 +47,17 @@ export default function AdminToolsDataTable() {
         ]
     }, [dict])
 
-    const { error, fetching, fetchTools, toolList } = useTools()
+    const searchParams = useSearchParams()
 
-    useEffect(() => fetchTools(), [])
+    const { data, error, isLoading } = useSWR(searchParams, toolListFetcher)
 
     return (
-        <ConditionalFeedback fetching={fetching} error={error}>
-            {toolList && (
+        <ConditionalFeedback fetching={isLoading} error={error}>
+            {isToolListResponse(data) && (
                 <DataTable
                     columns={columns}
                     columnToSearch="name"
-                    data={toolList}
+                    data={data.results}
                 />
             )}
         </ConditionalFeedback>

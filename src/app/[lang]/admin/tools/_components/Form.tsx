@@ -12,21 +12,21 @@ import { toolTypes } from '@/utils/enums/ToolType'
 import FormItem from '@/components/Admin/FormItem/FormItem'
 import SelectFormItem from '@/components/Admin/FormItem/Select'
 import { Form, FormField } from '@/components/Admin/shadcnui/form'
-import useAxios from '@/utils/hooks/useAxios'
 import TemporaryFile, {
     isTemporaryFile,
     isTemporaryFileResponse,
 } from '@/utils/dto/TemporaryFile'
-import Tool, { isToolResponse } from '@/utils/dto/Tool'
+import Tool, { isTool } from '@/utils/dto/Tool'
 import { useRouter } from 'next/navigation'
 import { useToast } from '@/components/Admin/shadcnui/use-toast'
-import { AxiosError } from 'axios'
+import api from '@/utils/api'
+import useLocalisedHref from '@/utils/hooks/useLocalisedHref'
 
 export default function AdminToolsForm({ tool }: { tool?: Tool }) {
     const dict = useDictionary()
     const router = useRouter()
-    const axios = useAxios()
     const { toast } = useToast()
+    const { redirectTo } = useLocalisedHref()
 
     // 1 KB = 1 * 1024 bytes
     // 200 KB = 200 * 1024 bytes
@@ -92,22 +92,24 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
     })
 
     function handleSuccess(response: any) {
-        if (isToolResponse(response)) {
-            toast({
-                title: dict.tool.event.created,
-            })
+        toast({
+            title: dict.tool.event.created,
+        })
 
-            router.push(`/admin/tools/${response.data.guidId}`)
-        } else {
-            // TODO: handle unexpected response
-        }
+        redirectTo(
+            isTool(response)
+                ? `/admin/tools/${response.guidId}`
+                : '/admin/tools'
+        )
     }
 
-    function handleFailure(_error: AxiosError) {
+    function handleFailure(_error: unknown) {
         // TODO: handle failure
+
+        alert('Failed to save tool')
     }
 
-    function saveTool(
+    async function saveTool(
         values: z.infer<typeof formSchema>,
         temporaryFile: TemporaryFile
     ) {
@@ -119,39 +121,44 @@ export default function AdminToolsForm({ tool }: { tool?: Tool }) {
             },
         }
 
-        if (tool) {
-            axios
-                .patch(`/api/v1/tools/${tool.guidId}`, data)
-                .then(handleSuccess)
-                .catch(handleFailure)
-        } else {
-            axios
-                .post('/api/v1/tools', data)
-                .then(handleSuccess)
-                .catch(handleFailure)
+        try {
+            const endpoint = tool
+                ? `/api/v1/tools/${tool.guidId}`
+                : '/api/v1/tools'
+
+            const response = await api(endpoint, {
+                method: tool ? 'PATCH' : 'POST',
+                body: JSON.stringify(data),
+            })
+
+            console.log('response:', response)
+
+            handleSuccess(response)
+        } catch (error) {
+            handleFailure(error)
         }
     }
 
-    function uploadFile(values: z.infer<typeof formSchema>) {
+    async function uploadFile(values: z.infer<typeof formSchema>) {
         const formData = new FormData()
-
         formData.append('file', values.logo)
 
-        const options = {
-            headers: {
-                'Content-Type': 'multipart/form-data',
-            },
-        }
-
-        axios
-            .post('/api/v1/files/temporary', formData, options)
-            .then((response) => {
-                if (isTemporaryFileResponse(response)) {
-                    saveTool(values, response.data)
-                } else {
-                    // TODO: handle unexpected response
-                }
+        try {
+            const response = await api('/api/v1/files/temporary', {
+                method: 'POST',
+                body: formData,
             })
+
+            if (isTemporaryFile(response)) {
+                saveTool(values, response)
+            } else {
+                console.error('Unexpected response structure:', response)
+                // TODO: handle unexpected response
+            }
+        } catch (error) {
+            console.error('File upload failed:', error)
+            // TODO: handle error (e.g., show toast or retry)
+        }
     }
 
     function onSubmit(values: z.infer<typeof formSchema>) {

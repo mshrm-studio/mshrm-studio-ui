@@ -6,6 +6,11 @@
         "logoUrl": "Nakili URL ya nembo",
         "link": "Nakili kiungo"
     },
+    "delete": {
+        "marketEntity": "Futa chombo cha soko",
+        "tool": "Futa chombo",
+        "user": "Futa mtumiaji"
+    },
     "edit": {
         "marketEntity": "Hariri chombo cha soko",
         "tool": "Hariri chombo",

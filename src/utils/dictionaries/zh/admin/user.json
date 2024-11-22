@@ -4,6 +4,12 @@
         "edit": "编辑用户",
         "update": "更新用户"
     },
+    "deleteForm": {
+        "cancel": "取消",
+        "confirm": "确认",
+        "message": "您确定要删除此用户吗？",
+        "title": "删除用户"
+    },
     "event": {
         "created": "用户已创建",
         "deleted": "用户已删除",

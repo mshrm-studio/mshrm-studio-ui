@@ -6,6 +6,11 @@
         "logoUrl": "Logo-URL kopieren",
         "link": "Link kopieren"
     },
+    "delete": {
+        "marketEntity": "Markteinheit löschen",
+        "tool": "Werkzeug löschen",
+        "user": "Benutzer löschen"
+    },
     "edit": {
         "marketEntity": "Markteinheit bearbeiten",
         "tool": "Werkzeug bearbeiten",

@@ -6,6 +6,11 @@
         "logoUrl": "Copy logo URL",
         "link": "Copy link"
     },
+    "delete": {
+        "marketEntity": "Delete market entity",
+        "tool": "Delete tool",
+        "user": "Delete user"
+    },
     "edit": {
         "marketEntity": "Edit market entity",
         "tool": "Edit tool",

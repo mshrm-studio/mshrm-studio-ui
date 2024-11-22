@@ -4,6 +4,12 @@
         "edit": "Benutzer bearbeiten",
         "update": "Benutzer aktualisieren"
     },
+    "deleteForm": {
+        "cancel": "Abbrechen",
+        "confirm": "Bestätigen",
+        "message": "Möchten Sie diesen Benutzer wirklich löschen?",
+        "title": "Benutzer löschen"
+    },
     "event": {
         "created": "Benutzer erstellt",
         "deleted": "Benutzer gelöscht",

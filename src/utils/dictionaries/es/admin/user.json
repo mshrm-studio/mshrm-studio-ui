@@ -4,6 +4,12 @@
         "edit": "Editar usuario",
         "update": "Actualizar usuario"
     },
+    "deleteForm": {
+        "cancel": "Cancelar",
+        "confirm": "Confirmar",
+        "message": "¿Estás seguro de que deseas eliminar este usuario?",
+        "title": "Eliminar usuario"
+    },
     "event": {
         "created": "Usuario creado",
         "deleted": "Usuario eliminado",

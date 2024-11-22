@@ -4,6 +4,12 @@
         "edit": "Hariri mtumiaji",
         "update": "Sasisha mtumiaji"
     },
+    "deleteForm": {
+        "cancel": "Ghairi",
+        "confirm": "Thibitisha",
+        "message": "Je! Una uhakika unataka kufuta mtumiaji huyu?",
+        "title": "Futa mtumiaji"
+    },
     "event": {
         "created": "Mtumiaji ameundwa",
         "deleted": "Mtumiaji amefutwa",

@@ -6,6 +6,11 @@
         "logoUrl": "ロゴURLをコピー",
         "link": "リンクをコピー"
     },
+    "delete": {
+        "marketEntity": "市場エンティティを削除",
+        "tool": "ツールを削除",
+        "user": "ユーザーを削除"
+    },
     "edit": {
         "marketEntity": "市場エンティティを編集",
         "tool": "ツールを編集",

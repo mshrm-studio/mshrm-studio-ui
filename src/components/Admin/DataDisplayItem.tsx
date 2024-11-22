@@ -1,5 +1,5 @@
 import CopyToClipboard from '@/components/Admin/CopyToClipboard'
-import Link from 'next/link'
+import LocaleLink from '@/components/LocaleLink'
 import React from 'react'
 
 export default function DataDisplayItem({
@@ -18,13 +18,13 @@ export default function DataDisplayItem({
     const WrappedChildren = ({ children }: { children: React.ReactNode }) => {
         if (link) {
             return (
-                <Link
+                <LocaleLink
                     href={link}
                     target={link.startsWith('http') ? '_blank' : undefined}
                     className={linkClassName || 'text-link'}
                 >
                     {children}
-                </Link>
+                </LocaleLink>
             )
         }
 

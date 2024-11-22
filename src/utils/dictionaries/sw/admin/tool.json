@@ -4,6 +4,12 @@
         "edit": "Hariri zana",
         "update": "Sasisha zana"
     },
+    "deletForm": {
+        "cancel": "Ghairi",
+        "confirm": "Thibitisha",
+        "message": "Je! Una uhakika unataka kufuta zana hii?",
+        "title": "Futa zana"
+    },
     "event": {
         "created": "Zana imeundwa",
         "deleted": "Zana imefutwa",

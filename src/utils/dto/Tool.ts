@@ -1,4 +1,7 @@
 import { ToolType } from '@/utils/enums/ToolType'
+import ApiPaginatedResponse, {
+    isApiPaginatedResponse,
+} from '@/utils/dto/ApiPaginatedResponse'
 
 export default interface Tool {
     guidId: string
@@ -7,38 +10,17 @@ export default interface Tool {
     rank: number
     toolType: ToolType
     description: string | null
-    darkLogoGuidId: string
-    darkLogoUrl: string
-    lightLogoGuidId: string
-    lightLogoUrl: string
+    logoGuidId: string
+    LogoUrl: string
 }
 
-export interface ToolResponse {
-    data: Tool
-}
-
-export interface ToolListResponse {
-    data: {
-        results: Tool[]
-    }
+export interface ToolListResponse
+    extends Omit<ApiPaginatedResponse, 'results'> {
+    results: Tool[]
 }
 
 export function isTool(input: unknown): input is Tool {
-    return (
-        typeof input === 'object' &&
-        input !== null &&
-        'guidId' in input &&
-        'name' in input
-    )
-}
-
-export function isToolResponse(input: unknown): input is ToolResponse {
-    return (
-        typeof input === 'object' &&
-        input !== null &&
-        'data' in input &&
-        isTool(input.data)
-    )
+    return typeof input === 'object' && input !== null && 'name' in input
 }
 
 export function isToolList(input: unknown): input is Tool[] {
@@ -46,13 +28,5 @@ export function isToolList(input: unknown): input is Tool[] {
 }
 
 export function isToolListResponse(input: unknown): input is ToolListResponse {
-    return (
-        typeof input === 'object' &&
-        input !== null &&
-        'data' in input &&
-        typeof input.data === 'object' &&
-        input.data !== null &&
-        'results' in input.data &&
-        isToolList(input.data.results)
-    )
+    return isApiPaginatedResponse(input) && isToolList(input.results)
 }

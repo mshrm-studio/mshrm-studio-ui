@@ -4,6 +4,12 @@
         "edit": "Werkzeug bearbeiten",
         "update": "Werkzeug aktualisieren"
     },
+    "deleteForm": {
+        "cancel": "Abbrechen",
+        "confirm": "Bestätigen",
+        "message": "Möchten Sie dieses Werkzeug wirklich löschen?",
+        "title": "Werkzeug löschen"
+    },
     "event": {
         "created": "Werkzeug erstellt",
         "deleted": "Werkzeug gelöscht",

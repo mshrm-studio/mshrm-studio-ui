@@ -4,6 +4,12 @@
         "edit": "ツールを編集",
         "update": "ツールを更新"
     },
+    "deleteForm": {
+        "cancel": "キャンセル",
+        "confirm": "確認",
+        "message": "このツールを削除してもよろしいですか？",
+        "title": "ツールを削除"
+    },
     "event": {
         "created": "ツールが作成されました",
         "deleted": "ツールが削除されました",

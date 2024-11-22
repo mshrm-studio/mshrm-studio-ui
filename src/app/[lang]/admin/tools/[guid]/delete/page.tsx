@@ -1,9 +1,9 @@
 import { Locale, locales } from '@/utils/enums/Locale'
 import { loadDictionaries } from '@/app/[lang]/dictionaries'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
-import Form from '@/app/[lang]/admin/tools/_components/Form'
-import { toolFetcher } from '@/utils/repo/toolFetcher'
+import Form from '@/app/[lang]/admin/tools/[guid]/delete/_components/Form'
 import { toolListFetcher } from '@/utils/repo/toolListFetcher'
+import { toolFetcher } from '@/utils/repo/toolFetcher'
 
 export const dynamic = 'force-static'
 
@@ -37,7 +37,7 @@ export default async function Page({ params }: Readonly<PageProps>) {
 
     return (
         <DictionaryContextProvider dictionary={dict}>
-            <div id="admin-edit-tool">
+            <div id="admin-delete-tool">
                 <Form tool={data} />
             </div>
         </DictionaryContextProvider>

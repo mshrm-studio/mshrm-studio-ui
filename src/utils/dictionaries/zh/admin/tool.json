@@ -4,6 +4,12 @@
         "edit": "编辑工具",
         "update": "更新工具"
     },
+    "deleteForm": {
+        "cancel": "取消",
+        "confirm": "确认",
+        "message": "您确定要删除此工具吗？",
+        "title": "删除工具"
+    },
     "event": {
         "created": "工具已创建",
         "deleted": "工具已删除",

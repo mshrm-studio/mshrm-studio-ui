@@ -4,6 +4,12 @@
         "edit": "Editar herramienta",
         "update": "Actualizar herramienta"
     },
+    "deleteForm": {
+        "cancel": "Cancelar",
+        "confirm": "Confirmar",
+        "message": "¿Estás seguro de que quieres eliminar esta herramienta?",
+        "title": "Eliminar herramienta"
+    },
     "event": {
         "created": "Herramienta creada",
         "deleted": "Herramienta eliminada",

@@ -4,6 +4,12 @@
         "edit": "Edit tool",
         "update": "Update tool"
     },
+    "deleteForm": {
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "message": "Are you sure you want to delete this tool?",
+        "title": "Delete tool"
+    },
     "event": {
         "created": "Tool created",
         "deleted": "Tool deleted",

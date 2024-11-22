@@ -6,18 +6,18 @@ export default interface ApiPaginatedResponse {
 }
 
 export function isApiPaginatedResponse(
-    response: unknown
-): response is ApiPaginatedResponse {
+    input: unknown
+): input is ApiPaginatedResponse {
     return (
-        typeof response === 'object' &&
-        response !== null &&
-        'pageNumber' in response &&
-        typeof response.pageNumber === 'number' &&
-        'perPage' in response &&
-        typeof response.perPage === 'number' &&
-        'results' in response &&
-        Array.isArray(response.results) &&
-        'totalResults' in response &&
-        typeof response.totalResults === 'number'
+        typeof input === 'object' &&
+        input !== null &&
+        'pageNumber' in input &&
+        typeof input.pageNumber === 'number' &&
+        'perPage' in input &&
+        typeof input.perPage === 'number' &&
+        'results' in input &&
+        Array.isArray(input.results) &&
+        'totalResults' in input &&
+        typeof input.totalResults === 'number'
     )
 }

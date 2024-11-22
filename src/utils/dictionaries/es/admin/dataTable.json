@@ -6,6 +6,11 @@
         "logoUrl": "Copiar URL del logo",
         "link": "Copiar enlace"
     },
+    "delete": {
+        "marketEntity": "Eliminar entidad del mercado",
+        "tool": "Eliminar herramienta",
+        "user": "Eliminar usuario"
+    },
     "edit": {
         "marketEntity": "Editar entidad del mercado",
         "tool": "Editar herramienta",

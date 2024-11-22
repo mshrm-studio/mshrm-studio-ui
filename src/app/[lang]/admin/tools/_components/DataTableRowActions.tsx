@@ -13,7 +13,7 @@ import {
 import Tool from '@/utils/dto/Tool'
 import { useToast } from '@/components/Admin/shadcnui/use-toast'
 import useDictionary from '@/utils/hooks/useDictionary'
-import Link from 'next/link'
+import LocaleLink from '@/components/LocaleLink'
 
 export default function AdminToolsDataTableRowActions({
     tool,
@@ -51,11 +51,11 @@ export default function AdminToolsDataTableRowActions({
             <DropdownMenuContent align="end">
                 <DropdownMenuLabel>{dict.dataTable.actions}</DropdownMenuLabel>
 
-                <DropdownMenuItem onClick={() => copy(tool.lightLogoUrl)}>
+                <DropdownMenuItem onClick={() => copy(tool.LogoUrl)}>
                     {dict.dataTable.copy.logoUrl}
                 </DropdownMenuItem>
 
-                <DropdownMenuItem onClick={() => copy(tool.darkLogoUrl)}>
+                <DropdownMenuItem onClick={() => copy(tool.LogoUrl)}>
                     {dict.dataTable.copy.logoUrl}
                 </DropdownMenuItem>
 
@@ -68,15 +68,21 @@ export default function AdminToolsDataTableRowActions({
                 <DropdownMenuSeparator />
 
                 <DropdownMenuItem>
-                    <Link href={`/admin/tools/${tool.guidId}`}>
+                    <LocaleLink href={`/admin/tools/${tool.guidId}`}>
                         {dict.dataTable.view.tool}
-                    </Link>
+                    </LocaleLink>
                 </DropdownMenuItem>
 
                 <DropdownMenuItem>
-                    <Link href={`/admin/tools/${tool.guidId}/edit`}>
+                    <LocaleLink href={`/admin/tools/${tool.guidId}/edit`}>
                         {dict.dataTable.edit.tool}
-                    </Link>
+                    </LocaleLink>
+                </DropdownMenuItem>
+
+                <DropdownMenuItem>
+                    <LocaleLink href={`/admin/tools/${tool.guidId}/delete`}>
+                        {dict.dataTable.delete.tool}
+                    </LocaleLink>
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
