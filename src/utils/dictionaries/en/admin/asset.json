@@ -1,0 +1,64 @@
+{
+    "action": {
+        "create": "Create asset",
+        "edit": "Edit asset",
+        "update": "Update asset"
+    },
+    "deleteForm": {
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "message": "Are you sure you want to delete this asset?",
+        "title": "Delete asset"
+    },
+    "event": {
+        "created": "Asset created",
+        "deleted": "Asset deleted",
+        "updated": "Asset updated"
+    },
+    "form": {
+        "description": "Add a new asset to the website",
+        "item": {
+            "assetType": {
+                "label": "Asset type",
+                "description": "The type of the asset",
+                "placeholder": "Stock"
+            },
+            "decimalPlaces": {
+                "label": "Decimal places",
+                "description": "The number of decimal places of the asset",
+                "placeholder": "2"
+            },
+            "description": {
+                "label": "Description",
+                "description": "The description of the asset",
+                "placeholder": "Multinational technology company that develops software, hardware, and cloud services."
+            },
+            "logo": {
+                "label": "Logo",
+                "description": "The logo of the asset"
+            },
+            "name": {
+                "label": "Name",
+                "description": "The display name of the asset",
+                "placeholder": "Microsoft"
+            },
+            "providerType": {
+                "label": "Pricing Provider",
+                "description": "The provider of the pricing data",
+                "placeholder": "TwelveData"
+            },
+            "symbolNative": {
+                "label": "Symbol Native",
+                "description": "The symbol of the asset",
+                "placeholder": "MSFT"
+            },
+            "symbol": {
+                "label": "Symbol",
+                "description": "The symbol of the asset",
+                "placeholder": "MSFT"
+            }
+        },
+        "save": "Save asset",
+        "title": "Create new asset"
+    }
+}

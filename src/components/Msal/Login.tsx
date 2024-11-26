@@ -10,7 +10,6 @@ import { useMsal, useMsalAuthentication } from '@azure/msal-react'
 import { loginRequest } from '@/utils/msal/Auth'
 import useAxios from '@/utils/hooks/useAxios'
 import { AxiosError } from 'axios'
-import { isUserResponse } from '@/utils/dto/User'
 import ApiError, { isApiError } from '@/utils/dto/ApiError'
 import UserContext from '@/utils/context/User'
 import DestructiveAlert from '@/components/Admin/DestructiveAlert'
@@ -18,6 +17,7 @@ import LoadingScreen from '@/components/LoadingScreen'
 import useProcessingStatus from '@/utils/hooks/useProcessingStatus'
 import { ProcessingStatus } from '@/utils/enums/ProcessingStatus'
 import { useRouter } from 'next/navigation'
+import { isUser } from '@/utils/dto/User'
 
 export default function MsalLogin() {
     const { instance, accounts, inProgress } = useMsal()
@@ -43,7 +43,7 @@ export default function MsalLogin() {
             .post(`/api/v1/users`)
             .then((response) => {
                 console.log('/api/v1/users response:', response)
-                if (isUserResponse(response)) {
+                if (isUser(response?.data)) {
                     setUser(response.data)
 
                     redirectUser()
@@ -85,7 +85,7 @@ export default function MsalLogin() {
                 .get(`/api/v1/users/profile`)
                 .then((response) => {
                     console.log('/api/v1/users/profile response:', response)
-                    if (isUserResponse(response)) {
+                    if (isUser(response?.data)) {
                         setUser(response.data)
 
                         redirectUser()

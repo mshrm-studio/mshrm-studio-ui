@@ -1,17 +1,17 @@
 {
     "mainNavigation": {
+        "assets": "資産",
         "conversations": "会話",
         "dashboard": "ダッシュボード",
         "home": "ホーム",
-        "marketEntities": "市場エンティティ",
         "tools": "ツール",
         "users": "ユーザー"
     },
     "pageTitle": {
+        "assets": "資産",
         "conversations": "会話",
         "dashboard": "ダッシュボード",
         "home": "ホーム",
-        "marketEntities": "市場エンティティ",
         "tools": "ツール",
         "users": "ユーザー"
     },

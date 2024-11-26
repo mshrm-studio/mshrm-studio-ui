@@ -1,0 +1,64 @@
+{
+    "action": {
+        "create": "アセットを作成",
+        "edit": "アセットを編集",
+        "update": "アセットを更新"
+    },
+    "deleteForm": {
+        "cancel": "キャンセル",
+        "confirm": "確認",
+        "message": "このアセットを削除してもよろしいですか？",
+        "title": "アセットを削除"
+    },
+    "event": {
+        "created": "アセットが作成されました",
+        "deleted": "アセットが削除されました",
+        "updated": "アセットが更新されました"
+    },
+    "form": {
+        "description": "ウェブサイトに新しいアセットを追加",
+        "item": {
+            "assetType": {
+                "label": "資産の種類",
+                "description": "資産の種類",
+                "placeholder": "株式"
+            },
+            "decimalPlaces": {
+                "label": "小数点以下の桁数",
+                "description": "資産の小数点以下の桁数",
+                "placeholder": "2"
+            },
+            "description": {
+                "label": "説明",
+                "description": "資産の説明",
+                "placeholder": "ソフトウェア、ハードウェア、クラウドサービスを開発する多国籍技術企業。"
+            },
+            "logo": {
+                "label": "ロゴ",
+                "description": "資産のロゴ"
+            },
+            "name": {
+                "label": "名前",
+                "description": "資産の表示名",
+                "placeholder": "マイクロソフト"
+            },
+            "providerType": {
+                "label": "価格プロバイダー",
+                "description": "価格データの提供者",
+                "placeholder": "TwelveData"
+            },
+            "symbolNative": {
+                "label": "ネイティブシンボル",
+                "description": "資産のシンボル",
+                "placeholder": "MSFT"
+            },
+            "symbol": {
+                "label": "シンボル",
+                "description": "資産のシンボル",
+                "placeholder": "MSFT"
+            }
+        },
+        "save": "アセットを保存",
+        "title": "新しいアセットを作成"
+    }
+}

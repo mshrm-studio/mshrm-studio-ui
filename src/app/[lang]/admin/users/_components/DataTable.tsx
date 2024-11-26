@@ -2,12 +2,16 @@
 
 import { DataTable } from '@/components/Admin/shadcnui/data-table'
 import { ColumnDef } from '@tanstack/react-table'
-import User from '@/utils/dto/User'
+import User, { isUserListResponse } from '@/utils/dto/User'
 import { useMemo } from 'react'
 import useDictionary from '@/utils/hooks/useDictionary'
-import DataTableRowActions from '@/components/Admin/Users/DataTableRowActions'
+import DataTableRowActions from '@/app/[lang]/admin/users/_components/DataTableRowActions'
+import { useSearchParams } from 'next/navigation'
+import useSWR from 'swr'
+import ConditionalFeedback from '@/components/Admin/ConditionalFeedback'
+import { userListFetcher } from '@/utils/repo/userListFetcher'
 
-export default function AdminUsersDataTable({ users }: { users: User[] }) {
+export default function UsersDataTable() {
     const dict = useDictionary()
 
     const columns = useMemo<ColumnDef<User>[]>(() => {
@@ -34,5 +38,17 @@ export default function AdminUsersDataTable({ users }: { users: User[] }) {
         ]
     }, [dict])
 
-    return <DataTable columns={columns} columnToSearch="email" data={users} />
+    const searchParams = useSearchParams()
+
+    const { data, error, isLoading } = useSWR(searchParams, () =>
+        userListFetcher(searchParams.toString())
+    )
+
+    return (
+        <ConditionalFeedback fetching={isLoading} error={error}>
+            {isUserListResponse(data) && (
+                <DataTable columns={columns} data={data.results} meta={data} />
+            )}
+        </ConditionalFeedback>
+    )
 }

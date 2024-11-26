@@ -1,0 +1,64 @@
+{
+    "action": {
+        "create": "Asset erstellen",
+        "edit": "Asset bearbeiten",
+        "update": "Asset aktualisieren"
+    },
+    "deleteForm": {
+        "cancel": "Abbrechen",
+        "confirm": "Bestätigen",
+        "message": "Sind Sie sicher, dass Sie dieses Asset löschen möchten?",
+        "title": "Asset löschen"
+    },
+    "event": {
+        "created": "Asset erstellt",
+        "deleted": "Asset gelöscht",
+        "updated": "Asset aktualisiert"
+    },
+    "form": {
+        "description": "Ein neues Asset zur Website hinzufügen",
+        "item": {
+            "assetType": {
+                "label": "Assettyp",
+                "description": "Der Typ des Assets",
+                "placeholder": "Aktie"
+            },
+            "decimalPlaces": {
+                "label": "Dezimalstellen",
+                "description": "Die Anzahl der Dezimalstellen des Assets",
+                "placeholder": "2"
+            },
+            "description": {
+                "label": "Beschreibung",
+                "description": "Die Beschreibung des Assets",
+                "placeholder": "Multinationales Technologieunternehmen, das Software, Hardware und Cloud-Dienste entwickelt."
+            },
+            "logo": {
+                "label": "Logo",
+                "description": "Das Logo des Assets"
+            },
+            "name": {
+                "label": "Name",
+                "description": "Der Anzeigename des Assets",
+                "placeholder": "Microsoft"
+            },
+            "providerType": {
+                "label": "Preis Anbieter",
+                "description": "Der Anbieter der Preisdaten",
+                "placeholder": "TwelveData"
+            },
+            "symbolNative": {
+                "label": "Symbol (Nativ)",
+                "description": "Das Symbol des Assets",
+                "placeholder": "MSFT"
+            },
+            "symbol": {
+                "label": "Symbol",
+                "description": "Das Symbol des Assets",
+                "placeholder": "MSFT"
+            }
+        },
+        "save": "Asset speichern",
+        "title": "Neues Asset erstellen"
+    }
+}

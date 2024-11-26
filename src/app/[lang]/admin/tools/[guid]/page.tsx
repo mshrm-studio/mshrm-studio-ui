@@ -57,8 +57,6 @@ export default async function Page({ params }: Readonly<PageProps>) {
 
                     <Separator />
 
-                    <Separator />
-
                     <DataDisplayItem label={dict.attribute.description}>
                         {tool.description || '-'}
                     </DataDisplayItem>

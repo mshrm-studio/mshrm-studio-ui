@@ -7,12 +7,12 @@
         "link": "Link kopieren"
     },
     "delete": {
-        "marketEntity": "Markteinheit löschen",
+        "asset": "Asset löschen",
         "tool": "Werkzeug löschen",
         "user": "Benutzer löschen"
     },
     "edit": {
-        "marketEntity": "Markteinheit bearbeiten",
+        "asset": "Asset bearbeiten",
         "tool": "Werkzeug bearbeiten",
         "user": "Benutzer bearbeiten"
     },
@@ -26,7 +26,6 @@
     "toggleTableColumnOptions": "Tabellenspaltenoptionen umschalten",
     "toggleTableRowMenu": "Tabellenzeilenmenü umschalten",
     "view": {
-        "marketEntity": "Markteinheit anzeigen",
         "tool": "Werkzeug anzeigen",
         "user": "Benutzer anzeigen"
     }

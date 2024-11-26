@@ -7,12 +7,12 @@
         "link": "Copy link"
     },
     "delete": {
-        "marketEntity": "Delete market entity",
+        "asset": "Delete asset",
         "tool": "Delete tool",
         "user": "Delete user"
     },
     "edit": {
-        "marketEntity": "Edit market entity",
+        "asset": "Edit asset",
         "tool": "Edit tool",
         "user": "Edit user"
     },
@@ -26,7 +26,7 @@
     "toggleTableColumnOptions": "Toggle table column options",
     "toggleTableRowMenu": "Toggle table row menu",
     "view": {
-        "marketEntity": "View market entity",
+        "asset": "View asset",
         "tool": "View tool",
         "user": "View user"
     }

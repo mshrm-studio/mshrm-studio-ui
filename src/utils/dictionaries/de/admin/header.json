@@ -1,17 +1,17 @@
 {
     "mainNavigation": {
+        "assets": "Vermögenswerte",
         "conversations": "Gespräche",
         "dashboard": "Instrumententafel",
         "home": "Startseite",
-        "marketEntities": "Markteinheiten",
         "tools": "Werkzeuge",
         "users": "Benutzer"
     },
     "pageTitle": {
+        "assets": "Vermögenswerte",
         "conversations": "Gespräche",
         "dashboard": "Instrumententafel",
         "home": "Startseite",
-        "marketEntities": "Markteinheiten",
         "tools": "Werkzeuge",
         "users": "Benutzer"
     },

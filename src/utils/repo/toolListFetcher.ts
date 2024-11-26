@@ -1,7 +1,7 @@
 import { isToolListResponse } from '@/utils/dto/Tool'
 import api from '@/utils/api'
 
-export async function toolListFetcher(params?: URLSearchParams) {
+export async function toolListFetcher(params?: string) {
     const endpoint = `/api/v1/tools`
 
     try {

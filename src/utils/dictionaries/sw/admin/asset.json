@@ -1,0 +1,64 @@
+{
+    "action": {
+        "create": "Unda mali",
+        "edit": "Hariri mali",
+        "update": "Sasisha mali"
+    },
+    "deleteForm": {
+        "cancel": "Ghairi",
+        "confirm": "Thibitisha",
+        "message": "Je, una hakika unataka kufuta mali hii?",
+        "title": "Futa mali"
+    },
+    "event": {
+        "created": "Mali imeundwa",
+        "deleted": "Mali imefutwa",
+        "updated": "Mali imesasishwa"
+    },
+    "form": {
+        "description": "Ongeza mali mpya kwenye tovuti",
+        "item": {
+            "assetType": {
+                "label": "Aina ya mali",
+                "description": "Aina ya mali",
+                "placeholder": "Hisa"
+            },
+            "decimalPlaces": {
+                "label": "Nambari za desimali",
+                "description": "Idadi ya nambari za desimali za mali",
+                "placeholder": "2"
+            },
+            "description": {
+                "label": "Maelezo",
+                "description": "Maelezo ya mali",
+                "placeholder": "Kampuni ya teknolojia ya kimataifa inayotengeneza programu, vifaa, na huduma za wingu."
+            },
+            "logo": {
+                "label": "Nembo",
+                "description": "Nembo ya mali"
+            },
+            "name": {
+                "label": "Jina",
+                "description": "Jina la kuonyesha la mali",
+                "placeholder": "Microsoft"
+            },
+            "providerType": {
+                "label": "Mtoa Bei",
+                "description": "Mtoa data ya bei",
+                "placeholder": "TwelveData"
+            },
+            "symbolNative": {
+                "label": "Alama ya Asili",
+                "description": "Alama ya mali",
+                "placeholder": "MSFT"
+            },
+            "symbol": {
+                "label": "Alama",
+                "description": "Alama ya mali",
+                "placeholder": "MSFT"
+            }
+        },
+        "save": "Hifadhi mali",
+        "title": "Unda mali mpya"
+    }
+}

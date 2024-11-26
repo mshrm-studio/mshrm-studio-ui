@@ -15,11 +15,7 @@ import { useToast } from '@/components/Admin/shadcnui/use-toast'
 import useDictionary from '@/utils/hooks/useDictionary'
 import LocaleLink from '@/components/LocaleLink'
 
-export default function AdminToolsDataTableRowActions({
-    tool,
-}: {
-    tool: Tool
-}) {
+export default function DataTableRowActions({ tool }: { tool: Tool }) {
     const dict = useDictionary()
 
     const { toast } = useToast()

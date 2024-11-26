@@ -1,17 +1,17 @@
 {
     "mainNavigation": {
+        "assets": "Activos",
         "conversations": "Conversaciones",
         "dashboard": "Tablero",
         "home": "Inicio",
-        "marketEntities": "Entidades de mercado",
         "tools": "Herramientas",
         "users": "Usuarios"
     },
     "pageTitle": {
+        "assets": "Activos",
         "conversations": "Conversaciones",
         "dashboard": "Tablero",
         "home": "Inicio",
-        "marketEntities": "Entidades de mercado",
         "tools": "Herramientas",
         "users": "Usuarios"
     },

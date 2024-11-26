@@ -1,17 +1,17 @@
 {
     "mainNavigation": {
+        "assets": "资产",
         "conversations": "对话",
         "dashboard": "仪表板",
         "home": "首页",
-        "marketEntities": "市场实体",
         "tools": "工具",
         "users": "用户"
     },
     "pageTitle": {
+        "assets": "资产",
         "conversations": "对话",
         "dashboard": "仪表板",
         "home": "首页",
-        "marketEntities": "市场实体",
         "tools": "工具",
         "users": "用户"
     },

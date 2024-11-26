@@ -1,7 +1,7 @@
 import { Locale } from '@/utils/enums/Locale'
 import { loadDictionaries } from '@/app/[lang]/dictionaries'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
-import UserForm from '@/components/Admin/Users/Form'
+import Form from '@/app/[lang]/admin/users/_components/Form'
 
 export default async function Page({
     params: { lang },
@@ -18,7 +18,7 @@ export default async function Page({
     return (
         <DictionaryContextProvider dictionary={dict}>
             <div id="admin-create-user">
-                <UserForm />
+                <Form />
             </div>
         </DictionaryContextProvider>
     )

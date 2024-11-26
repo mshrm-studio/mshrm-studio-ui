@@ -7,12 +7,12 @@
         "link": "复制链接"
     },
     "delete": {
-        "marketEntity": "删除市场实体",
+        "asset": "删除资产",
         "tool": "删除工具",
         "user": "删除用户"
     },
     "edit": {
-        "marketEntity": "编辑市场实体",
+        "asset": "编辑资产",
         "tool": "编辑工具",
         "user": "编辑用户"
     },
@@ -26,7 +26,7 @@
     "toggleTableColumnOptions": "切换表列选项",
     "toggleTableRowMenu": "切换表行菜单",
     "view": {
-        "marketEntity": "查看市场实体",
+        "asset": "查看资产",
         "tool": "查看工具",
         "user": "查看用户"
     }

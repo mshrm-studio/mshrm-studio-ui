@@ -7,12 +7,12 @@
         "link": "Nakili kiungo"
     },
     "delete": {
-        "marketEntity": "Futa chombo cha soko",
+        "asset": "Futa mali",
         "tool": "Futa chombo",
         "user": "Futa mtumiaji"
     },
     "edit": {
-        "marketEntity": "Hariri chombo cha soko",
+        "asset": "Hariri mali",
         "tool": "Hariri chombo",
         "user": "Hariri mtumiaji"
     },
@@ -26,7 +26,7 @@
     "toggleTableColumnOptions": "Badilisha chaguo za safu za jedwali",
     "toggleTableRowMenu": "Badilisha menyu ya safu ya jedwali",
     "view": {
-        "marketEntity": "Tazama chombo cha soko",
+        "asset": "Tazama mali",
         "tool": "Tazama chombo",
         "user": "Tazama mtumiaji"
     }

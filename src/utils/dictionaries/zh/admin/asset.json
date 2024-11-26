@@ -1,0 +1,64 @@
+{
+    "action": {
+        "create": "创建资产",
+        "edit": "编辑资产",
+        "update": "更新资产"
+    },
+    "deleteForm": {
+        "cancel": "取消",
+        "confirm": "确认",
+        "message": "您确定要删除此资产吗？",
+        "title": "删除资产"
+    },
+    "event": {
+        "created": "资产已创建",
+        "deleted": "资产已删除",
+        "updated": "资产已更新"
+    },
+    "form": {
+        "description": "向网站添加新资产",
+        "item": {
+            "assetType": {
+                "label": "资产类型",
+                "description": "资产的类型",
+                "placeholder": "股票"
+            },
+            "decimalPlaces": {
+                "label": "小数位数",
+                "description": "资产的小数位数",
+                "placeholder": "2"
+            },
+            "description": {
+                "label": "描述",
+                "description": "资产的描述",
+                "placeholder": "开发软件、硬件和云服务的跨国技术公司。"
+            },
+            "logo": {
+                "label": "标志",
+                "description": "资产的标志"
+            },
+            "name": {
+                "label": "名称",
+                "description": "资产的显示名称",
+                "placeholder": "微软"
+            },
+            "providerType": {
+                "label": "价格提供者",
+                "description": "价格数据的提供者",
+                "placeholder": "TwelveData"
+            },
+            "symbolNative": {
+                "label": "原始符号",
+                "description": "资产的符号",
+                "placeholder": "MSFT"
+            },
+            "symbol": {
+                "label": "符号",
+                "description": "资产的符号",
+                "placeholder": "MSFT"
+            }
+        },
+        "save": "保存资产",
+        "title": "创建新资产"
+    }
+}

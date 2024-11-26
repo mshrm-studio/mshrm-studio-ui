@@ -1,4 +1,10 @@
 {
+    "AssetType": {
+        "Fiat": "法定货币",
+        "Crypto": "加密货币",
+        "Stocks": "股票",
+        "Metals": "金属"
+    },
     "RoleType": {
         "Admin": "管理员",
         "User": "用户"

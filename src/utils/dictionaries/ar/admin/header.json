@@ -1,17 +1,17 @@
 {
     "mainNavigation": {
+        "assets": "الأصول",
         "conversations": "محادثات",
         "dashboard": "لوحة القيادة",
         "home": "الصفحة الرئيسية",
-        "marketEntities": "الكيانات السوقية",
         "tools": "أدوات",
         "users": "المستخدمون"
     },
     "pageTitle": {
+        "assets": "الأصول",
         "conversations": "محادثات",
         "dashboard": "لوحة القيادة",
         "home": "الصفحة الرئيسية",
-        "marketEntities": "الكيانات السوقية",
         "tools": "أدوات",
         "users": "المستخدمون"
     },

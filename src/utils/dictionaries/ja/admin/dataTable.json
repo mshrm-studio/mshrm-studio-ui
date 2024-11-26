@@ -7,12 +7,12 @@
         "link": "リンクをコピー"
     },
     "delete": {
-        "marketEntity": "市場エンティティを削除",
+        "asset": "アセットを削除",
         "tool": "ツールを削除",
         "user": "ユーザーを削除"
     },
     "edit": {
-        "marketEntity": "市場エンティティを編集",
+        "asset": "アセットを編集",
         "tool": "ツールを編集",
         "user": "ユーザーを編集"
     },
@@ -26,7 +26,7 @@
     "toggleTableColumnOptions": "テーブル列オプションを切り替え",
     "toggleTableRowMenu": "テーブル行メニューを切り替え",
     "view": {
-        "marketEntity": "市場エンティティを見る",
+        "asset": "アセットを見る",
         "tool": "ツールを見る",
         "user": "ユーザーを見る"
     }

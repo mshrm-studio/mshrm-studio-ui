@@ -5,7 +5,7 @@ import User from '@/utils/dto/User'
 import users from '@/utils/content/users'
 import { Button } from '@/components/Admin/shadcnui/button'
 import Link from 'next/link'
-import UsersDataTable from '@/components/Admin/Users/DataTable'
+import UsersDataTable from '@/app/[lang]/admin/users/_components/DataTable'
 
 async function getData(): Promise<User[]> {
     // TODO: Fetch data from your API here.
@@ -38,7 +38,7 @@ export default async function Page({
                     </Button>
                 </div>
 
-                <UsersDataTable users={data} />
+                <UsersDataTable />
             </div>
         </DictionaryContextProvider>
     )

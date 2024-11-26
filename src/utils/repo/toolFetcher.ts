@@ -1,7 +1,9 @@
+import 'server-only'
+import { cache } from 'react'
 import { isTool } from '@/utils/dto/Tool'
 import api from '@/utils/api'
 
-export async function toolFetcher(guid: string) {
+export const toolFetcher = cache(async (guid: string) => {
     try {
         const data = await api(`/api/v1/tools/${guid}`)
 
@@ -13,4 +15,4 @@ export async function toolFetcher(guid: string) {
     } catch (error) {
         throw error
     }
-}
+})

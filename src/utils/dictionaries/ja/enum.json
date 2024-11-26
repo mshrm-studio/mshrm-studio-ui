@@ -1,4 +1,10 @@
 {
+    "AssetType": {
+        "Fiat": "フィアット",
+        "Crypto": "暗号通貨",
+        "Stocks": "株式",
+        "Metals": "金属"
+    },
     "RoleType": {
         "Admin": "管理者",
         "User": "ユーザー"

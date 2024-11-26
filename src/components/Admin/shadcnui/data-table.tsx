@@ -2,9 +2,6 @@
 
 import {
     ColumnDef,
-    ColumnFiltersState,
-    SortingState,
-    VisibilityState,
     flexRender,
     getCoreRowModel,
     getFilteredRowModel,
@@ -21,117 +18,95 @@ import {
     TableRow,
 } from '@/components/Admin/shadcnui/table'
 import { Button } from '@/components/Admin/shadcnui/button'
-import {
-    DropdownMenu,
-    DropdownMenuCheckboxItem,
-    DropdownMenuContent,
-    DropdownMenuTrigger,
-} from '@/components/Admin/shadcnui/dropdown-menu'
-import { ChevronDown } from 'lucide-react'
 import { Input } from '@/components/Admin/shadcnui/input'
-import { useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import useDictionary from '@/utils/hooks/useDictionary'
+import ApiPaginatedResponse from '@/utils/dto/ApiPaginatedResponse'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { debounce } from 'lodash'
 
 interface DataTableProps<TData, TValue> {
     columns: ColumnDef<TData, TValue>[]
     data: TData[]
-    columnToSearch: string
+    meta: ApiPaginatedResponse
 }
 
 export function DataTable<TData, TValue>({
     columns,
     data,
-    columnToSearch,
+    meta,
 }: DataTableProps<TData, TValue>) {
     // TODO: Add searching of multiple columns
 
     const dict = useDictionary()
 
-    const [sorting, setSorting] = useState<SortingState>([])
-
-    const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([])
-
-    const [columnVisibility, setColumnVisibility] = useState<VisibilityState>(
-        {}
-    )
-
-    const [rowSelection, setRowSelection] = useState({})
+    const searchParams = useSearchParams()
+    const router = useRouter()
 
     const table = useReactTable({
-        data,
         columns,
-        onSortingChange: setSorting,
-        onColumnFiltersChange: setColumnFilters,
+        data,
+        manualPagination: true,
+        pageCount: Math.ceil(meta.totalResults / meta.perPage),
+        state: {
+            pagination: {
+                pageIndex: meta.pageNumber - 1,
+                pageSize: meta.perPage,
+            },
+        },
         getCoreRowModel: getCoreRowModel(),
+        getFilteredRowModel: getFilteredRowModel(),
         getPaginationRowModel: getPaginationRowModel(),
         getSortedRowModel: getSortedRowModel(),
-        getFilteredRowModel: getFilteredRowModel(),
-        onColumnVisibilityChange: setColumnVisibility,
-        onRowSelectionChange: setRowSelection,
-        state: {
-            sorting,
-            columnFilters,
-            columnVisibility,
-            rowSelection,
-        },
     })
+
+    const goToPage = useCallback(
+        (pageNumber: number) => {
+            table.setPageIndex(pageNumber - 1)
+            const params = new URLSearchParams(searchParams.toString())
+            params.set('pageNumber', pageNumber.toString())
+            router.replace(`?${params.toString()}`)
+        },
+        [searchParams]
+    )
+
+    const goToNextPage = useCallback(() => {
+        goToPage(meta.pageNumber + 1)
+    }, [meta.pageNumber])
+
+    const goToPreviousPage = useCallback(() => {
+        goToPage(meta.pageNumber - 1)
+    }, [meta.pageNumber])
+
+    const [search, setSearch] = useState(searchParams.get('search') || '')
+
+    useEffect(() => {
+        const updateSearch = debounce(() => {
+            const params = new URLSearchParams(searchParams.toString())
+
+            if (search) {
+                params.set('search', search)
+            } else {
+                params.delete('search')
+            }
+
+            router.replace(`?${params.toString()}`)
+        }, 500)
+
+        updateSearch()
+
+        return () => updateSearch.cancel()
+    }, [search])
 
     return (
         <div className="w-full">
-            <div className="flex space-x-3 justify-between items-center mb-4">
-                {table.getColumn(columnToSearch) && (
-                    <Input
-                        placeholder={`${dict.dataTable.search}...`}
-                        value={
-                            (table
-                                .getColumn(columnToSearch)
-                                ?.getFilterValue() as string) ?? ''
-                        }
-                        onChange={(event) =>
-                            table
-                                .getColumn(columnToSearch)
-                                ?.setFilterValue(event.target.value)
-                        }
-                        className="max-w-sm"
-                    />
-                )}
-
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                        <Button
-                            aria-label={dict.dataTable.toggleTableColumnOptions}
-                            title={dict.dataTable.toggleTableColumnOptions}
-                            variant="outline"
-                            className="ml-auto"
-                        >
-                            {dict.dataTable.columns}{' '}
-                            <ChevronDown className="ml-2 h-4 w-4" />
-                        </Button>
-                    </DropdownMenuTrigger>
-
-                    <DropdownMenuContent align="end">
-                        {table
-                            .getAllColumns()
-                            .filter((column) => column.getCanHide())
-                            .map((column) => {
-                                return (
-                                    <DropdownMenuCheckboxItem
-                                        key={column.id}
-                                        className="capitalize"
-                                        checked={column.getIsVisible()}
-                                        onCheckedChange={(value) =>
-                                            column.toggleVisibility(!!value)
-                                        }
-                                    >
-                                        {typeof column.columnDef.header ===
-                                        'string'
-                                            ? column.columnDef.header
-                                            : column.id}
-                                    </DropdownMenuCheckboxItem>
-                                )
-                            })}
-                    </DropdownMenuContent>
-                </DropdownMenu>
+            <div className="mb-4">
+                <Input
+                    className="max-w-sm"
+                    placeholder={`${dict.dataTable.search}...`}
+                    onChange={(event) => setSearch(event.target.value)}
+                    value={search}
+                />
             </div>
 
             <div className="rounded-md border">
@@ -196,10 +171,7 @@ export function DataTable<TData, TValue>({
                             ':numberOfResultsShown',
                             table.getFilteredRowModel().rows.length
                         )
-                        .replace(
-                            ':totalResults',
-                            table.getFilteredRowModel().rows.length
-                        )}
+                        .replace(':totalResults', meta.totalResults)}
                 </div>
 
                 <div className="space-x-2">
@@ -208,7 +180,7 @@ export function DataTable<TData, TValue>({
                         title={dict.dataTable.goToPreviousPage}
                         variant="outline"
                         size="sm"
-                        onClick={() => table.previousPage()}
+                        onClick={goToPreviousPage}
                         disabled={!table.getCanPreviousPage()}
                     >
                         {dict.dataTable.previous}
@@ -219,7 +191,7 @@ export function DataTable<TData, TValue>({
                         title={dict.dataTable.goToNextPage}
                         variant="outline"
                         size="sm"
-                        onClick={() => table.nextPage()}
+                        onClick={goToNextPage}
                         disabled={!table.getCanNextPage()}
                     >
                         {dict.dataTable.next}

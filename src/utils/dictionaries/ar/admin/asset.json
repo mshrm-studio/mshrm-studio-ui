@@ -1,0 +1,64 @@
+{
+    "action": {
+        "create": "إنشاء أصل",
+        "edit": "تعديل الأصل",
+        "update": "تحديث الأصل"
+    },
+    "deleteForm": {
+        "cancel": "إلغاء",
+        "confirm": "تأكيد",
+        "message": "هل أنت متأكد أنك تريد حذف هذا الأصل؟",
+        "title": "حذف الأصل"
+    },
+    "event": {
+        "created": "تم إنشاء الأصل",
+        "deleted": "تم حذف الأصل",
+        "updated": "تم تحديث الأصل"
+    },
+    "form": {
+        "description": "إضافة أصل جديد إلى الموقع",
+        "item": {
+            "assetType": {
+                "label": "نوع الأصل",
+                "description": "نوع الأصل",
+                "placeholder": "سهم"
+            },
+            "decimalPlaces": {
+                "label": "الأماكن العشرية",
+                "description": "عدد الأماكن العشرية للأصل",
+                "placeholder": "2"
+            },
+            "description": {
+                "label": "الوصف",
+                "description": "وصف الأصل",
+                "placeholder": "شركة تكنولوجيا متعددة الجنسيات تطور البرمجيات والأجهزة والخدمات السحابية."
+            },
+            "logo": {
+                "label": "الشعار",
+                "description": "شعار الأصل"
+            },
+            "name": {
+                "label": "الاسم",
+                "description": "الاسم المعروض للأصل",
+                "placeholder": "مايكروسوفت"
+            },
+            "providerType": {
+                "label": "مزود التسعير",
+                "description": "مزود بيانات التسعير",
+                "placeholder": "TwelveData"
+            },
+            "symbolNative": {
+                "label": "الرمز الأصلي",
+                "description": "رمز الأصل",
+                "placeholder": "MSFT"
+            },
+            "symbol": {
+                "label": "الرمز",
+                "description": "رمز الأصل",
+                "placeholder": "MSFT"
+            }
+        },
+        "save": "حفظ الأصل",
+        "title": "إنشاء أصل جديد"
+    }
+}

@@ -1,4 +1,10 @@
 {
+    "AssetType": {
+        "Fiat": "Fiat",
+        "Crypto": "Cripto",
+        "Stocks": "Acciones",
+        "Metals": "Metales"
+    },
     "RoleType": {
         "Admin": "Administrador",
         "User": "Usuario"

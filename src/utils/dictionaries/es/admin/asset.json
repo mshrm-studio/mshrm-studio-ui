@@ -1,0 +1,64 @@
+{
+    "action": {
+        "create": "Crear activo",
+        "edit": "Editar activo",
+        "update": "Actualizar activo"
+    },
+    "deleteForm": {
+        "cancel": "Cancelar",
+        "confirm": "Confirmar",
+        "message": "¿Estás seguro de que deseas eliminar este activo?",
+        "title": "Eliminar activo"
+    },
+    "event": {
+        "created": "Activo creado",
+        "deleted": "Activo eliminado",
+        "updated": "Activo actualizado"
+    },
+    "form": {
+        "description": "Agregar un nuevo activo al sitio web",
+        "item": {
+            "assetType": {
+                "label": "Tipo de activo",
+                "description": "El tipo del activo",
+                "placeholder": "Acción"
+            },
+            "decimalPlaces": {
+                "label": "Lugares decimales",
+                "description": "El número de lugares decimales del activo",
+                "placeholder": "2"
+            },
+            "description": {
+                "label": "Descripción",
+                "description": "La descripción del activo",
+                "placeholder": "Empresa multinacional de tecnología que desarrolla software, hardware y servicios en la nube."
+            },
+            "logo": {
+                "label": "Logo",
+                "description": "El logo del activo"
+            },
+            "name": {
+                "label": "Nombre",
+                "description": "El nombre para mostrar del activo",
+                "placeholder": "Microsoft"
+            },
+            "providerType": {
+                "label": "Proveedor de precios",
+                "description": "El proveedor de los datos de precios",
+                "placeholder": "TwelveData"
+            },
+            "symbolNative": {
+                "label": "Símbolo nativo",
+                "description": "El símbolo del activo",
+                "placeholder": "MSFT"
+            },
+            "symbol": {
+                "label": "Símbolo",
+                "description": "El símbolo del activo",
+                "placeholder": "MSFT"
+            }
+        },
+        "save": "Guardar activo",
+        "title": "Crear nuevo activo"
+    }
+}

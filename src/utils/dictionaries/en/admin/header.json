@@ -1,17 +1,17 @@
 {
     "mainNavigation": {
+        "assets": "Assets",
         "conversations": "Conversations",
         "dashboard": "Dashboard",
         "home": "Home",
-        "marketEntities": "Market entities",
         "tools": "Tools",
         "users": "Users"
     },
     "pageTitle": {
+        "assets": "Assets",
         "conversations": "Conversations",
         "dashboard": "Dashboard",
         "home": "Home",
-        "marketEntities": "Market Entities",
         "tools": "Tools",
         "users": "Users"
     },

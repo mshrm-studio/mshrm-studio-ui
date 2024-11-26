@@ -1,6 +1,5 @@
-import { AxiosError } from 'axios'
 import DestructiveAlert from '@/components/Admin/DestructiveAlert'
-import { RefreshCw } from 'lucide-react'
+import LoadingImage from '@/components/LoadingImage'
 
 export default function ConditionalFeedback({
     children,
@@ -8,10 +7,10 @@ export default function ConditionalFeedback({
     fetching,
 }: {
     children: React.ReactNode
-    error?: AxiosError
+    error?: unknown
     fetching?: boolean
 }) {
-    if (fetching) return <RefreshCw />
+    if (fetching) return <LoadingImage height={50} width={50} priority />
 
     if (error)
         return <DestructiveAlert>{JSON.stringify(error)}</DestructiveAlert>

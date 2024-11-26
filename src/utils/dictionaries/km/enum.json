@@ -1,4 +1,10 @@
 {
+    "AssetType": {
+        "Fiat": "លុយ",
+        "Crypto": "កាក់ឌីជីថល",
+        "Stocks": "ភាគហ៊ុន",
+        "Metals": "លោហៈ"
+    },
     "RoleType": {
         "Admin": "អ្នកគ្រប់គ្រង",
         "User": "អ្នកប្រើ"

@@ -1,4 +1,10 @@
 {
+    "AssetType": {
+        "Fiat": "Fiat",
+        "Crypto": "Kripto",
+        "Stocks": "Hisa",
+        "Metals": "Metali"
+    },
     "RoleType": {
         "Admin": "Msimamizi",
         "User": "Mtumiaji"

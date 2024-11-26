@@ -29,8 +29,8 @@ export default function AdminLayoutNavigation() {
                 shortcut: 'H',
             },
             {
-                title: dict.header.mainNavigation.marketEntities,
-                href: '/admin/market-entities',
+                title: dict.header.mainNavigation.assets,
+                href: '/admin/assets',
                 icon: <CandlestickChart className={iconClassName} />,
                 shortcut: 'M',
             },

@@ -1,17 +1,17 @@
 {
     "mainNavigation": {
+        "assets": "Mali",
         "conversations": "Mazungumzo",
         "dashboard": "Dashibodi",
         "home": "Nyumbani",
-        "marketEntities": "Vyombo vya Soko",
         "tools": "Zana",
         "users": "Watumiaji"
     },
     "pageTitle": {
+        "assets": "Mali",
         "conversations": "Mazungumzo",
         "dashboard": "Dashibodi",
         "home": "Nyumbani",
-        "marketEntities": "Vyombo vya Soko",
         "tools": "Zana",
         "users": "Watumiaji"
     },

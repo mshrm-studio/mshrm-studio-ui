@@ -7,12 +7,12 @@
         "link": "Copiar enlace"
     },
     "delete": {
-        "marketEntity": "Eliminar entidad del mercado",
+        "asset": "Eliminar activo",
         "tool": "Eliminar herramienta",
         "user": "Eliminar usuario"
     },
     "edit": {
-        "marketEntity": "Editar entidad del mercado",
+        "asset": "Editar activo",
         "tool": "Editar herramienta",
         "user": "Editar usuario"
     },
@@ -26,7 +26,7 @@
     "toggleTableColumnOptions": "Alternar opciones de columna de la tabla",
     "toggleTableRowMenu": "Alternar menú de fila de la tabla",
     "view": {
-        "marketEntity": "Ver entidad del mercado",
+        "asset": "Ver activo",
         "tool": "Ver herramienta",
         "user": "Ver usuario"
     }

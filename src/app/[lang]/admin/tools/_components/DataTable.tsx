@@ -12,7 +12,7 @@ import { useSearchParams } from 'next/navigation'
 import { toolListFetcher } from '@/utils/repo/toolListFetcher'
 import useSWR from 'swr'
 
-export default function AdminToolsDataTable() {
+export default function ToolsDataTable() {
     const dict = useDictionary()
 
     const columns = useMemo<ColumnDef<Tool>[]>(() => {
@@ -49,16 +49,14 @@ export default function AdminToolsDataTable() {
 
     const searchParams = useSearchParams()
 
-    const { data, error, isLoading } = useSWR(searchParams, toolListFetcher)
+    const { data, error, isLoading } = useSWR(searchParams, () =>
+        toolListFetcher(searchParams.toString())
+    )
 
     return (
         <ConditionalFeedback fetching={isLoading} error={error}>
             {isToolListResponse(data) && (
-                <DataTable
-                    columns={columns}
-                    columnToSearch="name"
-                    data={data.results}
-                />
+                <DataTable columns={columns} data={data.results} meta={data} />
             )}
         </ConditionalFeedback>
     )

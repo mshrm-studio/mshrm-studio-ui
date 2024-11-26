@@ -1,4 +1,10 @@
 {
+    "AssetType": {
+        "Fiat": "نقدي",
+        "Crypto": "عملة مشفرة",
+        "Stocks": "أسهم",
+        "Metals": "معادن"
+    },
     "RoleType": {
         "Admin": "مسؤول",
         "User": "مستخدم"

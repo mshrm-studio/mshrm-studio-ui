@@ -10,15 +10,12 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from '@/components/Admin/shadcnui/dropdown-menu'
-import User from '@/utils/dto/User'
+import Asset from '@/utils/dto/Asset'
 import { useToast } from '@/components/Admin/shadcnui/use-toast'
 import useDictionary from '@/utils/hooks/useDictionary'
+import LocaleLink from '@/components/LocaleLink'
 
-export default function AdminUsersDataTableRowActions({
-    user,
-}: {
-    user: User
-}) {
+export default function DataTableRowActions({ asset }: { asset: Asset }) {
     const dict = useDictionary()
 
     const { toast } = useToast()
@@ -50,17 +47,31 @@ export default function AdminUsersDataTableRowActions({
             <DropdownMenuContent align="end">
                 <DropdownMenuLabel>{dict.dataTable.actions}</DropdownMenuLabel>
 
-                {user.email && (
-                    <DropdownMenuItem
-                        onClick={() => copy(user.email as string)}
-                    >
-                        {dict.dataTable.copy.email}
+                {typeof asset.logoUrl === 'string' && (
+                    <DropdownMenuItem onClick={() => copy(asset.logoUrl || '')}>
+                        {dict.dataTable.copy.logoUrl}
                     </DropdownMenuItem>
                 )}
 
                 <DropdownMenuSeparator />
 
-                <DropdownMenuItem>{dict.dataTable.view.user}</DropdownMenuItem>
+                <DropdownMenuItem>
+                    <LocaleLink href={`/admin/assets/${asset.guidId}`}>
+                        {dict.dataTable.view.asset}
+                    </LocaleLink>
+                </DropdownMenuItem>
+
+                <DropdownMenuItem>
+                    <LocaleLink href={`/admin/assets/${asset.guidId}/edit`}>
+                        {dict.dataTable.edit.asset}
+                    </LocaleLink>
+                </DropdownMenuItem>
+
+                <DropdownMenuItem>
+                    <LocaleLink href={`/admin/assets/${asset.guidId}/delete`}>
+                        {dict.dataTable.delete.asset}
+                    </LocaleLink>
+                </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
     )
