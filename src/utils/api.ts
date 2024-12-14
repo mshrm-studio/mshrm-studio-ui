@@ -32,11 +32,7 @@ const api = async (endpoint: string, options?: RequestInit): Promise<any> => {
         headers,
     })
 
-    console.log('response:', response)
-
     if (!response.ok) {
-        console.log('response not ok', response)
-
         const error = await response.json().catch(() => ({}))
 
         throw error

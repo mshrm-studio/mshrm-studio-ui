@@ -34,8 +34,6 @@ export default function Form({ asset }: { asset: Asset }) {
                 method: 'DELETE',
             })
 
-            console.log('response:', response)
-
             handleSuccess(response)
         } catch (error) {
             handleFailure(error)

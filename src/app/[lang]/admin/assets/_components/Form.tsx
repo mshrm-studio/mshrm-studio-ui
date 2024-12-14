@@ -51,8 +51,6 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
             method: 'POST',
         })
 
-        console.log('importResponse:', importResponse)
-
         toast({
             title: dict.asset.event.created,
         })
@@ -92,8 +90,6 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
                 method: asset ? 'PATCH' : 'POST',
                 body: JSON.stringify(data),
             })
-
-            console.log('response:', response)
 
             handleSuccess(response)
         } catch (error) {

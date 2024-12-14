@@ -11,7 +11,6 @@ export async function userFetcher(guid: string) {
 
         return data
     } catch (error) {
-        console.log('userFetcher error', error)
         throw error
     }
 }

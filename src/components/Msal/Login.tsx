@@ -42,7 +42,6 @@ export default function MsalLogin() {
         axios
             .post(`/api/v1/users`)
             .then((response) => {
-                console.log('/api/v1/users response:', response)
                 if (isUser(response?.data)) {
                     setUser(response.data)
 
@@ -56,8 +55,6 @@ export default function MsalLogin() {
                 }
             })
             .catch((error: AxiosError) => {
-                console.log('/api/v1/users error:', error)
-
                 if (isApiError(error.response?.data)) {
                     setApiError(error.response?.data)
                 } else {
@@ -72,19 +69,11 @@ export default function MsalLogin() {
         if (status === ProcessingStatus.Pending) return
 
         if (inProgress === InteractionStatus.None && accounts.length > 0) {
-            console.log('accounts', accounts)
-
-            console.log(
-                'instance.getActiveAccount()',
-                instance.getActiveAccount()
-            )
-
             setStatus(ProcessingStatus.Pending)
 
             axios
                 .get(`/api/v1/users/profile`)
                 .then((response) => {
-                    console.log('/api/v1/users/profile response:', response)
                     if (isUser(response?.data)) {
                         setUser(response.data)
 
@@ -98,7 +87,6 @@ export default function MsalLogin() {
                     }
                 })
                 .catch((error: AxiosError) => {
-                    console.log('/api/v1/users/profile error:', error)
                     if (error.response?.status === 401) {
                         instance.acquireTokenRedirect({
                             ...loginRequest,

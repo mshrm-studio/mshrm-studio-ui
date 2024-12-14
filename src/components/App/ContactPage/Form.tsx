@@ -80,13 +80,10 @@ export default function ContactPageForm() {
             ...data,
             attachmentKeys: temporaryFiles.map((file) => file.key),
         }
-        console.log(form)
 
         axios
             .post(`/api/v1/contact-forms`, form)
             .then((res) => {
-                console.log(res)
-
                 alert('Check console for response')
             })
             .catch(console.log)

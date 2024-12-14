@@ -48,8 +48,6 @@ const InputAddedFile: React.FC<Props> = ({ file, setTemporaryFiles }) => {
                 },
             })
             .then((response) => {
-                console.log('/api/v1/files/temporary response:', response)
-
                 if (isTemporaryFileResponse(response)) {
                     setTemporaryFiles((prev) => prev.concat([response.data]))
 

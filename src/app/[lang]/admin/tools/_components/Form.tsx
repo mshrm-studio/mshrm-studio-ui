@@ -78,8 +78,6 @@ export default function ToolForm({ tool }: { tool?: Tool }) {
                 body: JSON.stringify(data),
             })
 
-            console.log('response:', response)
-
             handleSuccess(response)
         } catch (error) {
             handleFailure(error)

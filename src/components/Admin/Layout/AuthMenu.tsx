@@ -26,8 +26,6 @@ export default function AdminLayoutProfileMenu() {
     const pathname = usePathname()
 
     const handleSsoLoginRequest = () => {
-        console.log('Intended:', pathname)
-
         localStorage.setItem('intended', pathname)
 
         router.push('/auth/sso')

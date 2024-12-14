@@ -34,8 +34,6 @@ export default function Form({ user }: { user: User }) {
                 method: 'DELETE',
             })
 
-            console.log('response:', response)
-
             handleSuccess(response)
         } catch (error) {
             handleFailure(error)

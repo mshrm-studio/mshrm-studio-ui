@@ -64,8 +64,6 @@ export default function UserForm({ user }: { user?: User }) {
                 body: JSON.stringify(values),
             })
 
-            console.log(`${endpoint} response:`, response)
-
             handleSuccess(response)
         } catch (error) {
             handleFailure(error)
