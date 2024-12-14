@@ -50,7 +50,7 @@ export default function Form({ user }: { user: User }) {
 
             <div className="flex space-x-4">
                 <div>
-                    <LocaleLink href="/admin/users/">
+                    <LocaleLink href={`/admin/users/${user.guidId}`}>
                         <Button
                             aria-label={dict.user.deleteForm.cancel}
                             title={dict.user.deleteForm.cancel}
