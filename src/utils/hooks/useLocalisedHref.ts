@@ -12,9 +12,9 @@ export default function useLocalisedHref(href?: string) {
         return href.startsWith('/') ? `/${locale}${href}` : `/${locale}/${href}`
     }, [href])
 
-    function redirectTo(href: string) {
+    function redirectTo(path: string) {
         router.push(
-            href.startsWith('/') ? `/${locale}${href}` : `/${locale}/${href}`
+            path.startsWith('/') ? `/${locale}${path}` : `/${locale}/${path}`
         )
     }
 

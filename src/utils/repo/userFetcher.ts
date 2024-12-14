@@ -1,9 +1,7 @@
-import 'server-only'
-import { cache } from 'react'
 import { isUser } from '@/utils/dto/User'
 import api from '@/utils/api'
 
-export const userFetcher = cache(async (guid: string) => {
+export async function userFetcher(guid: string) {
     try {
         const data = await api(`/api/v1/users/${guid}`)
 
@@ -13,6 +11,7 @@ export const userFetcher = cache(async (guid: string) => {
 
         return data
     } catch (error) {
+        console.log('userFetcher error', error)
         throw error
     }
-})
+}

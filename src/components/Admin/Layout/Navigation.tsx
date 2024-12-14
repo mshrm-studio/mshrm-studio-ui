@@ -8,14 +8,12 @@ import {
     Mail,
     User,
 } from 'lucide-react'
-import Link from 'next/link'
-import { useContext, useMemo } from 'react'
+import { useMemo } from 'react'
 import { usePathname } from 'next/navigation'
-import LocaleContext from '@/utils/context/Locale'
+import LocaleLink from '@/components/LocaleLink'
 
 export default function AdminLayoutNavigation() {
     const dict = useDictionary()
-    const locale = useContext(LocaleContext)
     const pathname = usePathname()
 
     const menu = useMemo(() => {
@@ -52,16 +50,13 @@ export default function AdminLayoutNavigation() {
                 icon: <User className={iconClassName} />,
                 shortcut: 'U',
             },
-        ].map((item) => ({
-            ...item,
-            href: item.href === '/' ? `/${locale}` : `/${locale}${item.href}`,
-        }))
-    }, [dict, locale])
+        ]
+    }, [dict])
 
     return (
         <nav className="grid items-start px-4 text-sm font-medium">
             {menu.map((item, index) => (
-                <Link
+                <LocaleLink
                     key={index}
                     href={item.href}
                     className={`flex items-center gap-3 rounded-lg px-3 py-2 transition-all ${
@@ -72,7 +67,7 @@ export default function AdminLayoutNavigation() {
                 >
                     {item.icon}
                     {item.title}
-                </Link>
+                </LocaleLink>
             ))}
         </nav>
     )

@@ -2,9 +2,9 @@ import { z } from 'zod'
 import { Dictionary } from '@/app/[lang]/dictionaries'
 import { AssetType, assetTypes } from '@/utils/enums/AssetType'
 import {
-    PricingProviderType,
-    pricingProviderTypes,
-} from '@/utils/enums/PricingProviderType'
+    PricingProvider,
+    pricingProviders,
+} from '@/utils/enums/PricingProvider'
 
 // 1 KB = 1 * 1024 bytes
 // 200 KB = 200 * 1024 bytes
@@ -23,24 +23,27 @@ export const createFormSchema = (dict: Dictionary) =>
             .max(500, {
                 message: dict.form.rule.max.length.replace(':maximum', '500'),
             }),
-        logo: z
-            .instanceof(File)
-            .refine((file) => file.size <= 200 * 1024, {
-                message: dict.form.rule.max.size.replace(':size', '200KB'),
-            })
-            .refine(
-                (file) =>
-                    [
-                        'image/jpg',
-                        'image/jpeg',
-                        'image/png',
-                        'image/gif',
-                        'image/svg',
-                    ].includes(file.type),
-                {
-                    message: dict.form.rule.image,
-                }
-            ),
+        logo: z.union([
+            z
+                .instanceof(File)
+                .refine((file) => file.size <= 200 * 1024, {
+                    message: dict.form.rule.max.size.replace(':size', '200KB'),
+                })
+                .refine(
+                    (file) =>
+                        [
+                            'image/jpg',
+                            'image/jpeg',
+                            'image/png',
+                            'image/gif',
+                            'image/svg',
+                        ].includes(file.type),
+                    {
+                        message: dict.form.rule.image,
+                    }
+                ),
+            z.undefined(),
+        ]),
         name: z
             .string()
             .min(2, {
@@ -50,22 +53,19 @@ export const createFormSchema = (dict: Dictionary) =>
                 message: dict.form.rule.max.length.replace(':maximum', '50'),
             }),
         providerType: z.enum(
-            pricingProviderTypes as [
-                PricingProviderType,
-                ...PricingProviderType[]
-            ]
+            pricingProviders as [PricingProvider, ...PricingProvider[]]
         ),
         symbolNative: z
             .string()
-            .min(2, {
-                message: dict.form.rule.min.length.replace(':minimum', '2'),
+            .min(1, {
+                message: dict.form.rule.min.length.replace(':minimum', '1'),
             })
-            .max(50, {
-                message: dict.form.rule.max.length.replace(':maximum', '50'),
+            .max(1, {
+                message: dict.form.rule.max.length.replace(':maximum', '1'),
             }),
         symbol: z
             .string()
-            .min(2, {
+            .min(3, {
                 message: dict.form.rule.min.length.replace(':minimum', '2'),
             })
             .max(50, {

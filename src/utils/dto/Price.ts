@@ -25,9 +25,3 @@ export function isPrice(input: unknown): input is Price {
 export function isPriceList(input: unknown): input is Price[] {
     return Array.isArray(input) && input.every((item) => isPrice(item))
 }
-
-export function isPriceListResponse(
-    input: unknown
-): input is PriceListResponse {
-    return isApiPaginatedResponse(input) && isPriceList(input.results)
-}

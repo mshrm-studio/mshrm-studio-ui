@@ -1,4 +1,4 @@
-import { PricingProviderType } from '@/utils/enums/PricingProviderType'
+import { PricingProvider } from '@/utils/enums/PricingProvider'
 import { AssetType } from '@/utils/enums/AssetType'
 import ApiPaginatedResponse, {
     isApiPaginatedResponse,
@@ -14,9 +14,9 @@ export default interface Asset {
     logoGuidId: string | null
     name: string | null
     guidId: string
-    providerType: PricingProviderType
+    providerType: PricingProvider
     symbolNative: string | null
-    symbol: string | null
+    symbol: string
 }
 
 export interface AssetListResponse

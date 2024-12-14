@@ -15,7 +15,7 @@ export default function Tool({
             <div>
                 <BlobImage
                     className={`${styles.toolImg} ${styles.lightToolImg}`}
-                    src={`static/tools/${tool.LogoUrl}`}
+                    src={`static/tools/${tool.logoUrl}`}
                     alt={dict.common.lightEntityLogo.replace(
                         ':entity',
                         tool.name
@@ -26,7 +26,7 @@ export default function Tool({
 
                 <BlobImage
                     className={`${styles.toolImg} ${styles.darkToolImg}`}
-                    src={`static/tools/${tool.LogoUrl}`}
+                    src={`static/tools/${tool.logoUrl}`}
                     alt={dict.common.darkEntityLogo.replace(
                         ':entity',
                         tool.name

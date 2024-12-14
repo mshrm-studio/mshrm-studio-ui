@@ -37,7 +37,7 @@ export default function UserForm({ user }: { user?: User }) {
 
     function handleSuccess(response: unknown) {
         toast({
-            title: dict.tool.event.created,
+            title: dict.user.event.created,
         })
 
         redirectTo(
@@ -56,15 +56,15 @@ export default function UserForm({ user }: { user?: User }) {
     async function saveUser(values: z.infer<typeof formSchema>) {
         try {
             const endpoint = user
-                ? `/api/v1/users/${user.guidId}`
-                : '/api/v1/users'
+                ? `/api/v1/users/guid/${user.guidId}`
+                : '/api/v1/users/any-role'
 
             const response = await api(endpoint, {
                 method: user ? 'PATCH' : 'POST',
                 body: JSON.stringify(values),
             })
 
-            console.log('response:', response)
+            console.log(`${endpoint} response:`, response)
 
             handleSuccess(response)
         } catch (error) {
@@ -145,6 +145,7 @@ export default function UserForm({ user }: { user?: User }) {
                         <div className="space-y-2">
                             {roleTypes.map((type) => (
                                 <FormField
+                                    key={type}
                                     control={form.control}
                                     name="roles"
                                     render={({ field }) => (

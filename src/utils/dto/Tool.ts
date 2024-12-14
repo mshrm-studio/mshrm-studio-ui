@@ -11,7 +11,7 @@ export default interface Tool {
     toolType: ToolType
     description: string | null
     logoGuidId: string
-    LogoUrl: string
+    logoUrl: string
 }
 
 export interface ToolListResponse

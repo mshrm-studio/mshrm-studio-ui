@@ -18,7 +18,7 @@ export interface UserListResponse
 }
 
 export function isUser(input: unknown): input is User {
-    return typeof input === 'object' && input !== null && 'name' in input
+    return typeof input === 'object' && input !== null && 'email' in input
 }
 
 export function isUserList(input: unknown): input is User[] {

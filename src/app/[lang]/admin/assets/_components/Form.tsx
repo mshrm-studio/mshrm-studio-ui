@@ -19,7 +19,7 @@ import useLocalisedHref from '@/utils/hooks/useLocalisedHref'
 import { createFormSchema } from '@/app/[lang]/admin/assets/_utils/FormSchema'
 import FormFieldGroup from '@/app/[lang]/admin/_components/FormFieldGroup'
 import { assetTypes } from '@/utils/enums/AssetType'
-import { pricingProviderTypes } from '@/utils/enums/PricingProviderType'
+import { pricingProviders } from '@/utils/enums/PricingProvider'
 
 export default function AssetForm({ asset }: { asset?: Asset }) {
     const dict = useDictionary()
@@ -42,7 +42,17 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
         },
     })
 
-    function handleSuccess(response: unknown) {
+    async function handleSuccess(response: unknown) {
+        const { providerType } = form.getValues()
+
+        const importJobEndpoint = `/api/v1/jobs/import-prices/${providerType}`
+
+        const importResponse = await api(importJobEndpoint, {
+            method: 'POST',
+        })
+
+        console.log('importResponse:', importResponse)
+
         toast({
             title: dict.asset.event.created,
         })
@@ -62,14 +72,15 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
 
     async function saveAsset(
         values: z.infer<typeof formSchema>,
-        temporaryFile: TemporaryFile
+        temporaryFile?: TemporaryFile
     ) {
         const data = {
             ...values,
-            logo: {
-                temporaryKey: temporaryFile.key,
-                fileName: values.logo.name,
-            },
+            logo: temporaryFile &&
+                values.logo && {
+                    temporaryKey: temporaryFile.key,
+                    fileName: values.logo.name,
+                },
         }
 
         try {
@@ -92,7 +103,7 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
 
     async function uploadFile(values: z.infer<typeof formSchema>) {
         const formData = new FormData()
-        formData.append('file', values.logo)
+        formData.append('file', values.logo || '')
 
         try {
             const response = await api('/api/v1/files/temporary', {
@@ -113,7 +124,11 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
     }
 
     function onSubmit(values: z.infer<typeof formSchema>) {
-        uploadFile(values)
+        if (values.logo) {
+            uploadFile(values)
+        } else {
+            saveAsset(values)
+        }
     }
 
     return (
@@ -218,7 +233,7 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
                                     dict.asset.form.item.providerType
                                         .description
                                 }
-                                options={pricingProviderTypes.map((type) => ({
+                                options={pricingProviders.map((type) => ({
                                     value: type,
                                     label: type,
                                 }))}

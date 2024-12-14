@@ -5,6 +5,8 @@ import { assetListFetcher } from '@/utils/repo/assetListFetcher'
 import { assetFetcher } from '@/utils/repo/assetFetcher'
 import DataDisplayItem from '@/components/Admin/DataDisplayItem'
 import { Separator } from '@/components/Admin/shadcnui/separator'
+import { priceListFetcher } from '@/utils/repo/priceListFetcher'
+import AssetPrice from '@/components/Asset/Price'
 
 export const dynamic = 'force-static'
 
@@ -35,6 +37,8 @@ export default async function Page({ params }: Readonly<PageProps>) {
 
     const asset = await assetFetcher(guid)
 
+    const price = await priceListFetcher('symbols[0]=BTC&symbols[1]=ETH')
+
     return (
         <DictionaryContextProvider dictionary={dict}>
             <div id="admin-asset">
@@ -51,6 +55,18 @@ export default async function Page({ params }: Readonly<PageProps>) {
 
                     <Separator />
 
+                    <DataDisplayItem label="Price">
+                        <AssetPrice assetSymbol={asset.symbol} />
+                    </DataDisplayItem>
+
+                    <Separator />
+
+                    <DataDisplayItem label={dict.attribute.description}>
+                        {asset.description}
+                    </DataDisplayItem>
+
+                    <Separator />
+
                     {asset.logoUrl && (
                         <DataDisplayItem label={dict.attribute.logo}>
                             <img src={asset.logoUrl} alt={asset.name || ''} />
@@ -59,8 +75,32 @@ export default async function Page({ params }: Readonly<PageProps>) {
 
                     <Separator />
 
-                    <DataDisplayItem label={dict.attribute.description}>
-                        {asset.description || '-'}
+                    <DataDisplayItem label={dict.attribute.assetType}>
+                        {dict.enum.AssetType[asset.assetType]}
+                    </DataDisplayItem>
+
+                    <Separator />
+
+                    <DataDisplayItem label={dict.attribute.pricingProvider}>
+                        {asset.providerType}
+                    </DataDisplayItem>
+
+                    <Separator />
+
+                    <DataDisplayItem label={dict.attribute.symbol}>
+                        {asset.symbol}
+                    </DataDisplayItem>
+
+                    <Separator />
+
+                    <DataDisplayItem label={dict.attribute.symbolNative}>
+                        {asset.symbolNative}
+                    </DataDisplayItem>
+
+                    <Separator />
+
+                    <DataDisplayItem label={dict.attribute.decimalPlaces}>
+                        {asset.decimalPlaces}
                     </DataDisplayItem>
                 </dl>
             </div>

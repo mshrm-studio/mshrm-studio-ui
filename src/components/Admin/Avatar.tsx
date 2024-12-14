@@ -19,6 +19,8 @@ export default function Avatar({
     const blobStorageUrl = process.env.NEXT_PUBLIC_BLOB_STORAGE_URL
 
     const imgSrc = useMemo(() => {
+        if (!src) return ''
+
         return src.startsWith('http')
             ? src
             : src.startsWith('/')

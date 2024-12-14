@@ -1,8 +1,7 @@
 'use client'
 
 import UserContext from '@/utils/context/User'
-import User from '@/utils/dto/User'
-import useAxios from '@/utils/hooks/useAxios'
+import User, { isUser } from '@/utils/dto/User'
 import { profileFetcher } from '@/utils/repo/profileFetcher'
 import { useAccount } from '@azure/msal-react'
 import { useEffect, useState } from 'react'
@@ -15,12 +14,13 @@ export default function UserContextProvider({
 }>) {
     const [user, setUser] = useState<User | null>(null)
     const accountInfo = useAccount()
-    const axios = useAxios()
 
-    const { data } = useSWR([accountInfo, user], profileFetcher)
+    const { data } = useSWR(accountInfo, profileFetcher)
 
     useEffect(() => {
-        setUser(data || null)
+        if (isUser(data)) {
+            setUser(data)
+        }
     }, [data])
 
     return (

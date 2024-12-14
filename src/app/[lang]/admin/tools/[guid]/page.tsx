@@ -52,7 +52,7 @@ export default async function Page({ params }: Readonly<PageProps>) {
                     <Separator />
 
                     <DataDisplayItem label={dict.attribute.logo}>
-                        <img src={tool.LogoUrl} alt={tool.name} />
+                        <img src={tool.logoUrl} alt={tool.name} />
                     </DataDisplayItem>
 
                     <Separator />

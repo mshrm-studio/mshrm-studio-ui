@@ -1,7 +1,5 @@
-'use client'
-
+import LocaleLink from '@/components/LocaleLink'
 import MainMenuItem from '@/utils/dto/MainMenuItem'
-import Link from 'next/link'
 
 type Props = {
     item: MainMenuItem & { href: string }
@@ -20,7 +18,7 @@ export default function HeaderMainMenuLink({ item }: Props) {
                 <span className="mr-3">{item.prependedLabel}</span>
             )}
 
-            <Link
+            <LocaleLink
                 className={`${
                     item.prependedLabel
                         ? 'underline text-black/50 dark:text-white/50'
@@ -30,7 +28,7 @@ export default function HeaderMainMenuLink({ item }: Props) {
                 target={item.href.includes('http') ? '_blank' : undefined}
             >
                 {item.actionText}
-            </Link>
+            </LocaleLink>
 
             {item.appendedIcon && (
                 <item.appendedIcon className="ml-2 h-4 w-4 text-black/50 dark:text-white/50" />

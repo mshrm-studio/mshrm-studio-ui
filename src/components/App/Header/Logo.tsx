@@ -1,7 +1,7 @@
 import BrandLogo from '@/components/Brand/Logo'
-import Link from 'next/link'
 import styles from '@/styles/header/brandLogo.module.css'
 import { Dictionary } from '@/app/[lang]/dictionaries'
+import LocaleLink from '@/components/LocaleLink'
 
 type Props = {
     dict: Dictionary
@@ -9,7 +9,7 @@ type Props = {
 
 const HeaderLogo: React.FC<Props> = ({ dict }) => {
     return (
-        <Link href="/">
+        <LocaleLink href="/">
             <BrandLogo
                 className={styles.blackBrandLogo}
                 color="black"
@@ -23,7 +23,7 @@ const HeaderLogo: React.FC<Props> = ({ dict }) => {
                 dict={dict}
                 priority
             />
-        </Link>
+        </LocaleLink>
     )
 }
 

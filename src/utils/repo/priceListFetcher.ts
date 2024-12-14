@@ -1,4 +1,4 @@
-import { isPriceListResponse } from '@/utils/dto/Price'
+import { isPriceList } from '@/utils/dto/Price'
 import api from '@/utils/api'
 
 export async function priceListFetcher(params?: string) {
@@ -6,12 +6,10 @@ export async function priceListFetcher(params?: string) {
 
     try {
         const data = await api(
-            params
-                ? `${endpoint}?${params.toString()}`
-                : `${endpoint}?baseAsset=USD`
+            params ? `${endpoint}?${params.toString()}` : endpoint
         )
 
-        if (!isPriceListResponse(data)) {
+        if (!isPriceList(data)) {
             throw new Error('Invalid response structure')
         }
 

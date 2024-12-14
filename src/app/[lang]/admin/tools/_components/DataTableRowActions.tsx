@@ -47,11 +47,7 @@ export default function DataTableRowActions({ tool }: { tool: Tool }) {
             <DropdownMenuContent align="end">
                 <DropdownMenuLabel>{dict.dataTable.actions}</DropdownMenuLabel>
 
-                <DropdownMenuItem onClick={() => copy(tool.LogoUrl)}>
-                    {dict.dataTable.copy.logoUrl}
-                </DropdownMenuItem>
-
-                <DropdownMenuItem onClick={() => copy(tool.LogoUrl)}>
+                <DropdownMenuItem onClick={() => copy(tool.logoUrl)}>
                     {dict.dataTable.copy.logoUrl}
                 </DropdownMenuItem>
 

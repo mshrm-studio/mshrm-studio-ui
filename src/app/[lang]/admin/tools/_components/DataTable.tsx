@@ -23,7 +23,7 @@ export default function ToolsDataTable() {
                 cell: ({ row }) => {
                     return (
                         <Avatar
-                            src={row.original.LogoUrl}
+                            src={row.original.logoUrl}
                             alt={row.original.name}
                         />
                     )
