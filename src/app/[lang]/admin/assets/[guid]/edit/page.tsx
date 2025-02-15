@@ -8,12 +8,12 @@ import { assetListFetcher } from '@/utils/repo/assetListFetcher'
 export const dynamic = 'force-static'
 
 export async function generateStaticParams() {
-    const data = await assetListFetcher()
+    // const data = await assetListFetcher()
 
-    if (data)
-        return data.results.flatMap((asset) =>
-            locales.map((lang) => ({ guid: asset.guidId, lang }))
-        )
+    // if (data)
+    //     return data.results.flatMap((asset) =>
+    //         locales.map((lang) => ({ guid: asset.guidId, lang }))
+    //     )
 
     return []
 }
