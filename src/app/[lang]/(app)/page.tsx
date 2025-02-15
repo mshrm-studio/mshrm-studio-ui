@@ -3,7 +3,7 @@ import { loadDictionaries } from '@/app/[lang]/dictionaries'
 import Hero from '@/components/App/HomePage/Hero/Hero'
 import Stack from '@/components/App/HomePage/Tools'
 import DictionaryContextProvider from '@/components/Provider/Dictionary'
-import Clients from '@/components/App/HomePage/Clients'
+// import Clients from '@/components/App/HomePage/Clients'
 import MarketEntities from '@/components/App/HomePage/MarketEntities'
 import type { Metadata } from 'next'
 
