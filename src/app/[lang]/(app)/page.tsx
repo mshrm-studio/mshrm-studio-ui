@@ -46,7 +46,7 @@ export default async function Page({ params }: Props) {
             <div id="homepage">
                 <Hero dict={dict} />
 
-                <Clients dict={dict} />
+                {/* <Clients dict={dict} /> */}
 
                 <MarketEntities dict={dict} />
 
