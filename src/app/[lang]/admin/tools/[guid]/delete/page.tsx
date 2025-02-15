@@ -8,12 +8,12 @@ import { toolFetcher } from '@/utils/repo/toolFetcher'
 export const dynamic = 'force-static'
 
 export async function generateStaticParams() {
-    const data = await toolListFetcher()
+    // const data = await toolListFetcher()
 
-    if (data)
-        return data.results.flatMap((tool) =>
-            locales.map((lang) => ({ guid: tool.guidId, lang }))
-        )
+    // if (data)
+    //     return data.results.flatMap((tool) =>
+    //         locales.map((lang) => ({ guid: tool.guidId, lang }))
+    //     )
 
     return []
 }
