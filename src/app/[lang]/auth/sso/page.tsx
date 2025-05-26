@@ -1,7 +1,7 @@
 import { Locale } from '@/utils/enums/Locale'
 import { loadDictionaries } from '@/app/[lang]/dictionaries'
-import MsalLogin from '@/components/Msal/Login'
-import DictionaryContextProvider from '@/components/Provider/Dictionary'
+import MsalLogin from '@/app/[lang]/_components/Msal/Login'
+import DictionaryContextProvider from '@/app/[lang]/_components/Provider/Dictionary'
 
 export default async function Page({
     params: { lang },

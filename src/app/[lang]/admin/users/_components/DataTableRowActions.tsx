@@ -1,7 +1,7 @@
 'use client'
 
 import { MoreHorizontal } from 'lucide-react'
-import { Button } from '@/components/Admin/shadcnui/button'
+import { Button } from '@/app/[lang]/admin/_components/shadcnui/button'
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -9,11 +9,11 @@ import {
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
-} from '@/components/Admin/shadcnui/dropdown-menu'
+} from '@/app/[lang]/admin/_components/shadcnui/dropdown-menu'
 import User from '@/utils/dto/User'
-import { useToast } from '@/components/Admin/shadcnui/use-toast'
+import { useToast } from '@/app/[lang]/admin/_components/shadcnui/use-toast'
 import useDictionary from '@/utils/hooks/useDictionary'
-import LocaleLink from '@/components/LocaleLink'
+import LocaleLink from '@/app/[lang]/_components/LocaleLink'
 
 export default function DataTableRowActions({ user }: { user: User }) {
     const dict = useDictionary()

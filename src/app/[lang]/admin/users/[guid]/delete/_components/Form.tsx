@@ -1,9 +1,9 @@
 'use client'
 
 import useDictionary from '@/utils/hooks/useDictionary'
-import { Button } from '@/components/Admin/shadcnui/button'
-import { useToast } from '@/components/Admin/shadcnui/use-toast'
-import LocaleLink from '@/components/LocaleLink'
+import { Button } from '@/app/[lang]/admin/_components/shadcnui/button'
+import { useToast } from '@/app/[lang]/admin/_components/shadcnui/use-toast'
+import LocaleLink from '@/app/[lang]/_components/LocaleLink'
 import User from '@/utils/dto/User'
 import api from '@/utils/api'
 import useLocalisedHref from '@/utils/hooks/useLocalisedHref'

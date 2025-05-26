@@ -1,7 +1,7 @@
 import { Locale, locales } from '@/utils/enums/Locale'
 import { loadDictionaries } from '@/app/[lang]/dictionaries'
-import DictionaryContextProvider from '@/components/Provider/Dictionary'
-import ContactForm from '@/components/App/ContactPage/Form'
+import DictionaryContextProvider from '@/app/[lang]/_components/Provider/Dictionary'
+import ContactForm from '@/app/[lang]/(app)/contact/_components/Form'
 import type { Metadata } from 'next'
 
 type Props = Readonly<{

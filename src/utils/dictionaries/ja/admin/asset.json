@@ -18,6 +18,11 @@
     "form": {
         "description": "ウェブサイトに新しいアセットを追加",
         "item": {
+            "asset": {
+                "label": "アセット",
+                "description": "追加するアセット",
+                "placeholder": "AAPL"
+            },
             "assetType": {
                 "label": "資産の種類",
                 "description": "資産の種類",

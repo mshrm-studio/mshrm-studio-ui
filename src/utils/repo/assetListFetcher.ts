@@ -2,9 +2,9 @@ import { isAssetListResponse } from '@/utils/dto/Asset'
 import api from '@/utils/api'
 
 export async function assetListFetcher(params?: string) {
-    const endpoint = `/api/v1/assets`
-
     try {
+        const endpoint = '/api/v1/assets'
+
         const data = await api(
             params ? `${endpoint}?${params.toString()}` : endpoint
         )

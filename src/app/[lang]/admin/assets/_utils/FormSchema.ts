@@ -13,6 +13,14 @@ import {
 
 export const createFormSchema = (dict: Dictionary) =>
     z.object({
+        asset: z
+            .string()
+            .min(1, {
+                message: dict.form.rule.min.length.replace(':minimum', '1'),
+            })
+            .max(50, {
+                message: dict.form.rule.max.length.replace(':maximum', '50'),
+            }),
         assetType: z.enum(assetTypes as [AssetType, ...AssetType[]]),
         decimalPlaces: z.number(),
         description: z
@@ -60,13 +68,13 @@ export const createFormSchema = (dict: Dictionary) =>
             .min(1, {
                 message: dict.form.rule.min.length.replace(':minimum', '1'),
             })
-            .max(1, {
-                message: dict.form.rule.max.length.replace(':maximum', '1'),
+            .max(10, {
+                message: dict.form.rule.max.length.replace(':maximum', '10'),
             }),
         symbol: z
             .string()
-            .min(3, {
-                message: dict.form.rule.min.length.replace(':minimum', '2'),
+            .min(1, {
+                message: dict.form.rule.min.length.replace(':minimum', '1'),
             })
             .max(50, {
                 message: dict.form.rule.max.length.replace(':maximum', '50'),

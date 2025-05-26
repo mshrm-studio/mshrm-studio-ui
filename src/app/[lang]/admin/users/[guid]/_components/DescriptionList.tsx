@@ -1,11 +1,11 @@
 'use client'
 
-import ConditionalFeedback from '@/components/Admin/ConditionalFeedback'
-import DataDisplayItem from '@/components/Admin/DataDisplayItem'
+import ConditionalFeedback from '@/app/[lang]/admin/_components/ConditionalFeedback'
+import DataDisplayItem from '@/app/[lang]/admin/_components/DataDisplayItem'
 import { isUser } from '@/utils/dto/User'
 import { userFetcher } from '@/utils/repo/userFetcher'
 import useSWR from 'swr'
-import { Separator } from '@/components/Admin/shadcnui/separator'
+import { Separator } from '@/app/[lang]/admin/_components/shadcnui/separator'
 import useDictionary from '@/utils/hooks/useDictionary'
 
 type Props = {

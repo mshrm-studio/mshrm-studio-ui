@@ -18,6 +18,11 @@
     "form": {
         "description": "Ongeza mali mpya kwenye tovuti",
         "item": {
+            "asset": {
+                "label": "Mali",
+                "description": "Mali ya kuongeza",
+                "placeholder": "AAPL"
+            },
             "assetType": {
                 "label": "Aina ya mali",
                 "description": "Aina ya mali",

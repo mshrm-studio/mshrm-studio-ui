@@ -1,6 +1,6 @@
 import { Locale, locales } from '@/utils/enums/Locale'
 import { loadDictionaries } from '@/app/[lang]/dictionaries'
-import DictionaryContextProvider from '@/components/Provider/Dictionary'
+import DictionaryContextProvider from '@/app/[lang]/_components/Provider/Dictionary'
 import Form from '@/app/[lang]/admin/assets/[guid]/delete/_components/Form'
 import { assetListFetcher } from '@/utils/repo/assetListFetcher'
 import { assetFetcher } from '@/utils/repo/assetFetcher'

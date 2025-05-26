@@ -2,7 +2,7 @@ import { Locale } from '@/utils/enums/Locale'
 import '@/app/admin.css'
 import { Inter as FontSans } from 'next/font/google'
 import { cn } from '@/utils/shadcnui'
-import { Toaster } from '@/components/Admin/shadcnui/toaster'
+import { Toaster } from '@/app/[lang]/admin/_components/shadcnui/toaster'
 
 const fontSans = FontSans({
     subsets: ['latin'],

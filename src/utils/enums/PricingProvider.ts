@@ -1,6 +1,6 @@
 export enum PricingProvider {
+    CurrencyFreaks = 'CurrencyFreaks',
     TwelveData = 'TwelveData',
-    FreeCurrency = 'FreeCurrency',
     Mobula = 'Mobula',
     PolygonIO = 'PolygonIO',
     MetalsDev = 'MetalsDev',

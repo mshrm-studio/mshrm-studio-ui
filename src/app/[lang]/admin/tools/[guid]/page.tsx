@@ -1,10 +1,10 @@
 import { Locale, locales } from '@/utils/enums/Locale'
 import { loadDictionaries } from '@/app/[lang]/dictionaries'
-import DictionaryContextProvider from '@/components/Provider/Dictionary'
+import DictionaryContextProvider from '@/app/[lang]/_components/Provider/Dictionary'
 import { toolListFetcher } from '@/utils/repo/toolListFetcher'
 import { toolFetcher } from '@/utils/repo/toolFetcher'
-import DataDisplayItem from '@/components/Admin/DataDisplayItem'
-import { Separator } from '@/components/Admin/shadcnui/separator'
+import DataDisplayItem from '@/app/[lang]/admin/_components/DataDisplayItem'
+import { Separator } from '@/app/[lang]/admin/_components/shadcnui/separator'
 
 export const dynamic = 'force-static'
 

@@ -2,9 +2,9 @@ import { Locale } from '@/utils/enums/Locale'
 import '@/app/admin.css'
 import { Inter as FontSans } from 'next/font/google'
 import { cn } from '@/utils/shadcnui'
-import { Toaster } from '@/components/Admin/shadcnui/toaster'
-import AdminLayoutSidebar from '@/components/Admin/Layout/Sidebar'
-import AdminLayoutHeader from '@/components/Admin/Layout/Header'
+import { Toaster } from '@/app/[lang]/admin/_components/shadcnui/toaster'
+import AdminLayoutSidebar from '@/app/[lang]/admin/_components/Layout/Sidebar'
+import AdminLayoutHeader from '@/app/[lang]/admin/_components/Layout/Header'
 
 const fontSans = FontSans({
     subsets: ['latin'],

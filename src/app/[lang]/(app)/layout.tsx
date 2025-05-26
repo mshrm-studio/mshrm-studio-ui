@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import '@/app/app.css'
 import { Locale } from '@/utils/enums/Locale'
 import { Inter } from 'next/font/google'
-import Header from '@/components/App/Header/Header'
-import Footer from '@/components/App/Footer/Footer'
+import Header from '@/app/[lang]/(app)/_components/Header/Header'
+import Footer from '@/app/[lang]/(app)/_components/Footer/Footer'
+import clsx from 'clsx'
 
 const inter = Inter({
     subsets: ['latin'],
@@ -26,7 +27,10 @@ export default function Layout({
     return (
         <div
             id="app-layout"
-            className={`${inter.className} overflow-x-hidden dark:bg-black dark:text-white`}
+            className={clsx(
+                inter.className,
+                'overflow-x-hidden dark:bg-black dark:text-white'
+            )}
         >
             <Header locale={params.lang} />
 

@@ -1,5 +1,5 @@
 import { loginRequest } from '@/utils/msal/Auth'
-import { msalInstance } from '@/components/Provider/Msal'
+import { msalInstance } from '@/app/[lang]/_components/Provider/Msal'
 
 const getAccessToken = async () => {
     const storedToken = localStorage.getItem('accessToken')

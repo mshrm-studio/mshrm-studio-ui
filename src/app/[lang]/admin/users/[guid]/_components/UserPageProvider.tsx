@@ -1,5 +1,5 @@
 'use client'
-import ConditionalFeedback from '@/components/Admin/ConditionalFeedback'
+import ConditionalFeedback from '@/app/[lang]/admin/_components/ConditionalFeedback'
 import { isUser } from '@/utils/dto/User'
 import { userFetcher } from '@/utils/repo/userFetcher'
 import useSWR from 'swr'

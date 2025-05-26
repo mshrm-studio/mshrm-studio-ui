@@ -1,12 +1,12 @@
 import { Locale, locales } from '@/utils/enums/Locale'
 import { loadDictionaries } from '@/app/[lang]/dictionaries'
-import DictionaryContextProvider from '@/components/Provider/Dictionary'
+import DictionaryContextProvider from '@/app/[lang]/_components/Provider/Dictionary'
 import { assetListFetcher } from '@/utils/repo/assetListFetcher'
 import { assetFetcher } from '@/utils/repo/assetFetcher'
-import DataDisplayItem from '@/components/Admin/DataDisplayItem'
-import { Separator } from '@/components/Admin/shadcnui/separator'
+import DataDisplayItem from '@/app/[lang]/admin/_components/DataDisplayItem'
+import { Separator } from '@/app/[lang]/admin/_components/shadcnui/separator'
 import { priceListFetcher } from '@/utils/repo/priceListFetcher'
-import AssetPrice from '@/components/Asset/Price'
+import AssetPrice from '@/app/[lang]/_components/Asset/Price'
 
 export const dynamic = 'force-static'
 

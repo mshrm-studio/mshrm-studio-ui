@@ -1,6 +1,6 @@
 import { Locale, locales } from '@/utils/enums/Locale'
 import { loadDictionaries } from '@/app/[lang]/dictionaries'
-import DictionaryContextProvider from '@/components/Provider/Dictionary'
+import DictionaryContextProvider from '@/app/[lang]/_components/Provider/Dictionary'
 import DescriptionList from '@/app/[lang]/admin/users/[guid]/_components/DescriptionList'
 
 type PageProps = {

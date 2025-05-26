@@ -1,9 +1,9 @@
 import { Locale } from '@/utils/enums/Locale'
 import { loadDictionaries } from '@/app/[lang]/dictionaries'
-import DictionaryContextProvider from '@/components/Provider/Dictionary'
+import DictionaryContextProvider from '@/app/[lang]/_components/Provider/Dictionary'
 import ToolsDataTable from '@/app/[lang]/admin/tools/_components/DataTable'
-import { Button } from '@/components/Admin/shadcnui/button'
-import LocaleLink from '@/components/LocaleLink'
+import { Button } from '@/app/[lang]/admin/_components/shadcnui/button'
+import LocaleLink from '@/app/[lang]/_components/LocaleLink'
 
 export default async function Page({
     params: { lang },

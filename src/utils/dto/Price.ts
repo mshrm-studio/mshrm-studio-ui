@@ -1,7 +1,5 @@
 import Asset from '@/utils/dto/Asset'
-import ApiPaginatedResponse, {
-    isApiPaginatedResponse,
-} from '@/utils/dto/ApiPaginatedResponse'
+import ApiPaginatedResponse from '@/utils/dto/ApiPaginatedResponse'
 
 export default interface Price {
     price: number

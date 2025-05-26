@@ -1,11 +1,13 @@
 import { Locale, locales } from '@/utils/enums/Locale'
 import { loadDictionaries } from '@/app/[lang]/dictionaries'
-import Hero from '@/components/App/HomePage/Hero/Hero'
-import Stack from '@/components/App/HomePage/Tools'
-import DictionaryContextProvider from '@/components/Provider/Dictionary'
+import Hero from '@/app/[lang]/(app)/_components/Hero/Hero'
+import Stack from '@/app/[lang]/(app)/_components/Tools'
+import DictionaryContextProvider from '@/app/[lang]/_components/Provider/Dictionary'
 // import Clients from '@/components/App/HomePage/Clients'
-import MarketEntities from '@/components/App/HomePage/MarketEntities'
+import MarketEntities from '@/app/[lang]/(app)/_components/MarketEntities'
 import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import { assetListFetcher } from '@/utils/repo/assetListFetcher'
 
 type Props = Readonly<{
     params: { lang: Locale }
@@ -35,11 +37,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 }
 
+async function getAssets() {
+    const params = new URLSearchParams()
+
+    params.append('perPage', '5')
+
+    const response = await assetListFetcher(params.toString())
+
+    if (!response) notFound()
+
+    return response
+}
+
 export default async function Page({ params }: Props) {
     const dict = await loadDictionaries(params.lang, [
         'app/pages/home',
         'common',
     ])
+
+    const assetsResponse = await getAssets()
 
     return (
         <DictionaryContextProvider dictionary={dict}>
@@ -48,7 +64,7 @@ export default async function Page({ params }: Props) {
 
                 {/* <Clients dict={dict} /> */}
 
-                <MarketEntities dict={dict} />
+                <MarketEntities assets={assetsResponse.results} dict={dict} />
 
                 <Stack dict={dict} />
             </div>

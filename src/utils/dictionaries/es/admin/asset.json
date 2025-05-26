@@ -18,6 +18,11 @@
     "form": {
         "description": "Agregar un nuevo activo al sitio web",
         "item": {
+            "asset": {
+                "label": "Activo",
+                "description": "El activo a agregar",
+                "placeholder": "AAPL"
+            },
             "assetType": {
                 "label": "Tipo de activo",
                 "description": "El tipo del activo",

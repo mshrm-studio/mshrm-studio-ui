@@ -18,6 +18,11 @@
     "form": {
         "description": "Add a new asset to the website",
         "item": {
+            "asset": {
+                "label": "Asset",
+                "description": "The asset to add",
+                "placeholder": "AAPL"
+            },
             "assetType": {
                 "label": "Asset type",
                 "description": "The type of the asset",
@@ -50,12 +55,12 @@
             "symbolNative": {
                 "label": "Symbol Native",
                 "description": "The symbol of the asset",
-                "placeholder": "MSFT"
+                "placeholder": "$"
             },
             "symbol": {
                 "label": "Symbol",
-                "description": "The symbol of the asset",
-                "placeholder": "MSFT"
+                "description": "The native symbol of the asset",
+                "placeholder": "USD"
             }
         },
         "save": "Save asset",

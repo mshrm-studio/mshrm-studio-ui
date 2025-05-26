@@ -18,6 +18,11 @@
     "form": {
         "description": "向网站添加新资产",
         "item": {
+            "asset": {
+                "label": "资产",
+                "description": "要添加的资产",
+                "placeholder": "AAPL"
+            },
             "assetType": {
                 "label": "资产类型",
                 "description": "资产的类型",

@@ -3,34 +3,38 @@
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Input } from '@/components/Admin/shadcnui/input'
-import { Button } from '@/components/Admin/shadcnui/button'
-import { useMemo } from 'react'
+import { Input } from '@/app/[lang]/admin/_components/shadcnui/input'
+import { Button } from '@/app/[lang]/admin/_components/shadcnui/button'
+import { useEffect, useMemo, useState } from 'react'
 import useDictionary from '@/utils/hooks/useDictionary'
-import { Textarea } from '@/components/Admin/shadcnui/textarea'
-import FormItem from '@/components/Admin/FormItem/FormItem'
-import SelectFormItem from '@/components/Admin/FormItem/Select'
-import { Form, FormField } from '@/components/Admin/shadcnui/form'
+import { Textarea } from '@/app/[lang]/admin/_components/shadcnui/textarea'
+import FormItem from '@/app/[lang]/admin/_components/FormItem/FormItem'
+import SelectFormItem from '@/app/[lang]/admin/_components/FormItem/Select'
+import { Form, FormField } from '@/app/[lang]/admin/_components/shadcnui/form'
 import TemporaryFile, { isTemporaryFile } from '@/utils/dto/TemporaryFile'
 import Asset, { isAsset } from '@/utils/dto/Asset'
-import { useToast } from '@/components/Admin/shadcnui/use-toast'
+import { useToast } from '@/app/[lang]/admin/_components/shadcnui/use-toast'
 import api from '@/utils/api'
 import useLocalisedHref from '@/utils/hooks/useLocalisedHref'
 import { createFormSchema } from '@/app/[lang]/admin/assets/_utils/FormSchema'
 import FormFieldGroup from '@/app/[lang]/admin/_components/FormFieldGroup'
 import { assetTypes } from '@/utils/enums/AssetType'
 import { pricingProviders } from '@/utils/enums/PricingProvider'
+import { useWatch } from 'react-hook-form'
+import ProviderAsset, { isProviderAssetList } from '@/utils/dto/Provider/Asset'
 
 export default function AssetForm({ asset }: { asset?: Asset }) {
     const dict = useDictionary()
     const { toast } = useToast()
     const { redirectTo } = useLocalisedHref()
+    const [providerAssets, setProviderAssets] = useState<ProviderAsset[]>([])
 
     const formSchema = useMemo(() => createFormSchema(dict), [dict])
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
+            asset: asset?.symbol || undefined,
             assetType: asset?.assetType || undefined,
             decimalPlaces: asset?.decimalPlaces || 0,
             description: asset?.description || '',
@@ -42,12 +46,41 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
         },
     })
 
+    const providerType = useWatch({
+        control: form.control,
+        name: 'providerType',
+    })
+
+    useEffect(() => {
+        setProviderAssets([])
+
+        if (!providerType) return
+
+        async function fetchProviderAssets() {
+            try {
+                const response = await api(
+                    `/api/v1/assets/provider/${providerType}`
+                )
+
+                if (isProviderAssetList(response)) {
+                    setProviderAssets(
+                        [...response]
+                            .filter((pa) => pa.name !== '' && pa.symbol !== '')
+                            .sort((a, b) => a.name.localeCompare(b.name))
+                    )
+                }
+            } catch (error) {
+                console.error(error)
+            }
+        }
+
+        fetchProviderAssets()
+    }, [providerType])
+
     async function handleSuccess(response: unknown) {
         const { providerType } = form.getValues()
 
-        const importJobEndpoint = `/api/v1/jobs/import-prices/${providerType}`
-
-        const importResponse = await api(importJobEndpoint, {
+        await api(`/api/v1/jobs/import-prices/${providerType}`, {
             method: 'POST',
         })
 
@@ -133,6 +166,29 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
                 <FormFieldGroup>
                     <FormField
                         control={form.control}
+                        name="providerType"
+                        render={({ field }) => (
+                            <SelectFormItem
+                                field={field}
+                                label={dict.asset.form.item.providerType.label}
+                                placeholder={
+                                    dict.asset.form.item.providerType
+                                        .placeholder
+                                }
+                                description={
+                                    dict.asset.form.item.providerType
+                                        .description
+                                }
+                                options={pricingProviders.map((type) => ({
+                                    value: type,
+                                    label: type,
+                                }))}
+                            />
+                        )}
+                    />
+
+                    <FormField
+                        control={form.control}
                         name="assetType"
                         render={({ field }) => (
                             <SelectFormItem
@@ -148,6 +204,29 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
                                     value: type,
                                     label: dict.enum['AssetType'][type],
                                 }))}
+                            />
+                        )}
+                    />
+
+                    <FormField
+                        control={form.control}
+                        name="asset"
+                        render={({ field }) => (
+                            <SelectFormItem
+                                field={field}
+                                label={dict.asset.form.item.asset.label}
+                                placeholder={
+                                    dict.asset.form.item.asset.placeholder
+                                }
+                                description={
+                                    dict.asset.form.item.asset.description
+                                }
+                                options={providerAssets.map(
+                                    (providerAsset) => ({
+                                        value: providerAsset.symbol,
+                                        label: providerAsset.name,
+                                    })
+                                )}
                             />
                         )}
                     />
@@ -211,29 +290,6 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
                                     {...field}
                                 />
                             </FormItem>
-                        )}
-                    />
-
-                    <FormField
-                        control={form.control}
-                        name="providerType"
-                        render={({ field }) => (
-                            <SelectFormItem
-                                field={field}
-                                label={dict.asset.form.item.providerType.label}
-                                placeholder={
-                                    dict.asset.form.item.providerType
-                                        .placeholder
-                                }
-                                description={
-                                    dict.asset.form.item.providerType
-                                        .description
-                                }
-                                options={pricingProviders.map((type) => ({
-                                    value: type,
-                                    label: type,
-                                }))}
-                            />
                         )}
                     />
 

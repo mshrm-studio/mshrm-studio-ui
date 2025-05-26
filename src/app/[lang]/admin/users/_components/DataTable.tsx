@@ -1,6 +1,6 @@
 'use client'
 
-import { DataTable } from '@/components/Admin/shadcnui/data-table'
+import { DataTable } from '@/app/[lang]/admin/_components/shadcnui/data-table'
 import { ColumnDef } from '@tanstack/react-table'
 import User, { isUserListResponse } from '@/utils/dto/User'
 import { useMemo } from 'react'
@@ -8,7 +8,7 @@ import useDictionary from '@/utils/hooks/useDictionary'
 import DataTableRowActions from '@/app/[lang]/admin/users/_components/DataTableRowActions'
 import { useSearchParams } from 'next/navigation'
 import useSWR from 'swr'
-import ConditionalFeedback from '@/components/Admin/ConditionalFeedback'
+import ConditionalFeedback from '@/app/[lang]/admin/_components/ConditionalFeedback'
 import { userListFetcher } from '@/utils/repo/userListFetcher'
 
 export default function UsersDataTable() {

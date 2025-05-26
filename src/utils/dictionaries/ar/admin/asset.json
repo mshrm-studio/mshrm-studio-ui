@@ -18,6 +18,11 @@
     "form": {
         "description": "إضافة أصل جديد إلى الموقع",
         "item": {
+            "asset": {
+                "label": "الأصل",
+                "description": "الأصل الذي تريد إضافته",
+                "placeholder": "AAPL"
+            },
             "assetType": {
                 "label": "نوع الأصل",
                 "description": "نوع الأصل",
