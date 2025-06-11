@@ -3,6 +3,9 @@
     padding: 2rem;
     box-shadow: 0px 4px 10.9px 3px rgba(0, 0, 0, 0.06);
     backdrop-filter: blur(3.9000000953674316px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 :global(html.dark) .wrapper {
@@ -24,6 +27,7 @@
 }
 
 .percentageChange {
+    flex-grow: 1;
     margin-bottom: 1rem;
 }
 
@@ -33,14 +37,12 @@
 
 .marketCap,
 .volume,
-.lastUpdated,
 .source {
     display: flex;
 }
 
 .marketCap > *:not(:last-child),
 .volume > *:not(:last-child),
-.lastUpdated > *:not(:last-child),
 .source > *:not(:last-child) {
     margin-right: 0.25rem;
 }

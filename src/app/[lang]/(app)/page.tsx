@@ -8,6 +8,7 @@ import MarketEntities from '@/app/[lang]/(app)/_components/MarketEntities'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { assetListFetcher } from '@/utils/repo/assetListFetcher'
+import { AssetType } from '@/utils/enums/AssetType'
 
 type Props = Readonly<{
     params: { lang: Locale }
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 async function getAssets() {
     const params = new URLSearchParams()
 
-    params.append('perPage', '5')
+    params.append('perPage', '30')
 
     const response = await assetListFetcher(params.toString())
 
@@ -64,7 +65,12 @@ export default async function Page({ params }: Props) {
 
                 {/* <Clients dict={dict} /> */}
 
-                <MarketEntities assets={assetsResponse.results} dict={dict} />
+                <MarketEntities
+                    assets={assetsResponse.results.filter(
+                        (result) => result.assetType !== AssetType.Fiat
+                    )}
+                    dict={dict}
+                />
 
                 <Stack dict={dict} />
             </div>

@@ -74,7 +74,7 @@ export default function MarketEntity({ asset, currency, dict }: Props) {
                     {/* LOGO */}
                 </div>
 
-                <div className="text-[22px] font-extrabold">{asset.name}</div>
+                <div className="font-extrabold truncate">{asset.name}</div>
             </div>
 
             <div className={styles.percentageChange}>
@@ -83,33 +83,40 @@ export default function MarketEntity({ asset, currency, dict }: Props) {
                 />
             </div>
 
-            <div className={styles.marketCapAndVolume}>
-                {assetPriceList[0].marketCap && (
-                    <div className={styles.marketCap}>
-                        <label>{dict.home.marketEntity.marketCap}:</label>
+            {(assetPriceList[0].marketCap !== null ||
+                assetPriceList[0].volume !== null) && (
+                <div className={styles.marketCapAndVolume}>
+                    {assetPriceList[0].marketCap && (
+                        <div className={styles.marketCap}>
+                            <label>{dict.home.marketEntity.marketCap}:</label>
 
-                        <div className={styles.value}>
-                            <Price
-                                price={assetPriceList[0].marketCap}
-                                currency={assetPriceList[0].baseAsset.symbol}
-                            />
+                            <div className={styles.value}>
+                                <Price
+                                    price={assetPriceList[0].marketCap}
+                                    currency={
+                                        assetPriceList[0].baseAsset.symbol
+                                    }
+                                />
+                            </div>
                         </div>
-                    </div>
-                )}
+                    )}
 
-                {assetPriceList[0].volume && (
-                    <div className={styles.volume}>
-                        <label>{dict.home.marketEntity.volume}:</label>
+                    {assetPriceList[0].volume && (
+                        <div className={styles.volume}>
+                            <label>{dict.home.marketEntity.volume}:</label>
 
-                        <div className={styles.value}>
-                            <Price
-                                price={assetPriceList[0].volume}
-                                currency={assetPriceList[0].baseAsset.symbol}
-                            />
+                            <div className={styles.value}>
+                                <Price
+                                    price={assetPriceList[0].volume}
+                                    currency={
+                                        assetPriceList[0].baseAsset.symbol
+                                    }
+                                />
+                            </div>
                         </div>
-                    </div>
-                )}
-            </div>
+                    )}
+                </div>
+            )}
 
             <div className={styles.lastUpdatedAndSource}>
                 <div className={styles.lastUpdated}>
