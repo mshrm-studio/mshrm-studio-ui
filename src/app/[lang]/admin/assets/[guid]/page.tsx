@@ -69,7 +69,11 @@ export default async function Page({ params }: Readonly<PageProps>) {
 
                     {asset.logoUrl && (
                         <DataDisplayItem label={dict.attribute.logo}>
-                            <img src={asset.logoUrl} alt={asset.name || ''} />
+                            <img
+                                className="size-6"
+                                src={asset.logoUrl}
+                                alt={asset.name || ''}
+                            />
                         </DataDisplayItem>
                     )}
 

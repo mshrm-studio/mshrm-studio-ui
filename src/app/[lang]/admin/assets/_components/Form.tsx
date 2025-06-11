@@ -1,6 +1,6 @@
 'use client'
 
-import { useForm } from 'react-hook-form'
+import { useForm, useWatch } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Input } from '@/app/[lang]/admin/_components/shadcnui/input'
@@ -20,7 +20,7 @@ import { createFormSchema } from '@/app/[lang]/admin/assets/_utils/FormSchema'
 import FormFieldGroup from '@/app/[lang]/admin/_components/FormFieldGroup'
 import { assetTypes } from '@/utils/enums/AssetType'
 import { pricingProviders } from '@/utils/enums/PricingProvider'
-import { useWatch } from 'react-hook-form'
+import { isApiError } from '@/utils/dto/ApiError'
 import ProviderAsset, { isProviderAssetList } from '@/utils/dto/Provider/Asset'
 
 export default function AssetForm({ asset }: { asset?: Asset }) {
@@ -46,7 +46,12 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
         },
     })
 
-    const providerType = useWatch({
+    // const formAsset = useWatch({
+    //     control: form.control,
+    //     name: 'asset',
+    // })
+
+    const formProviderType = useWatch({
         control: form.control,
         name: 'providerType',
     })
@@ -54,20 +59,18 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
     useEffect(() => {
         setProviderAssets([])
 
-        if (!providerType) return
+        if (!formProviderType) return
 
         async function fetchProviderAssets() {
             try {
                 const response = await api(
-                    `/api/v1/assets/provider/${providerType}`
+                    `/api/v1/assets/provider/${formProviderType}?pageNumber=4&perPage=30`
                 )
 
                 if (isProviderAssetList(response)) {
-                    setProviderAssets(
-                        [...response]
-                            .filter((pa) => pa.name !== '' && pa.symbol !== '')
-                            .sort((a, b) => a.name.localeCompare(b.name))
-                    )
+                    setProviderAssets(response)
+                } else {
+                    console.error('Unexpected response structure:', response)
                 }
             } catch (error) {
                 console.error(error)
@@ -75,7 +78,7 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
         }
 
         fetchProviderAssets()
-    }, [providerType])
+    }, [formProviderType])
 
     async function handleSuccess(response: unknown) {
         const { providerType } = form.getValues()
@@ -95,10 +98,16 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
         )
     }
 
-    function handleFailure(_error: unknown) {
-        // TODO: handle failure
+    function handleFailure(error: unknown) {
+        const errorMap: Record<string, string> = {
+            AssetNotSupported: dict.asset.error.AssetNotSupported,
+        }
 
-        alert('Failed to save asset')
+        toast({
+            title: isApiError(error)
+                ? errorMap[error.FailureCode] || dict.common.error
+                : dict.common.error,
+        })
     }
 
     async function saveAsset(
@@ -212,6 +221,26 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
                         control={form.control}
                         name="asset"
                         render={({ field }) => (
+                            <FormItem
+                                label={dict.asset.form.item.asset.label}
+                                description={
+                                    dict.asset.form.item.asset.description
+                                }
+                            >
+                                <Input
+                                    placeholder={
+                                        dict.asset.form.item.asset.placeholder
+                                    }
+                                    {...field}
+                                />
+                            </FormItem>
+                        )}
+                    />
+
+                    {/* <FormField
+                        control={form.control}
+                        name="asset"
+                        render={({ field }) => (
                             <SelectFormItem
                                 field={field}
                                 label={dict.asset.form.item.asset.label}
@@ -229,7 +258,7 @@ export default function AssetForm({ asset }: { asset?: Asset }) {
                                 )}
                             />
                         )}
-                    />
+                    /> */}
 
                     <FormField
                         control={form.control}

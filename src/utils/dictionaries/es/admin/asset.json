@@ -10,6 +10,9 @@
         "message": "¿Estás seguro de que deseas eliminar este activo?",
         "title": "Eliminar activo"
     },
+    "error": {
+        "AssetNotSupported": "Este activo no es compatible con el proveedor."
+    },
     "event": {
         "created": "Activo creado",
         "deleted": "Activo eliminado",

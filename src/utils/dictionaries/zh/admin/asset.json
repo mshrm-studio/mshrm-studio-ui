@@ -10,6 +10,9 @@
         "message": "您确定要删除此资产吗？",
         "title": "删除资产"
     },
+    "error": {
+        "AssetNotSupported": "此资产不受提供者支持。"
+    },
     "event": {
         "created": "资产已创建",
         "deleted": "资产已删除",

@@ -14,6 +14,7 @@ export default function LoadingImage({ height, priority, width }: Props) {
             height={height}
             width={width}
             priority={priority}
+            unoptimized
         />
     )
 }

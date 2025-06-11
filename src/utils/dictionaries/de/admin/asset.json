@@ -10,6 +10,9 @@
         "message": "Sind Sie sicher, dass Sie dieses Asset löschen möchten?",
         "title": "Asset löschen"
     },
+    "error": {
+        "AssetNotSupported": "Dieses Asset wird vom Anbieter nicht unterstützt."
+    },
     "event": {
         "created": "Asset erstellt",
         "deleted": "Asset gelöscht",

@@ -10,6 +10,9 @@
         "message": "Are you sure you want to delete this asset?",
         "title": "Delete asset"
     },
+    "error": {
+        "AssetNotSupported": "This asset is not supported by the provider."
+    },
     "event": {
         "created": "Asset created",
         "deleted": "Asset deleted",

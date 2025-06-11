@@ -1,14 +1,14 @@
 import { Locale } from '@/utils/enums/Locale'
 import '@/app/admin.css'
-import { Inter as FontSans } from 'next/font/google'
-import { cn } from '@/utils/shadcnui'
+import { Inter } from 'next/font/google'
 import { Toaster } from '@/app/[lang]/admin/_components/shadcnui/toaster'
 import AdminLayoutSidebar from '@/app/[lang]/admin/_components/Layout/Sidebar'
 import AdminLayoutHeader from '@/app/[lang]/admin/_components/Layout/Header'
 
-const fontSans = FontSans({
+const inter = Inter({
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
     subsets: ['latin'],
-    variable: '--font-sans',
+    style: 'normal',
 })
 
 export default function Layout({
@@ -20,10 +20,7 @@ export default function Layout({
 }>) {
     return (
         <>
-            <div
-                id="admin-layout"
-                className={cn('font-sans antialiased', fontSans.variable)}
-            >
+            <div id="admin-layout" className={inter.className}>
                 <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
                     <AdminLayoutSidebar locale={params.lang} />
 

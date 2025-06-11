@@ -10,6 +10,9 @@
         "message": "Je, una hakika unataka kufuta mali hii?",
         "title": "Futa mali"
     },
+    "error": {
+        "AssetNotSupported": "Mali hii haikubaliwi na mtoa huduma."
+    },
     "event": {
         "created": "Mali imeundwa",
         "deleted": "Mali imefutwa",

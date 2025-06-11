@@ -9,6 +9,7 @@ type Props = {
     priority?: boolean
     sizes?: string
     src: string
+    unoptimized?: boolean
     width?: number
 }
 
@@ -20,10 +21,15 @@ const BlobImage: React.FC<Props> = ({
     priority,
     sizes,
     src,
+    unoptimized,
     width,
 }) => {
     return typeof height === 'number' && typeof width === 'number' ? (
         <Image
+            alt={alt}
+            className={className}
+            height={height}
+            priority={priority}
             src={
                 src.startsWith('http')
                     ? src
@@ -31,15 +37,17 @@ const BlobImage: React.FC<Props> = ({
                     ? process.env.NEXT_PUBLIC_BLOB_STORAGE_URL + src
                     : `${process.env.NEXT_PUBLIC_BLOB_STORAGE_URL}/${src}`
             }
-            className={className}
-            priority={priority}
-            alt={alt}
-            height={height}
+            unoptimized={unoptimized}
             width={width}
         />
     ) : (
         <div className={clsx(className, 'relative')}>
             <Image
+                alt={alt}
+                className={imgClassName || 'object-cover'}
+                fill
+                priority={priority}
+                sizes={sizes}
                 src={
                     src.startsWith('http')
                         ? src
@@ -47,11 +55,7 @@ const BlobImage: React.FC<Props> = ({
                         ? process.env.NEXT_PUBLIC_BLOB_STORAGE_URL + src
                         : `${process.env.NEXT_PUBLIC_BLOB_STORAGE_URL}/${src}`
                 }
-                fill
-                className={imgClassName || 'object-cover'}
-                priority={priority}
-                alt={alt}
-                sizes={sizes}
+                unoptimized={unoptimized}
             />
         </div>
     )
